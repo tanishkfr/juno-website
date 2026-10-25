@@ -1,0 +1,4 @@
+[     241ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5271/.vite-studio/deps/react-dom_client.js?v=85d5905f:5
+[   27879ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5271/.vite-studio/deps/react-dom_client.js?v=85d5905f:5
+[  774981ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://127.0.0.1:5271/api/routines:0
+[  839493ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:5271/.vite-studio/deps/react-dom_client.js?v=85d5905f:5

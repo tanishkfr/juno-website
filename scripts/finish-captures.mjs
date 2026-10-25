@@ -1,0 +1,10 @@
+import {chromium} from 'playwright';
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9331');
+const page=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('5271'));
+await page.setViewportSize({width:1440,height:960});
+if(await page.getByRole('button',{name:'bookshop.js',exact:true}).count()) await page.getByRole('button',{name:'bookshop.js',exact:true}).click();
+await page.getByRole('button',{name:'Toggle agent roster',exact:true}).click();
+await page.getByRole('textbox').last().waitFor();
+await page.screenshot({path:'source-assets/code.png'});
+console.log('CODE', (await page.locator('body').innerText()).slice(-3000));
+await browser.close();

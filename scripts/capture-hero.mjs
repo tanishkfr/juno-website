@@ -1,0 +1,13 @@
+import {chromium} from 'playwright';
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9331');
+const page=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('5271'));
+if(!await page.getByRole('button',{name:'Bot',exact:true}).count())await page.getByRole('button',{name:'Toggle agent roster',exact:true}).click();
+await page.getByRole('button',{name:'Bot',exact:true}).click();
+if(!await page.getByRole('button',{name:'Kyoto',exact:true}).count())await page.getByRole('button',{name:'Toggle agent roster',exact:true}).click();
+await page.getByRole('button',{name:'Kyoto',exact:true}).click();
+await page.getByRole('button',{name:'New conversation',exact:true}).click();
+await page.getByRole('heading',{name:'Kyoto',exact:true}).waitFor();
+await page.setViewportSize({width:1440,height:900});
+await page.screenshot({path:'source-assets/agent-kyoto.png'});
+console.log((await page.locator('main').innerText()).slice(0,1200));
+await browser.close();

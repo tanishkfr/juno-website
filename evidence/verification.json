@@ -1,0 +1,63 @@
+{
+  "url": "http://127.0.0.1:5273/",
+  "date": "2026-10-25T19:34:23.749Z",
+  "viewports": [
+    {
+      "name": "wide",
+      "width": 1920,
+      "clientWidth": 1920,
+      "scrollWidth": 1920,
+      "broken": [],
+      "anchors": [],
+      "violations": []
+    },
+    {
+      "name": "laptop",
+      "width": 1366,
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "broken": [],
+      "anchors": [],
+      "violations": []
+    },
+    {
+      "name": "tablet",
+      "width": 834,
+      "clientWidth": 834,
+      "scrollWidth": 834,
+      "broken": [],
+      "anchors": [],
+      "violations": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "broken": [],
+      "anchors": [],
+      "violations": []
+    },
+    {
+      "name": "narrow",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "broken": [],
+      "anchors": [],
+      "violations": []
+    }
+  ],
+  "interactions": [
+    "All six companion selections and arrow-key navigation",
+    "All four feature panels open their full authentic product photograph",
+    "Image dialog loads full image, traps focus, Escape closes, focus returns",
+    "Mobile menu opens, navigates, and closes",
+    "Private beta header link navigates to the actual availability statement",
+    "Reduced motion removes hero animation and smooth scrolling",
+    "No signup or download flows: 0 form elements",
+    "Core content renders with JavaScript disabled"
+  ],
+  "errors": [],
+  "imageFailures": []
+}

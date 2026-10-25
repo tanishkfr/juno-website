@@ -1,0 +1,1872 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f5e3]:
+    - navigation [ref=f5e4]:
+      - link "MausBot home" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f5e13]: MausBot
+      - generic [ref=f5e14]:
+        - generic [ref=f5e15]:
+          - link "Get started" [ref=f5e16] [cursor=pointer]:
+            - /url: /#quickstart
+          - link "Pricing" [ref=f5e17] [cursor=pointer]:
+            - /url: /pricing
+          - link "Solutions" [ref=f5e18] [cursor=pointer]:
+            - /url: /solutions
+          - link "Blog" [ref=f5e19] [cursor=pointer]:
+            - /url: /blog
+        - link "Partner" [ref=f5e20] [cursor=pointer]:
+          - /url: /partners
+        - link "MausBot on Discord" [ref=f5e21] [cursor=pointer]:
+          - /url: https://discord.gg/9Wb8MEpXRs
+        - link "MausBot on GitHub, 5596 stars" [ref=f5e25] [cursor=pointer]:
+          - /url: https://github.com/milind-soni/OpenMausBot
+          - generic [ref=f5e28]: 5.6k
+        - link "Start 3-day free trial" [ref=f5e29] [cursor=pointer]:
+          - /url: /pro#plans
+        - button "Toggle theme" [ref=f5e32]
+  - main [ref=f5e33]:
+    - generic [ref=f5e34]:
+      - link "Upvote MausBot on Product Hunt (opens in a new tab)" [ref=f5e36] [cursor=pointer]:
+        - /url: https://www.producthunt.com/products/mausbot?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-mausbot
+        - generic [ref=f5e37]:
+          - text: Support MausBot
+          - generic [ref=f5e38]: Upvote us on Product Hunt ↗
+        - 'img "MausBot - Open source Grok Bot: Free, Local | Product Hunt" [ref=f5e39]'
+      - generic [aria-hidden] [ref=f5e40]:
+        - generic [ref=f5e41]:
+          - generic [ref=f5e43]:
+            - generic [ref=f5e44]:
+              - generic [ref=f5e45]: MausBot
+              - generic [ref=f5e46]: MausBot
+              - generic [ref=f5e47]: MausBot
+              - generic [ref=f5e48]: MausBot
+            - generic [ref=f5e49]:
+              - generic [ref=f5e50]: MausBot
+              - generic [ref=f5e51]: MausBot
+              - generic [ref=f5e52]: MausBot
+              - generic [ref=f5e53]: MausBot
+          - generic [ref=f5e55]:
+            - generic [ref=f5e56]:
+              - generic [ref=f5e57]: MausBot
+              - generic [ref=f5e58]: MausBot
+              - generic [ref=f5e59]: MausBot
+              - generic [ref=f5e60]: MausBot
+            - generic [ref=f5e61]:
+              - generic [ref=f5e62]: MausBot
+              - generic [ref=f5e63]: MausBot
+              - generic [ref=f5e64]: MausBot
+              - generic [ref=f5e65]: MausBot
+          - generic [ref=f5e67]:
+            - generic [ref=f5e68]:
+              - generic [ref=f5e69]: MausBot
+              - generic [ref=f5e70]: MausBot
+              - generic [ref=f5e71]: MausBot
+              - generic [ref=f5e72]: MausBot
+            - generic [ref=f5e73]:
+              - generic [ref=f5e74]: MausBot
+              - generic [ref=f5e75]: MausBot
+              - generic [ref=f5e76]: MausBot
+              - generic [ref=f5e77]: MausBot
+          - generic [ref=f5e79]:
+            - generic [ref=f5e80]:
+              - generic [ref=f5e81]: MausBot
+              - generic [ref=f5e82]: MausBot
+              - generic [ref=f5e83]: MausBot
+              - generic [ref=f5e84]: MausBot
+            - generic [ref=f5e85]:
+              - generic [ref=f5e86]: MausBot
+              - generic [ref=f5e87]: MausBot
+              - generic [ref=f5e88]: MausBot
+              - generic [ref=f5e89]: MausBot
+        - button [ref=f5e90] [cursor=pointer]:
+          - generic [ref=f5e91]: M
+          - generic [ref=f5e93]: a
+          - generic [ref=f5e95]: u
+          - generic [ref=f5e97]: s
+          - generic [ref=f5e99]: B
+          - generic [ref=f5e101]: o
+          - generic [ref=f5e103]: t
+      - generic [ref=f5e159]:
+        - generic [ref=f5e160]:
+          - heading "Your business on autopilot" [level=1] [ref=f5e161]:
+            - generic [aria-hidden] [ref=f5e162]:
+              - text: Your
+              - generic [ref=f5e164]:
+                - generic [ref=f5e165]: b
+                - generic [ref=f5e166]: u
+                - generic [ref=f5e167]: s
+                - generic [ref=f5e168]: i
+                - generic [ref=f5e169]: "n"
+                - generic [ref=f5e170]: e
+                - generic [ref=f5e171]: s
+                - generic [ref=f5e172]: s
+              - text: on autopilot
+          - generic [ref=f5e173]:
+            - generic [ref=f5e175]:
+              - link "Download free" [ref=f5e176] [cursor=pointer]:
+                - /url: /download
+              - button "All platforms" [ref=f5e177]
+            - link "Start 3-day free trial" [ref=f5e180] [cursor=pointer]:
+              - /url: /pro#plans
+          - paragraph [ref=f5e181]: Every Cloud plan starts with a 3-day free trial. Cancel any time.
+          - paragraph [ref=f5e182]: The open source Grok Bot alternative. Free and open source. Bring your AI account or API key. Provider fees and limits apply.
+        - figure [ref=f5e184]:
+          - 'img "Illustration of the MausBot app: a list of bots, and the selected bot reporting what it found and what it is holding for your approval. Example conversation, not a live run." [ref=f5e185]':
+            - complementary [aria-hidden] [ref=f5e186]:
+              - generic [ref=f5e187]: This computer
+              - generic [ref=f5e200]: Search
+              - generic [ref=f5e204]:
+                - text: Bots
+                - generic [ref=f5e207]: ⠿
+              - generic [ref=f5e208]:
+                - generic [ref=f5e209]:
+                  - generic [ref=f5e217]:
+                    - generic [ref=f5e218]: Chief of Staff
+                    - paragraph [ref=f5e219]: Waiting on your yes
+                  - time [ref=f5e220]: now
+                - generic [ref=f5e229]:
+                  - generic [ref=f5e230]: Sales Follow-up
+                  - paragraph [ref=f5e231]: Weekdays at 9:00 AM
+                - generic [ref=f5e240]:
+                  - generic [ref=f5e241]: Support Triage
+                  - paragraph [ref=f5e242]: Every 30 minutes
+                - generic [ref=f5e251]:
+                  - generic [ref=f5e252]: Recruiter
+                  - paragraph [ref=f5e253]: Weekdays at 8:00 AM
+                - generic [ref=f5e262]:
+                  - generic [ref=f5e263]: Bookkeeper
+                  - paragraph [ref=f5e264]: Mondays at 9:00 AM
+                - generic [ref=f5e273]:
+                  - generic [ref=f5e274]: SEO Growth
+                  - paragraph [ref=f5e275]: Mondays at 6:00 AM
+              - generic [ref=f5e276]:
+                - generic [ref=f5e277]: Automations
+                - generic [ref=f5e280]: Apps
+            - generic [aria-hidden] [ref=f5e283]:
+              - generic [ref=f5e284]:
+                - generic [ref=f5e292]: Chief of Staff
+                - generic [ref=f5e293]: ╱
+                - generic [ref=f5e294]:
+                  - generic [ref=f5e295]:
+                    - generic [ref=f5e296]: ✳
+                    - text: Claude Sonnet 5
+                  - generic [ref=f5e302]: •••
+              - generic [ref=f5e303]:
+                - generic [ref=f5e304]: Today 7:30 AM
+                - generic [ref=f5e305]: "Three things need you today: the contract redline from legal, an offer letter waiting on your sign-off, and a 2:00 PM that lands on top of board prep."
+                - generic [ref=f5e306]: Everyone in the 2:00 PM is free Thursday at 11:00. Holding the new invite until you confirm.
+                - generic [ref=f5e307]: Move it
+                - generic [ref=f5e308]: Moved to Thursday at 11:00, with a note saying why. Your afternoon is clear for board prep.
+              - generic [ref=f5e309]:
+                - generic [ref=f5e315]: Message Chief of Staff
+                - generic [ref=f5e319]: ı|ı|ı
+          - generic [ref=f5e322]:
+            - text: Current app interface · Illustrated example conversation.
+            - link "Try the scripted preview" [ref=f5e323] [cursor=pointer]:
+              - /url: /demo
+            - text: .
+    - region [ref=f5e324]:
+      - generic [ref=f5e325]:
+        - heading "Part of" [level=2] [ref=f5e326]
+        - list [ref=f5e327]:
+          - listitem [ref=f5e328]:
+            - link "Google for Startups Cloud Program, Google Cloud" [ref=f5e329] [cursor=pointer]:
+              - /url: https://cloud.google.com/startup
+              - generic [ref=f5e336]:
+                - generic [ref=f5e337]: Google for Startups Cloud Program
+                - generic [ref=f5e338]: Google Cloud
+          - listitem [ref=f5e339]:
+            - link "NVIDIA Inception Program, NVIDIA" [ref=f5e340] [cursor=pointer]:
+              - /url: https://www.nvidia.com/en-us/startups/
+          - listitem [ref=f5e342]:
+            - link "Claude for Startups, Anthropic" [ref=f5e343] [cursor=pointer]:
+              - /url: https://claude.com/programs/startups
+              - generic [ref=f5e347]:
+                - generic [ref=f5e348]: Claude for Startups
+                - generic [ref=f5e349]: Anthropic
+    - generic [ref=f5e351]:
+      - heading "From download to your first useful task." [level=2] [ref=f5e352]
+      - paragraph [ref=f5e353]: Start with one bot and one provider. No connected apps or cloud computer needed.
+      - list [ref=f5e354]:
+        - listitem [ref=f5e355]:
+          - img "MausBot downloads onto a laptop, the bar fills, and a bot pops up from behind the screen." [ref=f5e356]:
+            - img [aria-hidden] [ref=f5e366]:
+              - generic [ref=f5e373]: MausBot
+              - generic [ref=f5e374]: Installed
+          - heading "Download the desktop app" [level=3] [ref=f5e378]
+          - paragraph [ref=f5e379]:
+            - link "Choose your computer’s installer" [ref=f5e380] [cursor=pointer]:
+              - /url: /download#installers
+            - text: and open MausBot. The phone apps are companions; start on your computer.
+        - listitem [ref=f5e381]:
+          - img "Of three providers, Claude rides its line into the app, and its row in the provider list lights up with a tick." [ref=f5e382]:
+            - img [aria-hidden] [ref=f5e384]:
+              - generic [ref=f5e399]: Providers
+              - generic [ref=f5e402]: Claude
+          - heading "Connect one provider" [level=3] [ref=f5e410]
+          - paragraph [ref=f5e411]: Use the onboarding engine check to install and sign in to one supported agent, such as Claude Code or Codex. Follow its install or sign-in instructions, then check again. You can also find this in App settings → Agent engines.
+        - listitem [ref=f5e412]:
+          - 'img "A New bot form: the name Mira is typed, Claude is chosen, a pointer presses Create, and the bot rises from behind the form." [ref=f5e413]':
+            - img [aria-hidden] [ref=f5e423]:
+              - generic [ref=f5e426]: New bot
+              - generic [ref=f5e428]: Mira
+              - generic [ref=f5e433]: Claude
+              - generic [ref=f5e434]: Created
+          - heading "Create your first bot" [level=3] [ref=f5e439]
+          - paragraph [ref=f5e440]: Select New or share → New bot. Give it a name, choose the connected engine and an available model. A working folder is only needed for tasks involving files.
+        - listitem [ref=f5e441]:
+          - img "You ask the bot to plan your morning, and it answers with a three-line schedule that it ticks off." [ref=f5e442]:
+            - img [aria-hidden] [ref=f5e452]:
+              - generic [ref=f5e453]: Plan my morning
+              - generic [ref=f5e456]:
+                - generic [ref=f5e458]: 9:00 Emails
+                - generic [ref=f5e462]: 10:00 Update
+                - generic [ref=f5e466]: 11:00 Meeting
+          - heading "Send a small, useful task" [level=3] [ref=f5e470]
+          - paragraph [ref=f5e471]: Ask your bot to plan your day, summarize notes, or draft an email. Start with one clear request and review its answer.
+      - paragraph [ref=f5e472]:
+        - link "Full setup guide" [ref=f5e473] [cursor=pointer]:
+          - /url: /download#quickstart
+          - text: Full setup guide →
+    - generic [ref=f5e475]:
+      - generic [ref=f5e476]:
+        - heading "Work with a whole team of bots" [level=2] [ref=f5e477]
+        - paragraph [ref=f5e478]: Give each bot a job, a brain, and a computer. They run in parallel on your own machine, and come back when something needs you.
+      - generic [ref=f5e479]:
+        - article "Every bot gets a computer" [ref=f5e480]:
+          - generic [ref=f5e481]:
+            - heading "Every bot gets a computer" [level=3] [ref=f5e482]
+            - paragraph [ref=f5e483]: "In the free app: a cloud desktop from a provider you connect, spun up on its own with a live screen preview. Or point the bot at this Mac."
+          - generic [ref=f5e490]:
+            - generic [ref=f5e491]:
+              - generic [ref=f5e492]: Activities
+              - generic [ref=f5e493]: Fri 9:41
+              - generic [ref=f5e494]: 4/4 reminders sent
+            - generic [ref=f5e505]:
+              - generic [ref=f5e506]: Home
+              - generic [ref=f5e510]: invoices.csv
+              - generic [ref=f5e514]: Trash
+            - generic [ref=f5e518]:
+              - generic [ref=f5e519]: "atlas@cloud: ~"
+              - generic [ref=f5e520]:
+                - generic [ref=f5e521]: ✓ opened Mail
+                - generic [ref=f5e522]: ✓ found 4 overdue invoices
+                - generic [ref=f5e523]: ✓ reminder sent to Northwind
+                - generic [ref=f5e524]: ✓ reminder sent to Globex
+                - generic [ref=f5e525]: ✓ reminder sent to Initech
+                - generic [ref=f5e526]: ✓ reminder sent to Hooli
+            - generic [ref=f5e527]:
+              - generic [ref=f5e528]: Inbox — Mail
+              - generic [ref=f5e533]:
+                - navigation [ref=f5e534]:
+                  - generic [ref=f5e535]:
+                    - text: Inbox
+                    - generic [ref=f5e536]: "0"
+                  - generic [ref=f5e537]: Flagged
+                  - generic [ref=f5e538]: Sent
+                  - generic [ref=f5e539]: Drafts
+                  - generic [ref=f5e540]: Archive
+                  - generic [ref=f5e541]: Folders
+                  - generic [ref=f5e542]: Invoices
+                - generic [ref=f5e543]:
+                  - generic [ref=f5e544]:
+                    - generic [ref=f5e545]: Northwind
+                    - generic [ref=f5e547]: "Invoice #1042 · $1,280"
+                    - generic [ref=f5e548]: Reminder sent
+                  - generic [ref=f5e551]:
+                    - generic [ref=f5e552]: Globex
+                    - generic [ref=f5e554]: "Invoice #1047 · $860"
+                    - generic [ref=f5e555]: Reminder sent
+                  - generic [ref=f5e558]:
+                    - generic [ref=f5e559]: Initech
+                    - generic [ref=f5e561]: "Invoice #1051 · $2,450"
+                    - generic [ref=f5e562]: Reminder sent
+                  - generic [ref=f5e565]:
+                    - generic [ref=f5e566]: Hooli
+                    - generic [ref=f5e568]: "Invoice #1055 · $430"
+                    - generic [ref=f5e569]: Reminder sent
+                - generic [ref=f5e572]:
+                  - generic [ref=f5e573]: "Invoice #1055 · $430"
+                  - generic [ref=f5e574]:
+                    - generic [ref=f5e575]: H
+                    - generic [ref=f5e576]:
+                      - generic [ref=f5e577]: Hooli Billing
+                      - generic [ref=f5e578]: to you
+                  - paragraph [ref=f5e579]: "Invoice #1055 for $430 was due 3 days ago. The PDF is attached."
+                  - generic [ref=f5e580]: invoice-1055.pdf
+                  - generic [ref=f5e582]:
+                    - generic [ref=f5e583]: Sent
+                    - text: "Hi Hooli team, a friendly nudge on invoice #1055 for $430, now 3 days overdue. Could you share an update?"
+                  - generic [ref=f5e586]: Send
+            - generic [ref=f5e588]:
+              - generic "Files" [ref=f5e589]
+              - generic "Mail" [ref=f5e592]
+              - generic "Browser" [ref=f5e596]
+              - generic "Terminal" [ref=f5e599]
+              - generic "Calendar" [ref=f5e602]
+              - generic "Settings" [ref=f5e605]
+            - generic: Atlas
+        - article "Pick a brain per bot" [ref=f5e609]:
+          - generic [ref=f5e610]:
+            - heading "Pick a brain per bot" [level=3] [ref=f5e611]
+            - paragraph [ref=f5e612]: Claude and Codex side by side, defaults marked. Switch a bot's model mid-conversation.
+          - generic [ref=f5e615]:
+            - generic [ref=f5e616]: Scout · model
+            - generic [ref=f5e622]:
+              - generic [ref=f5e631]:
+                - generic [ref=f5e632]: Scout
+                - generic [ref=f5e633]: thinking with Claude
+              - generic [ref=f5e634]:
+                - generic [ref=f5e636]:
+                  - generic [ref=f5e639]: Claude
+                  - generic [ref=f5e640]: Anthropic
+                - generic [ref=f5e644]:
+                  - generic [ref=f5e647]: Codex
+                  - generic [ref=f5e648]: OpenAI
+                - generic [ref=f5e652]:
+                  - generic [ref=f5e656]: Grok
+                  - generic [ref=f5e657]: xAI
+                - generic [ref=f5e661]:
+                  - generic [ref=f5e665]: Kimi
+                  - generic [ref=f5e666]: Moonshot AI
+        - article "Connected apps" [ref=f5e670]:
+          - generic [ref=f5e671]:
+            - heading "Connected apps" [level=3] [ref=f5e672]
+            - paragraph [ref=f5e673]: Gmail, Slack, GitHub, Notion, Linear and hundreds more over Composio. OAuth once, every bot can use them.
+          - generic [ref=f5e676]:
+            - generic [ref=f5e677]:
+              - generic [ref=f5e681]: Connected apps
+              - generic [ref=f5e682]: 6/6 connected
+            - generic [ref=f5e685]:
+              - generic "Gmail" [ref=f5e699]
+              - generic "Slack" [ref=f5e705]
+              - generic "GitHub" [ref=f5e711]
+              - generic "Notion" [ref=f5e717]
+              - generic "Linear" [ref=f5e723]
+              - generic "Google Calendar" [ref=f5e729]
+              - generic [ref=f5e735]: via Composio
+        - article "Manage bots like chats" [ref=f5e737]:
+          - generic [ref=f5e738]:
+            - heading "Manage bots like chats" [level=3] [ref=f5e739]
+            - paragraph [ref=f5e740]: Pin, mark unread, duplicate, hide, delete. It's a messaging app, and your agents behave like contacts.
+          - generic [ref=f5e743]:
+            - generic [ref=f5e744]: Bots
+            - generic [ref=f5e750]:
+              - generic [ref=f5e759]:
+                - generic [ref=f5e760]:
+                  - generic [ref=f5e761]: Atlas
+                  - generic [ref=f5e762]: 9:41
+                - generic [ref=f5e763]: All 4 reminders sent
+              - generic [ref=f5e773]:
+                - generic [ref=f5e774]:
+                  - generic [ref=f5e775]: Scout
+                  - generic [ref=f5e776]: 9:12
+                - generic [ref=f5e777]: Your Lisbon plan is ready
+              - generic [ref=f5e787]:
+                - generic [ref=f5e788]:
+                  - generic [ref=f5e789]: Pixel
+                  - generic [ref=f5e793]: 8:55
+                - generic [ref=f5e794]: The launch draft is in your inbox
+              - generic [ref=f5e804]:
+                - generic [ref=f5e805]:
+                  - generic [ref=f5e806]: Echo
+                  - generic [ref=f5e807]: now
+                - generic [ref=f5e808]: 3 PRs reviewed, 1 needs you
+        - article "Bots that talk back" [ref=f5e811]:
+          - generic [ref=f5e812]:
+            - heading "Bots that talk back" [level=3] [ref=f5e813]
+            - paragraph [ref=f5e814]: Hit call and it's a conversation. It hears you, narrates its work, and asks for approvals out loud. Live calls work on every plan, with your own OpenAI key.
+          - generic [ref=f5e817]:
+            - generic [ref=f5e818]:
+              - generic [ref=f5e822]: Call with Mira
+              - generic [ref=f5e823]: 0:14
+            - generic [ref=f5e829]:
+              - paragraph [ref=f5e845]: On it. Sending them now.
+              - generic [ref=f5e846]:
+                - generic [ref=f5e847]: Approve
+                - generic [ref=f5e850]: Not now
+        - article "Keys once, everything lights up" [ref=f5e851]:
+          - generic [ref=f5e852]:
+            - heading "Keys once, everything lights up" [level=3] [ref=f5e853]
+            - paragraph [ref=f5e854]: Paste credentials once and the provider fleet hot-reloads. Add a treg key and bots research X, companies, people, trends and search results. Secrets are write-only.
+          - generic [ref=f5e857]:
+            - generic [ref=f5e858]:
+              - generic [ref=f5e862]: Settings · Keys
+              - generic [ref=f5e863]: Write-only
+            - generic [ref=f5e869]:
+              - generic [ref=f5e870]:
+                - generic [ref=f5e874]: Anthropic
+                - generic [ref=f5e875]: ••••••••••••••••
+                - generic [ref=f5e876]: Ready
+              - generic [ref=f5e879]:
+                - generic [ref=f5e883]: OpenAI
+                - generic [ref=f5e884]: ••••••••••••••••
+                - generic [ref=f5e885]: Ready
+              - generic [ref=f5e888]:
+                - generic [ref=f5e893]: xAI
+                - generic [ref=f5e894]: ••••••••••••••••
+                - generic [ref=f5e895]: Ready
+        - article "Automations from one sentence" [ref=f5e898]:
+          - generic [ref=f5e899]:
+            - heading "Automations from one sentence" [level=3] [ref=f5e900]
+            - paragraph [ref=f5e901]: "Say “when I get an email from Acme, draft a reply” and it's set up: on a schedule, on a webhook, or when something happens in Gmail, Slack, HubSpot or Stripe. Gmail is checked every 15 minutes, other apps within seconds."
+          - generic [ref=f5e904]:
+            - generic [ref=f5e905]:
+              - generic [ref=f5e909]: Automations · This week
+              - generic [ref=f5e910]: Wed
+            - generic [ref=f5e916]:
+              - generic [ref=f5e917]:
+                - generic [ref=f5e918]:
+                  - generic [ref=f5e919]: 9:00
+                  - generic [ref=f5e920]: 11:00
+                  - generic [ref=f5e921]: 13:00
+                  - generic [ref=f5e922]: 15:00
+                - generic [ref=f5e923]:
+                  - generic [ref=f5e924]:
+                    - generic [ref=f5e925]: Mon
+                    - generic [ref=f5e926]: Tue
+                    - generic [ref=f5e927]: Wed
+                    - generic [ref=f5e928]: Thu
+                    - generic [ref=f5e929]: Fri
+                  - generic [ref=f5e939]: Inbox
+                  - generic [ref=f5e941]: Inbox
+                  - generic [ref=f5e943]: Inbox
+                  - generic [ref=f5e948]: Inbox
+                  - generic [ref=f5e950]: Inbox
+                  - generic [ref=f5e952]: Bills
+                  - generic [ref=f5e954]: PRs
+                  - generic [ref=f5e959]: Rivals
+                  - generic [ref=f5e961]: Stats
+                  - generic [ref=f5e963]: Report
+              - generic [ref=f5e968]: Scout scheduled Report · Fri 11:00
+    - generic [ref=f5e971]:
+      - heading "How it works" [level=2] [ref=f5e972]
+      - generic [ref=f5e973]:
+        - generic [ref=f5e974]:
+          - img "A laptop types claude, codex and grok into its terminal, and a bot rises from behind the screen after each one." [ref=f5e975]:
+            - img [aria-hidden] [ref=f5e1001]:
+              - generic [ref=f5e1007]: ">claude"
+              - generic [ref=f5e1010]: ">codex"
+              - generic [ref=f5e1013]: ">grok"
+              - generic [ref=f5e1016]: ">"
+          - heading "Your agents, your machine" [level=3] [ref=f5e1021]
+          - paragraph [ref=f5e1022]: Bots run on the claude, codex, and grok CLIs already installed on your computer, using your logins and your subscriptions, with no proxy in the middle.
+        - generic [ref=f5e1023]:
+          - img "Claude, Codex and Grok ride into one box marked 127.0.0.1 and leave it as a single row of identical dots." [ref=f5e1024]:
+            - img [aria-hidden] [ref=f5e1034]:
+              - generic [ref=f5e1035]: 127.0.0.1
+          - heading "One local harness" [level=3] [ref=f5e1090]
+          - paragraph [ref=f5e1091]: A single server on 127.0.0.1 owns every agent process and normalizes each provider's native protocol into one event stream.
+        - generic [ref=f5e1092]:
+          - img "A transcript, a key and a log drop into a folder marked ~/.openmausbot. A paper plane waits at a dashed line until a pointer presses Send." [ref=f5e1093]:
+            - img [aria-hidden] [ref=f5e1095]:
+              - generic [ref=f5e1110]: ~/.openmausbot
+              - generic [ref=f5e1119]: Send
+          - heading "Nothing leaves unless you send it" [level=3] [ref=f5e1124]
+          - paragraph [ref=f5e1125]: Transcripts, keys, and events live in ~/.openmausbot on your own disk. Local-first is the default, not a setting.
+    - generic [ref=f5e1127]:
+      - heading "Give each bot a job worth doing." [level=2] [ref=f5e1128]
+      - paragraph [ref=f5e1129]: Pick a job to see what its bot reports back, and what it waits for you to approve.
+      - generic [ref=f5e1130]:
+        - generic [ref=f5e1131]:
+          - group "Jobs" [ref=f5e1132]:
+            - button "Sales Follow-up" [pressed] [ref=f5e1133] [cursor=pointer]
+            - button "Chief of Staff" [ref=f5e1141] [cursor=pointer]
+            - button "Recruiter" [ref=f5e1149] [cursor=pointer]
+            - button "Bookkeeper" [ref=f5e1157] [cursor=pointer]
+            - button "Bug Fixer" [ref=f5e1165] [cursor=pointer]
+            - button "Support Triage" [ref=f5e1173] [cursor=pointer]
+            - button "Competitor Watch" [ref=f5e1181] [cursor=pointer]
+            - button "SEO Growth" [ref=f5e1189] [cursor=pointer]
+          - generic [ref=f5e1198]:
+            - paragraph [ref=f5e1199]: Finds the deals that went quiet, works out who owes the next step, and drafts each follow-up. Nothing sends until you approve it.
+            - generic [ref=f5e1200]:
+              - generic [ref=f5e1201]:
+                - term [ref=f5e1202]: Runs
+                - definition [ref=f5e1203]: Weekdays at 9:00 AM
+              - generic [ref=f5e1204]:
+                - term [ref=f5e1205]: Uses
+                - definition [ref=f5e1206]: Gmail, HubSpot
+        - figure "Example chat with Sales Follow-up" [ref=f5e1207]:
+          - generic [ref=f5e1208]:
+            - generic [ref=f5e1225]: Sales Follow-up
+            - generic [ref=f5e1226]:
+              - generic [ref=f5e1227]: Today 9:00 AM
+              - list [ref=f5e1228]:
+                - listitem [ref=f5e1229]:
+                  - generic [ref=f5e1230]: "Sales Follow-up:"
+                  - text: Four open deals have gone quiet for over a week. The largest asked for your security checklist on the 2nd and never got it.
+                - listitem [ref=f5e1231]:
+                  - generic [ref=f5e1232]: "Sales Follow-up:"
+                  - text: I've drafted all four follow-ups and attached the checklist. Holding them until you say send.
+                - listitem [ref=f5e1233]:
+                  - generic [ref=f5e1234]: "You:"
+                  - text: Send them
+                - listitem [ref=f5e1235]:
+                  - generic [ref=f5e1236]: "Sales Follow-up:"
+                  - text: Sent all four. I'll tell you the moment anyone replies.
+            - generic [ref=f5e1241]: Ask Sales Follow-up
+          - generic [ref=f5e1242]: Illustrative chat with fictional data, not a recorded app run.
+        - link "Explore more bots" [ref=f5e1243] [cursor=pointer]:
+          - /url: https://botmrr.io
+          - text: Explore more bots
+          - generic [aria-hidden] [ref=f5e1244]: ↗
+    - generic [ref=f5e1246]:
+      - heading "Our partners" [level=2] [ref=f5e1247]
+      - paragraph [ref=f5e1248]:
+        - text: Every bot borrows a brain, a pair of hands, and a set of keys. These are the companies behind each one.
+        - link "Want your product here? Become a partner" [ref=f5e1249] [cursor=pointer]:
+          - /url: /partners
+        - text: .
+      - 'link "Boat, boat.dev: Cloud computers" [ref=f5e1250] [cursor=pointer]':
+        - /url: https://boat.dev
+        - generic [ref=f5e1255]:
+          - generic [ref=f5e1256]: boat.dev
+          - generic [ref=f5e1257]: Featured partner · Cloud computers
+        - generic [ref=f5e1258]:
+          - generic [ref=f5e1259]: Every bot can get its own Linux computer in the cloud, with a desktop you can watch live while it works and take over at any time.
+          - generic [ref=f5e1260]:
+            - text: Visit boat.dev
+            - generic [aria-hidden] [ref=f5e1261]: ↗
+      - generic [ref=f5e1262]:
+        - generic [ref=f5e1263]:
+          - heading "Models" [level=3] [ref=f5e1264]
+          - generic [ref=f5e1266]:
+            - list "Models" [ref=f5e1267]:
+              - listitem [ref=f5e1268]:
+                - link "Claude Anthropic" [ref=f5e1269] [cursor=pointer]:
+                  - /url: https://claude.com/claude-code
+                  - generic [ref=f5e1273]: Claude
+                  - generic [ref=f5e1274]: Anthropic
+              - listitem [ref=f5e1275]:
+                - link "Codex OpenAI" [ref=f5e1276] [cursor=pointer]:
+                  - /url: https://openai.com/codex
+                  - generic [ref=f5e1280]: Codex
+                  - generic [ref=f5e1281]: OpenAI
+              - listitem [ref=f5e1282]:
+                - link "Grok xAI" [ref=f5e1283] [cursor=pointer]:
+                  - /url: https://x.ai/cli
+                  - generic [ref=f5e1288]: Grok
+                  - generic [ref=f5e1289]: xAI
+              - listitem [ref=f5e1290]:
+                - link "Cursor Cursor" [ref=f5e1291] [cursor=pointer]:
+                  - /url: https://cursor.com/docs/cli
+                  - generic [ref=f5e1295]: Cursor
+                  - generic [ref=f5e1296]: Cursor
+              - listitem [ref=f5e1297]:
+                - link "Kimi Moonshot AI" [ref=f5e1298] [cursor=pointer]:
+                  - /url: https://moonshotai.github.io/kimi-code/en/guides/getting-started.html
+                  - generic [ref=f5e1303]: Kimi
+                  - generic [ref=f5e1304]: Moonshot AI
+              - listitem [ref=f5e1305]:
+                - link "Droid Factory" [ref=f5e1306] [cursor=pointer]:
+                  - /url: https://factory.ai
+                  - generic [ref=f5e1310]: Droid
+                  - generic [ref=f5e1311]: Factory
+              - listitem [ref=f5e1312]:
+                - link "Antigravity Google" [ref=f5e1313] [cursor=pointer]:
+                  - /url: https://antigravity.google
+                  - generic [ref=f5e1317]: Antigravity
+                  - generic [ref=f5e1318]: Google
+              - listitem [ref=f5e1319]:
+                - link "OpenCode Open source" [ref=f5e1320] [cursor=pointer]:
+                  - /url: https://opencode.ai
+                  - generic [ref=f5e1324]: OpenCode
+                  - generic [ref=f5e1325]: Open source
+              - listitem [ref=f5e1326]:
+                - link "Qwen Alibaba" [ref=f5e1327] [cursor=pointer]:
+                  - /url: https://qwenlm.github.io/qwen-code-docs/
+                  - generic [ref=f5e1331]: Qwen
+                  - generic [ref=f5e1332]: Alibaba
+              - listitem [ref=f5e1333]:
+                - link "Hermes Nous Research" [ref=f5e1334] [cursor=pointer]:
+                  - /url: https://hermes-agent.nousresearch.com
+                  - generic [ref=f5e1340]: Hermes
+                  - generic [ref=f5e1341]: Nous Research
+              - listitem [ref=f5e1342]:
+                - link "Pi Open source" [ref=f5e1343] [cursor=pointer]:
+                  - /url: https://pi.dev
+                  - generic [ref=f5e1348]: Pi
+                  - generic [ref=f5e1349]: Open source
+            - list [aria-hidden] [ref=f5e1350]:
+              - listitem [aria-hidden] [ref=f5e1351]:
+                - link [ref=f5e1352] [cursor=pointer]:
+                  - /url: https://claude.com/claude-code
+                  - generic [ref=f5e1356]: Claude
+                  - generic [ref=f5e1357]: Anthropic
+              - listitem [aria-hidden] [ref=f5e1358]:
+                - link [ref=f5e1359] [cursor=pointer]:
+                  - /url: https://openai.com/codex
+                  - generic [ref=f5e1363]: Codex
+                  - generic [ref=f5e1364]: OpenAI
+              - listitem [aria-hidden] [ref=f5e1365]:
+                - link [ref=f5e1366] [cursor=pointer]:
+                  - /url: https://x.ai/cli
+                  - generic [ref=f5e1371]: Grok
+                  - generic [ref=f5e1372]: xAI
+              - listitem [aria-hidden] [ref=f5e1373]:
+                - link [ref=f5e1374] [cursor=pointer]:
+                  - /url: https://cursor.com/docs/cli
+                  - generic [ref=f5e1378]: Cursor
+                  - generic [ref=f5e1379]: Cursor
+              - listitem [aria-hidden] [ref=f5e1380]:
+                - link [ref=f5e1381] [cursor=pointer]:
+                  - /url: https://moonshotai.github.io/kimi-code/en/guides/getting-started.html
+                  - generic [ref=f5e1386]: Kimi
+                  - generic [ref=f5e1387]: Moonshot AI
+              - listitem [aria-hidden] [ref=f5e1388]:
+                - link [ref=f5e1389] [cursor=pointer]:
+                  - /url: https://factory.ai
+                  - generic [ref=f5e1393]: Droid
+                  - generic [ref=f5e1394]: Factory
+              - listitem [aria-hidden] [ref=f5e1395]:
+                - link [ref=f5e1396] [cursor=pointer]:
+                  - /url: https://antigravity.google
+                  - generic [ref=f5e1400]: Antigravity
+                  - generic [ref=f5e1401]: Google
+              - listitem [aria-hidden] [ref=f5e1402]:
+                - link [ref=f5e1403] [cursor=pointer]:
+                  - /url: https://opencode.ai
+                  - generic [ref=f5e1407]: OpenCode
+                  - generic [ref=f5e1408]: Open source
+              - listitem [aria-hidden] [ref=f5e1409]:
+                - link [ref=f5e1410] [cursor=pointer]:
+                  - /url: https://qwenlm.github.io/qwen-code-docs/
+                  - generic [ref=f5e1414]: Qwen
+                  - generic [ref=f5e1415]: Alibaba
+              - listitem [aria-hidden] [ref=f5e1416]:
+                - link [ref=f5e1417] [cursor=pointer]:
+                  - /url: https://hermes-agent.nousresearch.com
+                  - generic [ref=f5e1423]: Hermes
+                  - generic [ref=f5e1424]: Nous Research
+              - listitem [aria-hidden] [ref=f5e1425]:
+                - link [ref=f5e1426] [cursor=pointer]:
+                  - /url: https://pi.dev
+                  - generic [ref=f5e1431]: Pi
+                  - generic [ref=f5e1432]: Open source
+        - generic [ref=f5e1433]:
+          - heading "Tools and apps" [level=3] [ref=f5e1434]
+          - list "Tools and apps" [ref=f5e1435]:
+            - listitem [ref=f5e1436]:
+              - link "Cua Computer control" [ref=f5e1437] [cursor=pointer]:
+                - /url: https://cua.ai
+                - generic [ref=f5e1447]: Cua
+                - generic [ref=f5e1448]: Computer control
+            - listitem [ref=f5e1449]:
+              - link "Composio Connected apps" [ref=f5e1450] [cursor=pointer]:
+                - /url: https://composio.dev
+                - generic [ref=f5e1453]: Composio
+                - generic [ref=f5e1454]: Connected apps
+    - generic [ref=f5e1456]:
+      - generic [ref=f5e1457]:
+        - heading "What our users are saying" [level=2] [ref=f5e1458]
+        - paragraph [ref=f5e1459]: In their own words, on X.
+      - figure "Vaibhav Sisinty on X Vaibhav Sisinty @VaibhavSisinty on X ↗" [ref=f5e1460]:
+        - generic [aria-hidden] [ref=f5e1461]: “
+        - blockquote [ref=f5e1462]: Grok Bot launched today. This guy already built an open source version. And shipped it. 🤯 It is called OpenMausBot. It does everything Grok Bot does. It runs on the Claude and Codex subscriptions you already have.
+        - generic [ref=f5e1463]:
+          - img "Vaibhav Sisinty on X" [ref=f5e1464]
+          - generic [ref=f5e1465]:
+            - generic [ref=f5e1466]: Vaibhav Sisinty
+            - link "@VaibhavSisinty on X ↗" [ref=f5e1467] [cursor=pointer]:
+              - /url: https://x.com/VaibhavSisinty/status/2087426362793771026
+      - generic [ref=f5e1468]:
+        - generic [ref=f5e1470]:
+          - list "What people say about MausBot on X" [ref=f5e1471]:
+            - listitem [ref=f5e1472]:
+              - figure "Eric on X Eric @aialchemist_dev on X ↗" [ref=f5e1473]:
+                - generic [aria-hidden] [ref=f5e1474]: “
+                - blockquote [ref=f5e1475]: It’s a great application! I did not make this, but I am a contributor and had my PR merged which was an MCP server for external agent orchestration. I connect my Hermes agent to it so that all of my agents can communicate. If you haven’t used OpenMausBot, I highly recommend it.
+                - generic [ref=f5e1476]:
+                  - img "Eric on X" [ref=f5e1477]
+                  - generic [ref=f5e1478]:
+                    - generic [ref=f5e1479]: Eric
+                    - link "@aialchemist_dev on X ↗" [ref=f5e1480] [cursor=pointer]:
+                      - /url: https://x.com/aialchemist_dev/status/2102864399077974128
+            - listitem [ref=f5e1481]:
+              - figure "Artur Kre on X Artur Kre @Arturkre on X ↗" [ref=f5e1482]:
+                - generic [aria-hidden] [ref=f5e1483]: “
+                - blockquote [ref=f5e1484]: lets goooo its great to have this feature and its sad grok bot didn’t come with it once the mobile app is live this thing will be the best agent software of 2026
+                - generic [ref=f5e1485]:
+                  - img "Artur Kre on X" [ref=f5e1486]
+                  - generic [ref=f5e1487]:
+                    - generic [ref=f5e1488]: Artur Kre
+                    - link "@Arturkre on X ↗" [ref=f5e1489] [cursor=pointer]:
+                      - /url: https://x.com/Arturkre/status/2089099713068883992
+            - listitem [ref=f5e1490]:
+              - figure "Jens H. Nielsen on X Jens H. Nielsen @jenshnielsen on X ↗" [ref=f5e1491]:
+                - generic [aria-hidden] [ref=f5e1492]: “
+                - blockquote [ref=f5e1493]: Thanks, I just installed @mausbot_ on my server, so it can update the cards for the other teams within our company. They now have real-time data on their dashboards. 😃
+                - generic [ref=f5e1494]:
+                  - img "Jens H. Nielsen on X" [ref=f5e1495]
+                  - generic [ref=f5e1496]:
+                    - generic [ref=f5e1497]: Jens H. Nielsen
+                    - link "@jenshnielsen on X ↗" [ref=f5e1498] [cursor=pointer]:
+                      - /url: https://x.com/jenshnielsen/status/2107764559222288505
+            - listitem [ref=f5e1499]:
+              - figure "Kartik on X Kartik @1kartikkabadi1 on X ↗" [ref=f5e1500]:
+                - generic [aria-hidden] [ref=f5e1501]: “
+                - blockquote [ref=f5e1502]: No freaking ways. You are insanely fast haha. The stack is the best too, cua and box are amazing. Composio is the best for plugins. Can't wait to dig in. Thank you for this!
+                - generic [ref=f5e1503]:
+                  - img "Kartik on X" [ref=f5e1504]
+                  - generic [ref=f5e1505]:
+                    - generic [ref=f5e1506]: Kartik
+                    - link "@1kartikkabadi1 on X ↗" [ref=f5e1507] [cursor=pointer]:
+                      - /url: https://x.com/1kartikkabadi1/status/2087292242914668671
+            - listitem [ref=f5e1508]:
+              - figure "kkiran on X kkiran @kkiran on X ↗" [ref=f5e1509]:
+                - generic [aria-hidden] [ref=f5e1510]: “
+                - blockquote [ref=f5e1511]: Your bots. Your machine. Your keys. That is an amazing flex most others can’t! Well done you guys 👏👏👏
+                - generic [ref=f5e1512]:
+                  - img "kkiran on X" [ref=f5e1513]
+                  - generic [ref=f5e1514]:
+                    - generic [ref=f5e1515]: kkiran
+                    - link "@kkiran on X ↗" [ref=f5e1516] [cursor=pointer]:
+                      - /url: https://x.com/kkiran/status/2102727419144568978
+            - listitem [ref=f5e1517]:
+              - figure "Michael Fiorentini on X Michael Fiorentini @monaco_banker on X ↗" [ref=f5e1518]:
+                - generic [aria-hidden] [ref=f5e1519]: “
+                - blockquote [ref=f5e1520]: Very impressive. Why would anyone need Grok bot now?
+                - generic [ref=f5e1521]:
+                  - img "Michael Fiorentini on X" [ref=f5e1522]
+                  - generic [ref=f5e1523]:
+                    - generic [ref=f5e1524]: Michael Fiorentini
+                    - link "@monaco_banker on X ↗" [ref=f5e1525] [cursor=pointer]:
+                      - /url: https://x.com/monaco_banker/status/2091977943840870582
+            - listitem [ref=f5e1526]:
+              - figure "Vishal Borana on X Vishal Borana @vish34borana on X ↗" [ref=f5e1527]:
+                - generic [aria-hidden] [ref=f5e1528]: “
+                - blockquote [ref=f5e1529]: I’m 21, building KIN solo, and running my daily operations with an autonomous AI team on my own laptop. Not paying $200/month for closed platforms or hosted bot wrappers. I run OpenMausBot locally 100% open source and completely free.
+                - generic [ref=f5e1530]:
+                  - img "Vishal Borana on X" [ref=f5e1531]
+                  - generic [ref=f5e1532]:
+                    - generic [ref=f5e1533]: Vishal Borana
+                    - link "@vish34borana on X ↗" [ref=f5e1534] [cursor=pointer]:
+                      - /url: https://x.com/vish34borana/status/2107833328510337160
+            - listitem [ref=f5e1535]:
+              - figure "Saleem S. Khatri on X Saleem S. Khatri @SaleemSKhatri on X ↗" [ref=f5e1536]:
+                - generic [aria-hidden] [ref=f5e1537]: “
+                - blockquote [ref=f5e1538]: Animal. @elonmusk you're going to have to hire this guy before he outships the Cursor team.
+                - generic [ref=f5e1539]:
+                  - img "Saleem S. Khatri on X" [ref=f5e1540]
+                  - generic [ref=f5e1541]:
+                    - generic [ref=f5e1542]: Saleem S. Khatri
+                    - link "@SaleemSKhatri on X ↗" [ref=f5e1543] [cursor=pointer]:
+                      - /url: https://x.com/SaleemSKhatri/status/2088324285064483326
+            - listitem [ref=f5e1544]:
+              - figure "riz on X riz @rizvancodes on X ↗" [ref=f5e1545]:
+                - generic [aria-hidden] [ref=f5e1546]: “
+                - blockquote [ref=f5e1547]: I feel like a lot of people are sleeping on openmausbot. Its the best combo of grok, muse and hermes not that those are useless.
+                - generic [ref=f5e1548]:
+                  - img "riz on X" [ref=f5e1549]
+                  - generic [ref=f5e1550]:
+                    - generic [ref=f5e1551]: riz
+                    - link "@rizvancodes on X ↗" [ref=f5e1552] [cursor=pointer]:
+                      - /url: https://x.com/rizvancodes/status/2099031818372567332
+            - listitem [ref=f5e1553]:
+              - figure "kosovan on X kosovan @kosovan on X ↗" [ref=f5e1554]:
+                - generic [aria-hidden] [ref=f5e1555]: “
+                - blockquote [ref=f5e1556]: "The interesting signal here: nobody wants another $120/mo seat. Intelligence on your machine should come with it, not billed like headcount."
+                - generic [ref=f5e1557]:
+                  - img "kosovan on X" [ref=f5e1558]
+                  - generic [ref=f5e1559]:
+                    - generic [ref=f5e1560]: kosovan
+                    - link "@kosovan on X ↗" [ref=f5e1561] [cursor=pointer]:
+                      - /url: https://x.com/kosovan/status/2087922071988801724
+            - listitem [ref=f5e1562]:
+              - figure "Joe Slain on X Joe Slain @JoeSlain on X ↗" [ref=f5e1563]:
+                - generic [aria-hidden] [ref=f5e1564]: “
+                - blockquote [ref=f5e1565]: I've been using it since yesterday, honnestly impressed with the quality of the product, congrats man.
+                - generic [ref=f5e1566]:
+                  - img "Joe Slain on X" [ref=f5e1567]
+                  - generic [ref=f5e1568]:
+                    - generic [ref=f5e1569]: Joe Slain
+                    - link "@JoeSlain on X ↗" [ref=f5e1570] [cursor=pointer]:
+                      - /url: https://x.com/JoeSlain/status/2104282189823365313
+            - listitem [ref=f5e1571]:
+              - figure "Keith W on X Keith W @keith__w on X ↗" [ref=f5e1572]:
+                - generic [aria-hidden] [ref=f5e1573]: “
+                - blockquote [ref=f5e1574]: Grok Bot got released today and within 4 hours an OSS clone exists! We are living in some truly interesting times!
+                - generic [ref=f5e1575]:
+                  - img "Keith W on X" [ref=f5e1576]
+                  - generic [ref=f5e1577]:
+                    - generic [ref=f5e1578]: Keith W
+                    - link "@keith__w on X ↗" [ref=f5e1579] [cursor=pointer]:
+                      - /url: https://x.com/keith__w/status/2087325352490094891
+            - listitem [ref=f5e1580]:
+              - figure "Mauricio Gallmur on X Mauricio Gallmur @MGallmur on X ↗" [ref=f5e1581]:
+                - generic [aria-hidden] [ref=f5e1582]: “
+                - blockquote [ref=f5e1583]: Someone already shipped an open-source Grok Bot alternative. No new subscriptions. Uses the ones you already pay for. Spins up VMs, full computer use, plugin support via Composio.
+                - generic [ref=f5e1584]:
+                  - img "Mauricio Gallmur on X" [ref=f5e1585]
+                  - generic [ref=f5e1586]:
+                    - generic [ref=f5e1587]: Mauricio Gallmur
+                    - link "@MGallmur on X ↗" [ref=f5e1588] [cursor=pointer]:
+                      - /url: https://x.com/MGallmur/status/2087337924278796729
+            - listitem [ref=f5e1589]:
+              - figure "Internet Labs on X Internet Labs @internetlabsai on X ↗" [ref=f5e1590]:
+                - generic [aria-hidden] [ref=f5e1591]: “
+                - blockquote [ref=f5e1592]: Giving AI agents this level of dynamic personality makes the whole user experience feel so much more alive.
+                - generic [ref=f5e1593]:
+                  - img "Internet Labs on X" [ref=f5e1594]
+                  - generic [ref=f5e1595]:
+                    - generic [ref=f5e1596]: Internet Labs
+                    - link "@internetlabsai on X ↗" [ref=f5e1597] [cursor=pointer]:
+                      - /url: https://x.com/internetlabsai/status/2088516612504571934
+          - list [aria-hidden] [ref=f5e1598]:
+            - listitem [aria-hidden] [ref=f5e1599]:
+              - figure [ref=f5e1600]:
+                - generic [aria-hidden] [ref=f5e1601]: “
+                - blockquote [ref=f5e1602]: It’s a great application! I did not make this, but I am a contributor and had my PR merged which was an MCP server for external agent orchestration. I connect my Hermes agent to it so that all of my agents can communicate. If you haven’t used OpenMausBot, I highly recommend it.
+                - generic [ref=f5e1605]:
+                  - generic [ref=f5e1606]: Eric
+                  - link [ref=f5e1607] [cursor=pointer]:
+                    - /url: https://x.com/aialchemist_dev/status/2102864399077974128
+                    - text: "@aialchemist_dev on X ↗"
+            - listitem [aria-hidden] [ref=f5e1608]:
+              - figure [ref=f5e1609]:
+                - generic [aria-hidden] [ref=f5e1610]: “
+                - blockquote [ref=f5e1611]: lets goooo its great to have this feature and its sad grok bot didn’t come with it once the mobile app is live this thing will be the best agent software of 2026
+                - generic [ref=f5e1614]:
+                  - generic [ref=f5e1615]: Artur Kre
+                  - link [ref=f5e1616] [cursor=pointer]:
+                    - /url: https://x.com/Arturkre/status/2089099713068883992
+                    - text: "@Arturkre on X ↗"
+            - listitem [aria-hidden] [ref=f5e1617]:
+              - figure [ref=f5e1618]:
+                - generic [aria-hidden] [ref=f5e1619]: “
+                - blockquote [ref=f5e1620]: Thanks, I just installed @mausbot_ on my server, so it can update the cards for the other teams within our company. They now have real-time data on their dashboards. 😃
+                - generic [ref=f5e1623]:
+                  - generic [ref=f5e1624]: Jens H. Nielsen
+                  - link [ref=f5e1625] [cursor=pointer]:
+                    - /url: https://x.com/jenshnielsen/status/2107764559222288505
+                    - text: "@jenshnielsen on X ↗"
+            - listitem [aria-hidden] [ref=f5e1626]:
+              - figure [ref=f5e1627]:
+                - generic [aria-hidden] [ref=f5e1628]: “
+                - blockquote [ref=f5e1629]: No freaking ways. You are insanely fast haha. The stack is the best too, cua and box are amazing. Composio is the best for plugins. Can't wait to dig in. Thank you for this!
+                - generic [ref=f5e1632]:
+                  - generic [ref=f5e1633]: Kartik
+                  - link [ref=f5e1634] [cursor=pointer]:
+                    - /url: https://x.com/1kartikkabadi1/status/2087292242914668671
+                    - text: "@1kartikkabadi1 on X ↗"
+            - listitem [aria-hidden] [ref=f5e1635]:
+              - figure [ref=f5e1636]:
+                - generic [aria-hidden] [ref=f5e1637]: “
+                - blockquote [ref=f5e1638]: Your bots. Your machine. Your keys. That is an amazing flex most others can’t! Well done you guys 👏👏👏
+                - generic [ref=f5e1641]:
+                  - generic [ref=f5e1642]: kkiran
+                  - link [ref=f5e1643] [cursor=pointer]:
+                    - /url: https://x.com/kkiran/status/2102727419144568978
+                    - text: "@kkiran on X ↗"
+            - listitem [aria-hidden] [ref=f5e1644]:
+              - figure [ref=f5e1645]:
+                - generic [aria-hidden] [ref=f5e1646]: “
+                - blockquote [ref=f5e1647]: Very impressive. Why would anyone need Grok bot now?
+                - generic [ref=f5e1650]:
+                  - generic [ref=f5e1651]: Michael Fiorentini
+                  - link [ref=f5e1652] [cursor=pointer]:
+                    - /url: https://x.com/monaco_banker/status/2091977943840870582
+                    - text: "@monaco_banker on X ↗"
+            - listitem [aria-hidden] [ref=f5e1653]:
+              - figure [ref=f5e1654]:
+                - generic [aria-hidden] [ref=f5e1655]: “
+                - blockquote [ref=f5e1656]: I’m 21, building KIN solo, and running my daily operations with an autonomous AI team on my own laptop. Not paying $200/month for closed platforms or hosted bot wrappers. I run OpenMausBot locally 100% open source and completely free.
+                - generic [ref=f5e1659]:
+                  - generic [ref=f5e1660]: Vishal Borana
+                  - link [ref=f5e1661] [cursor=pointer]:
+                    - /url: https://x.com/vish34borana/status/2107833328510337160
+                    - text: "@vish34borana on X ↗"
+            - listitem [aria-hidden] [ref=f5e1662]:
+              - figure [ref=f5e1663]:
+                - generic [aria-hidden] [ref=f5e1664]: “
+                - blockquote [ref=f5e1665]: Animal. @elonmusk you're going to have to hire this guy before he outships the Cursor team.
+                - generic [ref=f5e1668]:
+                  - generic [ref=f5e1669]: Saleem S. Khatri
+                  - link [ref=f5e1670] [cursor=pointer]:
+                    - /url: https://x.com/SaleemSKhatri/status/2088324285064483326
+                    - text: "@SaleemSKhatri on X ↗"
+            - listitem [aria-hidden] [ref=f5e1671]:
+              - figure [ref=f5e1672]:
+                - generic [aria-hidden] [ref=f5e1673]: “
+                - blockquote [ref=f5e1674]: I feel like a lot of people are sleeping on openmausbot. Its the best combo of grok, muse and hermes not that those are useless.
+                - generic [ref=f5e1677]:
+                  - generic [ref=f5e1678]: riz
+                  - link [ref=f5e1679] [cursor=pointer]:
+                    - /url: https://x.com/rizvancodes/status/2099031818372567332
+                    - text: "@rizvancodes on X ↗"
+            - listitem [aria-hidden] [ref=f5e1680]:
+              - figure [ref=f5e1681]:
+                - generic [aria-hidden] [ref=f5e1682]: “
+                - blockquote [ref=f5e1683]: "The interesting signal here: nobody wants another $120/mo seat. Intelligence on your machine should come with it, not billed like headcount."
+                - generic [ref=f5e1686]:
+                  - generic [ref=f5e1687]: kosovan
+                  - link [ref=f5e1688] [cursor=pointer]:
+                    - /url: https://x.com/kosovan/status/2087922071988801724
+                    - text: "@kosovan on X ↗"
+            - listitem [aria-hidden] [ref=f5e1689]:
+              - figure [ref=f5e1690]:
+                - generic [aria-hidden] [ref=f5e1691]: “
+                - blockquote [ref=f5e1692]: I've been using it since yesterday, honnestly impressed with the quality of the product, congrats man.
+                - generic [ref=f5e1695]:
+                  - generic [ref=f5e1696]: Joe Slain
+                  - link [ref=f5e1697] [cursor=pointer]:
+                    - /url: https://x.com/JoeSlain/status/2104282189823365313
+                    - text: "@JoeSlain on X ↗"
+            - listitem [aria-hidden] [ref=f5e1698]:
+              - figure [ref=f5e1699]:
+                - generic [aria-hidden] [ref=f5e1700]: “
+                - blockquote [ref=f5e1701]: Grok Bot got released today and within 4 hours an OSS clone exists! We are living in some truly interesting times!
+                - generic [ref=f5e1704]:
+                  - generic [ref=f5e1705]: Keith W
+                  - link [ref=f5e1706] [cursor=pointer]:
+                    - /url: https://x.com/keith__w/status/2087325352490094891
+                    - text: "@keith__w on X ↗"
+            - listitem [aria-hidden] [ref=f5e1707]:
+              - figure [ref=f5e1708]:
+                - generic [aria-hidden] [ref=f5e1709]: “
+                - blockquote [ref=f5e1710]: Someone already shipped an open-source Grok Bot alternative. No new subscriptions. Uses the ones you already pay for. Spins up VMs, full computer use, plugin support via Composio.
+                - generic [ref=f5e1713]:
+                  - generic [ref=f5e1714]: Mauricio Gallmur
+                  - link [ref=f5e1715] [cursor=pointer]:
+                    - /url: https://x.com/MGallmur/status/2087337924278796729
+                    - text: "@MGallmur on X ↗"
+            - listitem [aria-hidden] [ref=f5e1716]:
+              - figure [ref=f5e1717]:
+                - generic [aria-hidden] [ref=f5e1718]: “
+                - blockquote [ref=f5e1719]: Giving AI agents this level of dynamic personality makes the whole user experience feel so much more alive.
+                - generic [ref=f5e1722]:
+                  - generic [ref=f5e1723]: Internet Labs
+                  - link [ref=f5e1724] [cursor=pointer]:
+                    - /url: https://x.com/internetlabsai/status/2088516612504571934
+                    - text: "@internetlabsai on X ↗"
+        - generic [ref=f5e1726]:
+          - list "More of what people say about MausBot on X" [ref=f5e1727]:
+            - listitem [ref=f5e1728]:
+              - figure "Ryan on X Ryan @HumanHitsSend on X ↗" [ref=f5e1729]:
+                - generic [aria-hidden] [ref=f5e1730]: “
+                - blockquote [ref=f5e1731]: I’ve been building with OMB and have a really great set of custom teams. I’ve tweaked it to run only my own local models and also my own agent computer (not the cloud sub 😏). Thanks for building this.
+                - generic [ref=f5e1732]:
+                  - img "Ryan on X" [ref=f5e1733]
+                  - generic [ref=f5e1734]:
+                    - generic [ref=f5e1735]: Ryan
+                    - link "@HumanHitsSend on X ↗" [ref=f5e1736] [cursor=pointer]:
+                      - /url: https://x.com/HumanHitsSend/status/2102761761199763896
+            - listitem [ref=f5e1737]:
+              - figure "Deamfarer on X Deamfarer @ZhouYimingsjtu on X ↗" [ref=f5e1738]:
+                - generic [aria-hidden] [ref=f5e1739]: “
+                - blockquote [ref=f5e1740]: This is the closest open-source project to Grok Bot that I’ve seen so far. I’ve contributed two PRs to it before. The lack of iOS mobile support once forced me to uninstall it, but now it’s time to fire it up again!
+                - generic [ref=f5e1741]:
+                  - img "Deamfarer on X" [ref=f5e1742]
+                  - generic [ref=f5e1743]:
+                    - generic [ref=f5e1744]: Deamfarer
+                    - link "@ZhouYimingsjtu on X ↗" [ref=f5e1745] [cursor=pointer]:
+                      - /url: https://x.com/ZhouYimingsjtu/status/2102671542320845022
+            - listitem [ref=f5e1746]:
+              - figure "Gabe Fletcher on X Gabe Fletcher @gabefletcher on X ↗" [ref=f5e1747]:
+                - generic [aria-hidden] [ref=f5e1748]: “
+                - blockquote [ref=f5e1749]: Have tried almost every alternative GrokBot provider out there and right now, @mausbot_ is by far the best out together, the best developed, most cross agent capable, and most flexible if you run your own infrastructure. I stand behind this.
+                - generic [ref=f5e1750]:
+                  - img "Gabe Fletcher on X" [ref=f5e1751]
+                  - generic [ref=f5e1752]:
+                    - generic [ref=f5e1753]: Gabe Fletcher
+                    - link "@gabefletcher on X ↗" [ref=f5e1754] [cursor=pointer]:
+                      - /url: https://x.com/gabefletcher/status/2106104752744407117
+            - listitem [ref=f5e1755]:
+              - figure "Gunjan Chokshi on X Gunjan Chokshi @viewofmind on X ↗" [ref=f5e1756]:
+                - generic [aria-hidden] [ref=f5e1757]: “
+                - blockquote [ref=f5e1758]: Running it on an Azure VM — works well for keeping the agent persistent/always-on.
+                - generic [ref=f5e1759]:
+                  - img "Gunjan Chokshi on X" [ref=f5e1760]
+                  - generic [ref=f5e1761]:
+                    - generic [ref=f5e1762]: Gunjan Chokshi
+                    - link "@viewofmind on X ↗" [ref=f5e1763] [cursor=pointer]:
+                      - /url: https://x.com/viewofmind/status/2091119375680188728
+            - listitem [ref=f5e1764]:
+              - figure "Koshik on X Koshik @rajkoshik on X ↗" [ref=f5e1765]:
+                - generic [aria-hidden] [ref=f5e1766]: “
+                - blockquote [ref=f5e1767]: I'm hooked to this grokbot style harness with existing coding agents with OpenMausBot. My previous harness where I made my Hermes act like a broker between the coding agents is outdated.
+                - generic [ref=f5e1768]:
+                  - img "Koshik on X" [ref=f5e1769]
+                  - generic [ref=f5e1770]:
+                    - generic [ref=f5e1771]: Koshik
+                    - link "@rajkoshik on X ↗" [ref=f5e1772] [cursor=pointer]:
+                      - /url: https://x.com/rajkoshik/status/2103171187279098171
+            - listitem [ref=f5e1773]:
+              - figure "Dale on X Dale @ddaalee on X ↗" [ref=f5e1774]:
+                - generic [aria-hidden] [ref=f5e1775]: “
+                - blockquote [ref=f5e1776]: I think having the crons on a calendar is great! Haven’t seen them visualised like that before
+                - generic [ref=f5e1777]:
+                  - img "Dale on X" [ref=f5e1778]
+                  - generic [ref=f5e1779]:
+                    - generic [ref=f5e1780]: Dale
+                    - link "@ddaalee on X ↗" [ref=f5e1781] [cursor=pointer]:
+                      - /url: https://x.com/ddaalee/status/2088562788155171208
+            - listitem [ref=f5e1782]:
+              - figure "Awny on X Awny @awny_faris on X ↗" [ref=f5e1783]:
+                - generic [aria-hidden] [ref=f5e1784]: “
+                - blockquote [ref=f5e1785]: I am using it and love it. It is the real deal.
+                - generic [ref=f5e1786]:
+                  - img "Awny on X" [ref=f5e1787]
+                  - generic [ref=f5e1788]:
+                    - generic [ref=f5e1789]: Awny
+                    - link "@awny_faris on X ↗" [ref=f5e1790] [cursor=pointer]:
+                      - /url: https://x.com/awny_faris/status/2103176020446601241
+            - listitem [ref=f5e1791]:
+              - figure "Maki@Sunwood AI Labs. on X Maki@Sunwood AI Labs. @hAru_mAki_ch on X ↗" [ref=f5e1792]:
+                - generic [aria-hidden] [ref=f5e1793]: “
+                - blockquote [ref=f5e1794]: I gathered five AIs into one group chat in OpenMausBot, the open-source version of Grok Bot, and had them debate. Codex on business strategy and mission, Grok Build on product ideas and brand, Antigravity on design and customer experience, OpenCode on development, operations and a 90-day plan, Claude Code on flagging risks and pulling it all together. This is fun!!
+                - paragraph [ref=f5e1795]: Translated from Japanese
+                - generic [ref=f5e1796]:
+                  - img "Maki@Sunwood AI Labs. on X" [ref=f5e1797]
+                  - generic [ref=f5e1798]:
+                    - generic [ref=f5e1799]: Maki@Sunwood AI Labs.
+                    - link "@hAru_mAki_ch on X ↗" [ref=f5e1800] [cursor=pointer]:
+                      - /url: https://x.com/hAru_mAki_ch/status/2096429063049289779
+            - listitem [ref=f5e1801]:
+              - figure "Hugo Catarino on X Hugo Catarino @hugocatarino on X ↗" [ref=f5e1802]:
+                - generic [aria-hidden] [ref=f5e1803]: “
+                - blockquote [ref=f5e1804]: seems far superior to grok bot at least in terms of config flexibility. Testing it now.. :)
+                - generic [ref=f5e1805]:
+                  - img "Hugo Catarino on X" [ref=f5e1806]
+                  - generic [ref=f5e1807]:
+                    - generic [ref=f5e1808]: Hugo Catarino
+                    - link "@hugocatarino on X ↗" [ref=f5e1809] [cursor=pointer]:
+                      - /url: https://x.com/hugocatarino/status/2105353148273484008
+            - listitem [ref=f5e1810]:
+              - figure "HardGuy on X HardGuy @whentonn on X ↗" [ref=f5e1811]:
+                - generic [aria-hidden] [ref=f5e1812]: “
+                - blockquote [ref=f5e1813]: Im spreading the gospel of your product I really hope it’s gonna keep being maintained :)
+                - generic [ref=f5e1814]:
+                  - img "HardGuy on X" [ref=f5e1815]
+                  - generic [ref=f5e1816]:
+                    - generic [ref=f5e1817]: HardGuy
+                    - link "@whentonn on X ↗" [ref=f5e1818] [cursor=pointer]:
+                      - /url: https://x.com/whentonn/status/2105063411058888739
+            - listitem [ref=f5e1819]:
+              - figure "Nathan Romano on X Nathan Romano @nathanromano on X ↗" [ref=f5e1820]:
+                - generic [aria-hidden] [ref=f5e1821]: “
+                - blockquote [ref=f5e1822]: "@OpenMausBot is an amazong tool and i am a witness to the extent that @milindlabs works on it every day. Smart. Free. Fast."
+                - generic [ref=f5e1823]:
+                  - img "Nathan Romano on X" [ref=f5e1824]
+                  - generic [ref=f5e1825]:
+                    - generic [ref=f5e1826]: Nathan Romano
+                    - link "@nathanromano on X ↗" [ref=f5e1827] [cursor=pointer]:
+                      - /url: https://x.com/nathanromano/status/2107485635132977293
+            - listitem [ref=f5e1828]:
+              - figure "David T Kramaley on X David T Kramaley @simplydt on X ↗" [ref=f5e1829]:
+                - generic [aria-hidden] [ref=f5e1830]: “
+                - blockquote [ref=f5e1831]: solid release, running on existing subscriptions removes a big barrier for adopters
+                - generic [ref=f5e1832]:
+                  - img "David T Kramaley on X" [ref=f5e1833]
+                  - generic [ref=f5e1834]:
+                    - generic [ref=f5e1835]: David T Kramaley
+                    - link "@simplydt on X ↗" [ref=f5e1836] [cursor=pointer]:
+                      - /url: https://x.com/simplydt/status/2087404989819793543
+            - listitem [ref=f5e1837]:
+              - figure "Alvaro Cerpa on X Alvaro Cerpa @alvarocerpa_ on X ↗" [ref=f5e1838]:
+                - generic [aria-hidden] [ref=f5e1839]: “
+                - blockquote [ref=f5e1840]: Keep it up with OpenMausBot, it’s a very good product that more people should know about 👏
+                - paragraph [ref=f5e1841]: Translated from Spanish
+                - generic [ref=f5e1842]:
+                  - img "Alvaro Cerpa on X" [ref=f5e1843]
+                  - generic [ref=f5e1844]:
+                    - generic [ref=f5e1845]: Alvaro Cerpa
+                    - link "@alvarocerpa_ on X ↗" [ref=f5e1846] [cursor=pointer]:
+                      - /url: https://x.com/alvarocerpa_/status/2099834245317304652
+            - listitem [ref=f5e1847]:
+              - figure "Kesley DEV on X Kesley DEV @kesleydev on X ↗" [ref=f5e1848]:
+                - generic [aria-hidden] [ref=f5e1849]: “
+                - blockquote [ref=f5e1850]: Congratulations, it's top-notch. I hope to contribute to the project; it looks really good and promising.
+                - generic [ref=f5e1851]:
+                  - img "Kesley DEV on X" [ref=f5e1852]
+                  - generic [ref=f5e1853]:
+                    - generic [ref=f5e1854]: Kesley DEV
+                    - link "@kesleydev on X ↗" [ref=f5e1855] [cursor=pointer]:
+                      - /url: https://x.com/kesleydev/status/2087330527527182475
+          - list [aria-hidden] [ref=f5e1856]:
+            - listitem [aria-hidden] [ref=f5e1857]:
+              - figure [ref=f5e1858]:
+                - generic [aria-hidden] [ref=f5e1859]: “
+                - blockquote [ref=f5e1860]: I’ve been building with OMB and have a really great set of custom teams. I’ve tweaked it to run only my own local models and also my own agent computer (not the cloud sub 😏). Thanks for building this.
+                - generic [ref=f5e1863]:
+                  - generic [ref=f5e1864]: Ryan
+                  - link [ref=f5e1865] [cursor=pointer]:
+                    - /url: https://x.com/HumanHitsSend/status/2102761761199763896
+                    - text: "@HumanHitsSend on X ↗"
+            - listitem [aria-hidden] [ref=f5e1866]:
+              - figure [ref=f5e1867]:
+                - generic [aria-hidden] [ref=f5e1868]: “
+                - blockquote [ref=f5e1869]: This is the closest open-source project to Grok Bot that I’ve seen so far. I’ve contributed two PRs to it before. The lack of iOS mobile support once forced me to uninstall it, but now it’s time to fire it up again!
+                - generic [ref=f5e1872]:
+                  - generic [ref=f5e1873]: Deamfarer
+                  - link [ref=f5e1874] [cursor=pointer]:
+                    - /url: https://x.com/ZhouYimingsjtu/status/2102671542320845022
+                    - text: "@ZhouYimingsjtu on X ↗"
+            - listitem [aria-hidden] [ref=f5e1875]:
+              - figure [ref=f5e1876]:
+                - generic [aria-hidden] [ref=f5e1877]: “
+                - blockquote [ref=f5e1878]: Have tried almost every alternative GrokBot provider out there and right now, @mausbot_ is by far the best out together, the best developed, most cross agent capable, and most flexible if you run your own infrastructure. I stand behind this.
+                - generic [ref=f5e1881]:
+                  - generic [ref=f5e1882]: Gabe Fletcher
+                  - link [ref=f5e1883] [cursor=pointer]:
+                    - /url: https://x.com/gabefletcher/status/2106104752744407117
+                    - text: "@gabefletcher on X ↗"
+            - listitem [aria-hidden] [ref=f5e1884]:
+              - figure [ref=f5e1885]:
+                - generic [aria-hidden] [ref=f5e1886]: “
+                - blockquote [ref=f5e1887]: Running it on an Azure VM — works well for keeping the agent persistent/always-on.
+                - generic [ref=f5e1890]:
+                  - generic [ref=f5e1891]: Gunjan Chokshi
+                  - link [ref=f5e1892] [cursor=pointer]:
+                    - /url: https://x.com/viewofmind/status/2091119375680188728
+                    - text: "@viewofmind on X ↗"
+            - listitem [aria-hidden] [ref=f5e1893]:
+              - figure [ref=f5e1894]:
+                - generic [aria-hidden] [ref=f5e1895]: “
+                - blockquote [ref=f5e1896]: I'm hooked to this grokbot style harness with existing coding agents with OpenMausBot. My previous harness where I made my Hermes act like a broker between the coding agents is outdated.
+                - generic [ref=f5e1899]:
+                  - generic [ref=f5e1900]: Koshik
+                  - link [ref=f5e1901] [cursor=pointer]:
+                    - /url: https://x.com/rajkoshik/status/2103171187279098171
+                    - text: "@rajkoshik on X ↗"
+            - listitem [aria-hidden] [ref=f5e1902]:
+              - figure [ref=f5e1903]:
+                - generic [aria-hidden] [ref=f5e1904]: “
+                - blockquote [ref=f5e1905]: I think having the crons on a calendar is great! Haven’t seen them visualised like that before
+                - generic [ref=f5e1908]:
+                  - generic [ref=f5e1909]: Dale
+                  - link [ref=f5e1910] [cursor=pointer]:
+                    - /url: https://x.com/ddaalee/status/2088562788155171208
+                    - text: "@ddaalee on X ↗"
+            - listitem [aria-hidden] [ref=f5e1911]:
+              - figure [ref=f5e1912]:
+                - generic [aria-hidden] [ref=f5e1913]: “
+                - blockquote [ref=f5e1914]: I am using it and love it. It is the real deal.
+                - generic [ref=f5e1917]:
+                  - generic [ref=f5e1918]: Awny
+                  - link [ref=f5e1919] [cursor=pointer]:
+                    - /url: https://x.com/awny_faris/status/2103176020446601241
+                    - text: "@awny_faris on X ↗"
+            - listitem [aria-hidden] [ref=f5e1920]:
+              - figure [ref=f5e1921]:
+                - generic [aria-hidden] [ref=f5e1922]: “
+                - blockquote [ref=f5e1923]: I gathered five AIs into one group chat in OpenMausBot, the open-source version of Grok Bot, and had them debate. Codex on business strategy and mission, Grok Build on product ideas and brand, Antigravity on design and customer experience, OpenCode on development, operations and a 90-day plan, Claude Code on flagging risks and pulling it all together. This is fun!!
+                - paragraph [ref=f5e1924]: Translated from Japanese
+                - generic [ref=f5e1927]:
+                  - generic [ref=f5e1928]: Maki@Sunwood AI Labs.
+                  - link [ref=f5e1929] [cursor=pointer]:
+                    - /url: https://x.com/hAru_mAki_ch/status/2096429063049289779
+                    - text: "@hAru_mAki_ch on X ↗"
+            - listitem [aria-hidden] [ref=f5e1930]:
+              - figure [ref=f5e1931]:
+                - generic [aria-hidden] [ref=f5e1932]: “
+                - blockquote [ref=f5e1933]: seems far superior to grok bot at least in terms of config flexibility. Testing it now.. :)
+                - generic [ref=f5e1936]:
+                  - generic [ref=f5e1937]: Hugo Catarino
+                  - link [ref=f5e1938] [cursor=pointer]:
+                    - /url: https://x.com/hugocatarino/status/2105353148273484008
+                    - text: "@hugocatarino on X ↗"
+            - listitem [aria-hidden] [ref=f5e1939]:
+              - figure [ref=f5e1940]:
+                - generic [aria-hidden] [ref=f5e1941]: “
+                - blockquote [ref=f5e1942]: Im spreading the gospel of your product I really hope it’s gonna keep being maintained :)
+                - generic [ref=f5e1945]:
+                  - generic [ref=f5e1946]: HardGuy
+                  - link [ref=f5e1947] [cursor=pointer]:
+                    - /url: https://x.com/whentonn/status/2105063411058888739
+                    - text: "@whentonn on X ↗"
+            - listitem [aria-hidden] [ref=f5e1948]:
+              - figure [ref=f5e1949]:
+                - generic [aria-hidden] [ref=f5e1950]: “
+                - blockquote [ref=f5e1951]: "@OpenMausBot is an amazong tool and i am a witness to the extent that @milindlabs works on it every day. Smart. Free. Fast."
+                - generic [ref=f5e1954]:
+                  - generic [ref=f5e1955]: Nathan Romano
+                  - link [ref=f5e1956] [cursor=pointer]:
+                    - /url: https://x.com/nathanromano/status/2107485635132977293
+                    - text: "@nathanromano on X ↗"
+            - listitem [aria-hidden] [ref=f5e1957]:
+              - figure [ref=f5e1958]:
+                - generic [aria-hidden] [ref=f5e1959]: “
+                - blockquote [ref=f5e1960]: solid release, running on existing subscriptions removes a big barrier for adopters
+                - generic [ref=f5e1963]:
+                  - generic [ref=f5e1964]: David T Kramaley
+                  - link [ref=f5e1965] [cursor=pointer]:
+                    - /url: https://x.com/simplydt/status/2087404989819793543
+                    - text: "@simplydt on X ↗"
+            - listitem [aria-hidden] [ref=f5e1966]:
+              - figure [ref=f5e1967]:
+                - generic [aria-hidden] [ref=f5e1968]: “
+                - blockquote [ref=f5e1969]: Keep it up with OpenMausBot, it’s a very good product that more people should know about 👏
+                - paragraph [ref=f5e1970]: Translated from Spanish
+                - generic [ref=f5e1973]:
+                  - generic [ref=f5e1974]: Alvaro Cerpa
+                  - link [ref=f5e1975] [cursor=pointer]:
+                    - /url: https://x.com/alvarocerpa_/status/2099834245317304652
+                    - text: "@alvarocerpa_ on X ↗"
+            - listitem [aria-hidden] [ref=f5e1976]:
+              - figure [ref=f5e1977]:
+                - generic [aria-hidden] [ref=f5e1978]: “
+                - blockquote [ref=f5e1979]: Congratulations, it's top-notch. I hope to contribute to the project; it looks really good and promising.
+                - generic [ref=f5e1982]:
+                  - generic [ref=f5e1983]: Kesley DEV
+                  - link [ref=f5e1984] [cursor=pointer]:
+                    - /url: https://x.com/kesleydev/status/2087330527527182475
+                    - text: "@kesleydev on X ↗"
+    - generic [ref=f5e1986]:
+      - generic [ref=f5e1987]:
+        - generic [ref=f5e1988]:
+          - heading "From the people building it" [level=2] [ref=f5e1989]
+          - paragraph [ref=f5e1990]: What we ship, as we ship it.
+        - generic [ref=f5e1991]:
+          - button "Previous posts" [disabled] [ref=f5e1992]
+          - button "Next posts" [ref=f5e1995]
+      - region "Posts on X" [ref=f5e1998]:
+        - article "Milind S on X" [ref=f5e1999]:
+          - generic [ref=f5e2000]:
+            - img "Milind S on X" [ref=f5e2001]
+            - generic [ref=f5e2002]:
+              - generic [ref=f5e2003]: Milind S
+              - link "@milindlabs" [ref=f5e2004] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2007]:
+            - text: I made an Open Source version of the Grok Bot complete with all the features It does not need any subscriptions at all and uses the existing subscriptions you already have It can spin up virtual machines from
+            - link "@asciidotdev" [ref=f5e2008] [cursor=pointer]:
+              - /url: https://x.com/asciidotdev
+            - text: It uses
+            - link "@trycua" [ref=f5e2009] [cursor=pointer]:
+              - /url: https://x.com/trycua
+            - text: for computer use It also has plugin
+          - paragraph [ref=f5e2011]: Grok Bot Introducing Grok Bot, now in early beta. Bots are AI teammates that do real work for you. They sign in to your tools, use them just like you do, and come back with finished work.
+          - link "Watch the video on X" [ref=f5e2012] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2087289803964559746
+            - img "Video posted by Milind S on X" [ref=f5e2013]
+          - generic [ref=f5e2018]:
+            - time [ref=f5e2019]: Aug 11, 2026
+            - generic "2491 likes" [ref=f5e2020]: 2.5K
+            - link "View on X ↗" [ref=f5e2023] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2087289803964559746
+        - article "Omkar Satpute on X" [ref=f5e2024]:
+          - generic [ref=f5e2025]:
+            - img "Omkar Satpute on X" [ref=f5e2026]
+            - generic [ref=f5e2027]:
+              - generic [ref=f5e2028]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2029] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2032]: "🎉 Introducing OpenMausBot An open-source, self-hostable team of AI agents, not another boxed-in assistant. • Computer use: browser, terminal, files & a real desktop • Connectors for the apps you already live in • Goals, routines & progress that keep moving • Built for"
+          - paragraph [ref=f5e2034]: "Atai Barkai 🎉 Introducing 𝙾𝚙𝚎𝚗𝙼𝚞𝚜𝚎 An open source, self-hostable personal assistant that works with any agent harness. Includes: - Computer use: browser, terminal & files - Connectors for your personal apps - Ideas, goals & progress tracking - Built for Mobile and Web Repo →"
+          - link "Watch the video on X" [ref=f5e2035] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2102603427297755264
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2036]
+          - generic [ref=f5e2041]:
+            - time [ref=f5e2042]: Sep 23, 2026
+            - generic "1109 likes" [ref=f5e2043]: 1.1K
+            - link "View on X ↗" [ref=f5e2046] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2102603427297755264
+        - article "Omkar Satpute on X" [ref=f5e2047]:
+          - generic [ref=f5e2048]:
+            - img "Omkar Satpute on X" [ref=f5e2049]
+            - generic [ref=f5e2050]:
+              - generic [ref=f5e2051]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2052] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2055]: Make your own Grok bot style mascot for free. It has 20+ expressions and animations that show different states of the bot. -> upload svg of your choice -> adjust the eyes -> check all the states ->download the code -> send to claude, codex or any other agent I used this
+          - paragraph [ref=f5e2057]: Benji Taylor Had a lot of fun animating our new Grok Bot icon. It's entirely made in code, with every state, shape and expression able to morph smoothly into the other. And of course, I made it with Grok Build.
+          - link "Watch the video on X" [ref=f5e2058] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2088367241742205312
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2059]
+          - generic [ref=f5e2064]:
+            - time [ref=f5e2065]: Aug 14, 2026
+            - generic "404 likes" [ref=f5e2066]: "404"
+            - link "View on X ↗" [ref=f5e2069] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2088367241742205312
+        - article "Milind S on X" [ref=f5e2070]:
+          - generic [ref=f5e2071]:
+            - img "Milind S on X" [ref=f5e2072]
+            - generic [ref=f5e2073]:
+              - generic [ref=f5e2074]: Milind S
+              - link "@milindlabs" [ref=f5e2075] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2078]: I put my bots on a calendar I hate the routines UI that every harness app has right now For me it only makes sense to put the routines on a calendar So I did just that in OpenMaus The open source version of Grok Bot now has routines
+          - link "Watch the video on X" [ref=f5e2079] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2088323759220592959
+            - img "Video posted by Milind S on X" [ref=f5e2080]
+          - generic [ref=f5e2085]:
+            - time [ref=f5e2086]: Aug 14, 2026
+            - generic "123 likes" [ref=f5e2087]: "123"
+            - link "View on X ↗" [ref=f5e2090] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2088323759220592959
+        - article "Milind S on X" [ref=f5e2091]:
+          - generic [ref=f5e2092]:
+            - img "Milind S on X" [ref=f5e2093]
+            - generic [ref=f5e2094]:
+              - generic [ref=f5e2095]: Milind S
+              - link "@milindlabs" [ref=f5e2096] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2099]:
+            - text: We now have webhook support. That means OpenMausBot can now react when something happens in the outside world This was a suggestion from
+            - link "@Arturkre" [ref=f5e2100] [cursor=pointer]:
+              - /url: https://x.com/Arturkre
+            - text: ", and honestly, it makes a lot of sense. You want OpenMaus to work with your other agents and apps. For example, connect your"
+          - paragraph [ref=f5e2102]: Milind S I put my bots on a calendar I hate the routines UI that every harness app has right now For me it only makes sense to put the routines on a calendar So I did just that in OpenMaus The open source version of Grok Bot now has routines
+          - link "Watch the video on X" [ref=f5e2103] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2089098494619640139
+            - img "Video posted by Milind S on X" [ref=f5e2104]
+          - generic [ref=f5e2109]:
+            - time [ref=f5e2110]: Aug 16, 2026
+            - generic "116 likes" [ref=f5e2111]: "116"
+            - link "View on X ↗" [ref=f5e2114] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2089098494619640139
+        - article "Omkar Satpute on X" [ref=f5e2115]:
+          - generic [ref=f5e2116]:
+            - img "Omkar Satpute on X" [ref=f5e2117]
+            - generic [ref=f5e2118]:
+              - generic [ref=f5e2119]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2120] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2123]: The open-source version of grok bot now has iOS app. Launching it soon. You can use your agents from your phone. thanks to the community for the contribution. Try OpenMausbot... free forever.
+          - link "Watch the video on X" [ref=f5e2124] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2089752935680897492
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2125]
+          - generic [ref=f5e2130]:
+            - time [ref=f5e2131]: Aug 18, 2026
+            - generic "188 likes" [ref=f5e2132]: "188"
+            - link "View on X ↗" [ref=f5e2135] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2089752935680897492
+        - article "Omkar Satpute on X" [ref=f5e2136]:
+          - generic [ref=f5e2137]:
+            - img "Omkar Satpute on X" [ref=f5e2138]
+            - generic [ref=f5e2139]:
+              - generic [ref=f5e2140]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2141] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2144]:
+            - text: open source version of Grok bot is here. OpenMausBot has a new mascot now, with different personalities. thanks to
+            - link "@_smontlouis" [ref=f5e2145] [cursor=pointer]:
+              - /url: https://x.com/_smontlouis
+            - text: for the inspiration. link to the repo in the comments.
+          - paragraph [ref=f5e2147]: Grok Bot Introducing Grok Bot, now in early beta. Bots are AI teammates that do real work for you. They sign in to your tools, use them just like you do, and come back with finished work.
+          - link "Watch the video on X" [ref=f5e2148] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2087641077109178702
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2149]
+          - generic [ref=f5e2154]:
+            - time [ref=f5e2155]: Aug 12, 2026
+            - generic "45 likes" [ref=f5e2156]: "45"
+            - link "View on X ↗" [ref=f5e2159] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2087641077109178702
+        - article "Omkar Satpute on X" [ref=f5e2160]:
+          - generic [ref=f5e2161]:
+            - img "Omkar Satpute on X" [ref=f5e2162]
+            - generic [ref=f5e2163]:
+              - generic [ref=f5e2164]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2165] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2168]: open sourced version of the Grok bot will now support the iOS Dynamic Island. Still tinkering around and open to ideas do feel free to contribute to the OpenMausBot repo. Let me know if you would love this? Launching soon....
+          - link "Watch the video on X" [ref=f5e2169] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2090130046602412369
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2170]
+          - generic [ref=f5e2175]:
+            - time [ref=f5e2176]: Aug 19, 2026
+            - generic "96 likes" [ref=f5e2177]: "96"
+            - link "View on X ↗" [ref=f5e2180] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2090130046602412369
+        - article "Milind S on X" [ref=f5e2181]:
+          - generic [ref=f5e2182]:
+            - img "Milind S on X" [ref=f5e2183]
+            - generic [ref=f5e2184]:
+              - generic [ref=f5e2185]: Milind S
+              - link "@milindlabs" [ref=f5e2186] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2189]: Grok Bot cannot use your android phone But OpenMausBot now can You can now connect your android via a USB and ask your it to open apps, tap, type, swipe, scroll, and get things done on your actual phone. It uses the phone harness skill for android and works really well Open
+          - link "Watch the video on X" [ref=f5e2190] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2089847867611795545
+            - img "Video posted by Milind S on X" [ref=f5e2191]
+          - generic [ref=f5e2196]:
+            - time [ref=f5e2197]: Aug 18, 2026
+            - generic "102 likes" [ref=f5e2198]: "102"
+            - link "View on X ↗" [ref=f5e2201] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2089847867611795545
+        - article "Milind S on X" [ref=f5e2202]:
+          - generic [ref=f5e2203]:
+            - img "Milind S on X" [ref=f5e2204]
+            - generic [ref=f5e2205]:
+              - generic [ref=f5e2206]: Milind S
+              - link "@milindlabs" [ref=f5e2207] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2210]:
+            - text: so your bot just did something useful. Why should it ever forget how? I built a skill recorder in OpenMausBot based on the pstack article by
+            - link "@poteto" [ref=f5e2211] [cursor=pointer]:
+              - /url: https://x.com/poteto
+            - text: It watches while you chat, collects every command that it runs and converts it all into a skill with a click of a button Now
+          - paragraph [ref=f5e2213]: lauren I'm writing a guide to pstack! Here's part one.
+          - link "Watch the video on X" [ref=f5e2214] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2098548381761306961
+            - img "Video posted by Milind S on X" [ref=f5e2215]
+          - generic [ref=f5e2220]:
+            - time [ref=f5e2221]: Sep 11, 2026
+            - generic "33 likes" [ref=f5e2222]: "33"
+            - link "View on X ↗" [ref=f5e2225] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2098548381761306961
+        - article "Omkar Satpute on X" [ref=f5e2226]:
+          - generic [ref=f5e2227]:
+            - img "Omkar Satpute on X" [ref=f5e2228]
+            - generic [ref=f5e2229]:
+              - generic [ref=f5e2230]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2231] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2234]: ngl the iOS Dynamic Island looks quite good. still refining it. launching the app soon for OpenMausBot.
+          - link "Watch the video on X" [ref=f5e2235] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2090239894144925763
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2236]
+          - generic [ref=f5e2241]:
+            - time [ref=f5e2242]: Aug 20, 2026
+            - generic "49 likes" [ref=f5e2243]: "49"
+            - link "View on X ↗" [ref=f5e2246] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2090239894144925763
+        - article "Milind S on X" [ref=f5e2247]:
+          - generic [ref=f5e2248]:
+            - img "Milind S on X" [ref=f5e2249]
+            - generic [ref=f5e2250]:
+              - generic [ref=f5e2251]: Milind S
+              - link "@milindlabs" [ref=f5e2252] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2255]:
+            - text: you can already self-host
+            - link "@mausbot_" [ref=f5e2256] [cursor=pointer]:
+              - /url: https://x.com/mausbot_
+            - text: We’ve worked hard to make the developer experience great. but you shouldn’t need to be so technical to get started. we are launching one-click cloud deployment. We handle the hosting and server setup, with priority support whenever you need
+          - link "Watch the video on X" [ref=f5e2257] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2106432527196184910
+            - img "Video posted by Milind S on X" [ref=f5e2258]
+          - generic [ref=f5e2263]:
+            - time [ref=f5e2264]: Oct 3, 2026
+            - generic "35 likes" [ref=f5e2265]: "35"
+            - link "View on X ↗" [ref=f5e2268] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2106432527196184910
+        - article "Milind S on X" [ref=f5e2269]:
+          - generic [ref=f5e2270]:
+            - img "Milind S on X" [ref=f5e2271]
+            - generic [ref=f5e2272]:
+              - generic [ref=f5e2273]: Milind S
+              - link "@milindlabs" [ref=f5e2274] [cursor=pointer]:
+                - /url: https://x.com/milindlabs
+          - paragraph [ref=f5e2277]: me with my open-source project up against billion dollar companies
+          - link "Watch the video on X" [ref=f5e2278] [cursor=pointer]:
+            - /url: https://x.com/milindlabs/status/2106071299542118847
+            - img "Video posted by Milind S on X" [ref=f5e2279]
+          - generic [ref=f5e2284]:
+            - time [ref=f5e2285]: Oct 2, 2026
+            - generic "45 likes" [ref=f5e2286]: "45"
+            - link "View on X ↗" [ref=f5e2289] [cursor=pointer]:
+              - /url: https://x.com/milindlabs/status/2106071299542118847
+        - article "Omkar Satpute on X" [ref=f5e2290]:
+          - generic [ref=f5e2291]:
+            - img "Omkar Satpute on X" [ref=f5e2292]
+            - generic [ref=f5e2293]:
+              - generic [ref=f5e2294]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2295] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2298]: The open-source version of Grok Bot is now available on Windows. Here is the installation guide.
+          - paragraph [ref=f5e2300]: Milind S You can use open source version of Grok Bot on windows now!! OpenMausBot out on windows Linux is next
+          - link "Watch the video on X" [ref=f5e2301] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2087997528688177162
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2302]
+          - generic [ref=f5e2307]:
+            - time [ref=f5e2308]: Aug 13, 2026
+            - generic "11 likes" [ref=f5e2309]: "11"
+            - link "View on X ↗" [ref=f5e2312] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2087997528688177162
+        - article "Omkar Satpute on X" [ref=f5e2313]:
+          - generic [ref=f5e2314]:
+            - img "Omkar Satpute on X" [ref=f5e2315]
+            - generic [ref=f5e2316]:
+              - generic [ref=f5e2317]: Omkar Satpute
+              - link "@BuildwithOmkarr" [ref=f5e2318] [cursor=pointer]:
+                - /url: https://x.com/BuildwithOmkarr
+          - paragraph [ref=f5e2321]:
+            - link "@mausbot_" [ref=f5e2322] [cursor=pointer]:
+              - /url: https://x.com/mausbot_
+            - text: "'s UI is simpler now. Want the full picture of what your agents are doing? Turn on Advanced mode in Settings"
+          - link "Watch the video on X" [ref=f5e2323] [cursor=pointer]:
+            - /url: https://x.com/BuildwithOmkarr/status/2106611405831184843
+            - img "Video posted by Omkar Satpute on X" [ref=f5e2324]
+          - generic [ref=f5e2329]:
+            - time [ref=f5e2330]: Oct 4, 2026
+            - generic "11 likes" [ref=f5e2331]: "11"
+            - link "View on X ↗" [ref=f5e2334] [cursor=pointer]:
+              - /url: https://x.com/BuildwithOmkarr/status/2106611405831184843
+    - generic [ref=f5e2336]:
+      - link "Meet MausBot. Free and open source." [ref=f5e2337] [cursor=pointer]:
+        - /url: /blog/meet-mausbot
+      - generic [ref=f5e2338]:
+        - generic [ref=f5e2339]:
+          - heading "Join our community" [level=2] [ref=f5e2343]
+          - paragraph [ref=f5e2344]: Swap setups, ask for help with your own bots, follow releases as they ship, and tell us what to build next. The maintainers are in there every day.
+          - paragraph [ref=f5e2345]: "Share a workflow: include the task, a screenshot with private details removed, and the result. Tell us whether we may feature it and how to credit you. We’ll add approved examples to the showcase."
+        - generic [ref=f5e2346]:
+          - generic [ref=f5e2347]:
+            - generic [ref=f5e2348]:
+              - generic [ref=f5e2349]: 3.2k
+              - generic [ref=f5e2351]: Members
+            - generic [ref=f5e2353]:
+              - generic [ref=f5e2354]: "260"
+              - generic [ref=f5e2359]: Online now
+          - link "Join our Discord" [ref=f5e2360] [cursor=pointer]:
+            - /url: https://discord.gg/9Wb8MEpXRs
+    - generic [ref=f5e2364]:
+      - heading "Hello from MausBot" [level=2] [ref=f5e2365]:
+        - generic [aria-hidden] [ref=f5e2367]:
+          - generic [ref=f5e2368]: Hello
+          - generic [ref=f5e2369]: Hallo
+          - generic [ref=f5e2370]: Hola
+          - generic [ref=f5e2371]: Bonjour
+          - generic [ref=f5e2372]: नमस्ते
+          - generic [ref=f5e2373]: こんにちは
+          - generic [ref=f5e2374]: Olá
+          - generic [ref=f5e2375]: 你好
+          - generic [ref=f5e2376]: 哈囉
+          - generic [ref=f5e2377]: Привіт
+        - generic [aria-hidden] [ref=f5e2378]:
+          - generic [ref=f5e2379]: from
+          - text: MausBot
+      - paragraph [ref=f5e2387]: The desktop app comes in 10 languages. It follows your computer's language, and you can switch any time in Settings.
+      - list "Languages the desktop app comes in" [ref=f5e2388]:
+        - listitem [ref=f5e2389]: English
+        - listitem [ref=f5e2390]: Deutsch
+        - listitem [ref=f5e2391]: Español
+        - listitem [ref=f5e2392]: Français
+        - listitem [ref=f5e2393]: हिन्दी
+        - listitem [ref=f5e2394]: 日本語
+        - listitem [ref=f5e2395]: Português (Brasil)
+        - listitem [ref=f5e2396]: 简体中文
+        - listitem [ref=f5e2397]: 繁體中文（台灣）
+        - listitem [ref=f5e2398]: Українська
+      - paragraph [ref=f5e2399]: Some translations are still growing, so a few screens may show English for now.
+    - region [ref=f5e2400]:
+      - generic [ref=f5e2401]:
+        - generic [ref=f5e2402]:
+          - generic [ref=f5e2403]: A concept from MausBot
+          - heading "MausBox" [level=2] [ref=f5e2404]
+          - paragraph [ref=f5e2405]: Sovereign AI for knowledge work.
+          - paragraph [ref=f5e2406]: A small silver box that runs MausBot and open models at home, with 128 GB of memory, so your files and chats stay with you.
+          - generic [ref=f5e2407]:
+            - link "Join the waitlist" [ref=f5e2408] [cursor=pointer]:
+              - /url: /mausbox#waitlist
+            - link "See MausBox" [ref=f5e2409] [cursor=pointer]:
+              - /url: /mausbox
+        - link "See MausBox" [ref=f5e2410] [cursor=pointer]:
+          - /url: /mausbox
+          - 'img "MausBox: three silver layers with hexagon vents, green light rings and the green Maus on the lid" [ref=f5e2411]'
+    - region [ref=f5e2414]:
+      - generic [ref=f5e2415]:
+        - heading "What you get on each Cloud plan" [level=2] [ref=f5e2416]
+        - paragraph [ref=f5e2417]: The app is free. A Cloud plan gives your bots their own cloud machine, so they keep working with your laptop closed.
+      - generic [ref=f5e2418]:
+        - region "What you get on Starter" [ref=f5e2419]:
+          - generic [ref=f5e2420]:
+            - heading "Starter" [level=3] [ref=f5e2421]
+            - paragraph [ref=f5e2422]: $15/month
+          - generic [ref=f5e2423]: Always on
+          - paragraph [ref=f5e2425]: What you get
+          - generic [ref=f5e2426]:
+            - generic [ref=f5e2427]:
+              - term [ref=f5e2428]: Machine
+              - definition [ref=f5e2429]: 2 shared CPUs · 2 GB memory
+            - generic [ref=f5e2430]:
+              - term [ref=f5e2431]: Storage
+              - definition [ref=f5e2432]: 10 GB, grows to 20 GB as it fills
+            - generic [ref=f5e2433]:
+              - term [ref=f5e2434]: Runs
+              - definition [ref=f5e2435]: Always on, around the clock
+            - generic [ref=f5e2436]:
+              - term [ref=f5e2437]: Bots
+              - definition [ref=f5e2438]: Unlimited, about 2 working at the same time*
+            - generic [ref=f5e2439]:
+              - term [ref=f5e2440]: Cloud computers
+              - definition [ref=f5e2441]: As many as your bots need, 100 computer-hours a month
+            - generic [ref=f5e2442]:
+              - term [ref=f5e2443]: Voice replies
+              - definition [ref=f5e2444]: About 30 minutes of speech a month (30,000 characters)
+            - generic [ref=f5e2445]:
+              - term [ref=f5e2446]: Connected apps
+              - definition [ref=f5e2447]: 2,000 app events a day
+            - generic [ref=f5e2448]:
+              - term [ref=f5e2449]: Backups
+              - definition [ref=f5e2450]: Daily, kept 14 days
+            - generic [ref=f5e2451]:
+              - term [ref=f5e2452]: Live calls
+              - definition [ref=f5e2453]: With your own OpenAI key
+            - generic [ref=f5e2454]:
+              - term [ref=f5e2455]: Free trial
+              - definition [ref=f5e2456]: 3 days, with $5 of Claude credit
+        - region "What you get on Pro" [ref=f5e2457]:
+          - generic [ref=f5e2458]:
+            - heading "Pro" [level=3] [ref=f5e2459]
+            - paragraph [ref=f5e2460]: $49/month
+          - generic [ref=f5e2461]:
+            - generic [ref=f5e2462]: Always on
+            - generic [ref=f5e2463]: Most popular
+          - paragraph [ref=f5e2464]: What you get
+          - generic [ref=f5e2465]:
+            - generic [ref=f5e2466]:
+              - term [ref=f5e2467]: Machine
+              - definition [ref=f5e2468]: 4 shared CPUs · 4 GB memory
+            - generic [ref=f5e2469]:
+              - term [ref=f5e2470]: Storage
+              - definition [ref=f5e2471]: 10 GB, grows to 100 GB as it fills
+            - generic [ref=f5e2472]:
+              - term [ref=f5e2473]: Runs
+              - definition [ref=f5e2474]: Always on, around the clock
+            - generic [ref=f5e2475]:
+              - term [ref=f5e2476]: Bots
+              - definition [ref=f5e2477]: Unlimited, about 3–4 working at the same time*
+            - generic [ref=f5e2478]:
+              - term [ref=f5e2479]: Cloud computers
+              - definition [ref=f5e2480]: As many as your bots need, 300 computer-hours a month
+            - generic [ref=f5e2481]:
+              - term [ref=f5e2482]: Voice replies
+              - definition [ref=f5e2483]: About an hour of speech a month (60,000 characters)
+            - generic [ref=f5e2484]:
+              - term [ref=f5e2485]: Connected apps
+              - definition [ref=f5e2486]: 2,000 app events a day
+            - generic [ref=f5e2487]:
+              - term [ref=f5e2488]: Backups
+              - definition [ref=f5e2489]: Daily, kept 14 days
+            - generic [ref=f5e2490]:
+              - term [ref=f5e2491]: Live calls
+              - definition [ref=f5e2492]: With your own OpenAI key
+            - generic [ref=f5e2493]:
+              - term [ref=f5e2494]: Free trial
+              - definition [ref=f5e2495]: 3 days, with $5 of Claude credit
+        - region "What you get on Max" [ref=f5e2496]:
+          - generic [ref=f5e2497]:
+            - heading "Max" [level=3] [ref=f5e2498]
+            - paragraph [ref=f5e2499]: $99/month
+          - generic [ref=f5e2500]: Always on
+          - paragraph [ref=f5e2502]: What you get
+          - generic [ref=f5e2503]:
+            - generic [ref=f5e2504]:
+              - term [ref=f5e2505]: Machine
+              - definition [ref=f5e2506]: 8 shared CPUs · 8 GB memory
+            - generic [ref=f5e2507]:
+              - term [ref=f5e2508]: Storage
+              - definition [ref=f5e2509]: 10 GB, grows to 100 GB as it fills
+            - generic [ref=f5e2510]:
+              - term [ref=f5e2511]: Runs
+              - definition [ref=f5e2512]: Always on, around the clock
+            - generic [ref=f5e2513]:
+              - term [ref=f5e2514]: Bots
+              - definition [ref=f5e2515]: Unlimited, about 8 or more working at the same time*
+            - generic [ref=f5e2516]:
+              - term [ref=f5e2517]: Cloud computers
+              - definition [ref=f5e2518]: As many as your bots need, 800 computer-hours a month
+            - generic [ref=f5e2519]:
+              - term [ref=f5e2520]: Voice replies
+              - definition [ref=f5e2521]: About 3 hours of speech a month (180,000 characters)
+            - generic [ref=f5e2522]:
+              - term [ref=f5e2523]: Connected apps
+              - definition [ref=f5e2524]: 2,000 app events a day
+            - generic [ref=f5e2525]:
+              - term [ref=f5e2526]: Backups
+              - definition [ref=f5e2527]: Daily, kept 14 days
+            - generic [ref=f5e2528]:
+              - term [ref=f5e2529]: Live calls
+              - definition [ref=f5e2530]: With your own OpenAI key
+            - generic [ref=f5e2531]:
+              - term [ref=f5e2532]: Free trial
+              - definition [ref=f5e2533]: 3 days, with $5 of Claude credit
+      - generic [ref=f5e2534]:
+        - paragraph [ref=f5e2535]: "*An estimate, not a limit: a bot at work uses about 0.5–1 GB of memory, so this is roughly how many can work at the same moment."
+        - paragraph [ref=f5e2536]: During the free trial a Cloud takes 500 app events a day. Allowances reset on the 1st of each month (UTC). A small computer counts as half an hour. Bring your own Claude or ChatGPT account, or an API key. Model usage is billed by your provider.
+      - generic [ref=f5e2537]:
+        - link "Choose a plan" [ref=f5e2538] [cursor=pointer]:
+          - /url: /pro#plans
+        - link "Compare every feature" [ref=f5e2539] [cursor=pointer]:
+          - /url: /pricing
+    - generic [ref=f5e2541]:
+      - heading "A few things to know before you start." [level=2] [ref=f5e2542]
+      - generic [ref=f5e2543]:
+        - group [ref=f5e2544]:
+          - generic "What is free, and what do I pay for?" [ref=f5e2545] [cursor=pointer]
+        - group [ref=f5e2546]:
+          - generic "Can I try Cloud for free?" [ref=f5e2547] [cursor=pointer]
+        - group [ref=f5e2548]:
+          - generic "Which platforms can I use?" [ref=f5e2549] [cursor=pointer]
+        - group [ref=f5e2550]:
+          - generic "Do I need to connect Gmail, Slack, or a cloud computer?" [ref=f5e2551] [cursor=pointer]
+        - group [ref=f5e2552]:
+          - generic "What can a bot access, and when does it ask for approval?" [ref=f5e2553] [cursor=pointer]
+        - group [ref=f5e2554]:
+          - generic "Is my data local or in the cloud?" [ref=f5e2555] [cursor=pointer]
+        - group [ref=f5e2556]:
+          - generic "Does the phone app run my bots?" [ref=f5e2557] [cursor=pointer]
+        - group [ref=f5e2558]:
+          - generic "What happens when my computer is off?" [ref=f5e2559] [cursor=pointer]
+        - group [ref=f5e2560]:
+          - generic "Where can I get help?" [ref=f5e2561] [cursor=pointer]
+      - generic "Get help" [ref=f5e2562]:
+        - link "Installation help" [ref=f5e2563] [cursor=pointer]:
+          - /url: /download#installation-help
+        - link "Discord support" [ref=f5e2564] [cursor=pointer]:
+          - /url: https://discord.gg/9Wb8MEpXRs
+        - link "Report an issue" [ref=f5e2565] [cursor=pointer]:
+          - /url: https://github.com/milind-soni/OpenMausBot/issues
+    - generic [ref=f5e2567]:
+      - heading "Meet your first bot" [level=2] [ref=f5e2568]
+      - paragraph [ref=f5e2569]: Free and open source. Connect one supported provider and start with a useful task. Provider fees and limits apply.
+      - generic [ref=f5e2570]:
+        - generic [ref=f5e2572]:
+          - link "Download free" [ref=f5e2573] [cursor=pointer]:
+            - /url: /download
+          - button "All platforms" [ref=f5e2574]
+        - link "Start 3-day free trial" [ref=f5e2577] [cursor=pointer]:
+          - /url: /pro#plans
+      - paragraph [ref=f5e2578]: Every Cloud plan starts with a 3-day free trial. Cancel any time.
+      - generic "Get help" [ref=f5e2580]:
+        - link "Installation help" [ref=f5e2581] [cursor=pointer]:
+          - /url: /download#installation-help
+        - link "Discord support" [ref=f5e2582] [cursor=pointer]:
+          - /url: https://discord.gg/9Wb8MEpXRs
+        - link "Report an issue" [ref=f5e2583] [cursor=pointer]:
+          - /url: https://github.com/milind-soni/OpenMausBot/issues
+      - img "The MausBot mascot as a line drawing. Its eyes follow the pointer." [ref=f5e2586]
+  - contentinfo [ref=f5e2587]:
+    - generic [ref=f5e2588]:
+      - generic [ref=f5e2589]:
+        - generic [ref=f5e2590]:
+          - generic [ref=f5e2591]:
+            - img "MausBot logo" [ref=f5e2592]
+            - generic [ref=f5e2593]: MausBot
+          - paragraph [ref=f5e2594]: Your own team of AI bots, in a chat app. Free, open source, and running on your own machine.
+          - heading "Creators" [level=3] [ref=f5e2595]
+          - generic [ref=f5e2596]:
+            - generic [ref=f5e2597]:
+              - paragraph [ref=f5e2598]: Omkar Satpute
+              - generic [ref=f5e2599]:
+                - link "Omkar Satpute on X" [ref=f5e2600] [cursor=pointer]:
+                  - /url: https://x.com/BuildwithOmkarr
+                - link "Omkar Satpute on Instagram" [ref=f5e2603] [cursor=pointer]:
+                  - /url: https://www.instagram.com/buildwithomkar/
+                - link "Omkar Satpute on LinkedIn" [ref=f5e2608] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/omkarsatputee/
+                - link "Omkar Satpute on Email" [ref=f5e2611] [cursor=pointer]:
+                  - /url: mailto:omkar@supamaus.com
+            - generic [ref=f5e2615]:
+              - paragraph [ref=f5e2616]: Milind Soni
+              - generic [ref=f5e2617]:
+                - link "Milind Soni on X" [ref=f5e2618] [cursor=pointer]:
+                  - /url: https://x.com/milindlabs
+                - link "Milind Soni on LinkedIn" [ref=f5e2621] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/milind-soni-314075175/
+                - link "Milind Soni on Email" [ref=f5e2624] [cursor=pointer]:
+                  - /url: mailto:milind.soni@supamaus.com
+        - generic [ref=f5e2628]:
+          - heading "Product" [level=3] [ref=f5e2629]
+          - list [ref=f5e2630]:
+            - listitem [ref=f5e2631]:
+              - link "Download" [ref=f5e2632] [cursor=pointer]:
+                - /url: /download
+            - listitem [ref=f5e2633]:
+              - link "Mac with Apple silicon" [ref=f5e2634] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/openmausbot-releases/releases/latest/download/OpenMausBot.dmg
+            - listitem [ref=f5e2635]:
+              - link "Mac with Intel" [ref=f5e2636] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/openmausbot-releases/releases/latest/download/OpenMausBot-intel.dmg
+            - listitem [ref=f5e2637]:
+              - link "Windows" [ref=f5e2638] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/openmausbot-releases/releases/latest/download/OpenMausBot-setup.exe
+            - listitem [ref=f5e2639]:
+              - link "Ubuntu" [ref=f5e2640] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/openmausbot-releases/releases/latest/download/OpenMausBot-amd64.deb
+            - listitem [ref=f5e2641]:
+              - link "Phone apps (Discord)" [ref=f5e2642] [cursor=pointer]:
+                - /url: https://discord.gg/9Wb8MEpXRs
+            - listitem [ref=f5e2643]:
+              - link "Scripted preview" [ref=f5e2644] [cursor=pointer]:
+                - /url: /demo
+            - listitem [ref=f5e2645]:
+              - link "Solutions" [ref=f5e2646] [cursor=pointer]:
+                - /url: /solutions
+            - listitem [ref=f5e2647]:
+              - link "Features" [ref=f5e2648] [cursor=pointer]:
+                - /url: /#features
+            - listitem [ref=f5e2649]:
+              - link "Ready-made bots" [ref=f5e2650] [cursor=pointer]:
+                - /url: https://botmrr.io
+            - listitem [ref=f5e2651]:
+              - link "Pricing" [ref=f5e2652] [cursor=pointer]:
+                - /url: /pricing
+            - listitem [ref=f5e2653]:
+              - link "Cloud" [ref=f5e2654] [cursor=pointer]:
+                - /url: /pro
+            - listitem [ref=f5e2655]:
+              - link "Sign in to your Cloud plan" [ref=f5e2656] [cursor=pointer]:
+                - /url: https://cloud.openmausbot.com/cloud?src=site_signin
+            - listitem [ref=f5e2657]:
+              - link "Enterprise" [ref=f5e2658] [cursor=pointer]:
+                - /url: /enterprise
+            - listitem [ref=f5e2659]:
+              - link "Become a partner" [ref=f5e2660] [cursor=pointer]:
+                - /url: /partners
+        - generic [ref=f5e2661]:
+          - heading "Project" [level=3] [ref=f5e2662]
+          - list [ref=f5e2663]:
+            - listitem [ref=f5e2664]:
+              - link "Blog" [ref=f5e2665] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=f5e2666]:
+              - link "Alternatives" [ref=f5e2667] [cursor=pointer]:
+                - /url: /alternatives
+            - listitem [ref=f5e2668]:
+              - link "Post about us" [ref=f5e2669] [cursor=pointer]:
+                - /url: /post-about-us
+            - listitem [ref=f5e2670]:
+              - link "GitHub" [ref=f5e2671] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/OpenMausBot
+            - listitem [ref=f5e2672]:
+              - link "Docs" [ref=f5e2673] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/OpenMausBot/tree/main/docs
+            - listitem [ref=f5e2674]:
+              - link "Contributing" [ref=f5e2675] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/OpenMausBot/blob/main/CONTRIBUTING.md
+            - listitem [ref=f5e2676]:
+              - link "Releases" [ref=f5e2677] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/openmausbot-releases/releases
+        - generic [ref=f5e2678]:
+          - heading "Talk to us" [level=3] [ref=f5e2679]
+          - list [ref=f5e2680]:
+            - listitem [ref=f5e2681]:
+              - link "Contact" [ref=f5e2682] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=f5e2683]:
+              - link "Discord" [ref=f5e2684] [cursor=pointer]:
+                - /url: https://discord.gg/9Wb8MEpXRs
+            - listitem [ref=f5e2685]:
+              - link "Book a demo" [ref=f5e2686] [cursor=pointer]:
+                - /url: https://cal.com/omkar-satpute-u4ih5q/openmausbot
+            - listitem [ref=f5e2687]:
+              - link "Report an issue" [ref=f5e2688] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/OpenMausBot/issues
+            - listitem [ref=f5e2689]:
+              - link "Apache 2.0 License" [ref=f5e2690] [cursor=pointer]:
+                - /url: https://github.com/milind-soni/OpenMausBot/blob/main/LICENSE
+            - listitem [ref=f5e2691]:
+              - link "Privacy Policy" [ref=f5e2692] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f5e2693]:
+              - link "Terms of Service" [ref=f5e2694] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=f5e2695]:
+              - link "Refund Policy" [ref=f5e2696] [cursor=pointer]:
+                - /url: /refund
+      - paragraph [ref=f5e2697]:
+        - strong [ref=f5e2698]: No affiliation with any cryptocurrency.
+        - text: MausBot has no token. Any coin using the MausBot, Maus, or SupaMaus name is not created, endorsed, or affiliated with this project or its maintainer.
+      - paragraph [ref=f5e2699]: © 2026 NVIDIA, the NVIDIA logo, and NVIDIA Inception are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries. Google Cloud is a trademark of Google LLC. Claude is a trademark of Anthropic, PBC.
+      - generic [ref=f5e2700]:
+        - paragraph [ref=f5e2701]: Apache 2.0 licensed · Built by the MausBot community
+        - paragraph [ref=f5e2702]: © 2026 Supamaus Software Private Limited. All rights reserved.
+    - generic [aria-hidden]:
+      - generic: MAUS

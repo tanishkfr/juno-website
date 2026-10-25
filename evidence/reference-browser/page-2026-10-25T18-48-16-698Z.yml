@@ -1,0 +1,113 @@
+- generic [ref=f14e4]:
+  - link "Skip to message" [ref=f14e5] [cursor=pointer]:
+    - /url: "#agent-composer"
+  - complementary "Agents" [ref=f14e6]:
+    - separator "Resize sidebar" [ref=f14e7]
+    - generic [ref=f14e8]:
+      - strong [ref=f14e10]: Juno.
+      - generic [ref=f14e11]:
+        - button "Search projects and sessions" [ref=f14e253] [cursor=pointer]
+        - button "Open a project" [ref=f14e254] [cursor=pointer]
+    - group "Workspace mode" [ref=f14e18]:
+      - button "Bot" [ref=f14e19] [cursor=pointer]
+      - button "Code" [pressed] [ref=f14e22] [cursor=pointer]
+    - generic [ref=f14e27]:
+      - generic [ref=f14e28]:
+        - paragraph [ref=f14e255]: Active bot
+        - navigation "Active bot" [ref=f14e256]:
+          - button "Kyoto Focus, editing and clear plans" [ref=f14e257] [cursor=pointer]:
+            - generic "Kyoto — Focus, editing and clear plans" [ref=f14e260]:
+              - strong [ref=f14e261]: Kyoto
+              - generic [ref=f14e262]: Focus, editing and clear plans
+      - paragraph [ref=f14e263]: Open a project to start a coding workspace.
+    - generic [ref=f14e98]:
+      - button "Open project" [active] [ref=f14e264] [cursor=pointer]
+      - button "Settings" [ref=f14e106] [cursor=pointer]
+  - main [ref=f14e110]:
+    - generic "Code workspace navigation" [ref=f14e267]:
+      - generic [ref=f14e268]:
+        - generic [ref=f14e269]: Code project
+        - combobox "Code project" [ref=f14e272] [cursor=pointer]:
+          - option "Open a project" [disabled] [selected]
+          - option "Open project…"
+      - tablist "Code sessions" [ref=f14e273]:
+        - button "New Code session" [ref=f14e274] [cursor=pointer]
+    - generic [ref=f14e111]:
+      - button "Toggle agent roster" [expanded] [ref=f14e112] [cursor=pointer]
+      - button "Kyoto settings" [ref=f14e114] [cursor=pointer]:
+        - generic [ref=f14e117]:
+          - strong [ref=f14e118]: Kyoto
+          - status [ref=f14e119]: Ready when you are
+      - generic [ref=f14e120]:
+        - group "Workspace panels" [ref=f14e121]:
+          - button "View computer" [ref=f14e132] [cursor=pointer]:
+            - generic [ref=f14e135]: Computer
+          - button "Workspace" [ref=f14e276] [cursor=pointer]
+        - group [ref=f14e280]:
+          - generic "Conversation actions" [ref=f14e281] [cursor=pointer]
+          - option "New thread" [selected]
+    - generic [ref=f14e143]:
+      - article [ref=f14e145]:
+        - separator [ref=f14e146]:
+          - generic [ref=f14e147]: Today
+        - paragraph [ref=f14e150]: I have an idea for a small neighborhood bookshop. Help me turn it into a clear first step.
+        - time [ref=f14e152]: 12:11 AM
+      - article [ref=f14e154]:
+        - generic [ref=f14e157]:
+          - paragraph [ref=f14e158]: Start with one shelf, not a whole shop.
+          - paragraph [ref=f14e159]:
+            - text: Try a Saturday pop-up with
+            - strong [ref=f14e160]: 30 books you would personally recommend
+            - text: . Give each one a handwritten note about why it belongs there.
+          - paragraph [ref=f14e161]: You will learn more from ten conversations with readers than from another month of planning.
+        - generic [ref=f14e162]:
+          - time [ref=f14e163]: 12:12 AM
+          - button "Copy reply" [ref=f14e164] [cursor=pointer]: Copy
+      - article [ref=f14e169]:
+        - paragraph [ref=f14e172]: What should I have ready for Saturday?
+        - time [ref=f14e174]: 12:13 AM
+      - article [ref=f14e176]:
+        - generic [ref=f14e179]:
+          - paragraph [ref=f14e180]: Keep it simple.
+          - list [ref=f14e181]:
+            - listitem [ref=f14e182]:
+              - strong [ref=f14e183]: "A place:"
+              - text: ask a local café about one table for the morning.
+            - listitem [ref=f14e184]:
+              - strong [ref=f14e185]: "A selection:"
+              - text: choose 30 books around one theme.
+            - listitem [ref=f14e186]:
+              - strong [ref=f14e187]: "A small sign:"
+              - text: “Good books. A note in every one.”
+          - paragraph [ref=f14e188]: Afterwards, write down what people picked up, what they asked about, and what you would bring next time.
+          - paragraph [ref=f14e189]: That is enough to begin.
+        - generic [ref=f14e190]:
+          - time [ref=f14e191]: 12:14 AM
+          - button "Copy reply" [ref=f14e192] [cursor=pointer]: Copy
+    - generic [ref=f14e196]:
+      - alert [ref=f14e319]:
+        - status [ref=f14e320]:
+          - strong [ref=f14e321]: Needs attention
+          - paragraph [ref=f14e322]: Code Mode is available in the Juno desktop app.
+          - button "Report issue" [ref=f14e323] [cursor=pointer]
+        - button "Check settings" [ref=f14e324] [cursor=pointer]
+      - generic [ref=f14e197]:
+        - generic [ref=f14e286]:
+          - button "Choose workspace" [ref=f14e287] [cursor=pointer]
+          - button "Reference an earlier session" [ref=f14e291] [cursor=pointer]
+          - status [ref=f14e296]:
+            - generic [ref=f14e297]: Code isn't available yet
+            - button "Set up" [ref=f14e298] [cursor=pointer]
+        - generic [ref=f14e227]:
+          - button "Choose context files" [ref=f14e228]
+          - button "Add context from project files" [ref=f14e299] [cursor=pointer]
+          - textbox "Direct Code" [ref=f14e300]:
+            - /placeholder: What should Kyoto build or change?
+          - button "Start Code" [disabled] [ref=f14e301]
+        - generic [ref=f14e302]:
+          - 'button "Code mode: Code" [disabled] [ref=f14e303]':
+            - generic [aria-hidden] [ref=f14e307]: Code
+          - 'button "Code model: Auto" [disabled] [ref=f14e308]':
+            - generic [ref=f14e313]: Auto model
+          - 'button "Code permissions: Default" [ref=f14e314] [cursor=pointer]':
+            - generic [ref=f14e318]: Ask first

@@ -1,0 +1,492 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - link "SpaceXSI Homepage" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic "SpaceXSI Logo - Right click to copy SVG" [ref=e6]
+      - generic [ref=e9]:
+        - link [aria-hidden]:
+          - /url: https://api2.cursor.sh/updates/download/stable/win32-x64/grok-bot-cf55d121b6d17368
+          - text: Download
+        - button [ref=e11] [cursor=pointer]
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - link "Grok Bot is here • Read the launch post" [ref=e20] [cursor=pointer]:
+          - /url: /news/introducing-grok-bot
+          - generic [ref=e21]:
+            - text: Grok Bot is here
+            - generic [ref=e22]: • Read the launch post
+        - heading "Meet Grok Bot" [level=1] [ref=e26]:
+          - generic [ref=e27]: Meet
+          - generic [ref=e33]: Grok
+          - generic [ref=e34]: Bot
+        - paragraph [ref=e35]: AI teammates you can give real work to. Bots can sign in to your tools, use them just like you do, and come back with finished work.
+        - generic [ref=e38]:
+          - link "Download for Windows" [ref=e39] [cursor=pointer]:
+            - /url: https://api2.cursor.sh/updates/download/stable/win32-x64/grok-bot-cf55d121b6d17368
+          - link "Contact sales" [ref=e42] [cursor=pointer]:
+            - /url: https://cursor.com/contact-sales?product=grok-bot
+      - generic [ref=e46]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - complementary [ref=e52]:
+              - button "New agent" [ref=e55] [cursor=pointer]:
+                - generic [ref=e56]: 
+              - generic [ref=e57]:
+                - generic [ref=e58]: 
+                - searchbox "Search chats" [ref=e59]
+              - generic [ref=e61]:
+                - button "Chief Yesterday booked the venue and sent the confirmation around." [ref=e62] [cursor=pointer]:
+                  - generic [ref=e67]:
+                    - generic [ref=e68]:
+                      - generic [ref=e69]: Chief
+                      - generic [ref=e71]: Yesterday
+                    - generic [ref=e72]: booked the venue and sent the confirmation around.
+                - button "New agent 12:02 AM" [ref=e74] [cursor=pointer]:
+                  - generic [ref=e80]:
+                    - generic [ref=e81]: New agent
+                    - generic [ref=e83]: 12:02 AM
+                - button "Inbox Manager Yesterday sent. inbox at zero, 5 drafts parked for tomorrow." [ref=e85] [cursor=pointer]:
+                  - generic [ref=e91]:
+                    - generic [ref=e92]:
+                      - generic [ref=e93]: Inbox Manager
+                      - generic [ref=e95]: Yesterday
+                    - generic [ref=e96]: sent. inbox at zero, 5 drafts parked for tomorrow.
+                - button "Account Manager Yesterday invite's out to vicky. globex note held in drafts." [ref=e98] [cursor=pointer]:
+                  - generic [ref=e103]:
+                    - generic [ref=e104]:
+                      - generic [ref=e105]: Account Manager
+                      - generic [ref=e107]: Yesterday
+                    - generic [ref=e108]: invite's out to vicky. globex note held in drafts.
+                - button "Talent Scout Yesterday 3 intros drafted in your voice, held for your ok." [ref=e110] [cursor=pointer]:
+                  - generic [ref=e115]:
+                    - generic [ref=e116]:
+                      - generic [ref=e117]: Talent Scout
+                      - generic [ref=e119]: Yesterday
+                    - generic [ref=e120]: 3 intros drafted in your voice, held for your ok.
+                - button "Expense Manager Yesterday report filed. 9 receipts, nothing outstanding." [ref=e122] [cursor=pointer]:
+                  - generic [ref=e127]:
+                    - generic [ref=e128]:
+                      - generic [ref=e129]: Expense Manager
+                      - generic [ref=e131]: Yesterday
+                    - generic [ref=e132]: report filed. 9 receipts, nothing outstanding.
+                - button "Offsite crew Yesterday that leaves the pipeline. i'd spin up a dedicated agent." [ref=e134] [cursor=pointer]:
+                  - generic [ref=e155]:
+                    - generic [ref=e156]:
+                      - generic [ref=e157]: Offsite crew
+                      - generic [ref=e159]: Yesterday
+                    - generic [ref=e160]: that leaves the pipeline. i'd spin up a dedicated agent.
+              - generic [ref=e162]:
+                - generic [ref=e163]: AS
+                - generic [ref=e164]: Armand Segall
+            - separator "Resize sidebar" [ref=e165]
+          - generic [ref=e166]:
+            - generic [ref=e169]:
+              - button "Open New agent's computer" [ref=e171] [cursor=pointer]:
+                - generic [ref=e177]: New agent
+              - button "Open computer" [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]: 
+            - generic [ref=e185]:
+              - generic [ref=e186]: 
+              - textbox [ref=e189]: Message New agent
+              - button "Voice message" [ref=e190] [cursor=pointer]:
+                - generic [ref=e191]: 
+        - generic [aria-hidden]:
+          - generic: You
+    - generic [ref=e195]:
+      - heading "Message Bots like teammates" [level=2] [ref=e196]
+      - paragraph [ref=e197]: Give tasks to Bots like you would a teammate on desktop or iOS. Your AI teammates take projects from start to end, keep context on how you work and get smarter over time, and come back when your approval is needed.
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - heading "Work with many Bots at once" [level=2] [ref=e201]
+        - paragraph [ref=e202]: Create a Bot, give it a task, and add another when the work grows—one on a project, one on outbound, one on systems. AI teammates work in parallel, collaborate where it makes sense, and keep working 24/7.
+      - generic [ref=e203]:
+        - article [ref=e204]:
+          - heading "Grok Bot works where you work" [level=3] [ref=e205]
+          - paragraph [ref=e206]: Log Grok Bot in once. It uses your apps and websites just like you would, including the tools that are harder to navigate.
+          - figure [ref=e207]:
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: Computer
+                - generic [ref=e214]:
+                  - generic [ref=e215]: You're in control
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: 
+                    - text: Working
+              - paragraph [ref=e222]: Sign in to Zendesk so I can work the support queue.
+              - generic [ref=e224]:
+                - generic [aria-hidden]:
+                  - generic: You
+        - article [ref=e288]:
+          - heading "Show a Bot how it’s done" [level=3] [ref=e289]
+          - paragraph [ref=e290]: Ask a Bot to follow along as you complete a workflow once. It saves it as a routine and runs it on its own next time.
+          - figure [ref=e291]:
+            - generic [ref=e294]:
+              - generic [ref=e295]:
+                - generic [ref=e296]:
+                  - generic [ref=e297]: Weekly Reporting is watching and learning
+                  - generic [ref=e298]: 0:04
+                  - generic [ref=e301]: 
+                - generic: Teach a task
+              - generic [aria-hidden]:
+                - generic: You
+        - article [ref=e364]:
+          - heading "Bots get smarter over time" [level=3] [ref=e365]
+          - paragraph [ref=e366]: Bots keep context and learn from each other. Show one a workflow today, hand off the project by Friday.
+          - figure [ref=e367]:
+            - generic [ref=e374]:
+              - generic [ref=e375]: Acme replied on pricing, same thread as last quarter. I already had the context, so I answered without waiting on you.
+              - generic [ref=e379]: "Noted for next time: they only sign annual, and Dana is the one who approves."
+              - generic [ref=e384]:
+                - generic [ref=e385]: Updated memory for
+                - generic [ref=e386]: Account Manager
+        - article [ref=e395]:
+          - heading "Connect the Bots" [level=3] [ref=e396]
+          - paragraph [ref=e397]: Put a few Bots in the same thread and they pass work between themselves. You watch them take action instead of approving every step.
+          - figure [ref=e398]:
+            - list [aria-hidden] [ref=e402]:
+              - listitem [ref=e403]:
+                - generic [ref=e409]: Asking Research…
+              - listitem [ref=e411]:
+                - generic [ref=e417]: Looping in Comms…
+              - listitem [ref=e418]:
+                - generic [ref=e424]: Sending to Chief…
+              - listitem [ref=e425]:
+                - generic [ref=e431]: Pinging Travel…
+    - generic [ref=e434]:
+      - heading "Give each Bot a job" [level=2] [ref=e435]
+      - generic [ref=e436]:
+        - generic [ref=e437]:
+          - button [pressed] [ref=e438] [cursor=pointer]
+          - button "Talent Scout" [ref=e445] [cursor=pointer]
+          - button "Paid Media" [ref=e446] [cursor=pointer]
+        - generic [ref=e447]:
+          - button "Expense Manager" [ref=e448] [cursor=pointer]
+          - button "Product Performance" [ref=e449] [cursor=pointer]
+        - generic [ref=e450]:
+          - button "Bug Reproduction" [ref=e451] [cursor=pointer]
+          - button "Account Health" [ref=e452] [cursor=pointer]
+        - button "Chief of Staff" [ref=e454] [cursor=pointer]
+      - paragraph [ref=e456]: Generate pipeline overnight. Researches accounts, scores contacts with intent, drafts email and LinkedIn in your voice, and leaves a review list for you to approve.
+      - link "Explore more bots" [ref=e458] [cursor=pointer]:
+        - /url: /bot/marketplace
+    - generic [ref=e461]:
+      - heading "The SpaceXSI team runs on Grok Bot" [level=2] [ref=e462]
+      - button "Play launch trailer" [ref=e464] [cursor=pointer]:
+        - generic: Play
+    - generic [ref=e467]:
+      - generic [ref=e468]:
+        - heading "Pricing" [level=2] [ref=e469]
+        - link "Contact sales" [ref=e470] [cursor=pointer]:
+          - /url: https://cursor.com/contact-sales?product=grok-bot
+      - generic [ref=e471]:
+        - group "Choose Individual or Teams plans" [ref=e472]:
+          - button "Individual" [pressed] [ref=e473] [cursor=pointer]
+          - button "Teams" [ref=e474] [cursor=pointer]
+        - generic [ref=e475]:
+          - article [ref=e476]:
+            - heading "Premium" [level=3] [ref=e478]
+            - paragraph [ref=e479]:
+              - generic [ref=e480]: $30
+              - generic [ref=e481]: / month
+            - paragraph [ref=e482]: Billed monthly
+            - link "Get Premium" [ref=e483] [cursor=pointer]:
+              - /url: https://grok.com/dashboard/billing?openUpgrade=true&tier=premium&yearly=false&product=grok-bot
+            - paragraph [ref=e484]: "Includes:"
+            - list [ref=e485]:
+              - listitem [ref=e486]:
+                - generic [ref=e489]: Grok Bot's own computer
+              - listitem [ref=e490]:
+                - generic [ref=e493]: Signs into your tools
+              - listitem [ref=e494]:
+                - generic [ref=e497]: Routines on a schedule
+              - listitem [ref=e498]:
+                - generic [ref=e501]: "Work anywhere: desktop, mobile, and more"
+              - listitem [ref=e502]:
+                - generic [ref=e505]: Weekly Grok Bot usage included
+          - article [ref=e506]:
+            - heading "Super" [level=3] [ref=e508]
+            - paragraph [ref=e509]:
+              - generic [ref=e510]: $100
+              - generic [ref=e511]: / month
+            - paragraph [ref=e512]: Billed monthly
+            - link "Get Super" [ref=e513] [cursor=pointer]:
+              - /url: https://grok.com/dashboard/billing?openUpgrade=true&tier=super&yearly=false&product=grok-bot
+            - paragraph [ref=e514]: "Everything in Premium, plus:"
+            - list [ref=e515]:
+              - listitem [ref=e516]:
+                - generic [ref=e519]: 3.5x Premium usage
+              - listitem [ref=e520]:
+                - generic [ref=e523]: Priority model access at peak times
+          - article [ref=e524]:
+            - heading "Ultra" [level=3] [ref=e526]
+            - paragraph [ref=e527]:
+              - generic [ref=e528]: $200
+              - generic [ref=e529]: / month
+            - paragraph [ref=e530]: Billed monthly
+            - link "Get Ultra" [ref=e531] [cursor=pointer]:
+              - /url: https://grok.com/dashboard/billing?openUpgrade=true&tier=ultra&yearly=false&product=grok-bot
+            - paragraph [ref=e532]: "Everything in Super, plus:"
+            - list [ref=e533]:
+              - listitem [ref=e534]:
+                - generic [ref=e537]: 12x Premium usage
+              - listitem [ref=e538]:
+                - generic [ref=e541]: Earliest access to all products & models
+        - generic [ref=e542]:
+          - generic [ref=e543]: Already on an eligible Premium, Super, Ultra, Teams, or Enterprise plan? Grok Bot is included.
+          - link "Sign in with your plan" [ref=e548] [cursor=pointer]:
+            - /url: https://grok.com/?product=grok-bot
+    - generic [ref=e550]:
+      - generic [ref=e551]:
+        - heading "Download Grok Bot" [level=2] [ref=e552]
+        - paragraph [ref=e553]: One team, wherever you are — on your desk and in your pocket.
+      - generic [ref=e554]:
+        - generic [ref=e559]:
+          - link "Windows — Windows 10 and 11 (x64)" [ref=e561] [cursor=pointer]:
+            - /url: https://api2.cursor.sh/updates/download/stable/win32-x64/grok-bot-cf55d121b6d17368
+            - text: Windows
+          - generic [ref=e562]: Windows 10 and 11 (x64)
+        - button "More downloads Other platforms and devices" [ref=e569] [cursor=pointer]:
+          - generic [ref=e574]:
+            - generic [ref=e575]: More downloads
+            - generic [ref=e576]: Other platforms and devices
+    - generic [ref=e579]:
+      - generic [ref=e580]:
+        - heading "Grok Bot Guides" [level=2] [ref=e581]
+        - paragraph [ref=e582]: How PMs, designers, and GTM run Grok Bot day to day.
+      - link "Read the guides" [ref=e583] [cursor=pointer]:
+        - /url: /bot/guides
+    - generic [ref=e585]:
+      - heading "FAQs" [level=2] [ref=e586]
+      - generic [ref=e587]:
+        - generic [ref=e588]:
+          - heading [level=3] [ref=e589]:
+            - button "How is Grok Bot different from AI assistants?" [expanded] [ref=e590] [cursor=pointer]
+          - region "How is Grok Bot different from AI assistants?" [ref=e594]:
+            - paragraph [ref=e596]: Bots have their own computer, so they can work inside your apps and tools. They also run in parallel, 24/7, even when your laptop is closed.
+        - generic [ref=e597]:
+          - heading [level=3] [ref=e598]:
+            - button "Who is Grok Bot available for today?" [ref=e599] [cursor=pointer]
+          - region "Who is Grok Bot available for today?":
+            - paragraph [ref=e604]: Grok Bot is included with Premium, Super, Ultra, Teams, and Enterprise.
+        - generic [ref=e605]:
+          - heading [level=3] [ref=e606]:
+            - button "Is Grok Bot available for enterprises?" [ref=e607] [cursor=pointer]
+          - region "Is Grok Bot available for enterprises?":
+            - paragraph [ref=e612]:
+              - text: Yes. Grok Bot is generally available for Enterprise, as well as for teams on the Teams plan.
+              - link "Contact sales" [ref=e613] [cursor=pointer]:
+                - /url: https://cursor.com/contact-sales?product=grok-bot
+              - text: to set up Enterprise access for your organization, including people who don’t already have a seat.
+        - generic [ref=e614]:
+          - heading [level=3] [ref=e615]:
+            - button "Where do I talk to Grok Bot?" [ref=e616] [cursor=pointer]
+          - region "Where do I talk to Grok Bot?":
+            - paragraph [ref=e621]: Work with Grok Bot from your desktop (macOS or Windows) or your phone with the iOS app.
+        - generic [ref=e622]:
+          - heading [level=3] [ref=e623]:
+            - button "How much does Grok Bot cost?" [ref=e624] [cursor=pointer]
+          - region "How much does Grok Bot cost?":
+            - paragraph [ref=e629]:
+              - text: Grok Bot subscriptions come with weekly usage included, with additional usage billed based on token cost. Enterprise customers should
+              - link "contact sales" [ref=e630] [cursor=pointer]:
+                - /url: https://cursor.com/contact-sales?product=grok-bot
+              - text: .
+        - generic [ref=e631]:
+          - heading [level=3] [ref=e632]:
+            - button "Do Bots share one computer?" [ref=e633] [cursor=pointer]
+          - region "Do Bots share one computer?":
+            - paragraph [ref=e638]: Yes. Every Grok Bot shares one persistent cloud computer. Your Bots share that machine (files, browser, logins), so they can hand work off and keep context. Isolation is per user, not per Grok Bot.
+        - generic [ref=e639]:
+          - heading [level=3] [ref=e640]:
+            - button "How does Grok Bot handle my data & privacy?" [ref=e641] [cursor=pointer]
+          - region "How does Grok Bot handle my data & privacy?":
+            - paragraph [ref=e646]: Grok Bot uses the same Cursor SSO, auth, and privacy mode you already trust. Your cloud computer is encrypted in transit and at rest, with training opt-out. Sensitive actions can go through Auto Review before they run. Enterprise admins can set DLP, certs, proxies, and network controls at boot.
+    - generic [ref=e649]:
+      - generic [ref=e650]:
+        - heading "Meet your first Bot" [level=2] [ref=e651]
+        - paragraph [ref=e652]: An AI teammate you can trust to get work done
+      - generic [ref=e654]:
+        - link "Get started for free" [ref=e655] [cursor=pointer]:
+          - /url: https://api2.cursor.sh/updates/download/stable/win32-x64/grok-bot-cf55d121b6d17368
+        - link "Contact sales" [ref=e656] [cursor=pointer]:
+          - /url: https://cursor.com/contact-sales?product=grok-bot
+  - contentinfo [ref=e658]:
+    - generic [ref=e660]:
+      - generic [ref=e661]:
+        - generic [ref=e662]:
+          - img "SpaceXSI" [ref=e663]
+          - generic [ref=e665]: © 2026 SpaceXAI LLC
+        - generic [ref=e666]:
+          - button "Switch to dark mode" [ref=e667] [cursor=pointer]
+          - link "Built with Grok" [ref=e671] [cursor=pointer]:
+            - /url: https://grok.com/?referrer=website
+      - generic [ref=e676]:
+        - generic [ref=e677]:
+          - generic [ref=e678]:
+            - generic [ref=e679]: Products
+            - generic [ref=e680]:
+              - link "Chat" [ref=e681] [cursor=pointer]:
+                - /url: /grok
+              - link "Build" [ref=e682] [cursor=pointer]:
+                - /url: /build
+              - link "Imagine" [ref=e683] [cursor=pointer]:
+                - /url: /api/imagine
+              - link "Voice" [ref=e684] [cursor=pointer]:
+                - /url: /voice
+              - link "Bot" [ref=e685] [cursor=pointer]:
+                - /url: /bot
+              - link "Grokipedia" [ref=e686] [cursor=pointer]:
+                - /url: https://grokipedia.com
+          - generic [ref=e687]:
+            - generic [ref=e688]: Download
+            - generic [ref=e689]:
+              - link "grok.com" [ref=e690] [cursor=pointer]:
+                - /url: https://grok.com/?referrer=website
+              - link "iOS" [ref=e691] [cursor=pointer]:
+                - /url: https://apps.apple.com/app/apple-store/id6670324846
+              - link "Android" [ref=e692] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=ai.x.grok
+              - link "Grok on X" [ref=e693] [cursor=pointer]:
+                - /url: https://x.com/i/grok
+        - generic [ref=e694]:
+          - generic [ref=e695]:
+            - generic [ref=e696]: Solutions
+            - generic [ref=e697]:
+              - link "Business" [ref=e698] [cursor=pointer]:
+                - /url: /grok/business
+              - link "Startups" [ref=e699] [cursor=pointer]:
+                - /url: /startups
+              - link "Government" [ref=e700] [cursor=pointer]:
+                - /url: /grok/government
+              - link "Customer Support" [ref=e701] [cursor=pointer]:
+                - /url: /solutions/customer-support
+              - link "Legal" [ref=e702] [cursor=pointer]:
+                - /url: /solutions/legal
+              - link "Security" [ref=e703] [cursor=pointer]:
+                - /url: /solutions/security
+              - link "Use Cases" [ref=e704] [cursor=pointer]:
+                - /url: /grok/use-cases
+          - generic [ref=e705]:
+            - generic [ref=e706]: Grok Bot
+            - generic [ref=e707]:
+              - link "Overview" [ref=e708] [cursor=pointer]:
+                - /url: /bot
+              - link "Marketplace" [ref=e709] [cursor=pointer]:
+                - /url: /bot/marketplace
+              - link "Guides" [ref=e710] [cursor=pointer]:
+                - /url: /bot/guides
+              - link "Use Cases" [ref=e711] [cursor=pointer]:
+                - /url: /bot/use-cases
+              - link "Changelog" [ref=e712] [cursor=pointer]:
+                - /url: /changelog/bot
+        - generic [ref=e713]:
+          - generic [ref=e714]:
+            - generic [ref=e715]: Developers
+            - generic [ref=e716]:
+              - link "API Overview" [ref=e717] [cursor=pointer]:
+                - /url: /api
+              - link "Pricing" [ref=e718] [cursor=pointer]:
+                - /url: /pricing
+              - link "Models" [ref=e719] [cursor=pointer]:
+                - /url: https://docs.x.ai/developers/models
+              - link "Console" [ref=e720] [cursor=pointer]:
+                - /url: https://console.x.ai?utm_source=website&utm_medium=referral&utm_campaign=site-footer&utm_content=developers-console
+              - link "Changelog" [ref=e721] [cursor=pointer]:
+                - /url: /api/changelog
+              - link "Docs" [ref=e722] [cursor=pointer]:
+                - /url: https://docs.x.ai
+              - link "Status" [ref=e723] [cursor=pointer]:
+                - /url: https://status.x.ai
+          - generic [ref=e724]:
+            - generic [ref=e725]: Enterprise
+            - generic [ref=e726]:
+              - link "Contact Sales" [ref=e727] [cursor=pointer]:
+                - /url: /contact-sales
+              - link "FAQs" [ref=e728] [cursor=pointer]:
+                - /url: /legal/faq-enterprise
+              - link "BAA" [ref=e729] [cursor=pointer]:
+                - /url: /legal/baa
+              - link "DPA" [ref=e730] [cursor=pointer]:
+                - /url: /legal/data-processing-addendum
+        - generic [ref=e731]:
+          - generic [ref=e732]:
+            - generic [ref=e733]: Company
+            - generic [ref=e734]:
+              - link "About" [ref=e735] [cursor=pointer]:
+                - /url: /company
+              - link "Colossus" [ref=e736] [cursor=pointer]:
+                - /url: /colossus
+              - link "Careers" [ref=e737] [cursor=pointer]:
+                - /url: /careers
+              - link "Partners" [ref=e738] [cursor=pointer]:
+                - /url: /partners
+              - link "News" [ref=e739] [cursor=pointer]:
+                - /url: /news
+              - link "Contact" [ref=e740] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=e741]:
+            - generic [ref=e742]: Trust
+            - generic [ref=e743]:
+              - link "Safety" [ref=e744] [cursor=pointer]:
+                - /url: /safety
+              - link "Security" [ref=e745] [cursor=pointer]:
+                - /url: /security
+              - link "Privacy Portal" [ref=e746] [cursor=pointer]:
+                - /url: /privacy-portal
+              - link "Subprocessors" [ref=e747] [cursor=pointer]:
+                - /url: /legal/subprocessor-list
+              - link "Help Center" [ref=e748] [cursor=pointer]:
+                - /url: https://docs.x.ai/grok/user-guide
+        - generic [ref=e749]:
+          - generic [ref=e750]:
+            - link "Legal" [ref=e751] [cursor=pointer]:
+              - /url: /legal
+            - generic [ref=e752]:
+              - link "Terms" [ref=e753] [cursor=pointer]:
+                - /url: /legal/terms-of-service
+              - link "Enterprise Terms" [ref=e754] [cursor=pointer]:
+                - /url: /legal/terms-of-service-enterprise
+              - link "Startup Terms" [ref=e755] [cursor=pointer]:
+                - /url: /legal/startup-program-terms
+              - link "Privacy" [ref=e756] [cursor=pointer]:
+                - /url: /legal/privacy-policy
+              - link "Cookies" [ref=e757] [cursor=pointer]:
+                - /url: /legal/cookie-policy
+              - link "AUP" [ref=e758] [cursor=pointer]:
+                - /url: /legal/acceptable-use-policy
+              - link "Brand" [ref=e759] [cursor=pointer]:
+                - /url: /legal/brand-guidelines
+              - button "Privacy choices" [ref=e760] [cursor=pointer]
+          - generic [ref=e761]:
+            - generic [ref=e762]: Social
+            - generic [ref=e763]:
+              - link "@SpaceXSI" [ref=e764] [cursor=pointer]:
+                - /url: https://x.com/spacexsi
+              - link "@grok" [ref=e765] [cursor=pointer]:
+                - /url: https://x.com/grok
+              - link "Discord" [ref=e766] [cursor=pointer]:
+                - /url: https://discord.com/invite/kqCc86jM55
+  - region "Notifications alt+T"
+  - alert [ref=e767]
+  - dialog "Cookie notice" [ref=e768]:
+    - generic [ref=e769]:
+      - button "Dismiss cookie notice" [ref=e770] [cursor=pointer]:
+        - generic [ref=e774]: Close
+      - generic [ref=e775]:
+        - paragraph [ref=e776]:
+          - text: Essential cookies keep the site working and stay on. Optional cookies help with performance and advertising — accept, reject, or manage them. Learn more in our
+          - link "Cookie Policy" [ref=e777] [cursor=pointer]:
+            - /url: https://x.ai/legal/cookie-policy
+          - text: ","
+          - link "Privacy Policy" [ref=e778] [cursor=pointer]:
+            - /url: https://x.ai/legal/privacy-policy
+          - text: ", and"
+          - link "Terms of Service" [ref=e779] [cursor=pointer]:
+            - /url: https://x.ai/legal/terms-of-service
+          - text: .
+        - generic [ref=e780]:
+          - button "Cookies Settings" [ref=e781] [cursor=pointer]
+          - button "Reject All" [ref=e782] [cursor=pointer]
+          - button "Accept All Cookies" [ref=e783] [cursor=pointer]

@@ -1,0 +1,18 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs';
+import path from 'node:path';
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9331');
+const page=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('5271'));
+if(!page)throw new Error('Owned desktop preview missing');
+await page.setViewportSize({width:1440,height:1040});
+const out=path.resolve('source-assets');
+await page.getByText('That is enough to begin.',{exact:false}).waitFor();
+await page.screenshot({path:path.join(out,'conversation.png')});
+await page.getByRole('button',{name:'View computer',exact:true}).click();
+await page.getByRole('button',{name:'Desktop',exact:true}).click();
+await page.screenshot({path:path.join(out,'computer-control.png')});
+await page.getByRole('button',{name:'Close computer',exact:true}).click();
+await page.getByRole('button',{name:'Library',exact:true}).click();
+await page.screenshot({path:path.join(out,'library.png')});
+console.log('Library body', (await page.locator('body').innerText()).slice(-2500));
+await browser.close();

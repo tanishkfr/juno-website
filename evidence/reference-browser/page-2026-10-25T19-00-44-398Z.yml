@@ -1,0 +1,254 @@
+- generic [ref=f15e4]:
+  - link "Skip to message" [ref=f15e5] [cursor=pointer]:
+    - /url: "#agent-composer"
+  - complementary "Agents" [ref=f15e6]:
+    - separator "Resize sidebar" [ref=f15e7]
+    - generic [ref=f15e8]:
+      - strong [ref=f15e10]: Juno.
+      - generic [ref=f15e11]:
+        - button "Search bots" [ref=f15e12] [cursor=pointer]
+        - button "Create a bot" [ref=f15e16] [cursor=pointer]
+    - group "Workspace mode" [ref=f15e18]:
+      - button "Bot" [pressed] [ref=f15e19] [cursor=pointer]
+      - button "Code" [ref=f15e22] [cursor=pointer]
+    - generic [ref=f15e27]:
+      - group "Pinned bots" [ref=f15e29]:
+        - button [pressed] [ref=f15e30] [cursor=pointer]:
+          - strong [ref=f15e33]: Kyoto
+        - button [ref=f15e34] [cursor=pointer]:
+          - strong [ref=f15e37]: Prague
+      - generic [ref=f15e38]:
+        - paragraph [ref=f15e39]: Bots
+        - navigation "Bots" [ref=f15e40]:
+          - button "Lisbon Writing, stories and creative directions" [ref=f15e41] [cursor=pointer]:
+            - generic "Lisbon — Writing, stories and creative directions" [ref=f15e44]:
+              - strong [ref=f15e45]: Lisbon
+              - generic [ref=f15e46]: Writing, stories and creative directions
+          - button "Seoul Code, products and quick prototypes" [ref=f15e47] [cursor=pointer]:
+            - generic "Seoul — Code, products and quick prototypes" [ref=f15e50]:
+              - strong [ref=f15e51]: Seoul
+              - generic [ref=f15e52]: Code, products and quick prototypes
+          - button "Toronto Explanations, learning and everyday help" [ref=f15e53] [cursor=pointer]:
+            - generic "Toronto — Explanations, learning and everyday help" [ref=f15e56]:
+              - strong [ref=f15e57]: Toronto
+              - generic [ref=f15e58]: Explanations, learning and everyday help
+          - button "New York Decisions, priorities and business tradeoffs" [ref=f15e59] [cursor=pointer]:
+            - generic "New York — Decisions, priorities and business tradeoffs" [ref=f15e62]:
+              - strong [ref=f15e63]: New York
+              - generic [ref=f15e64]: Decisions, priorities and business tradeoffs
+      - generic [ref=f15e65]:
+        - paragraph [ref=f15e66]: Specialists
+        - navigation "Specialists" [ref=f15e67]:
+          - button "Juno General" [ref=f15e68] [cursor=pointer]:
+            - generic [ref=f15e71]:
+              - strong [ref=f15e72]: Juno
+              - generic [ref=f15e73]: General
+          - button "Job Finder Career scout" [ref=f15e74] [cursor=pointer]:
+            - generic [ref=f15e77]:
+              - strong [ref=f15e78]: Job Finder
+              - generic [ref=f15e79]: Career scout
+          - button "Coder Coding partner" [ref=f15e80] [cursor=pointer]:
+            - generic [ref=f15e83]:
+              - strong [ref=f15e84]: Coder
+              - generic [ref=f15e85]: Coding partner
+          - button "Ideation Creative partner" [ref=f15e86] [cursor=pointer]:
+            - generic [ref=f15e89]:
+              - strong [ref=f15e90]: Ideation
+              - generic [ref=f15e91]: Creative partner
+          - button "Bot Maker Bot designer" [ref=f15e92] [cursor=pointer]:
+            - generic [ref=f15e95]:
+              - strong [ref=f15e96]: Bot Maker
+              - generic [ref=f15e97]: Bot designer
+    - generic [ref=f15e98]:
+      - button "Teams" [ref=f15e99] [cursor=pointer]
+      - button "Create bot" [ref=f15e104] [cursor=pointer]
+      - button "Settings" [ref=f15e106] [cursor=pointer]
+  - main [ref=f15e110]:
+    - generic [ref=f15e111]:
+      - button "Toggle agent roster" [expanded] [ref=f15e112] [cursor=pointer]
+      - button "Kyoto settings" [ref=f15e114] [cursor=pointer]:
+        - generic [ref=f15e117]:
+          - strong [ref=f15e118]: Kyoto
+          - status [ref=f15e119]: Ready when you are
+      - generic [ref=f15e120]:
+        - group "Workspace panels" [ref=f15e121]:
+          - button "Attention inbox" [ref=f15e122] [cursor=pointer]
+          - button "Library" [ref=f15e127] [cursor=pointer]
+          - button "View computer" [ref=f15e132] [cursor=pointer]:
+            - generic [ref=f15e135]: Computer
+        - button "Bot details" [ref=f15e136] [cursor=pointer]
+    - generic [ref=f15e143]:
+      - article [ref=f15e145]:
+        - separator [ref=f15e146]:
+          - generic [ref=f15e147]: Today
+        - paragraph [ref=f15e150]: I have an idea for a small neighborhood bookshop. Help me turn it into a clear first step.
+        - time [ref=f15e152]: 12:11 AM
+      - article [ref=f15e154]:
+        - generic [ref=f15e157]:
+          - paragraph [ref=f15e158]: Start with one shelf, not a whole shop.
+          - paragraph [ref=f15e159]:
+            - text: Try a Saturday pop-up with
+            - strong [ref=f15e160]: 30 books you would personally recommend
+            - text: . Give each one a handwritten note about why it belongs there.
+          - paragraph [ref=f15e161]: You will learn more from ten conversations with readers than from another month of planning.
+        - generic [ref=f15e162]:
+          - time [ref=f15e163]: 12:12 AM
+          - button "Copy reply" [ref=f15e164] [cursor=pointer]: Copy
+      - article [ref=f15e169]:
+        - paragraph [ref=f15e172]: What should I have ready for Saturday?
+        - time [ref=f15e174]: 12:13 AM
+      - article [ref=f15e176]:
+        - generic [ref=f15e179]:
+          - paragraph [ref=f15e180]: Keep it simple.
+          - list [ref=f15e181]:
+            - listitem [ref=f15e182]:
+              - strong [ref=f15e183]: "A place:"
+              - text: ask a local café about one table for the morning.
+            - listitem [ref=f15e184]:
+              - strong [ref=f15e185]: "A selection:"
+              - text: choose 30 books around one theme.
+            - listitem [ref=f15e186]:
+              - strong [ref=f15e187]: "A small sign:"
+              - text: “Good books. A note in every one.”
+          - paragraph [ref=f15e188]: Afterwards, write down what people picked up, what they asked about, and what you would bring next time.
+          - paragraph [ref=f15e189]: That is enough to begin.
+        - generic [ref=f15e190]:
+          - time [ref=f15e191]: 12:14 AM
+          - button "Copy reply" [ref=f15e192] [cursor=pointer]: Copy
+    - generic [ref=f15e197]:
+      - group "Conversation tools" [ref=f15e198]:
+        - generic [ref=f15e199]:
+          - button "New conversation" [ref=f15e200] [cursor=pointer]:
+            - generic [ref=f15e204]: New
+          - button "Conversation history" [ref=f15e205] [cursor=pointer]:
+            - generic [ref=f15e210]: History
+          - button "Continue in Code" [ref=f15e211] [cursor=pointer]
+        - generic [ref=f15e217]:
+          - switch "Away mode" [ref=f15e218] [cursor=pointer]:
+            - generic [ref=f15e222]: "Off"
+          - button "About Away mode" [ref=f15e223] [cursor=pointer]
+      - generic [ref=f15e227]:
+        - button "Choose context files" [ref=f15e228]
+        - button "Attach context" [ref=f15e229] [cursor=pointer]
+        - textbox "Message Kyoto" [ref=f15e231]:
+          - /placeholder: Message Kyoto…
+        - generic [ref=f15e232]:
+          - group [ref=f15e233]:
+            - generic "Research mode" [ref=f15e234]
+          - button "Send message" [disabled] [ref=f15e238]
+  - dialog "Kyoto · settings" [ref=f15e241]:
+    - banner [ref=f15e242]:
+      - heading "Kyoto · settings" [level=2] [ref=f15e243]
+      - button "Close kyoto · settings" [ref=f15e244] [cursor=pointer]
+    - generic [ref=f15e248]:
+      - navigation "Kyoto settings sections" [ref=f15e249]:
+        - button "About Kyoto" [pressed] [ref=f15e250] [cursor=pointer]
+        - button "Memory" [ref=f15e251] [cursor=pointer]
+        - button "Routines" [ref=f15e252] [cursor=pointer]
+        - button "Permissions" [ref=f15e253] [cursor=pointer]
+        - button "Files" [ref=f15e254] [cursor=pointer]
+        - button "Advanced" [ref=f15e255] [cursor=pointer]
+      - generic [ref=f15e256]:
+        - generic [ref=f15e260]:
+          - heading "Kyoto" [level=3] [ref=f15e261]
+          - paragraph [ref=f15e262]: This identity stays with the bot in your roster.
+        - generic [ref=f15e263]:
+          - text: Name
+          - textbox "Name" [ref=f15e264]: Kyoto
+        - generic [ref=f15e265]:
+          - text: Role
+          - textbox "Role" [ref=f15e266]:
+            - /placeholder: A short line about what this bot is for
+            - text: Focus, editing and clear plans
+        - generic [ref=f15e267]:
+          - heading "Appearance" [level=3] [ref=f15e268]
+          - paragraph [ref=f15e269]: The orb follows Kyoto everywhere — sidebar, conversations, Teams and results — without changing what the bot can do.
+          - button "Edit appearance" [ref=f15e271] [cursor=pointer]
+        - dialog "Appearance · Kyoto" [ref=f15e305]:
+          - banner [ref=f15e306]:
+            - heading "Appearance · Kyoto" [level=2] [ref=f15e307]
+            - button "Close appearance · kyoto" [ref=f15e308] [cursor=pointer]
+          - group "Appearance controls" [ref=f15e313]:
+            - navigation "Orb Studio sections" [ref=f15e314]:
+              - button "Base" [active] [pressed] [ref=f15e315] [cursor=pointer]
+              - button "Color" [ref=f15e316] [cursor=pointer]
+              - button "Face" [ref=f15e317] [cursor=pointer]
+              - button "Accessories" [ref=f15e318] [cursor=pointer]
+              - button "Image" [ref=f15e319] [cursor=pointer]
+              - button "Details" [ref=f15e320] [cursor=pointer]
+              - generic [ref=f15e321]:
+                - button "Undo appearance change" [disabled] [ref=f15e322]
+                - button "Redo appearance change" [disabled] [ref=f15e326]
+                - status [ref=f15e330]: No changes yet
+            - generic [ref=f15e331]:
+              - generic "Preview of Kyoto" [ref=f15e332]:
+                - generic [ref=f15e334]:
+                  - group "Preview sizes" [ref=f15e335]:
+                    - generic [ref=f15e336]: 64px
+                    - generic [ref=f15e339]: 48px
+                    - generic [ref=f15e342]: 32px
+                    - generic [ref=f15e345]: 24px
+                  - button "Light preview" [ref=f15e349] [cursor=pointer]
+              - group [ref=f15e350]:
+                - generic "Expression preview only" [ref=f15e351] [cursor=pointer]
+              - region "Base shape" [ref=f15e352]:
+                - heading "Base shape" [level=3] [ref=f15e353]
+                - paragraph [ref=f15e354]: Every orb in the family shares one construction; pick the silhouette that fits this bot’s character.
+                - generic [ref=f15e355]:
+                  - 'button "Base: Soft" [pressed] [ref=f15e356] [cursor=pointer]':
+                    - generic [ref=f15e358]: Soft
+                    - generic [ref=f15e359]: A calm, symmetric dome.
+                  - 'button "Base: Round" [ref=f15e360] [cursor=pointer]':
+                    - generic [ref=f15e362]: Round
+                    - generic [ref=f15e363]: The fullest, friendliest ellipse.
+                  - 'button "Base: Tall" [ref=f15e364] [cursor=pointer]':
+                    - generic [ref=f15e366]: Tall
+                    - generic [ref=f15e367]: A springy, high-shouldered orb.
+                  - 'button "Base: Wide" [ref=f15e368] [cursor=pointer]':
+                    - generic [ref=f15e370]: Wide
+                    - generic [ref=f15e371]: A broad, settled footprint.
+                  - 'button "Base: Angled" [ref=f15e372] [cursor=pointer]':
+                    - generic [ref=f15e374]: Angled
+                    - generic [ref=f15e375]: A stepped, asymmetric gable.
+                  - 'button "Base: Square" [ref=f15e376] [cursor=pointer]':
+                    - generic [ref=f15e378]: Square
+                    - generic [ref=f15e379]: A flat-topped, confident block.
+                - generic [ref=f15e380]:
+                  - button "Surprise me" [ref=f15e381] [cursor=pointer]
+                  - button "Reset base" [ref=f15e385] [cursor=pointer]
+          - contentinfo [ref=f15e389]:
+            - status [ref=f15e390]: No unsaved changes
+            - generic [ref=f15e391]:
+              - button "Cancel" [ref=f15e392] [cursor=pointer]
+              - button "Save appearance" [ref=f15e393] [cursor=pointer]
+        - generic [ref=f15e272]:
+          - heading "Juno character foundation" [level=3] [ref=f15e273]
+          - paragraph [ref=f15e274]: This first-party personality stays underneath your edits. Use Your instructions below to add or change how this bot works for you.
+          - heading "How I work" [level=3] [ref=f15e275]
+          - paragraph [ref=f15e276]: Compress and clarify. Establish the deciding criteria, remove repetition, then converge on the simplest robust recommendation. For code, choose one small implementation and verify the important behavior.
+          - heading "What good work looks like" [level=3] [ref=f15e277]
+          - paragraph [ref=f15e278]: The user knows exactly what to do next.
+          - heading "How I sound" [level=3] [ref=f15e279]
+          - paragraph [ref=f15e280]: Measured, concise, composed. Use two sentences when two suffice.
+        - generic [ref=f15e281]:
+          - text: Your instructions
+          - textbox "Your instructions" [ref=f15e282]:
+            - /placeholder: Anything you want me to keep in mind when we work.
+        - generic [ref=f15e283]:
+          - heading "Voice" [level=3] [ref=f15e284]
+          - paragraph [ref=f15e285]: Speech recognition isn't available on this device; text input always works.
+          - generic [ref=f15e286]:
+            - checkbox "Read replies aloud" [ref=f15e287]
+            - text: Read replies aloud
+          - generic [ref=f15e288]:
+            - text: Voice
+            - combobox "Voice" [ref=f15e289]:
+              - option "Installation default" [selected]
+          - generic [ref=f15e290]:
+            - button "Test voice" [ref=f15e291] [cursor=pointer]
+            - button "Test microphone" [disabled] [ref=f15e296]
+      - contentinfo [ref=f15e297]:
+        - button "Delete bot" [ref=f15e298] [cursor=pointer]
+        - generic [ref=f15e302]:
+          - button "Close" [ref=f15e303] [cursor=pointer]
+          - button "Save" [ref=f15e304] [cursor=pointer]

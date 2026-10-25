@@ -1,0 +1,10 @@
+import {chromium} from 'playwright';
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9331');
+const pages=browser.contexts().flatMap(c=>c.pages());
+const page=pages.find(p=>p.url().includes('5271'));
+if(!page)throw new Error('No owned Juno screenshot preview found');
+console.log('TITLE',await page.title());
+console.log('BRIDGE',await page.evaluate(()=>Object.keys(window.ogb?.codeRuntime??{})));
+console.log((await page.locator('body').innerText()).slice(0,6500));
+await page.screenshot({path:'evidence/studio-desktop-inspect.png'});
+await browser.close();

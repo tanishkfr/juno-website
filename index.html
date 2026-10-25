@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Juno — A little character. A workspace of possibilities.</title>
+    <meta
+      name="description"
+      content="Meet Juno, a local-first AI workspace for Windows. Six distinct companions, conversation, code, and tools—with you in control. Currently in private beta."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Meet Juno. Good work, in good company."
+    />
+    <meta
+      property="og:description"
+      content="Your AI desktop workspace, with a little character. Currently in private beta for Windows."
+    />
+    <meta property="og:image" content="/assets/juno-social.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/assets/juno-icon.svg" />
+    <link
+      rel="preload"
+      href="/assets/geist-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="wordmark" href="#overview" aria-label="Juno home"
+          ><img
+            src="/assets/juno-icon.svg"
+            alt=""
+            width="36"
+            height="36"
+          />Juno<span>.</span></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a><a href="#companions">Companions</a
+          ><a href="#features">Features</a><a href="#control">Your control</a>
+        </nav>
+        <a
+          class="beta-status"
+          href="#availability"
+          aria-label="Juno availability: private beta"
+          ><span>Private beta</span
+          ><span class="beta-arrow" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M7 17 17 7M7 7h10v10" /></svg></span
+        ></a>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open navigation"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#overview">Overview</a><a href="#companions">Companions</a
+        ><a href="#features">Features</a><a href="#control">Your control</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="overview" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="availability">
+            A desktop workspace. A little more personal.
+          </p>
+          <h1 id="hero-title">
+            Meet
+            <img
+              class="hero-orb"
+              src="/assets/kyoto.png"
+              width="108"
+              height="106"
+              alt="Kyoto, Juno’s blossom-wearing companion"
+              fetchpriority="high"
+            />
+            Juno<span>.</span>
+          </h1>
+          <p class="hero-description">
+            Your ideas, in good company.<br />Distinct companions. Connected
+            tools. One AI desktop workspace.
+          </p>
+          <a class="button primary" href="#product"
+            >Take a look
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M12 4v16m-6-6 6 6 6-6" /></svg
+          ></a>
+          <span class="platform"
+            >Made for Windows · Currently in private beta</span
+          >
+        </div>
+        <div class="hero-product wrap" id="product">
+          <div class="hero-stage">
+            <img
+              class="peek peek-prague"
+              src="/assets/prague.png"
+              alt=""
+              width="112"
+              height="124"
+            />
+            <button
+              class="product-shot hero-shot"
+              data-image="agent-kyoto"
+              data-caption="The Kyoto workspace · Real Juno interface"
+              aria-label="Enlarge the Juno desktop workspace screenshot"
+            >
+              <img
+                src="/assets/agent-kyoto-1440.webp"
+                srcset="
+                  /assets/agent-kyoto-960.webp   960w,
+                  /assets/agent-kyoto-1440.webp 1440w
+                "
+                sizes="(max-width: 700px) 100vw, 1120px"
+                alt="Juno’s light desktop workspace with the six city companions in the sidebar and Kyoto at the center."
+                width="1440"
+                height="900"
+                fetchpriority="high"
+              />
+              <span class="zoom-mark" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+              ></span>
+            </button>
+            <img
+              class="peek peek-toronto"
+              src="/assets/toronto.png"
+              alt=""
+              width="124"
+              height="100"
+            />
+          </div>
+          <p class="image-caption">
+            <span>The actual Juno workspace.</span
+            ><span
+              >Click any product image for a closer look
+              <span aria-hidden="true">↗</span></span
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="company-section wrap" aria-labelledby="company-title">
+        <div class="company-stage">
+          <div class="company-copy">
+            <h2 id="company-title">Good work starts<br />with good company.</h2>
+            <p>
+              A calm editor. A curious builder. Someone to put an idea to the
+              test. Juno’s companions bring a distinct approach to the work in
+              front of you.
+            </p>
+            <a class="text-link" href="#companions"
+              >Meet the companions <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <img
+            class="company-orb"
+            src="/assets/kyoto.png"
+            alt="Kyoto’s vermilion pixel orb with a small cream blossom"
+            width="396"
+            height="370"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section
+        class="companions-section wrap"
+        id="companions"
+        aria-labelledby="companions-title"
+      >
+        <div class="section-heading centered">
+          <h2 id="companions-title">
+            Six personalities.<br />A different way in.
+          </h2>
+          <p>
+            Same workspace. A cast with a point of view.<br />Choose a companion
+            to get to know them.
+          </p>
+        </div>
+        <div
+          class="companion-lineup"
+          role="group"
+          aria-label="Choose a companion"
+        >
+          <button
+            class="companion-choice"
+            data-companion="kyoto"
+            aria-pressed="true"
+          >
+            <img
+              src="/assets/kyoto.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>Kyoto</span>
+          </button>
+          <button
+            class="companion-choice"
+            data-companion="prague"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/prague.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>Prague</span>
+          </button>
+          <button
+            class="companion-choice"
+            data-companion="lisbon"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/lisbon.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>Lisbon</span>
+          </button>
+          <button
+            class="companion-choice"
+            data-companion="seoul"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/seoul.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>Seoul</span>
+          </button>
+          <button
+            class="companion-choice"
+            data-companion="toronto"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/toronto.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>Toronto</span>
+          </button>
+          <button
+            class="companion-choice"
+            data-companion="new-york"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/new-york.png"
+              alt=""
+              width="124"
+              height="112"
+              loading="lazy"
+            /><span>New York</span>
+          </button>
+        </div>
+        <div
+          class="companion-portrait"
+          id="companion-portrait"
+          style="--portrait-bg: #f3e8df; --portrait-ink: #75372b"
+        >
+          <div class="portrait-art">
+            <img
+              id="portrait-img"
+              src="/assets/kyoto.png"
+              alt="Kyoto"
+              width="280"
+              height="260"
+              loading="lazy"
+            /><span id="portrait-name">Kyoto</span>
+          </div>
+          <div class="portrait-copy" aria-live="polite" aria-atomic="true">
+            <p id="portrait-personality" class="personality">
+              Calm, precise, composed
+            </p>
+            <blockquote id="portrait-quote">
+              “Cut the second paragraph. The first one already said it.”
+            </blockquote>
+            <p id="portrait-strength">For focus, editing and clear plans.</p>
+          </div>
+        </div>
+        <p class="gallery-note">
+          A starting personality, not a limit. Give any companion your own
+          instructions, tools, and working style.
+        </p>
+      </section>
+
+      <section
+        class="conversation-section wrap"
+        id="features"
+        aria-labelledby="conversation-title"
+      >
+        <div class="section-heading split-heading">
+          <h2 id="conversation-title">
+            Start with a thought.<br />Leave with a next step.
+          </h2>
+          <p>
+            A place to think aloud, shape an idea, or work through a plan. The
+            conversation stays at the heart of Juno.
+          </p>
+        </div>
+        <div class="conversation-stage">
+          <img
+            class="conversation-orb"
+            src="/assets/lisbon.png"
+            alt=""
+            width="160"
+            height="140"
+            loading="lazy"
+          />
+          <button
+            class="product-shot"
+            data-image="conversation"
+            data-caption="A conversation with Kyoto · Illustrative conversation in the real Juno app"
+            aria-label="Enlarge the example conversation with Kyoto"
+          >
+            <img
+              src="/assets/conversation-1440.webp"
+              srcset="
+                /assets/conversation-960.webp   960w,
+                /assets/conversation-1440.webp 1440w
+              "
+              sizes="(max-width: 700px) 100vw, 1160px"
+              alt="An illustrative conversation with Kyoto about trying a neighborhood bookshop pop-up, shown in Juno’s actual conversation interface."
+              width="1440"
+              height="1040"
+              loading="lazy"
+            /><span class="zoom-mark" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <p class="image-caption">
+          <span>Conversation with Kyoto</span
+          ><span>Illustrative conversation · Actual application UI</span>
+        </p>
+      </section>
+
+      <section class="capability-section" aria-labelledby="capability-title">
+        <div class="wrap">
+          <div class="section-heading centered">
+            <h2 id="capability-title">
+              A conversation is<br />just the beginning.
+            </h2>
+            <p>
+              Put a question to work. Give a task some structure.<br />Keep the
+              useful things that come out of it.
+            </p>
+          </div>
+          <div class="capability-grid">
+            <article class="feature-panel computer-feature">
+              <div class="feature-copy">
+                <h3>Work where the task is.</h3>
+                <p>
+                  Keep Browser and Computer beside the conversation. Choose each
+                  bot’s tools and access, with permission when it matters.
+                </p>
+              </div>
+              <button
+                class="product-shot"
+                data-image="computer-control"
+                data-caption="Computer controls · Actual Juno interface; access is off"
+                aria-label="Enlarge Juno’s Computer controls"
+              >
+                <img
+                  src="/assets/computer-control-960.webp"
+                  width="640"
+                  height="500"
+                  loading="lazy"
+                  alt="The real Juno computer-access choices, with Off selected."
+                /><span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <p class="feature-note">Configuration and permission required.</p>
+            </article>
+            <article class="feature-panel research-feature">
+              <div class="feature-copy">
+                <h3>Give a question some room.</h3>
+                <p>
+                  A focused pass or a deeper investigation. Set the scope of
+                  your research around the question you’re trying to answer.
+                </p>
+              </div>
+              <button
+                class="product-shot"
+                data-image="research"
+                data-caption="Research depth options · Real Juno controls; no research run is depicted"
+                aria-label="Enlarge research options"
+              >
+                <img
+                  src="/assets/research-960.webp"
+                  width="950"
+                  height="490"
+                  loading="lazy"
+                  alt="The real Quick, Standard and Deep research choices in Juno."
+                /><span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <p class="feature-note">
+                Uses your configured provider and research tools.
+              </p>
+            </article>
+            <article class="feature-panel routine-feature">
+              <div class="feature-copy">
+                <h3>Make room for the recurring.</h3>
+                <p>
+                  Set up a routine for the work that comes around again. Keep
+                  its schedule and controls close to your companion.
+                </p>
+              </div>
+              <button
+                class="product-shot"
+                data-image="routines"
+                data-caption="Routines · A paused example schedule in the real Juno app"
+                aria-label="Enlarge routines settings"
+              >
+                <img
+                  src="/assets/routines-960.webp"
+                  width="1020"
+                  height="700"
+                  loading="lazy"
+                  alt="Juno’s real Routines settings with the Saturday reading hour example paused."
+                /><span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <p class="feature-note">
+                Runs while Juno and its required tools are available.
+              </p>
+            </article>
+            <article class="feature-panel results-feature">
+              <div class="feature-copy">
+                <h3>The work has a place to stay.</h3>
+                <p>
+                  Come back to what your companion creates. The Library brings
+                  saved files and results together beside the conversation.
+                </p>
+              </div>
+              <button
+                class="product-shot"
+                data-image="library"
+                data-caption="Results Library · Real Juno interface, shown before any results are saved"
+                aria-label="Enlarge results library"
+              >
+                <img
+                  src="/assets/library-960.webp"
+                  width="680"
+                  height="1008"
+                  loading="lazy"
+                  alt="Juno’s real Results panel, with file-type filters and its empty state."
+                /><span class="zoom-mark" aria-hidden="true">↗</span>
+              </button>
+              <p class="feature-note">
+                Saved results stay close to the conversation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="code-section" id="code" aria-labelledby="code-title">
+        <div class="wrap">
+          <div class="code-heading">
+            <div>
+              <h2 id="code-title">Think it through.<br />Then build it.</h2>
+              <p>
+                Bring your companion into Code. Keep the project, conversation,
+                files, and review in one workspace.
+              </p>
+            </div>
+            <img
+              src="/assets/seoul.png"
+              alt="Seoul, Juno’s prototype-loving companion"
+              width="224"
+              height="224"
+              loading="lazy"
+            />
+          </div>
+          <button
+            class="product-shot code-shot"
+            data-image="code"
+            data-caption="Juno Code workspace · A local example project"
+            aria-label="Enlarge the Juno Code workspace"
+          >
+            <img
+              src="/assets/code-1440.webp"
+              srcset="/assets/code-960.webp 960w, /assets/code-1440.webp 1440w"
+              sizes="(max-width: 700px) 100vw, 1280px"
+              alt="Juno’s real Code workspace with an example project and the adjacent file editor."
+              width="1440"
+              height="960"
+              loading="lazy"
+            /><span class="zoom-mark" aria-hidden="true">↗</span>
+          </button>
+          <p class="code-capture-note">
+            Local file editing shown. AI code work requires a configured
+            provider.
+          </p>
+          <div class="code-details">
+            <div>
+              <h3>Keep the context</h3>
+              <p>
+                Talk through the change with your companion alongside the
+                project.
+              </p>
+            </div>
+            <div>
+              <h3>See the work</h3>
+              <p>
+                Move between files, changes, and the terminal as the task needs.
+              </p>
+            </div>
+            <div>
+              <h3>Make the call</h3>
+              <p>Review proposed changes and choose what to apply.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section wrap" aria-labelledby="team-title">
+        <div class="section-heading centered">
+          <div class="team-cast" aria-hidden="true">
+            <img
+              src="/assets/prague.png"
+              alt=""
+              width="116"
+              height="124"
+              loading="lazy"
+            /><img
+              src="/assets/new-york.png"
+              alt=""
+              width="148"
+              height="128"
+              loading="lazy"
+            /><img
+              src="/assets/seoul.png"
+              alt=""
+              width="116"
+              height="124"
+              loading="lazy"
+            />
+          </div>
+          <h2 id="team-title">A few good minds.<br />One shared direction.</h2>
+          <p>
+            Bring companions together in Teams. Give each one a role,<br
+              class="desktop-break"
+            />
+            choose a coordinator, and decide how they work together.
+          </p>
+        </div>
+        <div class="team-layout">
+          <div class="team-description">
+            <h3>Different strengths,<br />working together.</h3>
+            <p>
+              Kyoto can clarify the plan. Prague can question the assumptions.
+              Seoul can explore a prototype.
+            </p>
+            <p class="supporting">
+              You choose the composition and responsibilities. Delegation uses
+              the tools and model providers you configure.
+            </p>
+          </div>
+          <button
+            class="product-shot"
+            data-image="teams"
+            data-caption="Team composition · Real Juno Teams interface"
+            aria-label="Enlarge Juno’s Teams interface"
+          >
+            <img
+              src="/assets/teams-960.webp"
+              alt="The real Teams editor showing companion selection, coordinator and role configuration."
+              width="1200"
+              height="1000"
+              loading="lazy"
+            /><span class="zoom-mark" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="studio-section wrap" aria-labelledby="studio-title">
+        <div class="studio-layout">
+          <button
+            class="product-shot"
+            data-image="studio"
+            data-caption="Orb Studio · The real appearance editor"
+            aria-label="Enlarge Orb Studio"
+          >
+            <img
+              src="/assets/studio-960.webp"
+              alt="Juno’s actual Orb Studio, with a character preview and appearance controls."
+              width="1200"
+              height="900"
+              loading="lazy"
+            /><span class="zoom-mark" aria-hidden="true">↗</span>
+          </button>
+          <div>
+            <h2 id="studio-title">Make it<br />your kind of Juno.</h2>
+            <p>
+              A familiar face, or something of your own. Shape a companion in
+              Orb Studio, from its silhouette and expression to its colors and
+              little details.
+            </p>
+            <p class="supporting">
+              Its appearance is yours to make. Its instructions and permissions
+              are yours to choose.
+            </p>
+            <div class="studio-orbs" aria-hidden="true">
+              <img
+                src="/assets/lisbon.png"
+                alt=""
+                width="96"
+                height="80"
+                loading="lazy"
+              /><img
+                src="/assets/toronto.png"
+                alt=""
+                width="112"
+                height="80"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="control-section"
+        id="control"
+        aria-labelledby="control-title"
+      >
+        <div class="wrap control-layout">
+          <div>
+            <h2 id="control-title">Your desktop.<br />Your decisions.</h2>
+            <p>
+              Juno is local-first. Your workspace lives on your computer, and
+              you choose the model providers and tools it connects to.
+            </p>
+            <p class="supporting">
+              Connected AI providers and services may process the information
+              you send them. Local-first doesn’t mean every model runs offline.
+            </p>
+          </div>
+          <dl class="control-list">
+            <div>
+              <dt>A workspace on your machine</dt>
+              <dd>
+                Keep your conversations and working context in your local Juno
+                installation.
+              </dd>
+            </div>
+            <div>
+              <dt>Providers you choose</dt>
+              <dd>
+                Configure the model provider for the work. Availability and
+                usage depend on that provider.
+              </dd>
+            </div>
+            <div>
+              <dt>Permission with a purpose</dt>
+              <dd>
+                Set each bot’s tools and access. Keep approval-sensitive actions
+                under your control.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section
+        id="availability"
+        class="closing wrap"
+        aria-labelledby="closing-title"
+      >
+        <img
+          class="closing-companion"
+          src="/assets/kyoto.png"
+          alt=""
+          width="88"
+          height="80"
+          loading="lazy"
+        />
+        <h2 id="closing-title">A little character.<br />A lot to work with.</h2>
+        <p>Juno is currently in private beta.</p>
+        <span class="closing-platform"
+          >An AI desktop workspace for Windows.</span
+        >
+        <img
+          class="closing-outline"
+          src="/assets/juno-outline.svg"
+          alt=""
+          width="1000"
+          height="1150"
+          loading="lazy"
+        />
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <a class="wordmark" href="#overview" aria-label="Juno back to top"
+        >Juno<span>.</span></a
+      >
+      <p>Good work, in good company.</p>
+      <a class="back-top" href="#overview"
+        >Back to top <span aria-hidden="true">↑</span></a
+      ><small>© 2026 Juno · Private beta</small>
+    </footer>
+    <dialog id="image-dialog" aria-labelledby="image-dialog-caption">
+      <div class="dialog-bar">
+        <p id="image-dialog-caption"></p>
+        <button id="close-image" aria-label="Close enlarged screenshot">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <img id="dialog-image" alt="" />
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

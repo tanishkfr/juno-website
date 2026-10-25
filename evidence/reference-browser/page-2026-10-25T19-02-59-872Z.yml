@@ -1,0 +1,184 @@
+- generic [active] [ref=f17e1]:
+  - link "Skip to content" [ref=f17e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f17e3]:
+    - generic [ref=f17e4]:
+      - link "Juno home" [ref=f17e5] [cursor=pointer]:
+        - /url: "#overview"
+        - text: Juno
+        - generic [ref=f17e6]: .
+      - navigation "Main navigation" [ref=f17e7]:
+        - link "Overview" [ref=f17e8] [cursor=pointer]:
+          - /url: "#overview"
+        - link "Companions" [ref=f17e9] [cursor=pointer]:
+          - /url: "#companions"
+        - link "Features" [ref=f17e10] [cursor=pointer]:
+          - /url: "#features"
+        - link "Your control" [ref=f17e11] [cursor=pointer]:
+          - /url: "#control"
+      - generic [ref=f17e12]: Private beta
+  - main [ref=f17e14]:
+    - region [ref=f17e15]:
+      - generic [ref=f17e16]:
+        - paragraph [ref=f17e17]: A desktop workspace. A little more personal.
+        - heading "Meet Kyoto, Juno’s blossom-wearing companion Juno ." [level=1] [ref=f17e18]:
+          - text: Meet
+          - img "Kyoto, Juno’s blossom-wearing companion" [ref=f17e19]
+          - text: Juno
+          - generic [ref=f17e20]: .
+        - paragraph [ref=f17e21]: Your ideas, in good company.An AI workspace with distinct companions and tools for getting things done.
+        - link "Take a look" [ref=f17e22] [cursor=pointer]:
+          - /url: "#product"
+        - generic [ref=f17e25]: Made for Windows · Currently in private beta
+      - generic [ref=f17e26]:
+        - button "Enlarge the Juno desktop workspace screenshot" [ref=f17e28] [cursor=pointer]:
+          - img "Juno’s light desktop workspace with the six city companions in the sidebar and Kyoto at the center." [ref=f17e29]
+        - paragraph [ref=f17e33]:
+          - generic [ref=f17e34]: The actual Juno workspace.
+          - generic [ref=f17e35]: Click any product image for a closer look ↗
+    - region [ref=f17e36]:
+      - generic [ref=f17e37]:
+        - generic [ref=f17e38]:
+          - heading "Good work starts with good company." [level=2] [ref=f17e39]: Good work startswith good company.
+          - paragraph [ref=f17e40]: A calm editor. A curious builder. Someone to put an idea to the test. Juno’s companions bring a distinct approach to the work in front of you.
+          - link "Meet the companions" [ref=f17e41] [cursor=pointer]:
+            - /url: "#companions"
+            - text: Meet the companions
+            - generic [aria-hidden] [ref=f17e42]: ↗
+        - img "Kyoto’s vermilion pixel orb with a small cream blossom" [ref=f17e43]
+    - region [ref=f17e44]:
+      - generic [ref=f17e45]:
+        - heading "Six personalities. A different way in." [level=2] [ref=f17e46]: Six personalities.A different way in.
+        - paragraph [ref=f17e47]: Same workspace. A cast with a point of view.Choose a companion to get to know them.
+      - group "Choose a companion" [ref=f17e48]:
+        - button "Kyoto" [pressed] [ref=f17e49] [cursor=pointer]
+        - button "Prague" [ref=f17e51] [cursor=pointer]
+        - button "Lisbon" [ref=f17e53] [cursor=pointer]
+        - button "Seoul" [ref=f17e55] [cursor=pointer]
+        - button "Toronto" [ref=f17e57] [cursor=pointer]
+        - button "New York" [ref=f17e59] [cursor=pointer]
+      - generic [ref=f17e61]:
+        - generic [ref=f17e62]:
+          - img "Kyoto" [ref=f17e63]
+          - generic [ref=f17e64]: Kyoto
+        - generic [ref=f17e65]:
+          - paragraph [ref=f17e66]: Calm, precise, composed
+          - blockquote [ref=f17e67]: “Cut the second paragraph. The first one already said it.”
+          - paragraph [ref=f17e68]: For focus, editing and clear plans.
+      - paragraph [ref=f17e69]: A starting personality, not a limit. Give any companion your own instructions, tools, and working style.
+    - region [ref=f17e70]:
+      - generic [ref=f17e71]:
+        - heading "Start with a thought. Leave with a next step." [level=2] [ref=f17e72]: Start with a thought.Leave with a next step.
+        - paragraph [ref=f17e73]: A place to think aloud, shape an idea, or work through a plan. The conversation stays at the heart of Juno.
+      - button "Enlarge the example conversation with Kyoto" [ref=f17e75] [cursor=pointer]:
+        - img "An illustrative conversation with Kyoto about trying a neighborhood bookshop pop-up, shown in Juno’s actual conversation interface." [ref=f17e76]
+        - generic [aria-hidden] [ref=f17e77]: ↗
+      - paragraph [ref=f17e78]:
+        - generic [ref=f17e79]: Conversation with Kyoto
+        - generic [ref=f17e80]: Illustrative conversation · Actual application UI
+    - region [ref=f17e81]:
+      - generic [ref=f17e82]:
+        - heading "More than a text box." [level=2] [ref=f17e83]: More thana text box.
+        - paragraph [ref=f17e84]: Give the conversation a place to work. Browser and Computer sit beside your chat, bringing the task and its context together.
+        - paragraph [ref=f17e85]: Choose which tools a bot can use, configure its access, and review actions when permission is needed.
+        - link "You set the boundaries" [ref=f17e86] [cursor=pointer]:
+          - /url: "#control"
+          - text: You set the boundaries
+          - generic [aria-hidden] [ref=f17e87]: ↗
+        - img "Toronto, the patient companion with a cream scarf" [ref=f17e88]
+      - figure "Browser & Computer · Configuration and permission required" [ref=f17e89]:
+        - button "Enlarge Juno’s Computer controls" [ref=f17e90] [cursor=pointer]:
+          - img "The real Computer panel beside a conversation, showing the choices for where a bot may work and computer access switched off." [ref=f17e91]
+          - generic [aria-hidden] [ref=f17e92]: ↗
+    - region [ref=f17e94]:
+      - generic [ref=f17e95]:
+        - generic [ref=f17e96]:
+          - generic [ref=f17e97]:
+            - heading "Think it through. Then build it." [level=2] [ref=f17e98]: Think it through.Then build it.
+            - paragraph [ref=f17e99]: Bring your companion into Code. Keep the project, conversation, files, and review in one workspace.
+          - img "Seoul, Juno’s prototype-loving companion" [ref=f17e100]
+        - button "Enlarge the Juno Code workspace" [ref=f17e101] [cursor=pointer]:
+          - img "Juno’s real Code workspace with an example project and the adjacent file editor." [ref=f17e102]
+          - generic [aria-hidden] [ref=f17e103]: ↗
+        - generic [ref=f17e104]:
+          - generic [ref=f17e105]:
+            - heading "Keep the context" [level=3] [ref=f17e106]
+            - paragraph [ref=f17e107]: Talk through the change with your companion alongside the project.
+          - generic [ref=f17e108]:
+            - heading "See the work" [level=3] [ref=f17e109]
+            - paragraph [ref=f17e110]: Move between files, changes, and the terminal as the task needs.
+          - generic [ref=f17e111]:
+            - heading "Make the call" [level=3] [ref=f17e112]
+            - paragraph [ref=f17e113]: Review proposed changes and choose what to apply.
+    - region [ref=f17e114]:
+      - generic [ref=f17e115]:
+        - heading "A few good minds. One shared direction." [level=2] [ref=f17e117]: A few good minds.One shared direction.
+        - paragraph [ref=f17e118]: Bring companions together in Teams. Give each one a role, choose a coordinator, and decide how they work together.
+      - generic [ref=f17e119]:
+        - generic [ref=f17e120]:
+          - heading "Different strengths, working together." [level=3] [ref=f17e121]: Different strengths,working together.
+          - paragraph [ref=f17e122]: Kyoto can clarify the plan. Prague can question the assumptions. Seoul can explore a prototype.
+          - paragraph [ref=f17e123]: You choose the composition and responsibilities. Delegation uses the tools and model providers you configure.
+        - button "Enlarge Juno’s Teams interface" [ref=f17e124] [cursor=pointer]:
+          - img "The real Teams editor showing companion selection, coordinator and role configuration." [ref=f17e125]
+          - generic [aria-hidden] [ref=f17e126]: ↗
+    - region [ref=f17e127]:
+      - generic [ref=f17e128]:
+        - heading "Good ideas deserve some follow-through." [level=2] [ref=f17e129]: Good ideas deservesome follow-through.
+        - paragraph [ref=f17e130]: Investigate a question. Keep the useful results. Set up a routine for the work that comes around again.
+      - generic [ref=f17e131]:
+        - group "Explore work features" [ref=f17e132]:
+          - button "Research Give a question some room." [pressed] [ref=f17e133] [cursor=pointer]:
+            - generic [ref=f17e134]: Research
+            - text: Give a question some room.
+          - button "Routines Make recurring work deliberate." [ref=f17e137] [cursor=pointer]:
+            - generic [ref=f17e138]: Routines
+            - text: Make recurring work deliberate.
+          - button "Results Keep the useful things close." [ref=f17e141] [cursor=pointer]:
+            - generic [ref=f17e142]: Results
+            - text: Keep the useful things close.
+        - generic [ref=f17e145]:
+          - button "Enlarge research options" [ref=f17e146] [cursor=pointer]:
+            - img "Juno’s real Research options, with depth and scope controls." [ref=f17e147]
+            - generic [aria-hidden] [ref=f17e148]: ↗
+          - paragraph [ref=f17e149]: Choose the scope and depth of an investigation. Research depends on your configured provider and tools.
+    - region [ref=f17e150]:
+      - generic [ref=f17e151]:
+        - button "Enlarge Orb Studio" [ref=f17e152] [cursor=pointer]:
+          - img "Juno’s actual Orb Studio, with a character preview and appearance controls." [ref=f17e153]
+          - generic [aria-hidden] [ref=f17e154]: ↗
+        - generic [ref=f17e155]:
+          - heading "Make it your kind of Juno." [level=2] [ref=f17e156]: Make ityour kind of Juno.
+          - paragraph [ref=f17e157]: A familiar face, or something of your own. Shape a companion in Orb Studio, from its silhouette and expression to its colors and little details.
+          - paragraph [ref=f17e158]: Its appearance is yours to make. Its instructions and permissions are yours to choose.
+    - region [ref=f17e160]:
+      - generic [ref=f17e161]:
+        - generic [ref=f17e162]:
+          - heading "Your desktop. Your decisions." [level=2] [ref=f17e163]: Your desktop.Your decisions.
+          - paragraph [ref=f17e164]: Juno is local-first. Your workspace lives on your computer, and you choose the model providers and tools it connects to.
+          - paragraph [ref=f17e165]: Connected AI providers and services may process the information you send them. Local-first doesn’t mean every model runs offline.
+        - generic [ref=f17e166]:
+          - generic [ref=f17e167]:
+            - term [ref=f17e168]: A workspace on your machine
+            - definition [ref=f17e169]: Keep your conversations and working context in your local Juno installation.
+          - generic [ref=f17e170]:
+            - term [ref=f17e171]: Providers you choose
+            - definition [ref=f17e172]: Configure the model provider for the work. Availability and usage depend on that provider.
+          - generic [ref=f17e173]:
+            - term [ref=f17e174]: Permission with a purpose
+            - definition [ref=f17e175]: Set each bot’s tools and access. Keep approval-sensitive actions under your control.
+    - region [ref=f17e176]:
+      - heading "A little character. A lot to work with." [level=2] [ref=f17e178]: A little character.A lot to work with.
+      - paragraph [ref=f17e179]: Juno is currently in private beta.
+      - generic [ref=f17e180]: An AI desktop workspace for Windows.
+  - contentinfo [ref=f17e181]:
+    - link "Juno back to top" [ref=f17e182] [cursor=pointer]:
+      - /url: "#overview"
+      - text: Juno
+      - generic [ref=f17e183]: .
+    - paragraph [ref=f17e184]: Good work, in good company.
+    - link "Back to top" [ref=f17e185] [cursor=pointer]:
+      - /url: "#overview"
+      - text: Back to top
+      - generic [aria-hidden] [ref=f17e186]: ↑
+    - generic [ref=f17e187]: © 2026 Juno · Private beta
