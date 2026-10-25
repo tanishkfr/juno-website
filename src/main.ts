@@ -97,13 +97,135 @@ for (const button of companionButtons) {
     companionButtons[next].click();
   });
 }
+const previewScenes: Record<
+  string,
+  { image: string; alt: string; caption: string }
+> = {
+  conversation: {
+    image: "conversation",
+    alt: "An illustrative conversation with Kyoto about a neighborhood bookshop, shown in the real Juno app.",
+    caption: "Conversation with Kyoto · Illustrative text, real app",
+  },
+  workspace: {
+    image: "agent-kyoto",
+    alt: "Juno’s actual workspace with Kyoto at the center and the six city companions in the sidebar.",
+    caption: "The Kyoto workspace · Actual Juno application",
+  },
+  code: {
+    image: "code",
+    alt: "The real Juno Code file editor with the Fieldnotes example project. Its AI provider is not connected.",
+    caption: "Local file editing in Code · AI provider not connected",
+  },
+};
+const previewTabs = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-preview]"),
+];
+const heroShot = document.querySelector<HTMLButtonElement>(".hero-shot")!;
+const heroImage = heroShot.querySelector("img")!;
+for (const tab of previewTabs) {
+  tab.addEventListener("click", () => {
+    const key = tab.dataset.preview!;
+    const scene = previewScenes[key];
+    previewTabs.forEach((button) => {
+      button.setAttribute("aria-selected", String(button === tab));
+      button.tabIndex = button === tab ? 0 : -1;
+    });
+    heroImage.srcset = `/assets/${scene.image}-960.webp 960w, /assets/${scene.image}-1440.webp 1440w`;
+    heroImage.src = `/assets/${scene.image}-1440.webp`;
+    heroImage.alt = scene.alt;
+    heroShot.dataset.image = scene.image;
+    heroShot.dataset.caption = scene.caption;
+    heroShot.setAttribute(
+      "aria-label",
+      `Enlarge ${key === "code" ? "Juno Code" : key === "workspace" ? "the Juno workspace" : "the conversation with Kyoto"}`,
+    );
+    document.querySelector<HTMLElement>(".hero-stage")!.dataset.scene = key;
+    byId("product-preview").setAttribute("aria-labelledby", tab.id);
+    byId("preview-caption").textContent = scene.caption;
+  });
+  tab.addEventListener("keydown", (event) => {
+    if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const index = previewTabs.indexOf(tab);
+    const next =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? previewTabs.length - 1
+          : (index +
+              (event.key === "ArrowRight" ? 1 : previewTabs.length - 1)) %
+            previewTabs.length;
+    previewTabs[next].focus();
+    previewTabs[next].click();
+  });
+}
 const dialog = byId<HTMLDialogElement>("image-dialog");
+const dialogImage = byId<HTMLImageElement>("dialog-image");
+const imageViewport = byId("image-viewport");
+const imageSize = byId<HTMLButtonElement>("image-size");
+const imageStatus = byId("image-status");
+const resetZoom = () => {
+  byId("image-zoom-hint").hidden = true;
+  imageViewport.dataset.zoomed = "false";
+  imageViewport.setAttribute('aria-label','Screenshot fit to view.');
+  imageSize.setAttribute("aria-pressed", "false");
+  imageSize.textContent = "Actual size";
+  imageViewport.scrollTo(0, 0);
+};
+dialogImage.addEventListener("load", () => {
+  if (!dialog.open) return;
+  imageStatus.hidden = true;
+  dialogImage.hidden = false;
+  imageSize.disabled = false;
+});
+dialogImage.addEventListener("error", () => {
+  if (!dialog.open) return;
+  imageStatus.hidden = false;
+  imageStatus.textContent =
+    "This screenshot couldn’t load. Close it and try again.";
+  dialogImage.hidden = true;
+  imageSize.disabled = true;
+});
+imageSize.addEventListener("click", () => {
+  const zoomed = imageSize.getAttribute("aria-pressed") !== "true";
+  imageViewport.dataset.zoomed = String(zoomed);
+  imageSize.setAttribute("aria-pressed", String(zoomed));
+  imageSize.textContent = zoomed ? "Fit to view" : "Actual size";
+  byId("image-zoom-hint").hidden = !zoomed;
+  const photo = imageTrigger?.dataset.image;
+  const focalPoint =
+    photo === "code"
+      ? 1
+      : ["conversation", "agent-kyoto", "computer-control", "library"].includes(
+            photo ?? "",
+          )
+        ? 0.64
+        : 0.5;
+  imageViewport.scrollTo(
+    zoomed
+      ? (imageViewport.scrollWidth - imageViewport.clientWidth) * focalPoint
+      : 0,
+    0,
+  );
+  imageViewport.setAttribute(
+    "aria-label",
+    zoomed
+      ? "Screenshot at actual size. Scroll to explore."
+      : "Screenshot fit to view.",
+  );
+  if (zoomed) imageViewport.focus({ preventScroll: true });
+});
 let imageTrigger: HTMLElement | undefined;
 document
   .querySelectorAll<HTMLButtonElement>("[data-image]")
   .forEach((button) => {
     button.addEventListener("click", () => {
       imageTrigger = button;
+      resetZoom();
+      imageSize.disabled = true;
+      imageStatus.hidden = false;
+      imageStatus.textContent = "Loading screenshot…";
+      dialogImage.hidden = true;
       const img = byId<HTMLImageElement>("dialog-image");
       img.src = `/assets/${button.dataset.image}-full.webp`;
       img.alt =
@@ -115,11 +237,23 @@ document
   });
 byId("close-image").addEventListener("click", () => dialog.close());
 dialog.addEventListener("keydown", (event) => {
-  // This image viewer has one interactive control. Keep both tab directions
-  // on Close while it is modal; Escape continues to use the native behavior.
   if (event.key === "Tab") {
-    event.preventDefault();
-    byId("close-image").focus();
+    const controls = [
+      imageSize,
+      byId<HTMLButtonElement>("close-image"),
+      imageViewport,
+    ].filter(
+      (control) => !(control instanceof HTMLButtonElement && control.disabled),
+    );
+    const index = controls.indexOf(document.activeElement as HTMLElement);
+    if (
+      index === -1 ||
+      (!event.shiftKey && index === controls.length - 1) ||
+      (event.shiftKey && index === 0)
+    ) {
+      event.preventDefault();
+      controls[event.shiftKey ? controls.length - 1 : 0].focus();
+    }
   }
 });
 dialog.addEventListener("click", (event) => {
@@ -135,6 +269,7 @@ dialog.addEventListener("click", (event) => {
   }
 });
 dialog.addEventListener("close", () => {
+  resetZoom();
   byId<HTMLImageElement>("dialog-image").removeAttribute("src");
   imageTrigger?.focus({ preventScroll: true });
 });
@@ -172,3 +307,35 @@ const observer = new IntersectionObserver(
   { rootMargin: "-80px 0px 0px 0px" },
 );
 observer.observe(document.querySelector(".hero-copy")!);
+const navSections = ["overview", "companions", "features", "control"].map(
+  (id) => byId(id),
+);
+const navLinks = [
+  ...document.querySelectorAll<HTMLAnchorElement>(
+    ".desktop-nav a,#mobile-nav a",
+  ),
+];
+let navFramePending = false;
+function updateNavigation() {
+  const current =
+    navSections
+      .filter((section) => section.getBoundingClientRect().top <= 160)
+      .at(-1)?.id ?? "overview";
+  for (const link of navLinks) {
+    if (link.hash === "#" + current)
+      link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  }
+  navFramePending = false;
+}
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!navFramePending) {
+      navFramePending = true;
+      requestAnimationFrame(updateNavigation);
+    }
+  },
+  { passive: true },
+);
+updateNavigation();

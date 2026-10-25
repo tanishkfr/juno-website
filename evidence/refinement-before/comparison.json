@@ -1,0 +1,130 @@
+{
+  "grok": {
+    "url": "https://x.ai/bot",
+    "title": "Attention Required! | Cloudflare",
+    "headings": [
+      "Sorry, you have been blocked",
+      "You are unable to access x.ai",
+      "Why have I been blocked?",
+      "What can I do to resolve this?"
+    ]
+  },
+  "maus": {
+    "url": "https://mausbot.com/",
+    "title": "Open Source Grok Bot — MausBot, your team of AI bots",
+    "headings": [
+      "Your business on autopilotbusinesssalessupporthiringinvoicesSEO",
+      "Part of",
+      "From download to your first useful task.",
+      "Work with a whole team of bots",
+      "How it works",
+      "Give each bot a job worth doing.",
+      "Our partners",
+      "What our users are saying",
+      "From the people building it",
+      "Join our community",
+      "Hello from MausBotHelloHalloHolaBonjourनमस्तेこんにちはOlá你好哈囉ПривітfromMausBot",
+      "MausBox",
+      "What you get on each Cloud plan",
+      "A few things to know before you start.",
+      "Meet your first bot"
+    ]
+  },
+  "chatgpt": {
+    "url": "https://chatgpt.com/download/",
+    "title": "",
+    "headings": []
+  },
+  "laptop": {
+    "height": 10771,
+    "viewport": 768,
+    "sections": [
+      {
+        "heading": "Meet\n            \n            Juno.",
+        "height": 1215
+      },
+      {
+        "heading": "Good work startswith good company.",
+        "height": 615
+      },
+      {
+        "heading": "Six personalities.A different way in.",
+        "height": 1013
+      },
+      {
+        "heading": "Start with a thought.Leave with a next step.",
+        "height": 1080
+      },
+      {
+        "heading": "A conversation isjust the beginning.",
+        "height": 1505
+      },
+      {
+        "heading": "Think it through.Then build it.",
+        "height": 1450
+      },
+      {
+        "heading": "A few good minds.One shared direction.",
+        "height": 1158
+      },
+      {
+        "heading": "Make ityour kind of Juno.",
+        "height": 586
+      },
+      {
+        "heading": "Your desktop.Your decisions.",
+        "height": 592
+      },
+      {
+        "heading": "A little character.A lot to work with.",
+        "height": 920
+      }
+    ]
+  },
+  "mobile": {
+    "height": 10551,
+    "viewport": 844,
+    "sections": [
+      {
+        "heading": "Meet\n            \n            Juno.",
+        "height": 692
+      },
+      {
+        "heading": "Good work startswith good company.",
+        "height": 639
+      },
+      {
+        "heading": "Six personalities.A different way in.",
+        "height": 1080
+      },
+      {
+        "heading": "Start with a thought.Leave with a next step.",
+        "height": 736
+      },
+      {
+        "heading": "A conversation isjust the beginning.",
+        "height": 2410
+      },
+      {
+        "heading": "Think it through.Then build it.",
+        "height": 1162
+      },
+      {
+        "heading": "A few good minds.One shared direction.",
+        "height": 1131
+      },
+      {
+        "heading": "Make ityour kind of Juno.",
+        "height": 705
+      },
+      {
+        "heading": "Your desktop.Your decisions.",
+        "height": 825
+      },
+      {
+        "heading": "A little character.A lot to work with.",
+        "height": 740
+      }
+    ]
+  }
+}

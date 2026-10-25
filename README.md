@@ -35,4 +35,4 @@ See [ASSET-INVENTORY.md](ASSET-INVENTORY.md) for sources and capture qualificati
 
 The captured desktop source is `c7q5b/complete-product-ui-overhaul` at `86b0f418e7161367f1132e1381f2fd001cccef94`. Its source and release configuration were not edited. The screenshot studio is a separate disposable copy at `../juno-website-studio`.
 
-Detailed results and limitations: [HANDOFF.md](HANDOFF.md).
+Detailed results and limitations: [HANDOFF.md](HANDOFF.md). The subsequent competitor comparison, refinements and current performance evidence are in [REFINEMENT-REVIEW.md](REFINEMENT-REVIEW.md).

@@ -3,7 +3,7 @@
 26 October 2026 · Private-beta showcase · Local delivery
 
 Project: `C:\Dev\Projects\Juno\backups\juno-website`  
-Branch: `codex/juno-website`  
+Branch: `codex/website-refinement`
 Commit: see the delivered Git commit in the chat and `git log -1 --oneline`. The source, artwork, capture provenance, and verification evidence are committed together.
 
 Local website: http://127.0.0.1:5272/  
@@ -12,9 +12,9 @@ No remote repository, public deployment, or production domain was created.
 
 ## What shipped
 
-A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 2.1 KB of compressed application JavaScript. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
+A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 3.25 KB of compressed application JavaScript. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
 
-The narrative includes the hero workspace, a dark oversized Kyoto exhibit, all six companions and their actual personality profiles, an illustrative conversation in the real app, four paired Computer/Research/Routines/Results panels, the actual Code file editor, Teams, Orb Studio, local-first controls, and a dark private-beta close with an enormous outline traced from Kyoto’s true pixel grid.
+The refined narrative opens with an illustrative conversation in the actual app, plus a three-view Conversation / Workspace / Code preview. It continues through the dark oversized Kyoto exhibit, all six companions and their actual personality profiles, four paired Computer/Research/Routines/Results panels, the actual Code file editor, Teams, Orb Studio, local-first controls, and a dark private-beta close with an enormous outline traced from Kyoto’s true pixel grid. The repeated standalone conversation section is removed. Teams uses a clearer example-role breakdown and leads with its product image on mobile.
 
 The owner’s later screenshot references are incorporated directly into the composition: the character breaks above and below its dark stage, the feature panels use focused real product details, and the final orb outline carries the page into a restrained dark footer. The header uses a true bold Geist face for Juno. Its monochrome Private beta pill links to the actual availability statement and replaces the original green-dot badge.
 
@@ -34,6 +34,7 @@ Desktop source baseline: `c7q5b/complete-product-ui-overhaul` at `86b0f418e71613
 - `npm run verify` against the built production preview: PASS after the final dialog focus correction.
 - Chrome at 1920×1080, 1366×768, 834×1112, 390×844 and 320×740: no horizontal overflow, broken loaded images, invalid in-page anchors, or axe WCAG A/AA violations.
 - All six companions and arrow-key selection; all four feature photograph viewers; full-image loading; forward/backward dialog tab containment; Escape; focus return; mobile navigation; beta availability navigation; reduced motion: PASS.
+- The refinement adds all three preview tabs and keyboard selection, active navigation, actual-size mobile image inspection, fit restoration, and a dismissible failed-image state. Current machine-readable results are in `evidence/verification.json`.
 - Core content without JavaScript: rendered and captured. Interactive galleries require JavaScript.
 - No runtime exceptions or failing website resource requests in the final automated browser run.
 - `npm audit --omit=optional`: zero vulnerabilities.
@@ -42,6 +43,8 @@ Desktop source baseline: `c7q5b/complete-product-ui-overhaul` at `86b0f418e71613
 Visual inspection caught and corrected the initial screenshot’s startup state, distorted decorative orbs, low-contrast entrance opacity, narrow mobile overflow, an overly broad Computer crop, and a Shift-Tab focus issue. The final page uses real, settled captures, proportionate artwork, already-legible motion, and keyboard-contained image viewing.
 
 ## Performance evidence and its boundary
+
+The figures below describe the earlier implementation. The subsequent refinement's current performance evidence and before/after comparison are recorded in `REFINEMENT-REVIEW.md`; do not treat older audit files as measurements of the newer interaction code.
 
 The final scoped Lighthouse mobile audit is `evidence/lighthouse-final-mobile-scoped.json`: performance **97**, accessibility **100**, SEO **100**, best practices **81**; FCP **1.8 s**, LCP **2.4 s**, blocking time **0 ms**, layout shift **0**. It uses Lighthouse’s simulated mobile profile against the local production build.
 

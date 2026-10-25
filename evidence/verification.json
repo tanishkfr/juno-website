@@ -1,12 +1,13 @@
 {
   "url": "http://127.0.0.1:5273/",
-  "date": "2026-10-25T19:34:23.749Z",
+  "date": "2026-10-25T20:23:51.456Z",
   "viewports": [
     {
       "name": "wide",
       "width": 1920,
       "clientWidth": 1920,
       "scrollWidth": 1920,
+      "module": "/assets/index-BT50OhF1.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -16,6 +17,7 @@
       "width": 1366,
       "clientWidth": 1366,
       "scrollWidth": 1366,
+      "module": "/assets/index-BT50OhF1.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -25,6 +27,7 @@
       "width": 834,
       "clientWidth": 834,
       "scrollWidth": 834,
+      "module": "/assets/index-BT50OhF1.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -34,6 +37,7 @@
       "width": 390,
       "clientWidth": 390,
       "scrollWidth": 390,
+      "module": "/assets/index-BT50OhF1.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -43,16 +47,21 @@
       "width": 320,
       "clientWidth": 320,
       "scrollWidth": 320,
+      "module": "/assets/index-BT50OhF1.js",
       "broken": [],
       "anchors": [],
       "violations": []
     }
   ],
   "interactions": [
+    "All three genuine product previews, with arrow-key tab selection",
     "All six companion selections and arrow-key navigation",
     "All four feature panels open their full authentic product photograph",
     "Image dialog loads full image, traps focus, Escape closes, focus returns",
     "Mobile menu opens, navigates, and closes",
+    "Navigation identifies the current section while scrolling",
+    "Actual-size mobile image inspection and fit-view restoration",
+    "Failed screenshot has a truthful error state and remains dismissible",
     "Private beta header link navigates to the actual availability statement",
     "Reduced motion removes hero animation and smooth scrolling",
     "No signup or download flows: 0 form elements",

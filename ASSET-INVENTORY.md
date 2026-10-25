@@ -8,8 +8,8 @@ All raw screenshots are retained in `source-assets/`. Every published WebP deriv
 
 | Asset | Source and staging | Website use / qualification |
 | --- | --- | --- |
-| `agent-kyoto.png` | New conversation in real Juno Electron, 1440×900; Kyoto selected, light theme | Hero. Clean canonical roster, no personal history or provider connections displayed. |
-| `conversation.png` | Real Juno Electron, 1440×1040; four inert, authored text messages about a small bookshop pop-up, seeded only for display | Conversation story, clearly labeled illustrative. No claim of a live AI answer, real external work, tool completion or provider capability. |
+| `agent-kyoto.png` | New conversation in real Juno Electron, 1440×900; Kyoto selected, light theme | Hero's Workspace preview. Clean canonical roster, no personal history or provider connections displayed. |
+| `conversation.png` | Real Juno Electron, 1440×1040; four inert, authored text messages about a small bookshop pop-up, seeded only for display | Initial hero preview, clearly labeled illustrative. No claim of a live AI answer, real external work, tool completion or provider capability. |
 | `computer-control.png` | Real Juno Electron, 1440×1040; adjacent Computer pane, Desktop view, access off | Tools and control story. Presentation crop x1086 y535 w335 h360 emphasizes the actual access choices. No desktop session or browser execution is claimed. |
 | `code.png` | Real Juno Electron and real Boreal workspace, 1440×960; local `Fieldnotes` example project and `bookshop.js`; roster collapsed with the real toggle | Code story. No internal paths shown. Real file content and editor, not AI-generated code execution. The unavailable provider is visible and qualified in the page. |
 | `teams.png` | Real Juno renderer, dialog crop 860×920; Bookshop studio draft, Kyoto/Prague/Seoul selected, responsibilities filled, Kyoto coordinator | Team-composition story. Draft configuration, not fabricated delegation activity. Draft was canceled. |

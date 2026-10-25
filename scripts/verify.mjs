@@ -41,6 +41,9 @@ for (const [name, width, height] of [
     width: innerWidth,
     clientWidth: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth,
+    module: document
+      .querySelector('script[type="module"][src]')
+      ?.getAttribute("src"),
     broken: [...document.images]
       .filter((i) => i.hasAttribute("src") && !i.naturalWidth)
       .map((i) => i.getAttribute("src")),
@@ -73,6 +76,29 @@ for (const [name, width, height] of [
 }
 await page.setViewportSize({ width: 1366, height: 768 });
 await page.goto(url);
+for (const name of ["Workspace", "Code", "Conversation"]) {
+  await page.getByRole("tab", { name, exact: true }).click();
+  await page.locator(".hero-shot img").evaluate((i) => i.decode());
+  if (
+    (await page
+      .getByRole("tab", { name, exact: true })
+      .getAttribute("aria-selected")) !== "true"
+  )
+    throw new Error("Product preview tab failed");
+}
+await page.getByRole("tab", { name: "Conversation", exact: true }).focus();
+await page.keyboard.press("ArrowRight");
+if (
+  new Set(results.viewports.map((v) => v.module)).size !== 1 ||
+  (await page
+    .getByRole("tab", { name: "Workspace", exact: true })
+    .getAttribute("aria-selected")) !== "true"
+)
+  throw new Error("Product preview keyboard navigation failed");
+await page.getByRole("tab", { name: "Conversation", exact: true }).click();
+results.interactions.push(
+  "All three genuine product previews, with arrow-key tab selection",
+);
 for (const name of [
   "Kyoto",
   "Prague",
@@ -129,6 +155,47 @@ await page.locator('#mobile-nav a[href="#companions"]').click();
 if (!(await page.locator("#mobile-nav").evaluate((e) => e.hidden)))
   throw new Error("Menu did not close");
 results.interactions.push("Mobile menu opens, navigates, and closes");
+await page.waitForFunction(
+  () =>
+    document
+      .querySelector('.desktop-nav a[href="#companions"]')
+      ?.getAttribute("aria-current") === "location",
+);
+results.interactions.push(
+  "Navigation identifies the current section while scrolling",
+);
+await page.locator(".hero-shot").click();
+await page.locator("#dialog-image").evaluate((i) => i.decode());
+await page.getByRole("button", { name: "Actual size", exact: true }).click();
+const zoom = await page
+  .locator("#image-viewport")
+  .evaluate((e) => ({ scroll: e.scrollWidth, client: e.clientWidth }));
+if (zoom.scroll <= zoom.client)
+  throw new Error("Actual-size image did not become scrollable on mobile");
+await page.screenshot({ path: "evidence/mobile-actual-size.png" });
+await page.getByRole("button", { name: "Fit to view", exact: true }).click();
+if (
+  (await page.locator("#image-size").getAttribute("aria-pressed")) !== "false"
+)
+  throw new Error("Fit view did not restore");
+await page.keyboard.press("Escape");
+results.interactions.push(
+  "Actual-size mobile image inspection and fit-view restoration",
+);
+await page.route("**/assets/conversation-full.webp", (route) => route.abort());
+await page.locator(".hero-shot").click();
+await page
+  .getByText("This screenshot couldn’t load. Close it and try again.", {
+    exact: true,
+  })
+  .waitFor();
+if (!(await page.locator("#image-size").isDisabled()))
+  throw new Error("Zoom enabled for failed image");
+await page.keyboard.press("Escape");
+await page.unroute("**/assets/conversation-full.webp");
+results.interactions.push(
+  "Failed screenshot has a truthful error state and remains dismissible",
+);
 await page.locator(".beta-status").click();
 if (!page.url().endsWith("#availability"))
   throw new Error("Availability link did not navigate");

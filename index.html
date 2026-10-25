@@ -87,9 +87,6 @@
     <main id="main">
       <section class="hero" id="overview" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="availability">
-            A desktop workspace. A little more personal.
-          </p>
           <h1 id="hero-title">
             Meet
             <img
@@ -103,11 +100,11 @@
             Juno<span>.</span>
           </h1>
           <p class="hero-description">
-            Your ideas, in good company.<br />Distinct companions. Connected
-            tools. One AI desktop workspace.
+            A local-first AI workspace for Windows.<br />Talk through ideas,
+            work on code, and put connected tools to use.
           </p>
           <a class="button primary" href="#product"
-            >Take a look
+            >Explore Juno
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -117,59 +114,99 @@
             >
               <path d="M12 4v16m-6-6 6 6 6-6" /></svg
           ></a>
-          <span class="platform"
-            >Made for Windows · Currently in private beta</span
-          >
         </div>
         <div class="hero-product wrap" id="product">
-          <div class="hero-stage">
-            <img
-              class="peek peek-prague"
-              src="/assets/prague.png"
-              alt=""
-              width="112"
-              height="124"
-            />
+          <div
+            class="product-tabs"
+            role="tablist"
+            aria-label="Explore the Juno workspace"
+          >
             <button
-              class="product-shot hero-shot"
-              data-image="agent-kyoto"
-              data-caption="The Kyoto workspace · Real Juno interface"
-              aria-label="Enlarge the Juno desktop workspace screenshot"
+              id="preview-conversation"
+              role="tab"
+              aria-selected="true"
+              aria-controls="product-preview"
+              data-preview="conversation"
             >
-              <img
-                src="/assets/agent-kyoto-1440.webp"
-                srcset="
-                  /assets/agent-kyoto-960.webp   960w,
-                  /assets/agent-kyoto-1440.webp 1440w
-                "
-                sizes="(max-width: 700px) 100vw, 1120px"
-                alt="Juno’s light desktop workspace with the six city companions in the sidebar and Kyoto at the center."
-                width="1440"
-                height="900"
-                fetchpriority="high"
-              />
-              <span class="zoom-mark" aria-hidden="true"
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
-              ></span>
+              Conversation
             </button>
-            <img
-              class="peek peek-toronto"
-              src="/assets/toronto.png"
-              alt=""
-              width="124"
-              height="100"
-            />
+            <button
+              id="preview-workspace"
+              role="tab"
+              aria-selected="false"
+              aria-controls="product-preview"
+              data-preview="workspace"
+              tabindex="-1"
+            >
+              Workspace
+            </button>
+            <button
+              id="preview-code"
+              role="tab"
+              aria-selected="false"
+              aria-controls="product-preview"
+              data-preview="code"
+              tabindex="-1"
+            >
+              Code
+            </button>
+          </div>
+          <div
+            id="product-preview"
+            role="tabpanel"
+            aria-labelledby="preview-conversation"
+            tabindex="0"
+          >
+            <div class="hero-stage" data-scene="conversation">
+              <img
+                class="peek peek-prague"
+                src="/assets/prague.png"
+                alt=""
+                width="112"
+                height="124"
+              />
+              <button
+                class="product-shot hero-shot"
+                data-image="conversation"
+                data-caption="Conversation with Kyoto · Illustrative text in the real Juno app"
+                aria-label="Enlarge the conversation with Kyoto"
+              >
+                <img
+                  src="/assets/conversation-1440.webp"
+                  srcset="
+                    /assets/conversation-960.webp   960w,
+                    /assets/conversation-1440.webp 1440w
+                  "
+                  sizes="(max-width: 700px) 100vw, 1120px"
+                  alt="An illustrative conversation with Kyoto about trying a neighborhood bookshop, shown in Juno’s real desktop app."
+                  width="1440"
+                  height="900"
+                  fetchpriority="high"
+                />
+                <span class="zoom-mark" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg
+                ></span>
+              </button>
+              <img
+                class="peek peek-toronto"
+                src="/assets/toronto.png"
+                alt=""
+                width="124"
+                height="100"
+              />
+            </div>
           </div>
           <p class="image-caption">
-            <span>The actual Juno workspace.</span
+            <span id="preview-caption" aria-live="polite"
+              >Conversation with Kyoto · Illustrative text, real app</span
             ><span
-              >Click any product image for a closer look
+              >Open an image to explore the details
               <span aria-hidden="true">↗</span></span
             >
           </p>
@@ -330,55 +367,10 @@
       </section>
 
       <section
-        class="conversation-section wrap"
         id="features"
-        aria-labelledby="conversation-title"
+        class="capability-section"
+        aria-labelledby="capability-title"
       >
-        <div class="section-heading split-heading">
-          <h2 id="conversation-title">
-            Start with a thought.<br />Leave with a next step.
-          </h2>
-          <p>
-            A place to think aloud, shape an idea, or work through a plan. The
-            conversation stays at the heart of Juno.
-          </p>
-        </div>
-        <div class="conversation-stage">
-          <img
-            class="conversation-orb"
-            src="/assets/lisbon.png"
-            alt=""
-            width="160"
-            height="140"
-            loading="lazy"
-          />
-          <button
-            class="product-shot"
-            data-image="conversation"
-            data-caption="A conversation with Kyoto · Illustrative conversation in the real Juno app"
-            aria-label="Enlarge the example conversation with Kyoto"
-          >
-            <img
-              src="/assets/conversation-1440.webp"
-              srcset="
-                /assets/conversation-960.webp   960w,
-                /assets/conversation-1440.webp 1440w
-              "
-              sizes="(max-width: 700px) 100vw, 1160px"
-              alt="An illustrative conversation with Kyoto about trying a neighborhood bookshop pop-up, shown in Juno’s actual conversation interface."
-              width="1440"
-              height="1040"
-              loading="lazy"
-            /><span class="zoom-mark" aria-hidden="true">↗</span>
-          </button>
-        </div>
-        <p class="image-caption">
-          <span>Conversation with Kyoto</span
-          ><span>Illustrative conversation · Actual application UI</span>
-        </p>
-      </section>
-
-      <section class="capability-section" aria-labelledby="capability-title">
         <div class="wrap">
           <div class="section-heading centered">
             <h2 id="capability-title">
@@ -392,10 +384,10 @@
           <div class="capability-grid">
             <article class="feature-panel computer-feature">
               <div class="feature-copy">
-                <h3>Work where the task is.</h3>
+                <h3>Tools, on your terms.</h3>
                 <p>
-                  Keep Browser and Computer beside the conversation. Choose each
-                  bot’s tools and access, with permission when it matters.
+                  Keep browser and desktop controls beside the conversation.
+                  Decide what each companion can access.
                 </p>
               </div>
               <button
@@ -442,7 +434,7 @@
             </article>
             <article class="feature-panel routine-feature">
               <div class="feature-copy">
-                <h3>Make room for the recurring.</h3>
+                <h3>Put recurring work on a schedule.</h3>
                 <p>
                   Set up a routine for the work that comes around again. Keep
                   its schedule and controls close to your companion.
@@ -468,7 +460,7 @@
             </article>
             <article class="feature-panel results-feature">
               <div class="feature-copy">
-                <h3>The work has a place to stay.</h3>
+                <h3>Keep files and results together.</h3>
                 <p>
                   Come back to what your companion creates. The Library brings
                   saved files and results together beside the conversation.
@@ -589,14 +581,24 @@
         </div>
         <div class="team-layout">
           <div class="team-description">
-            <h3>Different strengths,<br />working together.</h3>
-            <p>
-              Kyoto can clarify the plan. Prague can question the assumptions.
-              Seoul can explore a prototype.
-            </p>
+            <h3>One project.<br />Three perspectives.</h3>
+            <dl class="team-roles" aria-label="Example team responsibilities">
+              <div>
+                <dt>Kyoto</dt>
+                <dd>Clarify the plan</dd>
+              </div>
+              <div>
+                <dt>Prague</dt>
+                <dd>Question the assumptions</dd>
+              </div>
+              <div>
+                <dt>Seoul</dt>
+                <dd>Explore a prototype</dd>
+              </div>
+            </dl>
             <p class="supporting">
-              You choose the composition and responsibilities. Delegation uses
-              the tools and model providers you configure.
+              An example team. You choose the roles and coordinator, using the
+              providers and tools you configure.
             </p>
           </div>
           <button
@@ -745,6 +747,18 @@
     <dialog id="image-dialog" aria-labelledby="image-dialog-caption">
       <div class="dialog-bar">
         <p id="image-dialog-caption"></p>
+        <button
+          id="image-size"
+          class="image-size"
+          type="button"
+          aria-pressed="false"
+          disabled
+        >
+          Actual size
+        </button>
+        <span id="image-zoom-hint" class="image-zoom-hint" hidden
+          >Scroll to explore</span
+        >
         <button id="close-image" aria-label="Close enlarged screenshot">
           <svg
             viewBox="0 0 24 24"
@@ -757,7 +771,15 @@
           </svg>
         </button>
       </div>
-      <img id="dialog-image" alt="" />
+      <div
+        class="image-viewport"
+        id="image-viewport"
+        tabindex="0"
+        aria-label="Screenshot view"
+      >
+        <p id="image-status" role="status">Loading screenshot…</p>
+        <img id="dialog-image" alt="" />
+      </div>
     </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
