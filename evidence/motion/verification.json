@@ -1,0 +1,21 @@
+{
+  "url": "http://127.0.0.1:5273/",
+  "date": "2026-10-26T04:23:09.905Z",
+  "errors": [],
+  "checks": [
+    "Tour completes all three views and wraps",
+    "Pause and resume",
+    "Manual selection stops autoplay",
+    "Hover suspends tour",
+    "Offscreen tour suspends",
+    "Companion pause and resume",
+    "Dynamic reduced motion stops both loops",
+    "Real-time browser expression change and return to rest",
+    "Real-time browser tour advances"
+  ],
+  "companion": {
+    "pages": 7,
+    "duration": 14000,
+    "bytes": 890
+  }
+}

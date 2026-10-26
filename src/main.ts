@@ -122,26 +122,133 @@ const previewTabs = [
 ];
 const heroShot = document.querySelector<HTMLButtonElement>(".hero-shot")!;
 const heroImage = heroShot.querySelector("img")!;
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const previewPlayback = byId<HTMLButtonElement>("preview-playback");
+const companionPlayback = byId<HTMLButtonElement>("companion-playback");
+const companyOrb = byId<HTMLImageElement>("company-orb");
+let tourPlaying = !reducedMotion.matches;
+let companionPlaying = !reducedMotion.matches;
+let previewVisible = false;
+let companionVisible = false;
+let previewHovered = false;
+let tourTimer: ReturnType<typeof setTimeout> | undefined;
+let outgoingImage: HTMLImageElement | undefined;
+let previewTransition: Animation | undefined;
+
+function updatePlaybackButton(
+  button: HTMLButtonElement,
+  playing: boolean,
+  label: string,
+) {
+  button.hidden = false;
+  button.disabled = reducedMotion.matches;
+  button.title = reducedMotion.matches
+    ? "Paused for your reduced motion preference"
+    : "";
+  button.querySelector("span")!.textContent = reducedMotion.matches
+    ? `${label === "tour" ? "Tour" : "Animation"} paused`
+    : `${playing ? "Pause" : "Play"} ${label}`;
+  button
+    .querySelector("path")!
+    .setAttribute("d", playing ? "M7 5v10M13 5v10" : "M7 4l8 6-8 6V4Z");
+}
+
+function updateMotion() {
+  clearTimeout(tourTimer);
+  const tourAllowed = tourPlaying && !reducedMotion.matches;
+  updatePlaybackButton(previewPlayback, tourAllowed, "tour");
+  updatePlaybackButton(
+    companionPlayback,
+    companionPlaying && !reducedMotion.matches,
+    "animation",
+  );
+  byId("preview-caption").setAttribute(
+    "aria-live",
+    tourAllowed ? "off" : "polite",
+  );
+  if (
+    tourAllowed &&
+    previewVisible &&
+    !previewHovered &&
+    !document.hidden &&
+    !byId<HTMLDialogElement>("image-dialog").open
+  ) {
+    tourTimer = setTimeout(() => {
+      const index = previewTabs.findIndex(
+        (tab) => tab.getAttribute("aria-selected") === "true",
+      );
+      showPreview(previewTabs[(index + 1) % previewTabs.length], true);
+      updateMotion();
+    }, 7000);
+  }
+  const orbSource =
+    companionPlaying &&
+    companionVisible &&
+    !reducedMotion.matches &&
+    !document.hidden &&
+    !byId<HTMLDialogElement>("image-dialog").open
+      ? "/assets/kyoto-idle.webp"
+      : "/assets/kyoto.png";
+  if (companyOrb.getAttribute("src") !== orbSource) companyOrb.src = orbSource;
+}
+
+function stopTour() {
+  tourPlaying = false;
+  updateMotion();
+}
+
+function showPreview(tab: HTMLButtonElement, automatic = false) {
+  previewTransition?.cancel();
+  outgoingImage?.remove();
+  outgoingImage = undefined;
+  if (automatic) {
+    outgoingImage = heroImage.cloneNode() as HTMLImageElement;
+    outgoingImage.className = "preview-outgoing";
+    outgoingImage.alt = "";
+    outgoingImage.setAttribute("aria-hidden", "true");
+    outgoingImage.style.objectPosition =
+      getComputedStyle(heroImage).objectPosition;
+    heroShot.append(outgoingImage);
+  }
+  const key = tab.dataset.preview!;
+  const scene = previewScenes[key];
+  previewTabs.forEach((button) => {
+    button.setAttribute("aria-selected", String(button === tab));
+    button.tabIndex = button === tab ? 0 : -1;
+  });
+  heroImage.srcset = `/assets/${scene.image}-960.webp 960w, /assets/${scene.image}-1440.webp 1440w`;
+  heroImage.src = `/assets/${scene.image}-1440.webp`;
+  heroImage.alt = scene.alt;
+  heroShot.dataset.image = scene.image;
+  heroShot.dataset.caption = scene.caption;
+  heroShot.setAttribute(
+    "aria-label",
+    `Enlarge ${key === "code" ? "Juno Code" : key === "workspace" ? "the Juno workspace" : "the conversation with Kyoto"}`,
+  );
+  document.querySelector<HTMLElement>(".hero-stage")!.dataset.scene = key;
+  byId("product-preview").setAttribute("aria-labelledby", tab.id);
+  byId("preview-caption").textContent = scene.caption;
+  const cover = outgoingImage;
+  if (cover)
+    void heroImage
+      .decode()
+      .then(() => {
+        if (outgoingImage !== cover) return;
+        previewTransition = cover.animate([{ opacity: 1 }, { opacity: 0 }], {
+          duration: reducedMotion.matches ? 0 : 450,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+          fill: "forwards",
+        });
+        void previewTransition.finished
+          .then(() => cover.remove())
+          .catch(() => {});
+      })
+      .catch(() => cover.remove());
+}
 for (const tab of previewTabs) {
   tab.addEventListener("click", () => {
-    const key = tab.dataset.preview!;
-    const scene = previewScenes[key];
-    previewTabs.forEach((button) => {
-      button.setAttribute("aria-selected", String(button === tab));
-      button.tabIndex = button === tab ? 0 : -1;
-    });
-    heroImage.srcset = `/assets/${scene.image}-960.webp 960w, /assets/${scene.image}-1440.webp 1440w`;
-    heroImage.src = `/assets/${scene.image}-1440.webp`;
-    heroImage.alt = scene.alt;
-    heroShot.dataset.image = scene.image;
-    heroShot.dataset.caption = scene.caption;
-    heroShot.setAttribute(
-      "aria-label",
-      `Enlarge ${key === "code" ? "Juno Code" : key === "workspace" ? "the Juno workspace" : "the conversation with Kyoto"}`,
-    );
-    document.querySelector<HTMLElement>(".hero-stage")!.dataset.scene = key;
-    byId("product-preview").setAttribute("aria-labelledby", tab.id);
-    byId("preview-caption").textContent = scene.caption;
+    stopTour();
+    showPreview(tab);
   });
   tab.addEventListener("keydown", (event) => {
     if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
@@ -159,6 +266,48 @@ for (const tab of previewTabs) {
     previewTabs[next].click();
   });
 }
+previewPlayback.addEventListener("click", () => {
+  tourPlaying = !tourPlaying;
+  updateMotion();
+});
+companionPlayback.addEventListener("click", () => {
+  companionPlaying = !companionPlaying;
+  updateMotion();
+});
+for (const tab of previewTabs) tab.addEventListener("focus", stopTour);
+heroShot.addEventListener("focus", stopTour);
+heroShot.addEventListener("pointerenter", () => {
+  previewHovered = true;
+  updateMotion();
+});
+heroShot.addEventListener("pointerleave", () => {
+  previewHovered = false;
+  updateMotion();
+});
+const motionVisibility = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.target === heroShot)
+        previewVisible = entry.intersectionRatio >= 0.15;
+      else companionVisible = entry.isIntersecting;
+    }
+    updateMotion();
+  },
+  { threshold: [0, 0.15] },
+);
+motionVisibility.observe(heroShot);
+motionVisibility.observe(companyOrb);
+document.addEventListener("visibilitychange", updateMotion);
+reducedMotion.addEventListener("change", () => {
+  if (reducedMotion.matches) {
+    tourPlaying = false;
+    companionPlaying = false;
+    previewTransition?.finish();
+    outgoingImage?.remove();
+  }
+  updateMotion();
+});
+updateMotion();
 const dialog = byId<HTMLDialogElement>("image-dialog");
 const dialogImage = byId<HTMLImageElement>("dialog-image");
 const imageViewport = byId("image-viewport");
@@ -167,7 +316,7 @@ const imageStatus = byId("image-status");
 const resetZoom = () => {
   byId("image-zoom-hint").hidden = true;
   imageViewport.dataset.zoomed = "false";
-  imageViewport.setAttribute('aria-label','Screenshot fit to view.');
+  imageViewport.setAttribute("aria-label", "Screenshot fit to view.");
   imageSize.setAttribute("aria-pressed", "false");
   imageSize.textContent = "Actual size";
   imageViewport.scrollTo(0, 0);
@@ -233,6 +382,7 @@ document
       byId("image-dialog-caption").textContent =
         button.dataset.caption ?? "Juno";
       dialog.showModal();
+      updateMotion();
     });
   });
 byId("close-image").addEventListener("click", () => dialog.close());
@@ -269,6 +419,7 @@ dialog.addEventListener("click", (event) => {
   }
 });
 dialog.addEventListener("close", () => {
+  updateMotion();
   resetZoom();
   byId<HTMLImageElement>("dialog-image").removeAttribute("src");
   imageTrigger?.focus({ preventScroll: true });

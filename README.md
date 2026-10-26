@@ -17,11 +17,14 @@ Preview: http://127.0.0.1:5272
 npm run build
 npm run preview
 npm run verify
+npm run verify:motion
 ```
 
 `verify` expects Google Chrome installed and a running local preview. Set `WEBSITE_URL` to test a different owned preview. It checks five viewports, WCAG rules with axe, images, anchors, companion selection, feature photographs, dialog keyboard behavior, mobile navigation, the beta availability link, reduced motion, and static content without JavaScript. It writes the evidence directory.
 
 `npm run assets` regenerates the WebP assets from the untouched source screenshots and creates the social preview. Fonts and character exports are already included. The website builds independently; the separate screenshot studio and desktop source are not needed to run or deploy it.
+
+`verify:motion` checks the looping tour, pause/resume, manual selection, hover, offscreen suspension and dynamic reduced motion. It also records real elapsed Chrome playback and compares rendered Kyoto expressions as they change and return to rest. Results and a local WebM recording are saved in `evidence/motion/`.
 
 ## Deploy
 

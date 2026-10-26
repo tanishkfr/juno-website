@@ -116,39 +116,59 @@
           ></a>
         </div>
         <div class="hero-product wrap" id="product">
-          <div
-            class="product-tabs"
-            role="tablist"
-            aria-label="Explore the Juno workspace"
-          >
-            <button
-              id="preview-conversation"
-              role="tab"
-              aria-selected="true"
-              aria-controls="product-preview"
-              data-preview="conversation"
+          <div class="preview-toolbar">
+            <div
+              class="product-tabs"
+              role="tablist"
+              aria-label="Explore the Juno workspace"
             >
-              Conversation
-            </button>
+              <button
+                id="preview-conversation"
+                role="tab"
+                aria-selected="true"
+                aria-controls="product-preview"
+                data-preview="conversation"
+              >
+                Conversation
+              </button>
+              <button
+                id="preview-workspace"
+                role="tab"
+                aria-selected="false"
+                aria-controls="product-preview"
+                data-preview="workspace"
+                tabindex="-1"
+              >
+                Workspace
+              </button>
+              <button
+                id="preview-code"
+                role="tab"
+                aria-selected="false"
+                aria-controls="product-preview"
+                data-preview="code"
+                tabindex="-1"
+              >
+                Code
+              </button>
+            </div>
             <button
-              id="preview-workspace"
-              role="tab"
-              aria-selected="false"
+              id="preview-playback"
+              class="playback-control"
               aria-controls="product-preview"
-              data-preview="workspace"
-              tabindex="-1"
+              hidden
             >
-              Workspace
-            </button>
-            <button
-              id="preview-code"
-              role="tab"
-              aria-selected="false"
-              aria-controls="product-preview"
-              data-preview="code"
-              tabindex="-1"
-            >
-              Code
+              <svg
+                class="playback-icon"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M7 5v10M13 5v10" />
+              </svg>
+              <span>Pause tour</span>
             </button>
           </div>
           <div
@@ -225,8 +245,27 @@
             <a class="text-link" href="#companions"
               >Meet the companions <span aria-hidden="true">↗</span></a
             >
+            <button
+              id="companion-playback"
+              class="playback-control"
+              aria-controls="company-orb"
+              hidden
+            >
+              <svg
+                class="playback-icon"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M7 5v10M13 5v10" />
+              </svg>
+              <span>Pause animation</span>
+            </button>
           </div>
           <img
+            id="company-orb"
             class="company-orb"
             src="/assets/kyoto.png"
             alt="Kyoto’s vermilion pixel orb with a small cream blossom"

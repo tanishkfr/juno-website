@@ -20,6 +20,8 @@ All raw screenshots are retained in `source-assets/`. Every published WebP deriv
 
 ## Artwork
 
+`kyoto-idle.webp` is a lossless, transparent animated export of the same canonical Kyoto recipe and renderer. Its seven frames follow `orbFrameSchedule` in **idle** state, seed `kyoto`: a 14-second blink/glance loop with a fixed crop and no invented activity. It is 890 bytes. `source-assets/kyoto-idle.json` records every expression and hold; `scripts/export-motion.mjs` reproduces it from the disposable source copy. The website swaps back to the original PNG when paused, offscreen, backgrounded or reduced-motion is enabled. The screenshot tour only cycles the three existing authentic photographs; it does not manufacture a video of product execution.
+
 Six PNGs are deterministic exports of `CHARACTER_ORB_RECIPES` through Juno’s actual `renderOrbRgba` at 576 pixels, trimmed to transparent bounds. No image generation was used. Canonical identity and hues: Kyoto #B84A3A, Prague #7654AD, Lisbon #3567D6, Seoul #DC78A4, Toronto #6DB8CC, New York #D9B345. The refined Kyoto app icon is copied from Juno’s `public/app-icon.svg`, unchanged.
 
 Names, personality lines and sample voices come from `shared/juno-characters.ts`; a copy of that portable profile data is retained in `source-assets/companions.json`. Personality quotations are authored character samples from the product, not testimonials.

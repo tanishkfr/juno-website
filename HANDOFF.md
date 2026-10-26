@@ -12,7 +12,7 @@ No remote repository, public deployment, or production domain was created.
 
 ## What shipped
 
-A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 3.25 KB of compressed application JavaScript. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
+A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 4.09 KB of compressed application JavaScript including playback controls. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
 
 The refined narrative opens with an illustrative conversation in the actual app, plus a three-view Conversation / Workspace / Code preview. It continues through the dark oversized Kyoto exhibit, all six companions and their actual personality profiles, four paired Computer/Research/Routines/Results panels, the actual Code file editor, Teams, Orb Studio, local-first controls, and a dark private-beta close with an enormous outline traced from Kyoto’s true pixel grid. The repeated standalone conversation section is removed. Teams uses a clearer example-role breakdown and leads with its product image on mobile.
 
@@ -29,6 +29,10 @@ The photographs use a copied source tree and disposable profiles. The featured c
 Desktop source baseline: `c7q5b/complete-product-ui-overhaul` at `86b0f418e7161367f1132e1381f2fd001cccef94`. The baseline tracked files were clean before and after capture. Desktop source, release configuration, branch, installer and packaging files were not edited.
 
 ## Verification
+
+- Looping motion: PASS. The real screenshots cycle every seven seconds with a 450ms crossfade; Kyoto's seven-frame idle animation loops over 14 seconds. Both have pause controls, respect reduced motion, and suspend offscreen or in background tabs. Manual selection or image focus stops the tour; hovering suspends it. No animation library was added. The companion animation is 890 bytes.
+- `npm run verify:motion`: PASS against the built preview. Browser checks cover tour wrapping, pause/resume, manual selection, hover, offscreen suspension and changing reduced-motion preferences. A separate real-time Chrome session confirms rendered expression changes, return to rest and tour advancement. Evidence: `evidence/motion/verification.json`; local recording: `evidence/motion/loops.webm`.
+- The motion refinement was also checked with the full five-viewport acceptance suite; all five use production module `index-e2TLRVuz.js`. Existing navigation, image inspection and keyboard flows pass with no axe violations or runtime errors. Mobile visual review caught and corrected a collision between Kyoto's blossom and the new pause control. The earlier Lighthouse numbers below predate this motion refinement; no new performance score is claimed.
 
 - `npm run build`: PASS, including strict TypeScript checking and the production Vite build.
 - `npm run verify` against the built production preview: PASS after the final dialog focus correction.
