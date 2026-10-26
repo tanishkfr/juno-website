@@ -11,31 +11,33 @@ const { renderOrbRgba } = await load("src/product/orbs/orb-raster.ts");
 const { CHARACTER_ORB_RECIPES } = await load("src/product/orbs/orb-recipes.ts");
 const duration = 12000;
 const records = {};
+let phase = 0;
 for (const [id, recipe] of Object.entries(CHARACTER_ORB_RECIPES)) {
+  const offset = phase++ * 160;
   // An authored character-expression preview using the product's actual face
   // parts. It does not represent task completion or any runtime activity.
   const schedule = [
     { at: 0, frame: {} },
-    { at: 1400, frame: { eyes: "closed" } },
-    { at: 1550, frame: {} },
+    { at: 1400 + offset, frame: { eyes: "closed" } },
+    { at: 1550 + offset, frame: {} },
     {
-      at: 3000,
+      at: 3000 + offset,
       frame: {
         eyes: "happy",
         mouth: recipe.mouth === "smirk" ? "smirk" : "grin",
       },
     },
-    { at: 4400, frame: {} },
+    { at: 4400 + offset, frame: {} },
     {
-      at: 7200,
+      at: 7200 + offset,
       frame: {
         eyes:
           id === "prague" || id === "new-york" ? "glance-right" : "glance-left",
       },
     },
-    { at: 7800, frame: {} },
-    { at: 10000, frame: { eyes: "closed" } },
-    { at: 10150, frame: {} },
+    { at: 7800 + offset, frame: {} },
+    { at: 10000 + offset, frame: { eyes: "closed" } },
+    { at: 10150 + offset, frame: {} },
   ];
   // Keep the entire loop on one fixed canvas. Trimming each expression separately
   // would make the character jump between frames.

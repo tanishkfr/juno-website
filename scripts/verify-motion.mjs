@@ -130,6 +130,25 @@ assert.equal(
   await page.locator("#portrait-img").getAttribute("src"),
   "/assets/new-york-expressions.webp",
 );
+const decorativeOrbs = page.locator("img[data-orb]");
+assert.equal(await decorativeOrbs.count(), 16);
+for (let i = 0; i < (await decorativeOrbs.count()); i++) {
+  const orb = decorativeOrbs.nth(i);
+  await orb.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(100);
+  assert.equal(
+    await orb.getAttribute("src"),
+    `/assets/${await orb.getAttribute("data-orb")}-expressions.webp`,
+  );
+  await orb.evaluate((image) => image.decode());
+}
+await page.locator("#character-playback").click();
+assert.equal(await page.locator('img[src$="-expressions.webp"]').count(), 0);
+await page.locator("#character-playback").click();
+await page.waitForTimeout(100);
+assert(
+  (await page.locator('img[data-orb][src$="-expressions.webp"]').count()) > 0,
+);
 await page.emulateMedia({ reducedMotion: "reduce" });
 await page.waitForFunction(
   () =>
@@ -238,12 +257,38 @@ await live.waitForFunction(
     "/assets/seoul-expressions.webp",
 );
 await live.locator("#portrait-img").evaluate((i) => i.decode());
-await live.waitForTimeout(3300);
+await live.waitForTimeout(4000);
 await live.screenshot({ path: "evidence/motion/portrait-smile.png" });
 await live
   .getByRole("button", { name: "Pause expressions", exact: true })
   .click();
 await live.screenshot({ path: "evidence/motion/portrait-resting.png" });
+await live.locator("#portrait-playback").click();
+for (const [selector, stem] of [
+  [".hero-orb", "hero-orb"],
+  [".team-cast", "team-orbs"],
+]) {
+  const group = live.locator(selector);
+  await group.scrollIntoViewIfNeeded();
+  await live.mouse.move(5, 5);
+  await live.waitForTimeout(300);
+  const initial = await group.screenshot({
+    path: `evidence/motion/${stem}-resting.png`,
+  });
+  const initialPixels = await sharp(initial).raw().toBuffer();
+  let expression;
+  const end = Date.now() + 14000;
+  while (Date.now() < end) {
+    await live.waitForTimeout(150);
+    const next = await group.screenshot();
+    if (changed(initialPixels, await sharp(next).raw().toBuffer()) > 100) {
+      expression = next;
+      break;
+    }
+  }
+  assert(expression, `${selector} never changed expression in the browser`);
+  await fs.writeFile(`evidence/motion/${stem}-expression.png`, expression);
+}
 await live.locator(".preview-toolbar").scrollIntoViewIfNeeded();
 await live.mouse.move(5, 5);
 await live.waitForTimeout(6100);
@@ -271,6 +316,8 @@ const results = {
     "Offscreen tour suspends",
     "Companion pause and resume",
     "All six selected portraits load genuine expression loops; portrait pause/resume and reduced motion",
+    "All 16 standalone decorative orbs load expression loops; shared pause stops all character animation",
+    "Real browser pixel changes confirm hero and team-group expressions",
     "Dynamic reduced motion stops both loops",
     "Real-time browser expression change and return to rest",
     "Real-time browser tour advances",

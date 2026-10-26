@@ -88,6 +88,7 @@
           <h1 id="hero-title">
             Meet
             <img
+              data-orb="kyoto"
               class="hero-orb"
               src="/assets/kyoto.png"
               width="108"
@@ -150,24 +151,39 @@
                 Code
               </button>
             </div>
-            <button
-              id="preview-playback"
-              class="playback-control"
-              aria-controls="product-preview"
-              hidden
-            >
-              <svg
-                class="playback-icon"
-                viewBox="0 0 20 20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                aria-hidden="true"
+            <div class="preview-controls">
+              <button
+                id="preview-playback"
+                class="playback-control"
+                aria-controls="product-preview"
+                hidden
               >
-                <path d="M7 5v10M13 5v10" />
-              </svg>
-              <span>Pause tour</span>
-            </button>
+                <svg
+                  class="playback-icon"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                >
+                  <path d="M7 5v10M13 5v10" />
+                </svg>
+                <span>Pause tour</span>
+              </button>
+              <button id="character-playback" class="playback-control" hidden>
+                <svg
+                  class="playback-icon"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                >
+                  <path d="M7 5v10M13 5v10" />
+                </svg>
+                <span>Pause characters</span>
+              </button>
+            </div>
           </div>
           <div
             id="product-preview"
@@ -177,6 +193,7 @@
           >
             <div class="hero-stage" data-scene="conversation">
               <img
+                data-orb="prague"
                 class="peek peek-prague"
                 src="/assets/prague.png"
                 alt=""
@@ -212,6 +229,7 @@
                 ></span>
               </button>
               <img
+                data-orb="toronto"
                 class="peek peek-toronto"
                 src="/assets/toronto.png"
                 alt=""
@@ -299,6 +317,7 @@
             aria-pressed="true"
           >
             <img
+              data-orb="kyoto"
               src="/assets/kyoto.png"
               alt=""
               width="124"
@@ -312,6 +331,7 @@
             aria-pressed="false"
           >
             <img
+              data-orb="prague"
               src="/assets/prague.png"
               alt=""
               width="124"
@@ -325,6 +345,7 @@
             aria-pressed="false"
           >
             <img
+              data-orb="lisbon"
               src="/assets/lisbon.png"
               alt=""
               width="124"
@@ -338,6 +359,7 @@
             aria-pressed="false"
           >
             <img
+              data-orb="seoul"
               src="/assets/seoul.png"
               alt=""
               width="124"
@@ -351,6 +373,7 @@
             aria-pressed="false"
           >
             <img
+              data-orb="toronto"
               src="/assets/toronto.png"
               alt=""
               width="124"
@@ -364,6 +387,7 @@
             aria-pressed="false"
           >
             <img
+              data-orb="new-york"
               src="/assets/new-york.png"
               alt=""
               width="124"
@@ -554,6 +578,7 @@
               </p>
             </div>
             <img
+              data-orb="seoul"
               src="/assets/seoul.png"
               alt="Seoul, Juno’s prototype-loving companion"
               width="224"
@@ -607,18 +632,21 @@
         <div class="section-heading centered">
           <div class="team-cast" aria-hidden="true">
             <img
+              data-orb="prague"
               src="/assets/prague.png"
               alt=""
               width="116"
               height="124"
               loading="lazy"
             /><img
+              data-orb="new-york"
               src="/assets/new-york.png"
               alt=""
               width="148"
               height="128"
               loading="lazy"
             /><img
+              data-orb="seoul"
               src="/assets/seoul.png"
               alt=""
               width="116"
@@ -702,12 +730,14 @@
             </p>
             <div class="studio-orbs" aria-hidden="true">
               <img
+                data-orb="lisbon"
                 src="/assets/lisbon.png"
                 alt=""
                 width="96"
                 height="80"
                 loading="lazy"
               /><img
+                data-orb="toronto"
                 src="/assets/toronto.png"
                 alt=""
                 width="112"
@@ -768,6 +798,7 @@
         aria-labelledby="closing-title"
       >
         <img
+          data-orb="kyoto"
           class="closing-companion"
           src="/assets/kyoto.png"
           alt=""

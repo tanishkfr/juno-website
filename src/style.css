@@ -1852,10 +1852,21 @@ dialog[open] {
 /* Product-led overview and readable image inspection. */
 .preview-toolbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
+}
+.preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+}
+img[data-orb] {
+  image-rendering: pixelated;
 }
 .preview-toolbar .product-tabs {
   margin: 0;

@@ -129,11 +129,15 @@ const companionPlayback = byId<HTMLButtonElement>("companion-playback");
 const companyOrb = byId<HTMLImageElement>("company-orb");
 const portraitPlayback = byId<HTMLButtonElement>("portrait-playback");
 const portraitImage = byId<HTMLImageElement>("portrait-img");
+const characterPlayback = byId<HTMLButtonElement>("character-playback");
+const decorativeOrbs = [
+  ...document.querySelectorAll<HTMLImageElement>("img[data-orb]"),
+];
+const visibleOrbs = new Set<HTMLImageElement>();
 let selectedCompanion = "kyoto";
-let portraitPlaying = !reducedMotion.matches;
 let portraitVisible = false;
 let tourPlaying = !reducedMotion.matches;
-let companionPlaying = !reducedMotion.matches;
+let charactersPlaying = !reducedMotion.matches;
 let previewVisible = false;
 let companionVisible = false;
 let previewHovered = false;
@@ -165,13 +169,18 @@ function updateMotion() {
   updatePlaybackButton(previewPlayback, tourAllowed, "tour");
   updatePlaybackButton(
     companionPlayback,
-    companionPlaying && !reducedMotion.matches,
+    charactersPlaying && !reducedMotion.matches,
     "animation",
   );
   updatePlaybackButton(
     portraitPlayback,
-    portraitPlaying && !reducedMotion.matches,
+    charactersPlaying && !reducedMotion.matches,
     "expressions",
+  );
+  updatePlaybackButton(
+    characterPlayback,
+    charactersPlaying && !reducedMotion.matches,
+    "characters",
   );
   byId("preview-caption").setAttribute(
     "aria-live",
@@ -193,7 +202,7 @@ function updateMotion() {
     }, 5000);
   }
   const orbSource =
-    companionPlaying &&
+    charactersPlaying &&
     companionVisible &&
     !reducedMotion.matches &&
     !document.hidden &&
@@ -202,7 +211,7 @@ function updateMotion() {
       : "/assets/kyoto.png";
   if (companyOrb.getAttribute("src") !== orbSource) companyOrb.src = orbSource;
   const portraitSource =
-    portraitPlaying &&
+    charactersPlaying &&
     portraitVisible &&
     !reducedMotion.matches &&
     !document.hidden &&
@@ -211,6 +220,18 @@ function updateMotion() {
       : `/assets/${selectedCompanion}.png`;
   if (portraitImage.getAttribute("src") !== portraitSource)
     portraitImage.src = portraitSource;
+  const charactersAllowed =
+    charactersPlaying &&
+    !reducedMotion.matches &&
+    !document.hidden &&
+    !byId<HTMLDialogElement>("image-dialog").open;
+  for (const orb of decorativeOrbs) {
+    const source =
+      charactersAllowed && visibleOrbs.has(orb)
+        ? `/assets/${orb.dataset.orb}-expressions.webp`
+        : `/assets/${orb.dataset.orb}.png`;
+    if (orb.getAttribute("src") !== source) orb.src = source;
+  }
 }
 
 function stopTour() {
@@ -292,11 +313,15 @@ previewPlayback.addEventListener("click", () => {
   updateMotion();
 });
 companionPlayback.addEventListener("click", () => {
-  companionPlaying = !companionPlaying;
+  charactersPlaying = !charactersPlaying;
   updateMotion();
 });
 portraitPlayback.addEventListener("click", () => {
-  portraitPlaying = !portraitPlaying;
+  charactersPlaying = !charactersPlaying;
+  updateMotion();
+});
+characterPlayback.addEventListener("click", () => {
+  charactersPlaying = !charactersPlaying;
   updateMotion();
 });
 for (const tab of previewTabs) tab.addEventListener("focus", stopTour);
@@ -312,7 +337,13 @@ heroShot.addEventListener("pointerleave", () => {
 const motionVisibility = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
-      if (entry.target === heroShot)
+      if (
+        entry.target instanceof HTMLImageElement &&
+        entry.target.hasAttribute("data-orb")
+      ) {
+        if (entry.isIntersecting) visibleOrbs.add(entry.target);
+        else visibleOrbs.delete(entry.target);
+      } else if (entry.target === heroShot)
         previewVisible = entry.intersectionRatio >= 0.15;
       else if (entry.target === companyOrb)
         companionVisible = entry.isIntersecting;
@@ -325,12 +356,12 @@ const motionVisibility = new IntersectionObserver(
 motionVisibility.observe(heroShot);
 motionVisibility.observe(companyOrb);
 motionVisibility.observe(portrait);
+decorativeOrbs.forEach((orb) => motionVisibility.observe(orb));
 document.addEventListener("visibilitychange", updateMotion);
 reducedMotion.addEventListener("change", () => {
   if (reducedMotion.matches) {
     tourPlaying = false;
-    companionPlaying = false;
-    portraitPlaying = false;
+    charactersPlaying = false;
     previewTransition?.finish();
     outgoingImage?.remove();
   }
