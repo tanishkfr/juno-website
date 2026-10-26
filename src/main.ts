@@ -65,9 +65,11 @@ const byId = <T extends HTMLElement>(id: string) =>
 const demoVideo = byId<HTMLVideoElement>("workflow-demo");
 const playDemo = byId<HTMLButtonElement>("play-demo");
 const demoError = byId("demo-error");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+demoVideo.muted = true;
+demoVideo.autoplay = !reducedMotion.matches;
 demoVideo.controls = false;
-playDemo.hidden = false;
-playDemo.addEventListener("click", async () => {
+async function playWorkflow(showError = true) {
   playDemo.hidden = true;
   demoError.hidden = true;
   demoVideo.controls = true;
@@ -78,9 +80,10 @@ playDemo.addEventListener("click", async () => {
     playDemo.hidden = false;
     demoError.textContent =
       "The demo couldn’t play. Try again, or read the conversation below.";
-    demoError.hidden = false;
+    demoError.hidden = !showError;
   }
-});
+}
+playDemo.addEventListener("click", () => void playWorkflow());
 demoVideo.addEventListener("play", () => {
   playDemo.hidden = true;
   demoVideo.controls = true;
@@ -90,6 +93,8 @@ demoVideo.addEventListener("ended", () => {
   byId("demo-play-label").textContent = "Replay demo";
   playDemo.hidden = false;
 });
+if (reducedMotion.matches) playDemo.hidden = false;
+else void playWorkflow(false);
 const copyEmail = byId<HTMLButtonElement>("copy-email");
 copyEmail.hidden = false;
 copyEmail.addEventListener("click", async () => {
@@ -170,13 +175,10 @@ const previewTabs = [
 ];
 const heroShot = document.querySelector<HTMLButtonElement>(".hero-shot")!;
 const heroImage = heroShot.querySelector("img")!;
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const previewPlayback = byId<HTMLButtonElement>("preview-playback");
 const companionPlayback = byId<HTMLButtonElement>("companion-playback");
 const companyOrb = byId<HTMLImageElement>("company-orb");
 const portraitPlayback = byId<HTMLButtonElement>("portrait-playback");
 const portraitImage = byId<HTMLImageElement>("portrait-img");
-const characterPlayback = byId<HTMLButtonElement>("character-playback");
 const decorativeOrbs = [
   ...document.querySelectorAll<HTMLImageElement>("img[data-orb]"),
 ];
@@ -213,7 +215,6 @@ function updatePlaybackButton(
 function updateMotion() {
   clearTimeout(tourTimer);
   const tourAllowed = tourPlaying && !reducedMotion.matches;
-  updatePlaybackButton(previewPlayback, tourAllowed, "tour");
   updatePlaybackButton(
     companionPlayback,
     charactersPlaying && !reducedMotion.matches,
@@ -223,11 +224,6 @@ function updateMotion() {
     portraitPlayback,
     charactersPlaying && !reducedMotion.matches,
     "expressions",
-  );
-  updatePlaybackButton(
-    characterPlayback,
-    charactersPlaying && !reducedMotion.matches,
-    "characters",
   );
   byId("preview-caption").setAttribute(
     "aria-live",
@@ -355,19 +351,11 @@ for (const tab of previewTabs) {
     previewTabs[next].click();
   });
 }
-previewPlayback.addEventListener("click", () => {
-  tourPlaying = !tourPlaying;
-  updateMotion();
-});
 companionPlayback.addEventListener("click", () => {
   charactersPlaying = !charactersPlaying;
   updateMotion();
 });
 portraitPlayback.addEventListener("click", () => {
-  charactersPlaying = !charactersPlaying;
-  updateMotion();
-});
-characterPlayback.addEventListener("click", () => {
   charactersPlaying = !charactersPlaying;
   updateMotion();
 });
@@ -407,6 +395,9 @@ decorativeOrbs.forEach((orb) => motionVisibility.observe(orb));
 document.addEventListener("visibilitychange", updateMotion);
 reducedMotion.addEventListener("change", () => {
   if (reducedMotion.matches) {
+    demoVideo.autoplay = false;
+    demoVideo.pause();
+    if (!demoVideo.currentTime) playDemo.hidden = false;
     tourPlaying = false;
     charactersPlaying = false;
     previewTransition?.finish();

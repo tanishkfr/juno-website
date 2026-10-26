@@ -36,36 +36,17 @@ assert.equal(
     .then((s) => s.trim()),
   "Conversation",
 );
-await page.getByRole("button", { name: "Pause tour", exact: true }).click();
+assert.equal(await page.locator("#preview-playback, #character-playback").count(), 0);
+await page.locator(".hero-shot").hover();
 await page.clock.runFor(8000);
 assert.equal(
   await page.locator(".hero-stage").getAttribute("data-scene"),
   "conversation",
 );
-await page.getByRole("button", { name: "Play tour", exact: true }).click();
-await page.clock.runFor(5500);
-assert.equal(
-  await page.locator(".hero-stage").getAttribute("data-scene"),
-  "workspace",
-);
+await page.mouse.move(5, 5);
 await page.getByRole("tab", { name: "Code", exact: true }).click();
 await page.clock.runFor(8000);
-assert.equal(
-  await page.locator(".hero-stage").getAttribute("data-scene"),
-  "code",
-);
-assert.equal(
-  await page.getByRole("button", { name: "Play tour", exact: true }).count(),
-  1,
-);
-await page.getByRole("button", { name: "Play tour", exact: true }).click();
-await page.locator(".hero-shot").hover();
-await page.clock.runFor(8000);
-assert.equal(
-  await page.locator(".hero-stage").getAttribute("data-scene"),
-  "code",
-);
-await page.mouse.move(5, 5);
+assert.equal(await page.locator(".hero-stage").getAttribute("data-scene"), "code");
 await page.locator("#control").scrollIntoViewIfNeeded();
 // Let the real renderer deliver IntersectionObserver before advancing the
 // mocked timer by eight seconds. Network/paint latency varies on production.
@@ -142,9 +123,9 @@ for (let i = 0; i < (await decorativeOrbs.count()); i++) {
   );
   await orb.evaluate((image) => image.decode());
 }
-await page.locator("#character-playback").click();
+await page.locator("#portrait-playback").click();
 assert.equal(await page.locator('img[src$="-expressions.webp"]').count(), 0);
-await page.locator("#character-playback").click();
+await page.locator("#portrait-playback").click();
 await page.waitForTimeout(100);
 assert(
   (await page.locator('img[data-orb][src$="-expressions.webp"]').count()) > 0,
@@ -170,11 +151,7 @@ assert.equal(
   await page.locator("#company-orb").getAttribute("src"),
   "/assets/kyoto.png",
 );
-assert(
-  await page
-    .getByRole("button", { name: "Tour paused", exact: true })
-    .isDisabled(),
-);
+assert(await page.locator("#workflow-demo").evaluate((v) => v.paused && !v.autoplay));
 assert(
   await page
     .getByRole("button", { name: "Animation paused", exact: true })
@@ -310,7 +287,7 @@ const results = {
   errors,
   checks: [
     "Tour completes all three views and wraps",
-    "Pause and resume",
+    "Gallery playback buttons removed",
     "Manual selection stops autoplay",
     "Hover suspends tour",
     "Offscreen tour suspends",

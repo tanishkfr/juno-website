@@ -78,9 +78,10 @@ await page.setViewportSize({ width: 1366, height: 768 });
 await page.goto(url);
 const video = page.locator("#workflow-demo");
 await video.scrollIntoViewIfNeeded();
-await page
-  .getByRole("button", { name: "Play 22-second demo", exact: true })
-  .click();
+if (await page.locator("#preview-playback, #character-playback").count())
+  throw new Error("Removed gallery playback buttons are still present");
+if (!(await video.evaluate((v) => v.muted && v.autoplay)))
+  throw new Error("Demo must autoplay muted");
 await page.waitForFunction(() => {
   const v = document.querySelector("#workflow-demo");
   return (
@@ -123,7 +124,7 @@ if (
   throw new Error("Demo transcript differs from recorded provider reply");
 await page.locator(".demo-transcript summary").click();
 results.interactions.push(
-  "Real workflow MP4 decodes, plays, seeks and ends; captions load; transcript matches the genuine provider receipt",
+  "Real workflow MP4 autoplays muted, decodes, seeks and ends; captions load; transcript matches the genuine provider receipt",
 );
 await video.evaluate((v) => {
   v.play = async () => {

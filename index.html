@@ -151,39 +151,6 @@
                 Code
               </button>
             </div>
-            <div class="preview-controls">
-              <button
-                id="preview-playback"
-                class="playback-control"
-                aria-controls="product-preview"
-                hidden
-              >
-                <svg
-                  class="playback-icon"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  aria-hidden="true"
-                >
-                  <path d="M7 5v10M13 5v10" />
-                </svg>
-                <span>Pause tour</span>
-              </button>
-              <button id="character-playback" class="playback-control" hidden>
-                <svg
-                  class="playback-icon"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  aria-hidden="true"
-                >
-                  <path d="M7 5v10M13 5v10" />
-                </svg>
-                <span>Pause characters</span>
-              </button>
-            </div>
           </div>
           <div
             id="product-preview"
@@ -260,6 +227,7 @@
         <div class="demo-stage">
           <video
             id="workflow-demo"
+            muted
             controls
             playsinline
             preload="metadata"
