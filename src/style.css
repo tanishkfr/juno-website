@@ -994,6 +994,7 @@ dialog[open] {
   animation-delay: 0.12s;
 }
 .hero-copy .button {
+  gap: 8px;
   animation-delay: 0.18s;
 }
 @keyframes arrive {
