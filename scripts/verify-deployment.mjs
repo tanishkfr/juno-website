@@ -45,7 +45,7 @@ for (let start = 0; start < files.length; start += 6) {
         `Deployed bytes differ: ${relative}`,
       );
       if (relative === "index.html") {
-        const html = bytes.toString("utf8");
+        const html = bytes.toString("utf8").replace(/\s+/g, " ");
         assert(html.includes('rel="canonical" href="' + origin.href + '"'));
         assert(
           html.includes(
