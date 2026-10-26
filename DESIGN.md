@@ -13,3 +13,7 @@ Interaction thesis: a short already-visible hero entrance; preview tabs show thr
 Reference grammar: Grok Bot's centered introduction, full-width software frames, oversized characters, alternating pale stages and open editorial whitespace; ChatGPT's type restraint and clear image/copy relationships. No reference artwork, code, or copy is reused.
 
 Verification: actual browser captures at wide desktop, laptop, tablet, mobile, narrow mobile; menu and keyboard flows; image loading; reduced motion; axe checks; production build. Demonstration content is labeled, and capture provenance lives in ASSET-INVENTORY.md.
+
+The hero gallery is followed by an on-demand, 22-second real conversation recording: a request for a Saturday bookshop pop-up plan and its genuine provider response. A fixed close-up keeps the composer and answer readable; a clean play/replay control leads to the native video controls. English captions and an expandable exact transcript provide alternatives. The video does not autoplay, and unsupported playback has an explicit retry/transcript path.
+
+Before the closing exhibit, an open editorial definition list explains the confirmed Windows 11 x64 beta scope, unsigned installer, provider connection and private GitHub invitation process. The closing contact area adds Copy email address, a polite copied state and a manual-selection fallback if clipboard access is denied. The giant closing orb continues after all contact content in document flow. These additions preserve the existing fonts, palette, companion art and interaction direction.

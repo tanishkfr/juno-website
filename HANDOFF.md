@@ -14,7 +14,7 @@ Vercel project: `juno-website`, ID `prj_Xclj2KWqzCwOQgeCqKuW80K5dWAr`. See `DEPL
 
 ## What shipped
 
-A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 4.20 KB of compressed application JavaScript including playback controls. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
+A complete independent Vite/TypeScript website with semantic HTML and CSS, self-hosted fonts, no backend, and roughly 4.69 KB of compressed application JavaScript including playback controls. The production build is in `dist/`; `vercel.json` prepares a separate Vercel project. The site has no download, signup, waitlist, fabricated testimonial, or artificial availability promise.
 
 The refined narrative opens with an illustrative conversation in the actual app, plus a three-view Conversation / Workspace / Code preview. It continues through the dark oversized Kyoto exhibit, all six companions and their actual personality profiles, four paired Computer/Research/Routines/Results panels, the actual Code file editor, Teams, Orb Studio, local-first controls, and a dark private-beta close with an enormous outline traced from Kyoto’s true pixel grid. The repeated standalone conversation section is removed. Teams uses a clearer example-role breakdown and leads with its product image on mobile.
 
@@ -32,9 +32,13 @@ Desktop source baseline: `c7q5b/complete-product-ui-overhaul` at `86b0f418e71613
 
 ## Verification
 
+- Workflow demo: the 21.88-second H.264 MP4 decodes, plays, seeks and ends in Chrome; captions load and the exact transcript matches the genuine provider receipt. Failure recovery keeps a retry action and transcript available.
+- Copy-email fallback: the correct address is written to the clipboard; denied clipboard access selects the visible address for manual copying. The closing outline clears the full contact area.
+- Beta expectations are sourced from the desktop README and provider setup components. No response-time or invite guarantee is added. Physical-device compatibility testing is excluded at the owner's request.
+
 - Looping motion: PASS. The real screenshots cycle every five seconds with a 450ms crossfade; the oversized Kyoto and all six selected portraits have nine-frame blink, smile and glance loops over 12 seconds. All have pause controls, respect reduced motion, and suspend offscreen or in background tabs. Manual selection or image focus stops the tour; hovering suspends it. No animation library was added. The six expression animations total 6,240 bytes and use actual character recipes and face parts.
 - `npm run verify:motion`: PASS against the built preview. Browser checks cover tour wrapping, pause/resume, manual selection, hover, offscreen suspension and changing reduced-motion preferences. A separate real-time Chrome session confirms rendered expression changes, return to rest and tour advancement. Evidence: `evidence/motion/verification.json`; local recording: `evidence/motion/loops.webm`.
-- The motion refinement was also checked with the full five-viewport acceptance suite; all five use production module `index-e2TLRVuz.js`. Existing navigation, image inspection and keyboard flows pass with no axe violations or runtime errors. Mobile visual review caught and corrected a collision between Kyoto's blossom and the new pause control. The earlier Lighthouse numbers below predate this motion refinement; no new performance score is claimed.
+- The motion refinement was also checked with the full five-viewport acceptance suite; all five use production module `index-B_nQH_EX.js`. Existing navigation, image inspection and keyboard flows pass with no axe violations or runtime errors. Mobile visual review caught and corrected a collision between Kyoto's blossom and the new pause control. The earlier Lighthouse numbers below predate this motion refinement; no new performance score is claimed.
 
 - `npm run build`: PASS, including strict TypeScript checking and the production Vite build.
 - `npm run verify` against the built production preview: PASS after the final dialog focus correction.
@@ -54,11 +58,11 @@ The figures below describe the earlier implementation. The subsequent refinement
 
 The final scoped Lighthouse mobile audit is `evidence/lighthouse-final-mobile-scoped.json`: performance **97**, accessibility **100**, SEO **100**, best practices **81**; FCP **1.8 s**, LCP **2.4 s**, blocking time **0 ms**, layout shift **0**. It uses Lighthouse’s simulated mobile profile against the local production build.
 
-That scoped audit excludes only requests to the antivirus-injected `kaspersky-labs.com` host from its test browser. It does not disable or change antivirus settings. The unfiltered production baseline is retained in `evidence/lighthouse-production-mobile.json`; it scored performance 79 and included a 184 KB render-blocking script injected by that software. These are different test conditions, not public field-performance claims. Local plain HTTP lowers the best-practices score; no HTTPS deployment or public accessibility is claimed.
+That scoped audit excludes only requests to the antivirus-injected `kaspersky-labs.com` host from its test browser. It does not disable or change antivirus settings. The unfiltered production baseline is retained in `evidence/lighthouse-production-mobile.json`; it scored performance 79 and included a 184 KB render-blocking script injected by that software. These are different test conditions, not public field-performance claims. Those earlier local HTTP audits predate the now-published HTTPS site; they are not current production-performance scores.
 
 ## Remaining boundaries
 
-No live external provider calls, browser actions, computer-control tasks, research reports or delegated team execution were tested or implied by this website task. These photographs establish actual UI and configuration states. Firefox, Safari and physical phones were not tested. The public Vercel origin and its canonical/social metadata are now verified; see DEPLOYMENT.md.
+The original product photographs establish actual UI and configuration states. The new 22-second workflow demo records one genuine composer request and real provider response through an isolated Juno renderer and server. It does not demonstrate browser/computer control, research or delegated team execution. Firefox, Safari and physical phones were not tested. The public Vercel origin and its canonical/social metadata are now verified; see DEPLOYMENT.md.
 
 During screenshot setup, an import-order error wrote four demo messages to a new orphan thread in the default data store. The owner approved the exact cleanup; the guarded repair removed only those four rows and the newly inserted thread state, and verified their removal. The corrected writer uses an explicit disposable database path. This incident and its resolution are recorded in `ASSET-INVENTORY.md`.
 
@@ -72,4 +76,4 @@ npm run preview
 npm run verify
 ```
 
-The owner authorized repository creation, pushing and production deployment. The site is now published as its own Vercel project, build command `npm run build`, output `dist`, Node 24. The separate capture studio is not a build dependency. The full browser and motion suites pass against the public HTTPS origin; all 45 deployed files match the local production build. Private source paths return 404.
+The owner authorized repository creation, pushing and production deployment. The site is now published as its own Vercel project, build command `npm run build`, output `dist`, Node 24. The separate capture studio is not a build dependency. The full browser and motion suites pass against the public HTTPS origin; public file integrity is checked against the local production build by scripts/verify-deployment.mjs. Private source paths return 404.

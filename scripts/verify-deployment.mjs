@@ -69,6 +69,9 @@ for (const privatePath of [
   "/.git/config",
   "/.env",
   "/source-assets/companions.json",
+  "/source-assets/workflow-demo.json",
+  "/source-assets/workflow-recording.webm",
+  "/scripts/record-workflow.mjs",
   "/HANDOFF.md",
 ]) {
   const response = await fetch(new URL(privatePath, origin), {

@@ -344,6 +344,126 @@ p {
 .company-section {
   padding-top: 128px;
 }
+.demo-section {
+  padding-top: 104px;
+}
+.demo-section .section-heading {
+  margin-bottom: 40px;
+}
+.demo-section .section-heading p {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.demo-stage {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--paper);
+  border-radius: 20px;
+}
+.demo-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px #0002;
+}
+.demo-play[hidden],
+.demo-error[hidden] {
+  display: none;
+}
+.demo-play:hover {
+  background: #39423c;
+}
+.demo-play svg {
+  width: 18px;
+  height: 18px;
+}
+.demo-error {
+  max-width: 620px;
+  margin: 12px auto;
+  font-size: 14px;
+  color: #75372b;
+  text-align: center;
+}
+.demo-stage video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #f7f7f4;
+}
+.demo-caption {
+  margin: 16px auto 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.demo-transcript {
+  max-width: 760px;
+  margin: 28px auto 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.demo-transcript summary {
+  cursor: pointer;
+  padding: 16px 0;
+  font-weight: 500;
+}
+.demo-transcript > div {
+  padding-bottom: 24px;
+}
+.demo-transcript p {
+  margin: 0 0 16px;
+}
+.demo-transcript .transcript-speaker {
+  margin: 20px 0 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.demo-transcript ol {
+  padding-left: 24px;
+  margin: 0;
+}
+.demo-transcript li + li {
+  margin-top: 8px;
+}
+@media (max-width: 760px) {
+  .demo-section {
+    padding-top: 72px;
+  }
+  .demo-section .section-heading {
+    margin-bottom: 28px;
+  }
+  .demo-stage {
+    padding: 10px;
+    border-radius: 14px;
+  }
+  .demo-stage video {
+    border-radius: 6px;
+  }
+  .demo-caption {
+    font-size: 12px;
+    max-width: 28ch;
+  }
+}
 .company-stage {
   background: #f3f3ef;
   border-radius: 20px;
@@ -728,6 +848,58 @@ p {
   padding-top: 128px;
   padding-bottom: 112px;
   text-align: center;
+}
+.beta-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 80px;
+  padding-top: 96px;
+  padding-bottom: 112px;
+}
+.beta-intro h2 {
+  max-width: 11ch;
+}
+.beta-intro p {
+  max-width: 28ch;
+  margin-top: 24px;
+  color: var(--muted);
+}
+.beta-facts {
+  margin: 0;
+}
+.beta-facts > div {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+.beta-facts > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.beta-facts dt {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.beta-facts dd {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 52ch;
+}
+@media (max-width: 760px) {
+  .beta-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .beta-intro h2 {
+    max-width: 15ch;
+  }
+  .beta-intro p {
+    max-width: 32ch;
+    margin-top: 20px;
+  }
 }
 .closing h2 {
   font-size: clamp(48px, 5.7vw, 80px);
@@ -1644,6 +1816,42 @@ dialog[open] {
 }
 .beta-email-hint span {
   white-space: nowrap;
+}
+.beta-email-tools {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 16px auto 0;
+}
+.copy-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #3c493f;
+  border-radius: 8px;
+  background: #171d18;
+  color: #d5dfd7;
+  font-size: 13px;
+}
+.copy-email[hidden] {
+  display: none;
+}
+.copy-email:hover {
+  background: #252e27;
+}
+.copy-email svg {
+  width: 16px;
+  height: 16px;
+}
+#copy-email-status {
+  display: block;
+  min-height: 20px;
+  margin-top: 8px;
+  color: #b8c3ba;
+  font-size: 12px;
+  line-height: 1.6;
 }
 .closing-outline {
   position: relative;

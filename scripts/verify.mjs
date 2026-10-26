@@ -76,6 +76,122 @@ for (const [name, width, height] of [
 }
 await page.setViewportSize({ width: 1366, height: 768 });
 await page.goto(url);
+const video = page.locator("#workflow-demo");
+await video.scrollIntoViewIfNeeded();
+await page
+  .getByRole("button", { name: "Play 22-second demo", exact: true })
+  .click();
+await page.waitForFunction(() => {
+  const v = document.querySelector("#workflow-demo");
+  return (
+    v.currentTime > 0.25 && v.videoWidth === 840 && Number.isFinite(v.duration)
+  );
+});
+const media = await video.evaluate((v) => ({
+  duration: v.duration,
+  width: v.videoWidth,
+  height: v.videoHeight,
+  error: v.error?.message,
+}));
+if (media.duration < 15 || media.duration > 25 || media.error)
+  throw new Error("Recorded workflow video failed to decode");
+await video.evaluate((v) => {
+  v.textTracks[0].mode = "hidden";
+});
+await page.waitForFunction(
+  () =>
+    document.querySelector("#workflow-demo").textTracks[0].cues?.length === 3,
+);
+await video.evaluate((v) => {
+  v.currentTime = v.duration - 1;
+});
+await page.waitForFunction(
+  () => document.querySelector("#workflow-demo").ended,
+);
+await page.screenshot({ path: "evidence/demo-playback.png" });
+await page.locator(".demo-transcript summary").click();
+const receipt = JSON.parse(
+  await fs.readFile("source-assets/workflow-demo.json", "utf8"),
+);
+const transcript = await page.locator(".demo-transcript").innerText();
+if (
+  !transcript.includes(receipt.prompt) ||
+  receipt.response
+    .split("\n")
+    .some((line) => !transcript.includes(line.replace(/^\d+\. /, "")))
+)
+  throw new Error("Demo transcript differs from recorded provider reply");
+await page.locator(".demo-transcript summary").click();
+results.interactions.push(
+  "Real workflow MP4 decodes, plays, seeks and ends; captions load; transcript matches the genuine provider receipt",
+);
+await video.evaluate((v) => {
+  v.play = async () => {
+    throw new DOMException("Unsupported", "NotSupportedError");
+  };
+});
+await page.getByRole("button", { name: "Replay demo", exact: true }).click();
+await page
+  .getByText(
+    "The demo couldn’t play. Try again, or read the conversation below.",
+    { exact: true },
+  )
+  .waitFor();
+if (
+  !(await page
+    .getByRole("button", { name: "Replay demo", exact: true })
+    .isVisible())
+)
+  throw new Error("Failed playback lost its retry control");
+results.interactions.push(
+  "Failed playback retains a clear retry action and readable transcript",
+);
+await context.grantPermissions(["clipboard-read", "clipboard-write"], {
+  origin: new URL(url).origin,
+});
+await page
+  .getByRole("button", { name: "Copy email address", exact: true })
+  .click();
+await page.getByText("Email address copied.", { exact: true }).waitFor();
+if (
+  (await page.evaluate(() => navigator.clipboard.readText())) !==
+  "madebytanishk@gmail.com"
+)
+  throw new Error("Email clipboard contents incorrect");
+await page.evaluate(() =>
+  Object.defineProperty(navigator, "clipboard", {
+    configurable: true,
+    value: {
+      writeText: async () => {
+        throw new DOMException("Denied", "NotAllowedError");
+      },
+    },
+  }),
+);
+await page
+  .getByRole("button", { name: "Copy email address", exact: true })
+  .click();
+await page
+  .getByText("Email selected. Copy the highlighted address.", { exact: true })
+  .waitFor();
+if (
+  (await page.evaluate(() => window.getSelection()?.toString())) !==
+  "madebytanishk@gmail.com"
+)
+  throw new Error("Clipboard fallback did not select the email");
+await page.setViewportSize({ width: 320, height: 740 });
+const clearance = await page.evaluate(
+  () =>
+    document.querySelector(".closing-outline").getBoundingClientRect().top -
+    document.querySelector(".beta-email-tools").getBoundingClientRect().bottom,
+);
+if (clearance < 47) throw new Error("Contact tools overlap the closing orb");
+await page.screenshot({ path: "evidence/email-copy-fallback.png" });
+results.interactions.push(
+  "Copy email writes the correct address; denied clipboard access selects a manual fallback; closing artwork clears the contact controls",
+);
+await page.setViewportSize({ width: 1366, height: 768 });
+await page.goto(url);
 for (const name of ["Workspace", "Code", "Conversation"]) {
   await page.getByRole("tab", { name, exact: true }).click();
   await page.locator(".hero-shot img").evaluate((i) => i.decode());
@@ -233,9 +349,7 @@ results.interactions.push(
 await page.screenshot({ path: "evidence/mobile-reduced-motion.png" });
 await page.goto(url);
 const noForms = await page.locator("input,form").count();
-results.interactions.push(
-  `No embedded web forms: ${noForms} form elements`,
-);
+results.interactions.push(`No embedded web forms: ${noForms} form elements`);
 await context.close();
 const noJs = await browser.newContext({
   javaScriptEnabled: false,

@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-26T06:05:32.580Z",
+  "source": "Real Juno renderer, UI-overhaul 86b0f418, isolated server and fresh browser profile",
+  "provider": "Authenticated Codex CLI through Juno",
+  "model": "gpt-6-luna",
+  "prompt": "Help me plan a Saturday bookshop pop-up. Give me three practical first steps, under 60 words total.",
+  "response": "1. Confirm the date, hours, and permission with the bookshop.\n2. Choose a focused book selection and set prices.\n3. Arrange a table, payment method, and simple sign.",
+  "threadId": "11a8b541-ead3-4aa4-99e7-9e7fa4237bf2",
+  "replyId": "38b3f9cc-2bff-4ddb-9f99-8ef1f270a5d9",
+  "startSeconds": 3.64,
+  "sentSeconds": 11.122,
+  "endSeconds": 25.484,
+  "elapsedSeconds": 21.844,
+  "errors": [],
+  "qualification": "Genuine provider response. No seeded messages, fake engines, scripted reply text, or fabricated tool execution. Only the initial loading period may be trimmed.",
+  "presentationCrop": {
+    "left": 430,
+    "top": 500,
+    "width": 840,
+    "height": 500
+  }
+}

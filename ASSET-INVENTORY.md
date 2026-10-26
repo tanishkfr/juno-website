@@ -18,7 +18,19 @@ All raw screenshots are retained in `source-assets/`. Every published WebP deriv
 | `library.png` | Real Juno Electron, 1440×1040; actual Results panel with empty state | Results story. Presentation crop x1064 y32 w376 h300 emphasizes the panel header and empty state. No output files or results were invented. |
 | `studio.png` | Real Juno renderer, dialog crop 1000×646; Kyoto’s Orb Studio Base section | Appearance story. Genuine appearance controls and canonical preview; no saved change required. |
 
-## Artwork
+## Real workflow recording
+
+`juno-workflow.mp4` is a 21.88-second, silent H.264 recording of Juno's actual renderer sending a real request through its server and receiving a genuine provider reply. It uses the same UI-overhaul source `86b0f418` as the photographs. The renderer runs in a fresh Chrome profile against a separately launched, disposable Juno data directory following the real-runtime fixture pattern in `scripts/phase1-acceptance.ts`. The user's live Juno app and data are not used.
+
+The recorded provider is the authenticated Codex CLI using `gpt-6-luna`, a model present in both its real catalog and Juno's existing approved model chain. The request is submitted through the real composer. No reply text, tool execution or completion event is injected. It demonstrates one conversation and a practical three-step answer, not browser/computer control or a coding task. This one take is not a performance benchmark.
+
+Source material: `source-assets/workflow-recording.webm` (full original browser recording), `workflow-result.png` (actual completed UI), and `workflow-demo.json` (exact prompt, reply, model, conversation/message IDs and timing). The published recording trims only 3.64 seconds of initial loading and uses a fixed conversation close-up at x430 y500 w840 h500. Waiting and typing are not sped up. The 168,689-byte MP4 has no audio; WebVTT captions and an exact expandable transcript accompany it. The poster is the same crop of the real result screenshot. `scripts/record-workflow.mjs` records against the explicitly owned fixture described by `../juno-website-studio/live-demo.json`; it is a capture helper, not a website build dependency.
+
+## Beta expectation sources
+
+The Windows 11 x64 scope, unsigned-installer notice and invitation to a private GitHub prerelease are confirmed in the desktop repository's current `README.md` under Beta scope. Account sign-in and API-key options are confirmed in `src/product/setup/ProviderConnectPanel.tsx` and `src/product/ProviderSettings.tsx`. The website does not promise a response time, guaranteed invitation or included provider credits.
+
+## Character artwork
 
 The six `*-expressions.webp` files are lossless, transparent exports of the canonical recipes through the product's actual renderer and authored eye/mouth parts. Each nine-frame, 12-second loop blinks, smiles and glances; Prague and New York retain their characteristic smirk. This is an authored expression preview, not a runtime activity or completion signal. Combined size is 6,240 bytes. `source-assets/expressions.json` records every expression and hold; `scripts/export-motion.mjs` reproduces all six from the disposable source copy. All 16 standalone decorative orbs, the large Kyoto exhibit and selected companion portrait use these loops. Character-specific timing offsets prevent the cast from blinking in unison. The shared Pause characters control and exhibit/portrait controls pause the same character motion; they revert to the original PNG when paused, offscreen, backgrounded or reduced motion is enabled. The screenshot tour only cycles three existing authentic photographs; it does not manufacture product execution. The header uses the canonical Kyoto PNG with pixel rendering for stronger colours at its small size.
 

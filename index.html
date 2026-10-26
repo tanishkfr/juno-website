@@ -56,7 +56,7 @@
         <a
           class="beta-status"
           data-beta-request
-          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
+          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AGitHub%20username%20(if%20you%20have%20one)%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
           aria-label="Request access to Juno’s private beta by email"
           >Request access</a
         >
@@ -247,6 +247,72 @@
             >
           </p>
         </div>
+      </section>
+
+      <section class="demo-section wrap" id="demo" aria-labelledby="demo-title">
+        <div class="section-heading centered">
+          <h2 id="demo-title">Plan a Saturday pop-up with Kyoto.</h2>
+          <p>
+            A real conversation, from the first request to three practical next
+            steps.
+          </p>
+        </div>
+        <div class="demo-stage">
+          <video
+            id="workflow-demo"
+            controls
+            playsinline
+            preload="metadata"
+            poster="/assets/workflow-demo-poster.webp"
+            width="840"
+            height="500"
+            aria-describedby="demo-caption"
+          >
+            <source src="/assets/juno-workflow.mp4" type="video/mp4" />
+            <track
+              kind="captions"
+              src="/assets/workflow-demo.vtt"
+              srclang="en"
+              label="English"
+            />
+            Your browser cannot play this video. The complete conversation is
+            available below.
+          </video>
+          <button
+            id="play-demo"
+            class="demo-play"
+            type="button"
+            aria-controls="workflow-demo"
+            hidden
+          >
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M6 3.5 16 10 6 16.5z" />
+            </svg>
+            <span id="demo-play-label">Play 22-second demo</span>
+          </button>
+        </div>
+        <p class="demo-caption" id="demo-caption">
+          22-second recording · Real provider response · Conversation close-up
+        </p>
+        <p class="demo-error" id="demo-error" role="status" hidden></p>
+        <details class="demo-transcript">
+          <summary>Read the conversation</summary>
+          <div>
+            <p class="transcript-speaker">You</p>
+            <p>
+              Help me plan a Saturday bookshop pop-up. Give me three practical
+              first steps, under 60 words total.
+            </p>
+            <p class="transcript-speaker">Kyoto</p>
+            <ol>
+              <li>
+                Confirm the date, hours, and permission with the bookshop.
+              </li>
+              <li>Choose a focused book selection and set prices.</li>
+              <li>Arrange a table, payment method, and simple sign.</li>
+            </ol>
+          </div>
+        </details>
       </section>
 
       <section class="company-section wrap" aria-labelledby="company-title">
@@ -793,6 +859,42 @@
       </section>
 
       <section
+        class="beta-section wrap"
+        id="beta-details"
+        aria-labelledby="beta-details-title"
+      >
+        <div class="beta-intro">
+          <h2 id="beta-details-title">Before you request access.</h2>
+          <p>Windows requirements, provider setup and how invitations work.</p>
+        </div>
+        <dl class="beta-facts">
+          <div>
+            <dt>Windows 11, 64-bit</dt>
+            <dd>
+              This beta is for Windows 11 x64. The installer is currently
+              unsigned, so Windows SmartScreen may show a warning.
+            </dd>
+          </div>
+          <div>
+            <dt>A provider connection</dt>
+            <dd>
+              Connect a supported provider in Juno with an account sign-in or an
+              API key. Model access, usage limits and any provider charges
+              depend on the connection you choose.
+            </dd>
+          </div>
+          <div>
+            <dt>Access by invitation</dt>
+            <dd>
+              Invited testers receive access to a private GitHub prerelease with
+              the Windows build. Include your GitHub username in your request if
+              you have one. Expect bugs and unfinished features.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section
         id="availability"
         class="closing wrap"
         aria-labelledby="closing-title"
@@ -814,13 +916,30 @@
         <a
           class="beta-status closing-request"
           data-beta-request
-          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
+          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AGitHub%20username%20(if%20you%20have%20one)%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
           >Request beta access</a
         >
         <p class="beta-email-hint">
-          Opens an email draft to <span>madebytanishk@gmail.com</span> for you
+          Opens an email draft to
+          <span id="beta-email-address">madebytanishk@gmail.com</span> for you
           to review.
         </p>
+        <div class="beta-email-tools">
+          <button id="copy-email" class="copy-email" type="button" hidden>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V4H4v12h4" />
+            </svg>
+            Copy email address
+          </button>
+          <span id="copy-email-status" role="status" aria-live="polite"></span>
+        </div>
         <img
           class="closing-outline"
           src="/assets/juno-outline.svg"

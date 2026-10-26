@@ -62,6 +62,53 @@ const companions: Record<string, Companion> = {
 };
 const byId = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
+const demoVideo = byId<HTMLVideoElement>("workflow-demo");
+const playDemo = byId<HTMLButtonElement>("play-demo");
+const demoError = byId("demo-error");
+demoVideo.controls = false;
+playDemo.hidden = false;
+playDemo.addEventListener("click", async () => {
+  playDemo.hidden = true;
+  demoError.hidden = true;
+  demoVideo.controls = true;
+  try {
+    await demoVideo.play();
+  } catch {
+    demoVideo.controls = false;
+    playDemo.hidden = false;
+    demoError.textContent =
+      "The demo couldn’t play. Try again, or read the conversation below.";
+    demoError.hidden = false;
+  }
+});
+demoVideo.addEventListener("play", () => {
+  playDemo.hidden = true;
+  demoVideo.controls = true;
+});
+demoVideo.addEventListener("ended", () => {
+  demoVideo.controls = false;
+  byId("demo-play-label").textContent = "Replay demo";
+  playDemo.hidden = false;
+});
+const copyEmail = byId<HTMLButtonElement>("copy-email");
+copyEmail.hidden = false;
+copyEmail.addEventListener("click", async () => {
+  const email = byId("beta-email-address");
+  const status = byId("copy-email-status");
+  try {
+    if (!navigator.clipboard?.writeText)
+      throw new Error("Clipboard unavailable");
+    await navigator.clipboard.writeText(email.textContent!.trim());
+    status.textContent = "Email address copied.";
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(email);
+    const selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+    status.textContent = "Email selected. Copy the highlighted address.";
+  }
+});
 const portrait = byId("companion-portrait");
 const companionButtons = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-companion]"),

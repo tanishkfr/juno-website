@@ -26,6 +26,8 @@ npm run verify:motion
 
 `verify:motion` checks the looping tour, pause/resume, manual selection, hover, offscreen suspension and dynamic reduced motion. It also records real elapsed Chrome playback and compares rendered Kyoto expressions as they change and return to rest. Results and a local WebM recording are saved in `evidence/motion/`.
 
+The product demo is a genuine 22-second request and provider response, recorded in an isolated Juno renderer. Its full source recording, exact reply and timing receipt are retained in `source-assets/`; the public MP4 is a conversation close-up with captions and an exact transcript. Only initial loading is trimmed. `verify` checks real decoding, playback, seeking, captions, transcript agreement, playback-error recovery, clipboard success and denied-access fallback. Physical devices are outside this verification run.
+
 ## Deploy
 
 Live website: [juno-website-two.vercel.app](https://juno-website-two.vercel.app/). Private source repository: [tanishkfr/juno-website](https://github.com/tanishkfr/juno-website), production branch `main`. The separate Vercel project `juno-website` is connected to this repository. `vercel.json` defines the build and output. The public production domain is accessible without signing in; preview and generated deployment URLs retain Vercel Authentication.
