@@ -185,16 +185,7 @@ p {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  background: #f1f2ed;
-  padding: 10px 14px;
-  border-radius: 30px;
   white-space: nowrap;
-}
-.beta-status > span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #497058;
 }
 .menu-toggle {
   display: none;
@@ -1418,30 +1409,22 @@ dialog[open] {
   font-weight: 700;
 }
 .beta-status {
-  background: #202623;
-  color: #fff;
-  min-height: 42px;
-  padding: 5px 6px 5px 18px;
-  gap: 14px;
+  background: #fbf5f0;
+  color: #75372b;
+  border: 1px solid #d9bfb2;
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  gap: 12px;
   font-size: 13px;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 .beta-status:hover {
-  background: #39423c;
-}
-.beta-status > span {
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  background: transparent;
+  background: #f3e8df;
+  border-color: #ba8c78;
 }
 .beta-status .beta-arrow {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #3a433c;
-  display: grid;
-  place-items: center;
+  display: flex;
 }
 .beta-arrow svg {
   width: 15px;
@@ -1653,14 +1636,9 @@ dialog[open] {
 }
 @media (max-width: 760px) {
   .beta-status {
-    min-height: 38px;
     font-size: 12px;
-    padding: 4px 5px 4px 14px;
+    padding: 10px 12px;
     gap: 10px;
-  }
-  .beta-status .beta-arrow {
-    width: 28px;
-    height: 28px;
   }
   .beta-arrow svg {
     width: 14px;
@@ -1762,14 +1740,9 @@ dialog[open] {
 }
 @media (max-width: 370px) {
   .beta-status {
-    min-height: 34px;
     font-size: 11px;
-    padding: 4px 5px 4px 12px;
+    padding: 10px;
     gap: 8px;
-  }
-  .beta-status .beta-arrow {
-    width: 24px;
-    height: 24px;
   }
   .company-stage {
     width: calc(100% - 40px);
