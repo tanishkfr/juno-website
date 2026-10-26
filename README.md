@@ -1,6 +1,6 @@
 # Juno website
 
-Independent private-beta showcase for Juno. Vite, TypeScript, semantic HTML and CSS. No backend, accounts, analytics, external runtime scripts, public signup, or downloads.
+Independent private-beta showcase for Juno. Vite, TypeScript, semantic HTML and CSS. No backend, accounts, analytics, external runtime scripts, embedded signup form or public downloads. Access requests open a prefilled email draft for the visitor to review and send.
 
 ## Run
 

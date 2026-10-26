@@ -1,0 +1,422 @@
+{
+  "kyoto": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 72,
+      "top": 96,
+      "width": 432,
+      "height": 384
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "grin"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-left"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  },
+  "prague": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 72,
+      "top": 0,
+      "width": 432,
+      "height": 456
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "smirk"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-right"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  },
+  "lisbon": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 72,
+      "top": 144,
+      "width": 432,
+      "height": 336
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "grin"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-left"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  },
+  "seoul": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 48,
+      "top": 48,
+      "width": 480,
+      "height": 432
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "grin"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-left"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  },
+  "toronto": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 72,
+      "top": 168,
+      "width": 432,
+      "height": 336
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "grin"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-left"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  },
+  "new-york": {
+    "source": "UI-overhaul 86b0f418: canonical recipe, expression face parts and renderOrbRgba",
+    "presentation": "Authored blink, smile and glance loop; no runtime activity implied",
+    "duration": 12000,
+    "crop": {
+      "left": 72,
+      "top": 72,
+      "width": 432,
+      "height": 408
+    },
+    "frames": [
+      {
+        "at": 0,
+        "frame": {}
+      },
+      {
+        "at": 1400,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 1550,
+        "frame": {}
+      },
+      {
+        "at": 3000,
+        "frame": {
+          "eyes": "happy",
+          "mouth": "smirk"
+        }
+      },
+      {
+        "at": 4400,
+        "frame": {}
+      },
+      {
+        "at": 7200,
+        "frame": {
+          "eyes": "glance-right"
+        }
+      },
+      {
+        "at": 7800,
+        "frame": {}
+      },
+      {
+        "at": 10000,
+        "frame": {
+          "eyes": "closed"
+        }
+      },
+      {
+        "at": 10150,
+        "frame": {}
+      }
+    ],
+    "pages": 9,
+    "delays": [
+      1400,
+      150,
+      1450,
+      1400,
+      2800,
+      600,
+      2200,
+      150,
+      1850
+    ]
+  }
+}

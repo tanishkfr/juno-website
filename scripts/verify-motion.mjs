@@ -81,11 +81,11 @@ await page.waitForFunction(() =>
   document
     .querySelector("#company-orb")
     .getAttribute("src")
-    .endsWith("idle.webp"),
+    .endsWith("expressions.webp"),
 );
 assert.equal(
   await page.locator("#company-orb").getAttribute("src"),
-  "/assets/kyoto-idle.webp",
+  "/assets/kyoto-expressions.webp",
 );
 await page
   .getByRole("button", { name: "Pause animation", exact: true })
@@ -97,9 +97,50 @@ assert.equal(
 await page.getByRole("button", { name: "Play animation", exact: true }).click();
 assert.equal(
   await page.locator("#company-orb").getAttribute("src"),
-  "/assets/kyoto-idle.webp",
+  "/assets/kyoto-expressions.webp",
+);
+for (const [id, name] of [
+  ["kyoto", "Kyoto"],
+  ["prague", "Prague"],
+  ["lisbon", "Lisbon"],
+  ["seoul", "Seoul"],
+  ["toronto", "Toronto"],
+  ["new-york", "New York"],
+]) {
+  await page.getByRole("button", { name, exact: true }).click();
+  await page.locator("#companion-portrait").scrollIntoViewIfNeeded();
+  await page.waitForFunction(
+    (expected) =>
+      document.querySelector("#portrait-img").getAttribute("src") === expected,
+    `/assets/${id}-expressions.webp`,
+  );
+  await page.locator("#portrait-img").evaluate((i) => i.decode());
+}
+await page
+  .getByRole("button", { name: "Pause expressions", exact: true })
+  .click();
+assert.equal(
+  await page.locator("#portrait-img").getAttribute("src"),
+  "/assets/new-york.png",
+);
+await page
+  .getByRole("button", { name: "Play expressions", exact: true })
+  .click();
+assert.equal(
+  await page.locator("#portrait-img").getAttribute("src"),
+  "/assets/new-york-expressions.webp",
 );
 await page.emulateMedia({ reducedMotion: "reduce" });
+await page.waitForFunction(
+  () =>
+    document.querySelector("#portrait-img").getAttribute("src") ===
+    "/assets/new-york.png",
+);
+assert(
+  await page
+    .getByRole("button", { name: "Expressions paused", exact: true })
+    .isDisabled(),
+);
 await page.waitForFunction(() =>
   document
     .querySelector("#company-orb")
@@ -149,7 +190,7 @@ await live.waitForFunction(() =>
   document
     .querySelector("#company-orb")
     .getAttribute("src")
-    .endsWith("idle.webp"),
+    .endsWith("expressions.webp"),
 );
 await live.locator("#company-orb").evaluate((i) => i.decode());
 await live.waitForTimeout(700);
@@ -176,16 +217,35 @@ while (Date.now() < deadline) {
 }
 assert(glance, "Rendered companion never changed expression");
 await fs.writeFile("evidence/motion/kyoto-glance.png", glance);
-await live.waitForTimeout(1100);
-const returned = await live.screenshot({
-  path: "evidence/motion/kyoto-loop-return.png",
-});
+let returned;
+const restDeadline = Date.now() + 4000;
+while (Date.now() < restDeadline) {
+  await live.waitForTimeout(200);
+  returned = await live.screenshot();
+  if (changed(rest, await pixels(returned)) === 0) break;
+}
+await fs.writeFile("evidence/motion/kyoto-loop-return.png", returned);
 assert.equal(
   changed(rest, await pixels(returned)),
   0,
   "Companion did not settle back to its resting expression",
 );
+await live.getByRole("button", { name: "Seoul", exact: true }).click();
+await live.locator("#companion-portrait").scrollIntoViewIfNeeded();
+await live.waitForFunction(
+  () =>
+    document.querySelector("#portrait-img").getAttribute("src") ===
+    "/assets/seoul-expressions.webp",
+);
+await live.locator("#portrait-img").evaluate((i) => i.decode());
+await live.waitForTimeout(3300);
+await live.screenshot({ path: "evidence/motion/portrait-smile.png" });
+await live
+  .getByRole("button", { name: "Pause expressions", exact: true })
+  .click();
+await live.screenshot({ path: "evidence/motion/portrait-resting.png" });
 await live.locator(".preview-toolbar").scrollIntoViewIfNeeded();
+await live.mouse.move(5, 5);
 await live.waitForTimeout(6100);
 await live.screenshot({ path: "evidence/motion/tour-workspace.png" });
 assert.equal(
@@ -195,7 +255,7 @@ assert.equal(
 await context.close();
 await fs.rename(await recording.path(), "evidence/motion/loops.webm");
 await recordingBrowser.close();
-const metadata = await sharp("public/assets/kyoto-idle.webp", {
+const metadata = await sharp("public/assets/kyoto-expressions.webp", {
   animated: true,
 }).metadata();
 assert.equal(errors.length, 0);
@@ -210,6 +270,7 @@ const results = {
     "Hover suspends tour",
     "Offscreen tour suspends",
     "Companion pause and resume",
+    "All six selected portraits load genuine expression loops; portrait pause/resume and reduced motion",
     "Dynamic reduced motion stops both loops",
     "Real-time browser expression change and return to rest",
     "Real-time browser tour advances",
@@ -217,7 +278,7 @@ const results = {
   companion: {
     pages: metadata.pages,
     duration: metadata.delay.reduce((a, b) => a + b, 0),
-    bytes: (await fs.stat("public/assets/kyoto-idle.webp")).size,
+    bytes: (await fs.stat("public/assets/kyoto-expressions.webp")).size,
   },
 };
 await fs.writeFile(

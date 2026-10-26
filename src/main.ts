@@ -76,12 +76,13 @@ for (const button of companionButtons) {
     portrait.style.setProperty("--portrait-bg", c.bg);
     portrait.style.setProperty("--portrait-ink", c.ink);
     const img = byId<HTMLImageElement>("portrait-img");
-    img.src = `/assets/${key}.png`;
+    selectedCompanion = key;
     img.alt = c.name;
     byId("portrait-name").textContent = c.name;
     byId("portrait-personality").textContent = c.personality;
     byId("portrait-quote").textContent = `“${c.quote}”`;
     byId("portrait-strength").textContent = c.strength;
+    updateMotion();
   });
   button.addEventListener("keydown", (event) => {
     if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
@@ -126,6 +127,11 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const previewPlayback = byId<HTMLButtonElement>("preview-playback");
 const companionPlayback = byId<HTMLButtonElement>("companion-playback");
 const companyOrb = byId<HTMLImageElement>("company-orb");
+const portraitPlayback = byId<HTMLButtonElement>("portrait-playback");
+const portraitImage = byId<HTMLImageElement>("portrait-img");
+let selectedCompanion = "kyoto";
+let portraitPlaying = !reducedMotion.matches;
+let portraitVisible = false;
 let tourPlaying = !reducedMotion.matches;
 let companionPlaying = !reducedMotion.matches;
 let previewVisible = false;
@@ -146,7 +152,7 @@ function updatePlaybackButton(
     ? "Paused for your reduced motion preference"
     : "";
   button.querySelector("span")!.textContent = reducedMotion.matches
-    ? `${label === "tour" ? "Tour" : "Animation"} paused`
+    ? `${label[0].toUpperCase() + label.slice(1)} paused`
     : `${playing ? "Pause" : "Play"} ${label}`;
   button
     .querySelector("path")!
@@ -161,6 +167,11 @@ function updateMotion() {
     companionPlayback,
     companionPlaying && !reducedMotion.matches,
     "animation",
+  );
+  updatePlaybackButton(
+    portraitPlayback,
+    portraitPlaying && !reducedMotion.matches,
+    "expressions",
   );
   byId("preview-caption").setAttribute(
     "aria-live",
@@ -187,9 +198,19 @@ function updateMotion() {
     !reducedMotion.matches &&
     !document.hidden &&
     !byId<HTMLDialogElement>("image-dialog").open
-      ? "/assets/kyoto-idle.webp"
+      ? "/assets/kyoto-expressions.webp"
       : "/assets/kyoto.png";
   if (companyOrb.getAttribute("src") !== orbSource) companyOrb.src = orbSource;
+  const portraitSource =
+    portraitPlaying &&
+    portraitVisible &&
+    !reducedMotion.matches &&
+    !document.hidden &&
+    !byId<HTMLDialogElement>("image-dialog").open
+      ? `/assets/${selectedCompanion}-expressions.webp`
+      : `/assets/${selectedCompanion}.png`;
+  if (portraitImage.getAttribute("src") !== portraitSource)
+    portraitImage.src = portraitSource;
 }
 
 function stopTour() {
@@ -274,6 +295,10 @@ companionPlayback.addEventListener("click", () => {
   companionPlaying = !companionPlaying;
   updateMotion();
 });
+portraitPlayback.addEventListener("click", () => {
+  portraitPlaying = !portraitPlaying;
+  updateMotion();
+});
 for (const tab of previewTabs) tab.addEventListener("focus", stopTour);
 heroShot.addEventListener("focus", stopTour);
 heroShot.addEventListener("pointerenter", () => {
@@ -289,7 +314,9 @@ const motionVisibility = new IntersectionObserver(
     for (const entry of entries) {
       if (entry.target === heroShot)
         previewVisible = entry.intersectionRatio >= 0.15;
-      else companionVisible = entry.isIntersecting;
+      else if (entry.target === companyOrb)
+        companionVisible = entry.isIntersecting;
+      else portraitVisible = entry.isIntersecting;
     }
     updateMotion();
   },
@@ -297,11 +324,13 @@ const motionVisibility = new IntersectionObserver(
 );
 motionVisibility.observe(heroShot);
 motionVisibility.observe(companyOrb);
+motionVisibility.observe(portrait);
 document.addEventListener("visibilitychange", updateMotion);
 reducedMotion.addEventListener("change", () => {
   if (reducedMotion.matches) {
     tourPlaying = false;
     companionPlaying = false;
+    portraitPlaying = false;
     previewTransition?.finish();
     outgoingImage?.remove();
   }

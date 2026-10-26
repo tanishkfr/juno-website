@@ -20,7 +20,10 @@
       property="og:description"
       content="Your AI desktop workspace, with a little character. Currently in private beta for Windows."
     />
-    <meta property="og:image" content="https://juno-website-two.vercel.app/assets/juno-social.png" />
+    <meta
+      property="og:image"
+      content="https://juno-website-two.vercel.app/assets/juno-social.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -52,9 +55,10 @@
         </nav>
         <a
           class="beta-status"
-          href="#availability"
-          aria-label="Juno availability: private beta"
-          >Private beta</a
+          data-beta-request
+          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
+          aria-label="Request access to Juno’s private beta by email"
+          >Request access</a
         >
         <button
           class="menu-toggle"
@@ -382,6 +386,24 @@
               height="260"
               loading="lazy"
             /><span id="portrait-name">Kyoto</span>
+            <button
+              id="portrait-playback"
+              class="playback-control"
+              aria-controls="portrait-img"
+              hidden
+            >
+              <svg
+                class="playback-icon"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M7 5v10M13 5v10" />
+              </svg>
+              <span>Pause expressions</span>
+            </button>
           </div>
           <div class="portrait-copy" aria-live="polite" aria-atomic="true">
             <p id="portrait-personality" class="personality">
@@ -758,6 +780,16 @@
         <span class="closing-platform"
           >An AI desktop workspace for Windows.</span
         >
+        <a
+          class="beta-status closing-request"
+          data-beta-request
+          href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!"
+          >Request beta access</a
+        >
+        <p class="beta-email-hint">
+          Opens an email draft to <span>madebytanishk@gmail.com</span> for you
+          to review.
+        </p>
         <img
           class="closing-outline"
           src="/assets/juno-outline.svg"

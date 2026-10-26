@@ -1,13 +1,13 @@
 {
-  "url": "https://juno-website-two.vercel.app/",
-  "date": "2026-10-26T04:52:51.909Z",
+  "url": "http://127.0.0.1:5273/",
+  "date": "2026-10-26T05:23:28.867Z",
   "viewports": [
     {
       "name": "wide",
       "width": 1920,
       "clientWidth": 1920,
       "scrollWidth": 1920,
-      "module": "/assets/index-VYcPEX-X.js",
+      "module": "/assets/index-CpIo3G1k.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -17,7 +17,7 @@
       "width": 1366,
       "clientWidth": 1366,
       "scrollWidth": 1366,
-      "module": "/assets/index-VYcPEX-X.js",
+      "module": "/assets/index-CpIo3G1k.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -27,7 +27,7 @@
       "width": 834,
       "clientWidth": 834,
       "scrollWidth": 834,
-      "module": "/assets/index-VYcPEX-X.js",
+      "module": "/assets/index-CpIo3G1k.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -37,7 +37,7 @@
       "width": 390,
       "clientWidth": 390,
       "scrollWidth": 390,
-      "module": "/assets/index-VYcPEX-X.js",
+      "module": "/assets/index-CpIo3G1k.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -47,7 +47,7 @@
       "width": 320,
       "clientWidth": 320,
       "scrollWidth": 320,
-      "module": "/assets/index-VYcPEX-X.js",
+      "module": "/assets/index-CpIo3G1k.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -62,7 +62,7 @@
     "Navigation identifies the current section while scrolling",
     "Actual-size mobile image inspection and fit-view restoration",
     "Failed screenshot has a truthful error state and remains dismissible",
-    "Private beta header link navigates to the actual availability statement",
+    "Header and closing CTA contain the same prefilled beta-request email; private-beta disclosure remains visible",
     "Reduced motion removes hero animation and smooth scrolling",
     "No signup or download flows: 0 form elements",
     "Core content renders with JavaScript disabled"

@@ -1,6 +1,6 @@
 {
   "url": "http://127.0.0.1:5273/",
-  "date": "2026-10-26T05:04:43.123Z",
+  "date": "2026-10-26T05:23:47.793Z",
   "errors": [],
   "checks": [
     "Tour completes all three views and wraps",
@@ -9,13 +9,14 @@
     "Hover suspends tour",
     "Offscreen tour suspends",
     "Companion pause and resume",
+    "All six selected portraits load genuine expression loops; portrait pause/resume and reduced motion",
     "Dynamic reduced motion stops both loops",
     "Real-time browser expression change and return to rest",
     "Real-time browser tour advances"
   ],
   "companion": {
-    "pages": 7,
-    "duration": 14000,
-    "bytes": 890
+    "pages": 9,
+    "duration": 12000,
+    "bytes": 1062
   }
 }

@@ -196,11 +196,28 @@ await page.unroute("**/assets/conversation-full.webp");
 results.interactions.push(
   "Failed screenshot has a truthful error state and remains dismissible",
 );
-await page.locator(".beta-status").click();
-if (!page.url().endsWith("#availability"))
-  throw new Error("Availability link did not navigate");
+const requestLinks = await page
+  .locator("[data-beta-request]")
+  .evaluateAll((links) => links.map((link) => link.href));
+if (requestLinks.length !== 2 || new Set(requestLinks).size !== 1)
+  throw new Error("Email request links differ");
+const mail = new URL(requestLinks[0]);
+if (
+  mail.protocol !== "mailto:" ||
+  mail.pathname !== "madebytanishk@gmail.com" ||
+  mail.searchParams.get("subject") !== "Juno private beta access" ||
+  !mail.searchParams.get("body")?.includes("bugs or unfinished features") ||
+  !mail.searchParams.get("body")?.includes("Name:")
+)
+  throw new Error("Prefilled beta email is incomplete");
+if (
+  !(await page
+    .getByText("Juno is currently in private beta.", { exact: true })
+    .count())
+)
+  throw new Error("Private-beta availability statement missing");
 results.interactions.push(
-  "Private beta header link navigates to the actual availability statement",
+  "Header and closing CTA contain the same prefilled beta-request email; private-beta disclosure remains visible",
 );
 await page.emulateMedia({ reducedMotion: "reduce" });
 await page.reload();
@@ -217,7 +234,7 @@ await page.screenshot({ path: "evidence/mobile-reduced-motion.png" });
 await page.goto(url);
 const noForms = await page.locator("input,form").count();
 results.interactions.push(
-  `No signup or download flows: ${noForms} form elements`,
+  `No embedded web forms: ${noForms} form elements`,
 );
 await context.close();
 const noJs = await browser.newContext({
