@@ -28,9 +28,16 @@ npm run verify:motion
 
 ## Deploy
 
-Import this directory into its own Vercel project. `vercel.json` defines the build and output. Deploy a preview first, then verify it. Production publishing and a public domain need owner approval. No remote repository or deployment has been created by this task.
+Live website: [juno-website-two.vercel.app](https://juno-website-two.vercel.app/). Private source repository: [tanishkfr/juno-website](https://github.com/tanishkfr/juno-website), production branch `main`. The separate Vercel project `juno-website` is connected to this repository. `vercel.json` defines the build and output. The public production domain is accessible without signing in; preview and generated deployment URLs retain Vercel Authentication.
 
-Use the final approved public domain for canonical metadata and absolute social-preview URLs once it exists; none is invented here.
+Canonical metadata and the absolute social-preview image use the assigned production domain. Release checks and evidence are in [DEPLOYMENT.md](DEPLOYMENT.md). To check production:
+
+```powershell
+$env:WEBSITE_URL='https://juno-website-two.vercel.app/'
+npm run verify
+npm run verify:motion
+node scripts/verify-deployment.mjs
+```
 
 ## Product photographs
 

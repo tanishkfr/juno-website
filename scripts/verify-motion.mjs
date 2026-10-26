@@ -67,6 +67,9 @@ assert.equal(
 );
 await page.mouse.move(5, 5);
 await page.locator("#control").scrollIntoViewIfNeeded();
+// Let the real renderer deliver IntersectionObserver before advancing the
+// mocked timer by eight seconds. Network/paint latency varies on production.
+await page.waitForTimeout(100);
 await page.clock.runFor(8000);
 assert.equal(
   await page.locator(".hero-stage").getAttribute("data-scene"),

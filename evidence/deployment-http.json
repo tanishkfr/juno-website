@@ -1,0 +1,339 @@
+{
+  "url": "https://juno-website-two.vercel.app/",
+  "date": "2026-10-26T04:54:15.247Z",
+  "files": [
+    {
+      "path": "assets/agent-kyoto-1440.webp",
+      "status": 200,
+      "bytes": 31010,
+      "sha256": "c4c3ca6526220ab343a87561ef82cf8937ae6bf5f8b8c9c3849eae5a996e626a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/agent-kyoto-960.webp",
+      "status": 200,
+      "bytes": 17326,
+      "sha256": "7255629e6297768d5c6c3e16d746e94c64050606735a33cd0019aca5f629aaa9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/agent-kyoto-full.webp",
+      "status": 200,
+      "bytes": 43528,
+      "sha256": "14edcabd5f8ec6424217feaca0829a495b2ff2a9bb50dba236a1dd03b8d22eb7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/code-1440.webp",
+      "status": 200,
+      "bytes": 48090,
+      "sha256": "b945ebcf46e8f72a07edce3d7ee841f78d2ad7b70add209ac662ea821b5e2850",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/code-960.webp",
+      "status": 200,
+      "bytes": 24658,
+      "sha256": "572abddeb70c7fc182ff750115f053f79541a2801345d368f51fe5256896b24d",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/code-full.webp",
+      "status": 200,
+      "bytes": 67760,
+      "sha256": "19c83350120815caea9cd247bfac250f3aeb918123f610c2b523048def433cd5",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/computer-control-1440.webp",
+      "status": 200,
+      "bytes": 7012,
+      "sha256": "356674bb84abf2eb73c91aecf8c70cbb8e2e71b03d77b4c9aec5a0324bdbe02a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/computer-control-960.webp",
+      "status": 200,
+      "bytes": 7012,
+      "sha256": "356674bb84abf2eb73c91aecf8c70cbb8e2e71b03d77b4c9aec5a0324bdbe02a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/computer-control-full.webp",
+      "status": 200,
+      "bytes": 110762,
+      "sha256": "3ba71549373070a7d7705fbb557c8da9d964743c71d72a58cba2a66f6d3850c0",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/conversation-1440.webp",
+      "status": 200,
+      "bytes": 65788,
+      "sha256": "841d87fd67072659501135a2bc0411e0249828821d2be425c75be39917bc9b65",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/conversation-960.webp",
+      "status": 200,
+      "bytes": 35592,
+      "sha256": "5ba260e67bbb3c4ba8be15ebca16be62a0ea65e13ff49fc383f775de092c39e7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/conversation-full.webp",
+      "status": 200,
+      "bytes": 90442,
+      "sha256": "dfd81ce935c6006e64ead420df6702f74b1d8b425478c31de0da348e357d06ca",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/geist-bold.woff2",
+      "status": 200,
+      "bytes": 46692,
+      "sha256": "10deaf02d513e6f922ba5b0e2f3913ee3d4bf8b0cd524d9bedbdd3a62a41145c",
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "assets/Geist-LICENSE.txt",
+      "status": 200,
+      "bytes": 4368,
+      "sha256": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "assets/geist-medium.woff2",
+      "status": 200,
+      "bytes": 46496,
+      "sha256": "865f5097d2abcee4f83bd5eb5da193437644421606d28358cd2a45e5fff0cb16",
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "assets/geist-regular.woff2",
+      "status": 200,
+      "bytes": 45224,
+      "sha256": "47855d1c577de88e8528a628130e210be0939216f3b5383fe87b62d4295eb9de",
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "assets/index-lakboQYQ.css",
+      "status": 200,
+      "bytes": 29759,
+      "sha256": "e184dfdcd8f628d56f88510ff2d84d3a14799af6e3707e61bfbc2b444f3cbc35",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "assets/index-VYcPEX-X.js",
+      "status": 200,
+      "bytes": 9999,
+      "sha256": "7da0168253d8ae25da82f7e4189317e3edf2c446b88b48a7c04403a7b1bbf3e3",
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "assets/juno-icon.svg",
+      "status": 200,
+      "bytes": 47885,
+      "sha256": "7cbc262ef899c4a2858f44d65b0747a609019a892e48b0fc07269488cec2d51b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/juno-outline.svg",
+      "status": 200,
+      "bytes": 886,
+      "sha256": "38b2bbd12bed58be0830ea39cc63c60f9bf71ec5d02c361068d00207858a08a7",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/juno-social.png",
+      "status": 200,
+      "bytes": 40230,
+      "sha256": "6f26f290bafe8d498944acef36f1d0a7fa21f124448e0da451d2b9352570f54b",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/kyoto-idle.webp",
+      "status": 200,
+      "bytes": 890,
+      "sha256": "08ce1507a635c4a5d47dd229d515e33928fef25d3ee388e8901b22543f9f7139",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/kyoto.png",
+      "status": 200,
+      "bytes": 5212,
+      "sha256": "b0d8af124197d7386b4609648c1c18671623e2374a87cf108ac2f87ac5c54418",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/library-1440.webp",
+      "status": 200,
+      "bytes": 4486,
+      "sha256": "ff04c4e7898ed7205a270192f8a8ed3ab72e6e3d843569b82d3fb3201752c431",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/library-960.webp",
+      "status": 200,
+      "bytes": 4486,
+      "sha256": "ff04c4e7898ed7205a270192f8a8ed3ab72e6e3d843569b82d3fb3201752c431",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/library-full.webp",
+      "status": 200,
+      "bytes": 96320,
+      "sha256": "f559c8c061d3c5aa145ff23250321c13c4477e1e6e9a78e1e4dfacc25a832a47",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/lisbon.png",
+      "status": 200,
+      "bytes": 4951,
+      "sha256": "8168ca0ae9ef88385bdae800c2ae6733816cd7f901c21606370f83cbc7b4c6d9",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/new-york.png",
+      "status": 200,
+      "bytes": 6006,
+      "sha256": "e03cde85ba7cb86729af3c6615ed1f6f9b0e69ec32bb8ac24ce168247c3916ab",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/prague.png",
+      "status": 200,
+      "bytes": 5974,
+      "sha256": "9ea50f9a0fd9b681466d91e35894bde389d94d36d3c9da14795359004171c33a",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/research-1440.webp",
+      "status": 200,
+      "bytes": 11744,
+      "sha256": "6e4d6f80c34de3d20a0983ceb3f07078e3c519045fafa87c8ae060b8b048634a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/research-960.webp",
+      "status": 200,
+      "bytes": 11744,
+      "sha256": "6e4d6f80c34de3d20a0983ceb3f07078e3c519045fafa87c8ae060b8b048634a",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/research-full.webp",
+      "status": 200,
+      "bytes": 100018,
+      "sha256": "d236c5b3d86d9f6f74d6ab2e8c05a2d695a4feb8d6e4a7719988c950e27202c9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/routines-1440.webp",
+      "status": 200,
+      "bytes": 13726,
+      "sha256": "cab59c752c3a7a5c5bb5760097883cc470f8a3d39a34aa694427199f3f03c357",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/routines-960.webp",
+      "status": 200,
+      "bytes": 13726,
+      "sha256": "cab59c752c3a7a5c5bb5760097883cc470f8a3d39a34aa694427199f3f03c357",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/routines-full.webp",
+      "status": 200,
+      "bytes": 18212,
+      "sha256": "b798c376a0b7afa185a4d68a01c8e4c76cde79e45df2ea391141eec4524fcda7",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/seoul.png",
+      "status": 200,
+      "bytes": 6312,
+      "sha256": "38b0f10943f318caf3947d78730af0dc914847301cd7fb75698b66dfa0abb298",
+      "contentType": "image/png"
+    },
+    {
+      "path": "assets/studio-1440.webp",
+      "status": 200,
+      "bytes": 26818,
+      "sha256": "a7d660cedb51157f035a98b4793081f192df4223c883329d30df991a1dd268f9",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/studio-960.webp",
+      "status": 200,
+      "bytes": 25962,
+      "sha256": "740e2b5e08ce92a76d345c6bcf1b61edbca81616d3e61bcc4907c35745864258",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/studio-full.webp",
+      "status": 200,
+      "bytes": 35570,
+      "sha256": "468d3436d811cd0ede9bc4f88d7b8216617b0fda00d287c9d1d72284c4797d6e",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/teams-1440.webp",
+      "status": 200,
+      "bytes": 28500,
+      "sha256": "c9ac953ebd9723e76f4e8eaf124a2b35b0fdca09238ad9b46641773cea2afcbc",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/teams-960.webp",
+      "status": 200,
+      "bytes": 28500,
+      "sha256": "c9ac953ebd9723e76f4e8eaf124a2b35b0fdca09238ad9b46641773cea2afcbc",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/teams-full.webp",
+      "status": 200,
+      "bytes": 38054,
+      "sha256": "c00ba948452f62fe00d8ff2067931eaef0e33677dc3858371678eb6d2a21065b",
+      "contentType": "image/webp"
+    },
+    {
+      "path": "assets/toronto.png",
+      "status": 200,
+      "bytes": 5151,
+      "sha256": "21837f7680356463d05d6de40dc7a71dec8d7a66ae6317aaf8e5735eeb3f8be3",
+      "contentType": "image/png"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 28360,
+      "sha256": "2ca26a411d83d337b60b30f25bdf4cfa618390755958a4081bef5980cca75ac0",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "contentType": "text/plain; charset=utf-8"
+    }
+  ],
+  "privatePaths": [
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "path": "/.env",
+      "status": 404
+    },
+    {
+      "path": "/source-assets/companions.json",
+      "status": 404
+    },
+    {
+      "path": "/HANDOFF.md",
+      "status": 404
+    }
+  ]
+}

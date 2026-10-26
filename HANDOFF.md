@@ -1,6 +1,6 @@
 # Juno website handoff
 
-26 October 2026 · Private-beta showcase · Local delivery
+26 October 2026 · Private-beta showcase · Published and verified
 
 Project: `C:\Dev\Projects\Juno\backups\juno-website`  
 Branch: `codex/website-refinement`
@@ -8,7 +8,9 @@ Commit: see the delivered Git commit in the chat and `git log -1 --oneline`. The
 
 Local website: http://127.0.0.1:5272/  
 Built production preview used for acceptance: http://127.0.0.1:5273/  
-No remote repository, public deployment, or production domain was created.
+Public website: https://juno-website-two.vercel.app/
+Private repository: https://github.com/tanishkfr/juno-website (`main`).
+Vercel project: `juno-website`, ID `prj_Xclj2KWqzCwOQgeCqKuW80K5dWAr`. See `DEPLOYMENT.md` for production verification.
 
 ## What shipped
 
@@ -16,7 +18,7 @@ A complete independent Vite/TypeScript website with semantic HTML and CSS, self-
 
 The refined narrative opens with an illustrative conversation in the actual app, plus a three-view Conversation / Workspace / Code preview. It continues through the dark oversized Kyoto exhibit, all six companions and their actual personality profiles, four paired Computer/Research/Routines/Results panels, the actual Code file editor, Teams, Orb Studio, local-first controls, and a dark private-beta close with an enormous outline traced from Kyoto’s true pixel grid. The repeated standalone conversation section is removed. Teams uses a clearer example-role breakdown and leads with its product image on mobile.
 
-The owner’s later screenshot references are incorporated directly into the composition: the character breaks above and below its dark stage, the feature panels use focused real product details, and the final orb outline carries the page into a restrained dark footer. The header uses a true bold Geist face for Juno. Its monochrome Private beta pill links to the actual availability statement and replaces the original green-dot badge.
+The owner’s later screenshot references are incorporated directly into the composition: the character breaks above and below its dark stage, the feature panels use focused real product details, and the final orb outline carries the page into a restrained dark footer. The header uses a true bold Geist face for Juno. Its Private beta button now uses a warm Kyoto-tinted outline, 8px corners and an inline arrow, linking to the actual availability statement.
 
 Grok Bot supplied the composition and pacing reference, including large characters, paired demonstrations, restrained dark stages, and the oversized outline close. ChatGPT supplied typographic restraint and image/copy relationships. MausBot was also inspected. No proprietary reference artwork, copy, logos, screenshots, or code is in the published website.
 
@@ -56,7 +58,7 @@ That scoped audit excludes only requests to the antivirus-injected `kaspersky-la
 
 ## Remaining boundaries
 
-No live external provider calls, browser actions, computer-control tasks, research reports or delegated team execution were tested or implied by this website task. These photographs establish actual UI and configuration states. Firefox, Safari, physical phones and a deployed Vercel origin were not tested. Set canonical and absolute social-preview URLs after the owner selects a real public domain; a domain is deliberately not invented.
+No live external provider calls, browser actions, computer-control tasks, research reports or delegated team execution were tested or implied by this website task. These photographs establish actual UI and configuration states. Firefox, Safari and physical phones were not tested. The public Vercel origin and its canonical/social metadata are now verified; see DEPLOYMENT.md.
 
 During screenshot setup, an import-order error wrote four demo messages to a new orphan thread in the default data store. The owner approved the exact cleanup; the guarded repair removed only those four rows and the newly inserted thread state, and verified their removal. The corrected writer uses an explicit disposable database path. This incident and its resolution are recorded in `ASSET-INVENTORY.md`.
 
@@ -70,4 +72,4 @@ npm run preview
 npm run verify
 ```
 
-Deploy this directory as its own Vercel project, build command `npm run build`, output `dist`. Review a preview first. Publishing a production domain still requires the owner’s approval. The separate capture studio is not a build dependency.
+The owner authorized repository creation, pushing and production deployment. The site is now published as its own Vercel project, build command `npm run build`, output `dist`, Node 24. The separate capture studio is not a build dependency. The full browser and motion suites pass against the public HTTPS origin; all 45 deployed files match the local production build. Private source paths return 404.

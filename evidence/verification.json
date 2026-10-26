@@ -1,13 +1,13 @@
 {
-  "url": "http://127.0.0.1:5273/",
-  "date": "2026-10-26T04:26:06.128Z",
+  "url": "https://juno-website-two.vercel.app/",
+  "date": "2026-10-26T04:52:51.909Z",
   "viewports": [
     {
       "name": "wide",
       "width": 1920,
       "clientWidth": 1920,
       "scrollWidth": 1920,
-      "module": "/assets/index-e2TLRVuz.js",
+      "module": "/assets/index-VYcPEX-X.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -17,7 +17,7 @@
       "width": 1366,
       "clientWidth": 1366,
       "scrollWidth": 1366,
-      "module": "/assets/index-e2TLRVuz.js",
+      "module": "/assets/index-VYcPEX-X.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -27,7 +27,7 @@
       "width": 834,
       "clientWidth": 834,
       "scrollWidth": 834,
-      "module": "/assets/index-e2TLRVuz.js",
+      "module": "/assets/index-VYcPEX-X.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -37,7 +37,7 @@
       "width": 390,
       "clientWidth": 390,
       "scrollWidth": 390,
-      "module": "/assets/index-e2TLRVuz.js",
+      "module": "/assets/index-VYcPEX-X.js",
       "broken": [],
       "anchors": [],
       "violations": []
@@ -47,7 +47,7 @@
       "width": 320,
       "clientWidth": 320,
       "scrollWidth": 320,
-      "module": "/assets/index-e2TLRVuz.js",
+      "module": "/assets/index-VYcPEX-X.js",
       "broken": [],
       "anchors": [],
       "violations": []
