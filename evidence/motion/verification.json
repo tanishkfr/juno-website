@@ -1,6 +1,6 @@
 {
-  "url": "https://juno-website-two.vercel.app/",
-  "date": "2026-10-26T04:54:38.826Z",
+  "url": "http://127.0.0.1:5273/",
+  "date": "2026-10-26T05:04:43.123Z",
   "errors": [],
   "checks": [
     "Tour completes all three views and wraps",

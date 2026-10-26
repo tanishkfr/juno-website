@@ -1408,27 +1408,21 @@ dialog[open] {
 .site-header .wordmark {
   font-weight: 700;
 }
+.site-header .wordmark img {
+  image-rendering: pixelated;
+}
 .beta-status {
-  background: #fbf5f0;
-  color: #75372b;
-  border: 1px solid #d9bfb2;
-  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 999px;
   min-height: 44px;
-  padding: 10px 14px;
-  gap: 12px;
+  padding: 10px 18px;
   font-size: 13px;
-  transition: background 0.2s, border-color 0.2s;
+  font-weight: 500;
+  transition: background 0.2s;
 }
 .beta-status:hover {
-  background: #f3e8df;
-  border-color: #ba8c78;
-}
-.beta-status .beta-arrow {
-  display: flex;
-}
-.beta-arrow svg {
-  width: 15px;
-  height: 15px;
+  background: #e8ebe5;
 }
 .company-section {
   width: 100%;
@@ -1638,11 +1632,6 @@ dialog[open] {
   .beta-status {
     font-size: 12px;
     padding: 10px 12px;
-    gap: 10px;
-  }
-  .beta-arrow svg {
-    width: 14px;
-    height: 14px;
   }
   .company-section {
     margin-top: 72px;
@@ -1742,7 +1731,6 @@ dialog[open] {
   .beta-status {
     font-size: 11px;
     padding: 10px;
-    gap: 8px;
   }
   .company-stage {
     width: calc(100% - 40px);

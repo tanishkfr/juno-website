@@ -12,7 +12,7 @@ await page.clock.install();
 await page.goto(url);
 await page.locator(".preview-toolbar").scrollIntoViewIfNeeded();
 await page.mouse.move(5, 5);
-await page.clock.runFor(7500);
+await page.clock.runFor(5500);
 assert.equal(
   await page
     .locator('[role="tab"][aria-selected="true"]')
@@ -20,7 +20,7 @@ assert.equal(
     .then((s) => s.trim()),
   "Workspace",
 );
-await page.clock.runFor(7000);
+await page.clock.runFor(5000);
 assert.equal(
   await page
     .locator('[role="tab"][aria-selected="true"]')
@@ -28,7 +28,7 @@ assert.equal(
     .then((s) => s.trim()),
   "Code",
 );
-await page.clock.runFor(7000);
+await page.clock.runFor(5000);
 assert.equal(
   await page
     .locator('[role="tab"][aria-selected="true"]')
@@ -43,7 +43,7 @@ assert.equal(
   "conversation",
 );
 await page.getByRole("button", { name: "Play tour", exact: true }).click();
-await page.clock.runFor(7500);
+await page.clock.runFor(5500);
 assert.equal(
   await page.locator(".hero-stage").getAttribute("data-scene"),
   "workspace",
@@ -186,7 +186,7 @@ assert.equal(
   "Companion did not settle back to its resting expression",
 );
 await live.locator(".preview-toolbar").scrollIntoViewIfNeeded();
-await live.waitForTimeout(8100);
+await live.waitForTimeout(6100);
 await live.screenshot({ path: "evidence/motion/tour-workspace.png" });
 assert.equal(
   await live.locator(".hero-stage").getAttribute("data-scene"),

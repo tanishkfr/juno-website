@@ -179,7 +179,7 @@ function updateMotion() {
       );
       showPreview(previewTabs[(index + 1) % previewTabs.length], true);
       updateMotion();
-    }, 7000);
+    }, 5000);
   }
   const orbSource =
     companionPlaying &&
