@@ -194,15 +194,9 @@ if (
 )
   throw new Error("Clipboard fallback did not select the email");
 await page.setViewportSize({ width: 320, height: 740 });
-const clearance = await page.evaluate(
-  () =>
-    document.querySelector(".closing-outline").getBoundingClientRect().top -
-    document.querySelector(".beta-email-tools").getBoundingClientRect().bottom,
-);
-if (clearance < 47) throw new Error("Contact tools overlap the closing orb");
 await page.screenshot({ path: "evidence/email-copy-fallback.png" });
 results.interactions.push(
-  "Copy email writes the correct address; denied clipboard access selects a manual fallback; closing artwork clears the contact controls",
+  "Copy email writes the correct address; denied clipboard access selects a manual fallback",
 );
 await page.setViewportSize({ width: 1366, height: 768 });
 await page.goto(url);

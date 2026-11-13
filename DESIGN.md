@@ -1,3 +1,28 @@
+# Current direction: a day in a pixel sky
+
+The page is one continuous sky, drawn as dithered pixels on a small WebGL
+canvas (`src/sky.ts`) and scaled up crisp. Scrolling moves the time of day:
+morning at the hero, afternoon over the product tour, dusk as the companions
+gather, a starry night with an aurora over "Your control", and dawn at the
+closing call to action. Each section sets its hour with `data-hour`; a clock
+pill in the corner reads the time back, with the current section's companion.
+
+- Type: Geist only, set large and tight (500/600), white on the sky with a soft
+  blue shadow for legibility. Geist Mono for small labels.
+- Surfaces: glass pills (navigation, tabs, buttons) and black-bezel frames that
+  hold the real Juno screenshots and the demo video.
+- Motion: headlines and frames resolve through a dot grid (`dz` keyframes),
+  the hero lifts away on scroll, the navigation condenses into a floating pill
+  with a progress hairline, Lenis eases the page on mouse and trackpad.
+- Companions: perch on the hero wordmark, peek over frames, walk in one by one
+  in the pinned dusk scene, lean with scroll speed, and stand on the footer
+  wordmark.
+- Fallbacks: without WebGL or JavaScript the body paints the same day as a
+  gradient down the page. Reduced motion freezes the clouds and removes every
+  entrance, pin and lean.
+
+The sections below describe earlier passes and are kept for history.
+
 # Juno website
 
 ## Current direction — "a pixel studio on warm paper" (November 2026 redesign)

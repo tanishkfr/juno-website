@@ -116,10 +116,20 @@ assert.equal(await decorativeOrbs.count(), 20);
 for (let i = 0; i < (await decorativeOrbs.count()); i++) {
   const orb = decorativeOrbs.nth(i);
   await orb.scrollIntoViewIfNeeded();
-  await page.waitForTimeout(100);
-  assert.equal(
-    await orb.getAttribute("src"),
-    `/assets/${await orb.getAttribute("data-orb")}-expressions.webp`,
+  // The loop starts once the visibility observer reports the orb; allow for
+  // a slow frame instead of assuming a fixed delay.
+  await orb.evaluate(
+    (image) =>
+      new Promise((resolve, reject) => {
+        const expected = `/assets/${image.dataset.orb}-expressions.webp`;
+        const started = Date.now();
+        (function poll() {
+          if (image.getAttribute("src") === expected) resolve(true);
+          else if (Date.now() - started > 4000)
+            reject(new Error(`Expression loop did not start: ${image.dataset.orb}`));
+          else requestAnimationFrame(poll);
+        })();
+      }),
   );
   await orb.evaluate((image) => image.decode());
 }
@@ -179,6 +189,9 @@ const live = await context.newPage();
 live.on("pageerror", (e) => errors.push(e.message));
 const recording = live.video();
 await live.goto(url);
+// These checks compare the companion's pixels between frames. The sky behind
+// it drifts on its own, so it is hidden here to isolate the expression loop.
+await live.addStyleTag({ content: "#sky{visibility:hidden}" });
 await live.evaluate(() => document.fonts.ready);
 await live.locator(".company-section").scrollIntoViewIfNeeded();
 await live.mouse.move(5, 5);
@@ -189,7 +202,8 @@ await live.waitForFunction(() =>
     .endsWith("expressions.webp"),
 );
 await live.locator("#company-orb").evaluate((i) => i.decode());
-await live.waitForTimeout(700);
+// The cast walks in on scroll; let that scene come to rest before sampling.
+await live.waitForTimeout(2200);
 // Measure the companion where the layout actually places it.
 const crop = await live.locator("#company-orb").evaluate((orb) => {
   const box = orb.getBoundingClientRect();
