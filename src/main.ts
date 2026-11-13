@@ -1,8 +1,14 @@
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
+import { createPixelField } from "./pixel-field";
+import { createSky } from "./sky";
+document.documentElement.classList.add("js");
 type Companion = {
   name: string;
   personality: string;
   quote: string;
   strength: string;
+  greeting: string;
   bg: string;
   ink: string;
 };
@@ -12,6 +18,7 @@ const companions: Record<string, Companion> = {
     personality: "Calm, precise, composed",
     quote: "Cut the second paragraph. The first one already said it.",
     strength: "For focus, editing and clear plans.",
+    greeting: "What needs a little clarity?",
     bg: "#f3e8df",
     ink: "#75372b",
   },
@@ -21,6 +28,7 @@ const companions: Record<string, Companion> = {
     quote:
       "It’s competent, which is the problem. Nothing here would make anyone stop scrolling.",
     strength: "For critique, analysis and failure modes.",
+    greeting: "What should we put to the test?",
     bg: "#eee8f6",
     ink: "#543979",
   },
@@ -30,6 +38,7 @@ const companions: Record<string, Companion> = {
     quote:
       "There’s a lovely rhythm in your opening line. Let’s follow it and see where the page wants to go.",
     strength: "For writing, stories and creative directions.",
+    greeting: "What are you imagining?",
     bg: "#e8edf8",
     ink: "#314e85",
   },
@@ -39,6 +48,7 @@ const companions: Record<string, Companion> = {
     quote:
       "Okay, this has potential. Let me mock up three headline variants so we can compare.",
     strength: "For code, products and quick prototypes.",
+    greeting: "What can we make?",
     bg: "#f4e8ee",
     ink: "#793d59",
   },
@@ -48,6 +58,7 @@ const companions: Record<string, Companion> = {
     quote:
       "The headline’s a good start. A couple of small changes could help it land better.",
     strength: "For explanations, learning and everyday help.",
+    greeting: "What can I help you untangle?",
     bg: "#e6f0f1",
     ink: "#315b62",
   },
@@ -56,6 +67,7 @@ const companions: Record<string, Companion> = {
     personality: "Blunt, decisive, efficient",
     quote: "Headline’s weak. CTA’s buried. Fix both, then we’ll talk.",
     strength: "For decisions, priorities and business tradeoffs.",
+    greeting: "What needs deciding?",
     bg: "#f4eedb",
     ink: "#635024",
   },
@@ -114,6 +126,12 @@ copyEmail.addEventListener("click", async () => {
     status.textContent = "Email selected. Copy the highlighted address.";
   }
 });
+/** Restart a short CSS entrance on an element whose content just changed. */
+function replay(element: HTMLElement, name: string) {
+  element.classList.remove(name);
+  void element.offsetWidth;
+  element.classList.add(name);
+}
 const portrait = byId("companion-portrait");
 const companionButtons = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-companion]"),
@@ -134,6 +152,7 @@ for (const button of companionButtons) {
     byId("portrait-personality").textContent = c.personality;
     byId("portrait-quote").textContent = `“${c.quote}”`;
     byId("portrait-strength").textContent = c.strength;
+    replay(portrait, "swap");
     updateMotion();
   });
   button.addEventListener("keydown", (event) => {
@@ -551,11 +570,6 @@ window.matchMedia("(min-width:761px)").addEventListener("change", (event) => {
   if (event.matches) closeMenu();
 });
 const header = document.querySelector(".site-header")!;
-const observer = new IntersectionObserver(
-  ([entry]) => header.classList.toggle("scrolled", !entry.isIntersecting),
-  { rootMargin: "-80px 0px 0px 0px" },
-);
-observer.observe(document.querySelector(".hero-copy")!);
 const navSections = ["overview", "companions", "features", "control"].map(
   (id) => byId(id),
 );
@@ -588,3 +602,298 @@ window.addEventListener(
   { passive: true },
 );
 updateNavigation();
+
+// ── Hero: choose who greets you ────────────────────────────────────────────
+const hero = byId("overview");
+const heroScene = byId("hero-scene");
+const heroOrb = byId<HTMLImageElement>("hero-orb");
+const heroPicks = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-hero-pick]"),
+];
+for (const pick of heroPicks) {
+  pick.addEventListener("click", () => {
+    const key = pick.dataset.heroPick!;
+    const c = companions[key];
+    heroPicks.forEach((b) => b.setAttribute("aria-pressed", String(b === pick)));
+    hero.dataset.host = key;
+    heroOrb.dataset.orb = key;
+    heroOrb.alt = `${c.name}, one of Juno’s six pixel companions`;
+    byId("hero-greeting").textContent = c.greeting;
+    byId("hero-host-name").textContent = c.name;
+    byId("hero-host-trait").textContent = c.personality;
+    replay(heroScene, "swap");
+    updateMotion();
+  });
+}
+
+// ── Scroll reveals ─────────────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add("in");
+      revealObserver.unobserve(entry.target);
+    }
+  },
+  { rootMargin: "0px 0px -12% 0px", threshold: 0.08 },
+);
+document
+  .querySelectorAll("[data-reveal], .footer-mark")
+  .forEach((element) => revealObserver.observe(element));
+
+// ── Scroll engine ──────────────────────────────────────────────────────────
+// Native scrolling is never intercepted. One rAF loop eases a follower value
+// toward the real scroll position and every scroll-linked effect reads that,
+// so motion stays fluid on stepped mouse wheels. Transform/opacity only; the
+// loop sleeps as soon as the follower catches up.
+const root = document.documentElement;
+const clamp = (value: number, min = 0, max = 1) =>
+  Math.min(max, Math.max(min, value));
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const pixelField = finePointer.matches
+  ? createPixelField(reducedMotion)
+  : undefined;
+// Lenis glides the page itself on wheel and trackpad input. It is only used
+// with a mouse and motion allowed: touch keeps native momentum, and reduced
+// motion keeps plain native scrolling.
+let lenis: Lenis | undefined;
+function syncLenis() {
+  const wanted = finePointer.matches && !reducedMotion.matches;
+  if (wanted && !lenis) {
+    lenis = new Lenis({ autoRaf: true, lerp: 0.1, anchors: true });
+  } else if (!wanted && lenis) {
+    lenis.destroy();
+    lenis = undefined;
+  }
+}
+syncLenis();
+reducedMotion.addEventListener("change", syncLenis);
+finePointer.addEventListener("change", syncLenis);
+const hostColors: Record<string, string> = {
+  kyoto: "#ff8a73",
+  prague: "#b79cf0",
+  lisbon: "#9dbaf3",
+  seoul: "#f5a3c6",
+  toronto: "#8fd8ea",
+  "new-york": "#f0d06a",
+};
+const chapters = [...document.querySelectorAll<HTMLElement>("[data-chapter]")];
+const companySection = document.querySelector<HTMLElement>(".company-section")!;
+const crowd = [...document.querySelectorAll<HTMLElement>("[data-crowd]")];
+const phrases = [...document.querySelectorAll<HTMLElement>("[data-phrase]")];
+const footerMark = document.querySelector<HTMLElement>(".footer-mark")!;
+const railBuddy = byId<HTMLImageElement>("rail-buddy");
+const skyTime = byId("sky-time");
+const pinQuery = window.matchMedia(
+  "(min-width: 1001px) and (min-height: 620px)",
+);
+
+// Headlines dissolve in word by word through a grid of dots as they arrive.
+for (const heading of document.querySelectorAll<HTMLElement>(".kin")) {
+  let index = 0;
+  const wrap = (parent: Node) => {
+    for (const node of [...parent.childNodes]) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const fragment = document.createDocumentFragment();
+        for (const part of node.textContent!.split(/(\s+)/)) {
+          if (!part.trim()) {
+            if (part) fragment.append(" ");
+            continue;
+          }
+          const word = document.createElement("span");
+          word.className = "w";
+          word.style.setProperty("--i", String(index++));
+          word.textContent = part;
+          fragment.append(word);
+        }
+        node.replaceWith(fragment);
+      } else if (node instanceof HTMLElement && node.tagName !== "BR") {
+        wrap(node);
+      }
+    }
+  };
+  wrap(heading);
+  revealObserver.observe(heading);
+}
+// Once a dot-grid dissolve has finished, drop its mask so shadows return.
+document.addEventListener("animationend", (event) => {
+  if (event.animationName.startsWith("dz") && event.target instanceof Element)
+    event.target.classList.add("dz-done");
+});
+
+// The sky follows the scroll through a day; the clock reads the time back.
+const sky = createSky(reducedMotion, (hour, night) => {
+  const minutes = Math.round((((hour % 24) + 24) % 24) * 60) % 1440;
+  const h = Math.floor(minutes / 60);
+  skyTime.textContent = `${h % 12 || 12}:${String(minutes % 60).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
+  root.dataset.sky = night ? "night" : "day";
+});
+
+let follower = window.scrollY;
+let engineRunning = false;
+let railHost = "";
+let lastTrail = 0;
+
+function currentHost(chapter: HTMLElement) {
+  const name = chapter.dataset.chapter!;
+  if (name === "hero") return hero.dataset.host ?? "kyoto";
+  if (name === "cast") return selectedCompanion;
+  return name;
+}
+
+function engineFrame() {
+  const target = window.scrollY;
+  const viewport = window.innerHeight;
+  sky.update(target);
+  header.classList.toggle("scrolled", target > 48);
+  if (reducedMotion.matches) {
+    follower = target;
+    engineRunning = false;
+    root.style.setProperty("--v", "0");
+    hero.style.setProperty("--hp", "0");
+    footerMark.style.removeProperty("--fp");
+    phrases.forEach((phrase) => phrase.classList.add("lit"));
+    updateRail(target, viewport, 0);
+    return;
+  }
+  // With Lenis the page position is already eased, so effects track it
+  // exactly and the lean comes from Lenis's own velocity. Without it (touch),
+  // the follower supplies the easing.
+  if (lenis) follower = target;
+  else {
+    follower += (target - follower) * 0.13;
+    if (Math.abs(target - follower) < 0.4) follower = target;
+  }
+  const lag = target - follower;
+  const gliding = lenis ? Math.abs(lenis.velocity) > 0.01 : false;
+  const velocity = clamp(
+    (lenis ? lenis.velocity / 0.13 : lag) / (viewport * 0.4),
+    -1,
+    1,
+  );
+
+  // Read layout first, then write.
+  const companyBox = companySection.getBoundingClientRect();
+  const footerBox = footerMark.getBoundingClientRect();
+
+  root.style.setProperty("--v", velocity.toFixed(3));
+  // The hero lifts away and fades as the next section rises.
+  hero.style.setProperty("--hp", clamp(follower / (viewport * 0.8)).toFixed(3));
+
+  // Dusk: pinned on large screens, the cast walks in one by one.
+  const companyTop = companyBox.top + lag;
+  const companyProgress = pinQuery.matches
+    ? clamp(-companyTop / Math.max(1, companyBox.height - viewport))
+    : clamp((viewport * 0.75 - companyTop) / (viewport * 0.7));
+  crowd.forEach((bot, index) => {
+    const t = clamp((companyProgress - (0.05 + index * 0.13)) / 0.3);
+    const eased = 1 - (1 - t) ** 3;
+    const hop = Math.abs(Math.sin(t * Math.PI * 3)) * 26 * (1 - t);
+    bot.style.setProperty("--t", eased.toFixed(3));
+    bot.style.setProperty("--hop", hop.toFixed(1));
+  });
+  phrases.forEach((phrase, index) =>
+    phrase.classList.toggle("lit", companyProgress >= [0.02, 0.2, 0.34][index]),
+  );
+
+  // Footer wordmark fills in ten stepped rows.
+  const footerProgress = clamp(
+    (viewport - (footerBox.top + lag)) / (footerBox.height * 0.85),
+  );
+  footerMark.style.setProperty(
+    "--fp",
+    (Math.ceil(footerProgress * 10) / 10).toFixed(1),
+  );
+
+  updateRail(follower, viewport, velocity);
+
+  if (follower !== target || gliding) requestAnimationFrame(engineFrame);
+  else engineRunning = false;
+}
+
+function updateRail(position: number, viewport: number, velocity: number) {
+  const progress = clamp(
+    position / Math.max(1, root.scrollHeight - viewport),
+  );
+  root.style.setProperty("--rail-p", progress.toFixed(4));
+  let chapter = chapters[0];
+  for (const candidate of chapters) {
+    if (candidate.getBoundingClientRect().top <= viewport * 0.45)
+      chapter = candidate;
+  }
+  const host = currentHost(chapter);
+  if (host !== railHost) {
+    const first = !railHost;
+    railHost = host;
+    railBuddy.src = `/assets/${host}.png`;
+    pixelField?.setColor(hostColors[host]);
+    if (!first && !reducedMotion.matches) replay(railBuddy, "hop");
+  }
+  // The companion by the clock kicks up pixels when the page moves quickly.
+  const now = performance.now();
+  if (pixelField && Math.abs(velocity) > 0.12 && now - lastTrail > 45) {
+    lastTrail = now;
+    const box = railBuddy.getBoundingClientRect();
+    if (box.width)
+      pixelField.spawn(
+        box.left + Math.random() * box.width,
+        box.top + (velocity > 0 ? -8 : box.height + 8) - velocity * 30,
+        0.7,
+      );
+  }
+}
+
+function wakeEngine() {
+  if (engineRunning) return;
+  engineRunning = true;
+  requestAnimationFrame(engineFrame);
+}
+window.addEventListener("scroll", wakeEngine, { passive: true });
+window.addEventListener("resize", wakeEngine);
+window.addEventListener("load", wakeEngine);
+reducedMotion.addEventListener("change", wakeEngine);
+// Selecting a companion (hero or roster) changes who rides the rail.
+document.addEventListener("click", (event) => {
+  if (
+    event.target instanceof Element &&
+    event.target.closest("[data-hero-pick], [data-companion]")
+  )
+    wakeEngine();
+});
+wakeEngine();
+
+if (finePointer.matches) {
+  hero.addEventListener("pointermove", (event) => {
+    if (reducedMotion.matches) return;
+    const box = heroScene.getBoundingClientRect();
+    const x = (event.clientX - (box.left + box.width / 2)) / window.innerWidth;
+    const y = (event.clientY - (box.top + box.height / 2)) / window.innerHeight;
+    heroScene.style.setProperty("--mx", (-x * 1.4).toFixed(3));
+    heroScene.style.setProperty("--my", (-y * 1.4).toFixed(3));
+  });
+  hero.addEventListener("pointerleave", () => {
+    heroScene.style.setProperty("--mx", "0");
+    heroScene.style.setProperty("--my", "0");
+  });
+}
+
+// ── Feature index follows the panel being read ─────────────────────────────
+const featureLinks = [
+  ...document.querySelectorAll<HTMLAnchorElement>("[data-feature-link]"),
+];
+const featureObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      for (const link of featureLinks) {
+        if (link.hash === "#" + entry.target.id)
+          link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      }
+    }
+  },
+  { rootMargin: "-45% 0px -45% 0px" },
+);
+document
+  .querySelectorAll(".feature-panel")
+  .forEach((panel) => featureObserver.observe(panel));

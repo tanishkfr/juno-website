@@ -24,7 +24,7 @@ npm run verify:motion
 
 `npm run assets` regenerates the WebP assets from the untouched source screenshots and creates the social preview. Fonts and character exports are already included. The website builds independently; the separate screenshot studio and desktop source are not needed to run or deploy it.
 
-`verify:motion` checks the looping tour, pause/resume, manual selection, hover, offscreen suspension and dynamic reduced motion. It also records real elapsed Chrome playback and compares rendered Kyoto expressions as they change and return to rest. Results and a local WebM recording are saved in `evidence/motion/`.
+`verify:motion` defaults to port 5273; set `WEBSITE_URL=http://127.0.0.1:5272/` for the local preview, and run `npx playwright install ffmpeg` once for its recording. It checks the looping tour, pause/resume, manual selection, hover, offscreen suspension and dynamic reduced motion. It also records real elapsed Chrome playback and compares rendered Kyoto expressions as they change and return to rest. Results and a local WebM recording are saved in `evidence/motion/`.
 
 The product demo is a genuine 22-second request and provider response, recorded in an isolated Juno renderer. Its full source recording, exact reply and timing receipt are retained in `source-assets/`; the public MP4 is a conversation close-up with captions and an exact transcript. Only initial loading is trimmed. `verify` checks real decoding, playback, seeking, captions, transcript agreement, playback-error recovery, clipboard success and denied-access fallback. Physical devices are outside this verification run.
 

@@ -1,4 +1,45 @@
+# Current direction: a day in a pixel sky
+
+The page is one continuous sky, drawn as dithered pixels on a small WebGL
+canvas (`src/sky.ts`) and scaled up crisp. Scrolling moves the time of day:
+morning at the hero, afternoon over the product tour, dusk as the companions
+gather, a starry night with an aurora over "Your control", and dawn at the
+closing call to action. Each section sets its hour with `data-hour`; a clock
+pill in the corner reads the time back, with the current section's companion.
+
+- Type: Geist only, set large and tight (500/600), white on the sky with a soft
+  blue shadow for legibility. Geist Mono for small labels.
+- Surfaces: glass pills (navigation, tabs, buttons) and black-bezel frames that
+  hold the real Juno screenshots and the demo video.
+- Motion: headlines and frames resolve through a dot grid (`dz` keyframes),
+  the hero lifts away on scroll, the navigation condenses into a floating pill
+  with a progress hairline, Lenis eases the page on mouse and trackpad.
+- Companions: perch on the hero wordmark, peek over frames, walk in one by one
+  in the pinned dusk scene, lean with scroll speed, and stand on the footer
+  wordmark.
+- Fallbacks: without WebGL or JavaScript the body paints the same day as a
+  gradient down the page. Reduced motion freezes the clouds and removes every
+  entrance, pin and lean.
+
+The sections below describe earlier passes and are kept for history.
+
 # Juno website
+
+## Current direction — "a pixel studio on warm paper" (November 2026 redesign)
+
+Visual thesis: Juno's six pixel companions host the page. Everything borrows from the grid they are drawn on: a faint 36px grid on warm paper, stepped one-cell corners instead of rounded ones, stray accent pixels, and Geist Pixel for the brand's voice. Each chapter takes its colour from the companion hosting it.
+
+- Palette: paper #f5f0e6, deeper paper #ebe4d5, card #fffdf8, ink #1d1b18, muted #5c574d; dark rooms #171512 with ink #f3ede1. The six canonical companion hues (Kyoto #B84A3A, Prague #7654AD, Lisbon #3567D6, Seoul #DC78A4, Toronto #6DB8CC, New York #D9B345) each have a tint, a deep and an ink variant, exposed as `--host*` custom properties through `data-host`.
+- Type: Geist (reading and headlines, medium, tight tracking), Geist Mono (labels, captions, qualifications), Geist Pixel Square (wordmark, "Juno." hero, chapter numerals, companion names). All three are self-hosted from the existing `geist` dependency; no new packages.
+- Shape: no border radius. Buttons, tiles, frames and bubbles use a single stepped notch (`clip-path`), sized by `--s`.
+- Structure: hero (Meet Juno + a stage where any companion can greet you with its real blank-page line) → workspace previews → real recorded conversation → dark "good company" room → the cast roster → four capabilities with a sticky index → Code (dark) → Teams → Orb Studio → Your control → beta facts → closing request → footer with the cast standing on a full-width pixel wordmark.
+- Motion: a sub-second opening (stepped wipe on the wordmark, stepped pop on the companion); scroll reveals via one IntersectionObserver; pointer and scroll depth on the hero stage; product frames that tilt flat as they scroll in; a feature index that follows the panel being read; stepped (`steps()`) micro-transitions for pixel markers. Transform and opacity only, one rAF per frame, observers gate off-screen work. No scroll hijacking. `prefers-reduced-motion` removes all of it and content is visible without JavaScript.
+- Unchanged on purpose: every product claim, qualification, screenshot, the recorded demo, the email-draft access flow, the screenshot dialog, the preview tour and the companion expression loops. Copy additions are limited to section labels, the heading "Somewhere to think. Somewhere to build." and each companion's blank-page prompt, taken from `source-assets/companions.json` (`empty`).
+- Reference: joinariapp.com was studied for pacing, a single continuous atmosphere, and a typographic close. No layout, copy, artwork or code was reused.
+
+The notes below describe the previous white-gallery design and are kept for history; behaviours they describe (tour timing, expression loops, dialog, demo, access email) still apply.
+
+---
 
 Visual thesis: a quiet white product gallery made personable by Juno's actual pixel companions. Large framed software captures carry the narrative; the characters are the recurring signature moment.
 
