@@ -112,7 +112,7 @@ assert.equal(
   "/assets/new-york-expressions.webp",
 );
 const decorativeOrbs = page.locator("img[data-orb]");
-assert.equal(await decorativeOrbs.count(), 16);
+assert.equal(await decorativeOrbs.count(), 20);
 for (let i = 0; i < (await decorativeOrbs.count()); i++) {
   const orb = decorativeOrbs.nth(i);
   await orb.scrollIntoViewIfNeeded();
@@ -190,7 +190,16 @@ await live.waitForFunction(() =>
 );
 await live.locator("#company-orb").evaluate((i) => i.decode());
 await live.waitForTimeout(700);
-const crop = { left: 850, top: 350, width: 400, height: 390 };
+// Measure the companion where the layout actually places it.
+const crop = await live.locator("#company-orb").evaluate((orb) => {
+  const box = orb.getBoundingClientRect();
+  return {
+    left: Math.max(0, Math.floor(box.left)),
+    top: Math.max(0, Math.floor(box.top)),
+    width: Math.floor(box.width),
+    height: Math.floor(Math.min(box.height, innerHeight - Math.max(0, box.top))),
+  };
+});
 const pixels = (buffer) => sharp(buffer).extract(crop).raw().toBuffer();
 const changed = (a, b) =>
   a.reduce(
@@ -293,7 +302,7 @@ const results = {
     "Offscreen tour suspends",
     "Companion pause and resume",
     "All six selected portraits load genuine expression loops; portrait pause/resume and reduced motion",
-    "All 16 standalone decorative orbs load expression loops; shared pause stops all character animation",
+    "All 20 standalone decorative orbs load expression loops; shared pause stops all character animation",
     "Real browser pixel changes confirm hero and team-group expressions",
     "Dynamic reduced motion stops both loops",
     "Real-time browser expression change and return to rest",

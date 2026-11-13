@@ -1,6 +1,6 @@
 {
-  "url": "http://127.0.0.1:5273/",
-  "date": "2026-10-26T07:55:54.420Z",
+  "url": "http://127.0.0.1:5272/",
+  "date": "2026-11-13T12:21:45.142Z",
   "errors": [],
   "checks": [
     "Tour completes all three views and wraps",
@@ -10,7 +10,7 @@
     "Offscreen tour suspends",
     "Companion pause and resume",
     "All six selected portraits load genuine expression loops; portrait pause/resume and reduced motion",
-    "All 16 standalone decorative orbs load expression loops; shared pause stops all character animation",
+    "All 20 standalone decorative orbs load expression loops; shared pause stops all character animation",
     "Real browser pixel changes confirm hero and team-group expressions",
     "Dynamic reduced motion stops both loops",
     "Real-time browser expression change and return to rest",

@@ -1,8 +1,10 @@
+document.documentElement.classList.add("js");
 type Companion = {
   name: string;
   personality: string;
   quote: string;
   strength: string;
+  greeting: string;
   bg: string;
   ink: string;
 };
@@ -12,6 +14,7 @@ const companions: Record<string, Companion> = {
     personality: "Calm, precise, composed",
     quote: "Cut the second paragraph. The first one already said it.",
     strength: "For focus, editing and clear plans.",
+    greeting: "What needs a little clarity?",
     bg: "#f3e8df",
     ink: "#75372b",
   },
@@ -21,6 +24,7 @@ const companions: Record<string, Companion> = {
     quote:
       "It’s competent, which is the problem. Nothing here would make anyone stop scrolling.",
     strength: "For critique, analysis and failure modes.",
+    greeting: "What should we put to the test?",
     bg: "#eee8f6",
     ink: "#543979",
   },
@@ -30,6 +34,7 @@ const companions: Record<string, Companion> = {
     quote:
       "There’s a lovely rhythm in your opening line. Let’s follow it and see where the page wants to go.",
     strength: "For writing, stories and creative directions.",
+    greeting: "What are you imagining?",
     bg: "#e8edf8",
     ink: "#314e85",
   },
@@ -39,6 +44,7 @@ const companions: Record<string, Companion> = {
     quote:
       "Okay, this has potential. Let me mock up three headline variants so we can compare.",
     strength: "For code, products and quick prototypes.",
+    greeting: "What can we make?",
     bg: "#f4e8ee",
     ink: "#793d59",
   },
@@ -48,6 +54,7 @@ const companions: Record<string, Companion> = {
     quote:
       "The headline’s a good start. A couple of small changes could help it land better.",
     strength: "For explanations, learning and everyday help.",
+    greeting: "What can I help you untangle?",
     bg: "#e6f0f1",
     ink: "#315b62",
   },
@@ -56,6 +63,7 @@ const companions: Record<string, Companion> = {
     personality: "Blunt, decisive, efficient",
     quote: "Headline’s weak. CTA’s buried. Fix both, then we’ll talk.",
     strength: "For decisions, priorities and business tradeoffs.",
+    greeting: "What needs deciding?",
     bg: "#f4eedb",
     ink: "#635024",
   },
@@ -114,6 +122,12 @@ copyEmail.addEventListener("click", async () => {
     status.textContent = "Email selected. Copy the highlighted address.";
   }
 });
+/** Restart a short CSS entrance on an element whose content just changed. */
+function replay(element: HTMLElement, name: string) {
+  element.classList.remove(name);
+  void element.offsetWidth;
+  element.classList.add(name);
+}
 const portrait = byId("companion-portrait");
 const companionButtons = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-companion]"),
@@ -134,6 +148,7 @@ for (const button of companionButtons) {
     byId("portrait-personality").textContent = c.personality;
     byId("portrait-quote").textContent = `“${c.quote}”`;
     byId("portrait-strength").textContent = c.strength;
+    replay(portrait, "swap");
     updateMotion();
   });
   button.addEventListener("keydown", (event) => {
@@ -588,3 +603,136 @@ window.addEventListener(
   { passive: true },
 );
 updateNavigation();
+
+// ── Hero: choose who greets you ────────────────────────────────────────────
+const hero = byId("overview");
+const heroScene = byId("hero-scene");
+const heroOrb = byId<HTMLImageElement>("hero-orb");
+const heroPicks = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-hero-pick]"),
+];
+for (const pick of heroPicks) {
+  pick.addEventListener("click", () => {
+    const key = pick.dataset.heroPick!;
+    const c = companions[key];
+    heroPicks.forEach((b) => b.setAttribute("aria-pressed", String(b === pick)));
+    hero.dataset.host = key;
+    heroOrb.dataset.orb = key;
+    heroOrb.alt = `${c.name}, one of Juno’s six pixel companions`;
+    byId("hero-greeting").textContent = c.greeting;
+    byId("hero-host-name").textContent = c.name;
+    byId("hero-host-trait").textContent = c.personality;
+    replay(heroScene, "swap");
+    updateMotion();
+  });
+}
+
+// ── Scroll reveals ─────────────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add("in");
+      revealObserver.unobserve(entry.target);
+    }
+  },
+  { rootMargin: "0px 0px -12% 0px", threshold: 0.08 },
+);
+document
+  .querySelectorAll("[data-reveal], .footer-mark")
+  .forEach((element) => revealObserver.observe(element));
+
+// ── Scroll- and pointer-linked depth (transform only, one rAF per frame) ───
+const parallaxLayers = [
+  ...document.querySelectorAll<HTMLElement>("[data-parallax]"),
+];
+const tiltFrames = [...document.querySelectorAll<HTMLElement>("[data-tilt]")];
+const nearViewport = new Set<Element>();
+const depthObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) nearViewport.add(entry.target);
+      else nearViewport.delete(entry.target);
+    }
+    queueDepth();
+  },
+  { rootMargin: "20% 0px" },
+);
+[...parallaxLayers, ...tiltFrames, heroScene].forEach((element) =>
+  depthObserver.observe(element),
+);
+let depthFramePending = false;
+function updateDepth() {
+  depthFramePending = false;
+  if (reducedMotion.matches) {
+    for (const layer of parallaxLayers) layer.style.transform = "";
+    for (const frame of tiltFrames) frame.style.removeProperty("--p");
+    heroScene.style.setProperty("--sy", "0");
+    return;
+  }
+  const viewport = window.innerHeight;
+  for (const layer of parallaxLayers) {
+    if (!nearViewport.has(layer)) continue;
+    const box = layer.parentElement!.getBoundingClientRect();
+    const offset = box.top + box.height / 2 - viewport / 2;
+    layer.style.transform = `translate3d(0, ${(offset * Number(layer.dataset.parallax)).toFixed(1)}px, 0)`;
+  }
+  for (const frame of tiltFrames) {
+    if (!nearViewport.has(frame)) continue;
+    const top = frame.getBoundingClientRect().top;
+    const progress = Math.min(
+      1,
+      Math.max(0, (viewport - top) / (viewport * 0.62)),
+    );
+    frame.style.setProperty("--p", progress.toFixed(3));
+  }
+  if (nearViewport.has(heroScene))
+    heroScene.style.setProperty(
+      "--sy",
+      Math.min(12, window.scrollY / 60).toFixed(2),
+    );
+}
+function queueDepth() {
+  if (depthFramePending) return;
+  depthFramePending = true;
+  requestAnimationFrame(updateDepth);
+}
+window.addEventListener("scroll", queueDepth, { passive: true });
+window.addEventListener("resize", queueDepth);
+reducedMotion.addEventListener("change", queueDepth);
+queueDepth();
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  hero.addEventListener("pointermove", (event) => {
+    if (reducedMotion.matches) return;
+    const box = heroScene.getBoundingClientRect();
+    const x = (event.clientX - (box.left + box.width / 2)) / window.innerWidth;
+    const y = (event.clientY - (box.top + box.height / 2)) / window.innerHeight;
+    heroScene.style.setProperty("--mx", (-x * 1.4).toFixed(3));
+    heroScene.style.setProperty("--my", (-y * 1.4).toFixed(3));
+  });
+  hero.addEventListener("pointerleave", () => {
+    heroScene.style.setProperty("--mx", "0");
+    heroScene.style.setProperty("--my", "0");
+  });
+}
+
+// ── Feature index follows the panel being read ─────────────────────────────
+const featureLinks = [
+  ...document.querySelectorAll<HTMLAnchorElement>("[data-feature-link]"),
+];
+const featureObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      for (const link of featureLinks) {
+        if (link.hash === "#" + entry.target.id)
+          link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      }
+    }
+  },
+  { rootMargin: "-45% 0px -45% 0px" },
+);
+document
+  .querySelectorAll(".feature-panel")
+  .forEach((panel) => featureObserver.observe(panel));

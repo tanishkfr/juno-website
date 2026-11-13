@@ -37,6 +37,19 @@ for (const [name, width, height] of [
         .map((i) => i.decode().catch(() => {})),
     );
   });
+  // Sections reveal as they enter the viewport; walk the page once so the
+  // audit and full-page captures see the settled design.
+  await page.evaluate(async () => {
+    const root = document.documentElement;
+    root.style.scrollBehavior = "auto";
+    for (let y = 0; y < root.scrollHeight; y += innerHeight / 2) {
+      scrollTo(0, y);
+      await new Promise((resolve) => setTimeout(resolve, 60));
+    }
+    scrollTo(0, 0);
+    await new Promise((resolve) => setTimeout(resolve, 1300));
+    root.style.scrollBehavior = "";
+  });
   const layout = await page.evaluate(() => ({
     width: innerWidth,
     clientWidth: document.documentElement.clientWidth,
