@@ -1,6 +1,5 @@
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import { createPixelField } from "./pixel-field";
 import { createSky } from "./sky";
 document.documentElement.classList.add("js");
 type Companion = {
@@ -650,9 +649,6 @@ const root = document.documentElement;
 const clamp = (value: number, min = 0, max = 1) =>
   Math.min(max, Math.max(min, value));
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-const pixelField = finePointer.matches
-  ? createPixelField(reducedMotion)
-  : undefined;
 // Lenis glides the page itself on wheel and trackpad input. It is only used
 // with a mouse and motion allowed: touch keeps native momentum, and reduced
 // motion keeps plain native scrolling.
@@ -669,21 +665,10 @@ function syncLenis() {
 syncLenis();
 reducedMotion.addEventListener("change", syncLenis);
 finePointer.addEventListener("change", syncLenis);
-const hostColors: Record<string, string> = {
-  kyoto: "#ff8a73",
-  prague: "#b79cf0",
-  lisbon: "#9dbaf3",
-  seoul: "#f5a3c6",
-  toronto: "#8fd8ea",
-  "new-york": "#f0d06a",
-};
-const chapters = [...document.querySelectorAll<HTMLElement>("[data-chapter]")];
 const companySection = document.querySelector<HTMLElement>(".company-section")!;
 const crowd = [...document.querySelectorAll<HTMLElement>("[data-crowd]")];
 const phrases = [...document.querySelectorAll<HTMLElement>("[data-phrase]")];
 const footerMark = document.querySelector<HTMLElement>(".footer-mark")!;
-const railBuddy = byId<HTMLImageElement>("rail-buddy");
-const skyTime = byId("sky-time");
 const pinQuery = window.matchMedia(
   "(min-width: 1001px) and (min-height: 620px)",
 );
@@ -721,25 +706,13 @@ document.addEventListener("animationend", (event) => {
     event.target.classList.add("dz-done");
 });
 
-// The sky follows the scroll through a day; the clock reads the time back.
-const sky = createSky(reducedMotion, (hour, night) => {
-  const minutes = Math.round((((hour % 24) + 24) % 24) * 60) % 1440;
-  const h = Math.floor(minutes / 60);
-  skyTime.textContent = `${h % 12 || 12}:${String(minutes % 60).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
+// The original scroll-driven day remains, now in a warm dusk palette.
+const sky = createSky(reducedMotion, (_hour, night) => {
   root.dataset.sky = night ? "night" : "day";
 });
 
 let follower = window.scrollY;
 let engineRunning = false;
-let railHost = "";
-let lastTrail = 0;
-
-function currentHost(chapter: HTMLElement) {
-  const name = chapter.dataset.chapter!;
-  if (name === "hero") return hero.dataset.host ?? "kyoto";
-  if (name === "cast") return selectedCompanion;
-  return name;
-}
 
 function engineFrame() {
   const target = window.scrollY;
@@ -753,7 +726,7 @@ function engineFrame() {
     hero.style.setProperty("--hp", "0");
     footerMark.style.removeProperty("--fp");
     phrases.forEach((phrase) => phrase.classList.add("lit"));
-    updateRail(target, viewport, 0);
+    updateProgress(target, viewport);
     return;
   }
   // With Lenis the page position is already eased, so effects track it
@@ -805,42 +778,17 @@ function engineFrame() {
     (Math.ceil(footerProgress * 10) / 10).toFixed(1),
   );
 
-  updateRail(follower, viewport, velocity);
+  updateProgress(follower, viewport);
 
   if (follower !== target || gliding) requestAnimationFrame(engineFrame);
   else engineRunning = false;
 }
 
-function updateRail(position: number, viewport: number, velocity: number) {
+function updateProgress(position: number, viewport: number) {
   const progress = clamp(
     position / Math.max(1, root.scrollHeight - viewport),
   );
   root.style.setProperty("--rail-p", progress.toFixed(4));
-  let chapter = chapters[0];
-  for (const candidate of chapters) {
-    if (candidate.getBoundingClientRect().top <= viewport * 0.45)
-      chapter = candidate;
-  }
-  const host = currentHost(chapter);
-  if (host !== railHost) {
-    const first = !railHost;
-    railHost = host;
-    railBuddy.src = `/assets/${host}.png`;
-    pixelField?.setColor(hostColors[host]);
-    if (!first && !reducedMotion.matches) replay(railBuddy, "hop");
-  }
-  // The companion by the clock kicks up pixels when the page moves quickly.
-  const now = performance.now();
-  if (pixelField && Math.abs(velocity) > 0.12 && now - lastTrail > 45) {
-    lastTrail = now;
-    const box = railBuddy.getBoundingClientRect();
-    if (box.width)
-      pixelField.spawn(
-        box.left + Math.random() * box.width,
-        box.top + (velocity > 0 ? -8 : box.height + 8) - velocity * 30,
-        0.7,
-      );
-  }
 }
 
 function wakeEngine() {
@@ -852,7 +800,7 @@ window.addEventListener("scroll", wakeEngine, { passive: true });
 window.addEventListener("resize", wakeEngine);
 window.addEventListener("load", wakeEngine);
 reducedMotion.addEventListener("change", wakeEngine);
-// Selecting a companion (hero or roster) changes who rides the rail.
+// Companion changes also refresh the scroll-linked scene.
 document.addEventListener("click", (event) => {
   if (
     event.target instanceof Element &&
@@ -897,3 +845,57 @@ const featureObserver = new IntersectionObserver(
 document
   .querySelectorAll(".feature-panel")
   .forEach((panel) => featureObserver.observe(panel));
+
+// Website guides expose genuine media; they do not execute agent tasks.
+const storyButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-story-time]')];
+for (const button of storyButtons) button.addEventListener('click', async () => {
+  storyButtons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  if (demoVideo.readyState < 1) {
+    try { await new Promise<void>((resolve, reject) => {
+      const done = () => { clearTimeout(timeout); resolve(); };
+      const timeout = setTimeout(() => { demoVideo.removeEventListener('loadedmetadata', done); reject(new Error('Video unavailable')); }, 5000);
+      demoVideo.addEventListener('loadedmetadata', done, { once: true }); demoVideo.load();
+    }); } catch { byId('story-status').textContent = 'The recording could not load. Read the complete conversation below.'; return; }
+  }
+  demoVideo.pause();
+  demoVideo.currentTime = Math.min(Number(button.dataset.storyTime), Math.max(0, demoVideo.duration - .1));
+  demoVideo.controls = true;
+  playDemo.hidden = false;
+  byId('demo-play-label').textContent = 'Continue recording';
+  byId('story-status').textContent = button.querySelector('small')!.textContent;
+});
+const depths: Record<string, string> = { quick: 'A focused pass with a few sources.', standard: 'Several angles, cross-checked.', deep: 'Broad discovery, with explicit uncertainty.' };
+for (const button of document.querySelectorAll<HTMLButtonElement>('[data-depth]')) button.addEventListener('click', () => {
+  document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  byId('research-explanation').textContent = depths[button.dataset.depth!];
+});
+const companionPaths: Record<string, [string, string, string]> = {
+ kyoto: ['#demo', 'Explore a task with Kyoto', 'Put Kyoto’s focus to work in the recorded planning conversation.'],
+ prague: ['#feature-research', 'Explore research controls', 'Give a question room for the skeptical perspective you choose.'],
+ lisbon: ['#feature-results', 'Explore the Library', 'Keep the writing and files you create close to the conversation.'],
+ seoul: ['#code', 'Explore the Code workspace', 'Bring a builder’s perspective into your project workspace.'],
+ toronto: ['#feature-routines', 'Explore routine settings', 'Find the controls for work you want to return to.'],
+ 'new-york': ['#team-title', 'Explore Teams', 'Give a companion a clear role in a shared direction.'],
+};
+for (const button of companionButtons) button.addEventListener('click', () => {
+ const [href, label, context] = companionPaths[button.dataset.companion!];
+ const link = byId<HTMLAnchorElement>('companion-destination'); link.href = href; link.textContent = label;
+ byId('companion-context').textContent = context;
+});
+
+// The closing scene rests whenever it cannot be seen or motion is unwanted.
+const flightToggle = byId<HTMLButtonElement>('footer-flight-toggle');
+let flightVisible = false;
+let flightPaused = false;
+function syncFlight() {
+ const resting = reducedMotion.matches;
+ footerMark.classList.toggle('flight-running', flightVisible && !flightPaused && !resting && !document.hidden);
+ flightToggle.hidden = resting;
+ flightToggle.setAttribute('aria-pressed', String(flightPaused));
+ flightToggle.textContent = flightPaused ? 'Resume companion flight' : 'Pause companion flight';
+}
+new IntersectionObserver(([entry]) => { flightVisible = entry.isIntersecting; syncFlight(); }, { threshold: .12 }).observe(footerMark);
+flightToggle.addEventListener('click', () => { flightPaused = !flightPaused; syncFlight(); });
+reducedMotion.addEventListener('change', syncFlight);
+document.addEventListener('visibilitychange', syncFlight);
+syncFlight();

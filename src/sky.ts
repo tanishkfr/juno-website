@@ -22,13 +22,13 @@ type Key = {
   moon: [number, number, number];
 };
 
-const NIGHT: Key["palette"] = ["#04060c", "#070c1c", "#0b1636", "#132658", "#27468f"];
+const NIGHT: Key["palette"] = ["#100e12", "#19161c", "#27212a", "#3c3039", "#59424a"];
 const KEYS: Key[] = [
   {
     hour: 6.5,
-    palette: ["#4874d2", "#648fe3", "#86a9ee", "#b4caf6", "#f5f8ff"],
+    palette: ["#19181d", "#2c272d", "#44363d", "#655057", "#8e716c"],
     base: 0.4,
-    cloud: 1,
+    cloud: 0.72,
     gradient: 0.05,
     stars: 0,
     aurora: 0,
@@ -37,20 +37,20 @@ const KEYS: Key[] = [
   },
   {
     hour: 11.5,
-    palette: ["#4470d0", "#5f8be1", "#7fa4ec", "#aac3f5", "#f1f6ff"],
+    palette: ["#1b191e", "#302a31", "#483940", "#6b535a", "#977972"],
     base: 0.37,
-    cloud: 0.95,
+    cloud: 0.62,
     gradient: 0,
     stars: 0,
     aurora: 0,
-    sun: [0.87, 0.14, 1],
+    sun: [0.91, 0.20, 1],
     moon: [0.93, 0.2, 0],
   },
   {
     hour: 15.5,
-    palette: ["#315cc1", "#4572d4", "#5f8ae1", "#86a8ee", "#dde8fc"],
+    palette: ["#211b21", "#382a32", "#523a43", "#78545a", "#a77b70"],
     base: 0.32,
-    cloud: 0.7,
+    cloud: 0.48,
     gradient: 0.1,
     stars: 0,
     aurora: 0,
@@ -59,7 +59,7 @@ const KEYS: Key[] = [
   },
   {
     hour: 18.4,
-    palette: ["#182f70", "#223f8f", "#2d54ae", "#4b74cf", "#b7ccf6"],
+    palette: ["#1c171d", "#30232c", "#4b303b", "#70464e", "#a87567"],
     base: 0.26,
     cloud: 0.5,
     gradient: 0.3,
@@ -72,7 +72,7 @@ const KEYS: Key[] = [
     hour: 20.3,
     palette: NIGHT,
     base: 0.24,
-    cloud: 0.32,
+    cloud: 0.20,
     gradient: 0.42,
     stars: 1,
     aurora: 0,
@@ -114,7 +114,7 @@ const KEYS: Key[] = [
   },
   {
     hour: 29.6,
-    palette: ["#0a1840", "#1a3684", "#2f58b8", "#4f7bd6", "#86a8ee"],
+    palette: ["#1d181e", "#34282f", "#4e3841", "#6c4c53", "#78545a"],
     base: 0.36,
     cloud: 0.16,
     gradient: 1.25,
@@ -125,7 +125,7 @@ const KEYS: Key[] = [
   },
   {
     hour: 30.4,
-    palette: ["#0a1840", "#1a3684", "#2f58b8", "#4f7bd6", "#86a8ee"],
+    palette: ["#1d181e", "#34282f", "#4e3841", "#6c4c53", "#78545a"],
     base: 0.36,
     cloud: 0.16,
     gradient: 1.25,
@@ -196,6 +196,9 @@ void main(){
   float mr = max(4., u_res.y * .036);
   tone += u_moon.z * .5 * exp(-md / (mr * 2.6));
 
+  float readingZone = (1. - smoothstep(.12, .44, abs(uv.x - .5)))
+                    * smoothstep(.18, .38, uv.y) * (1. - smoothstep(.74, .94, uv.y));
+  tone = mix(tone, min(tone, .40), readingZone * .88);
   float lv = clamp(tone, 0., .999) * 4.;
   float fi = floor(lv);
   vec3 col = pal(fi + step(th + .031, lv - fi));
@@ -211,31 +214,31 @@ void main(){
     float al = clamp(a * u_aurora, 0., .999) * 3.;
     float ai = floor(al) + step(th + .031, al - floor(al));
     if (ai > .5)
-      col = ai < 1.5 ? vec3(.05, .27, .30) : ai < 2.5 ? vec3(.13, .52, .48) : vec3(.36, .80, .62);
+      col = ai < 1.5 ? vec3(.19, .22, .25) : ai < 2.5 ? vec3(.28, .35, .35) : vec3(.46, .51, .44);
   }
 
   if (u_stars > .001) {
     vec2 s = cell + vec2(0., floor(u_scroll * u_res.y * .12));
     float h = hash(s * .731 + 3.1);
     float twinkle = .55 + .45 * sin(u_time * 1.6 + h * 90.);
-    if (h > 1. - .0055 * u_stars) col = mix(col, vec3(.72, .82, 1.), twinkle * u_stars);
+    if (h > 1. - .0055 * u_stars) col = mix(col, vec3(.86, .80, .74), twinkle * u_stars);
     float centre = big(s);
     float arms = big(s + vec2(1., 0.)) + big(s - vec2(1., 0.)) + big(s + vec2(0., 1.)) + big(s - vec2(0., 1.));
     if (centre > 0.) col = mix(col, vec3(1.), u_stars);
-    else if (arms > 0.) col = mix(col, vec3(.62, .76, 1.), u_stars * (.5 + .5 * twinkle));
+    else if (arms > 0.) col = mix(col, vec3(.79, .72, .68), u_stars * (.5 + .5 * twinkle));
   }
 
   if (u_sun.z > .01) {
-    if (sd < sr) col = mix(col, vec3(.96, .98, 1.), u_sun.z);
+    if (sd < sr) col = mix(col, vec3(.88, .77, .65), u_sun.z);
     // A thin streak of light running off to the right of the sun.
     float along = (cell.x - sc.x - sr) / max(1., u_res.x - sc.x - sr);
     if (abs(cell.y - floor(sc.y)) < .5 && along > .04) {
       float dash = hash(vec2(floor(cell.x / (1. + along * 3.)), 7.));
-      if (dash > along * .85) col = mix(col, vec3(.96, .98, 1.), u_sun.z * .9);
+      if (dash > along * .85) col = mix(col, vec3(.88, .77, .65), u_sun.z * .9);
     }
   }
   if (u_moon.z > .01 && md < mr && distance(cell, mc + vec2(-mr * .55, -mr * .18)) > mr * .95)
-    col = mix(col, vec3(.86, .92, 1.), u_moon.z);
+    col = mix(col, vec3(.88, .84, .77), u_moon.z);
 
   gl_FragColor = vec4(col, 1.);
 }`;
