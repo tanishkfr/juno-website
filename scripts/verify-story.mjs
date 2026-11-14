@@ -1,3 +1,5 @@
+import fs from 'node:fs/promises';
+await fs.mkdir('evidence/story-refinement', { recursive: true });
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 const b=await chromium.launch({channel:'chrome',headless:true,args:['--no-proxy-server']});
