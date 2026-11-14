@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#4874d2" />
+    <meta name="theme-color" content="#211b21" />
     <title>Juno — A little character. A workspace of possibilities.</title>
     <meta
       name="description"
@@ -65,10 +65,6 @@
         <a href="#overview">Overview</a><a href="#companions">Companions</a><a href="#features">Features</a><a href="#control">Your control</a>
       </nav>
     </header>
-    <div class="sky-clock" id="sky-clock" aria-hidden="true">
-      <img class="rail-buddy" id="rail-buddy" src="/assets/kyoto.png" alt="" width="20" height="18" />
-      <span id="sky-time">6:30 am</span>
-    </div>
     <main id="main">
       <section data-chapter="hero" data-hour="6.5" class="hero" id="overview" aria-labelledby="hero-title" data-host="kyoto">
         <div class="hero-in hero-copy">
@@ -78,6 +74,7 @@
           </div>
           <h1 id="hero-title"><span class="sr-only">Meet Juno</span><span class="hero-word" aria-hidden="true"><b style="--i: 0">J</b><b style="--i: 1">u</b><b style="--i: 2">n</b><b style="--i: 3">o</b></span></h1>
           <p class="hero-line">A little character.<br />A workspace of possibilities.</p>
+          <p class="hero-explainer">Your AI desktop workspace for conversations, code, and connected tools.</p>
           <div class="hero-cta">
             <a class="pill pill-white" href="#product">Explore Juno</a>
             <a class="pill pill-ghost" href="#demo"
@@ -86,6 +83,7 @@
           </div>
           <p class="hero-fine">Private beta for Windows 11 · <a href="#beta-details">How the beta works</a></p>
         </div>
+        <a class="hero-scroll-cue" href="#product">Explore the workspace <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5" /></svg></a>
         <div class="hero-foot">
           <div class="hero-cast" role="group" aria-label="Choose who greets you">
             <button class="hero-pick" data-hero-pick="kyoto" aria-pressed="true" aria-label="Say hello to Kyoto"><img src="/assets/kyoto.png" alt="" width="44" height="39" /></button><button class="hero-pick" data-hero-pick="prague" aria-pressed="false" aria-label="Say hello to Prague"><img src="/assets/prague.png" alt="" width="44" height="46" /></button><button class="hero-pick" data-hero-pick="lisbon" aria-pressed="false" aria-label="Say hello to Lisbon"><img src="/assets/lisbon.png" alt="" width="44" height="34" /></button><button class="hero-pick" data-hero-pick="seoul" aria-pressed="false" aria-label="Say hello to Seoul"><img src="/assets/seoul.png" alt="" width="44" height="40" /></button><button class="hero-pick" data-hero-pick="toronto" aria-pressed="false" aria-label="Say hello to Toronto"><img src="/assets/toronto.png" alt="" width="44" height="34" /></button><button class="hero-pick" data-hero-pick="new-york" aria-pressed="false" aria-label="Say hello to New York"><img src="/assets/new-york.png" alt="" width="44" height="42" /></button>
@@ -138,6 +136,11 @@
             steps.
           </p>
         </div>
+        <div class="story-steps" role="group" aria-label="Explore the recorded conversation">
+<button data-story-time="0" aria-pressed="true"><span>Start with a task</span><small>A Saturday bookshop pop-up. A clear, bounded request.</small></button>
+<button data-story-time="7" aria-pressed="false"><span>Watch Kyoto respond</span><small>Follow the real provider response as it arrives.</small></button>
+<button data-story-time="18" aria-pressed="false"><span>Leave with a plan</span><small>Confirm the venue, choose the books, arrange the essentials.</small></button>
+</div><p class="story-status" id="story-status" role="status">A genuine conversation recorded in Juno. Choose a moment to inspect.</p>
         <div class="demo-side" data-reveal="frame">
           <div class="demo-stage mac">
             <video id="workflow-demo" muted controls playsinline preload="metadata" poster="/assets/workflow-demo-poster.webp" width="840" height="500" aria-describedby="demo-caption">
@@ -253,6 +256,7 @@
             </button>
           </div>
         </div>
+        <div class="companion-next"><p id="companion-context">Put Kyoto’s focus to work in the recorded planning conversation.</p><a id="companion-destination" class="pill pill-ghost" href="#demo">Explore a task with Kyoto</a><small>Suggested starting points. You choose each companion’s instructions and tools.</small></div>
         <p class="gallery-note" data-reveal>
           A starting personality, not a limit. Give any companion your own
           instructions, tools, and working style.
@@ -272,7 +276,7 @@
             <article class="feature-panel computer-feature" id="feature-tools" data-host="kyoto" data-reveal>
               <header><h3>Tools, on your terms.</h3><span class="feature-no" aria-hidden="true">01</span></header>
               <p>Keep browser and desktop controls beside the conversation. Decide what each companion can access.</p>
-              <p class="feature-note">Configuration and permission required.</p>
+              <p class="feature-note">Configuration and permission required.</p><details class="feature-context"><summary>What am I giving access to?</summary><p>The real controls below show the available computer environments. Off is selected in this capture. Choose permissions inside Juno for each companion.</p></details>
               <div class="feature-stage">
                 <img data-orb="kyoto" class="feature-host" src="/assets/kyoto.png" alt="" width="56" height="50" loading="lazy" />
                 <button class="product-shot" data-image="computer-control" data-caption="Computer controls · Actual Juno interface; access is off" aria-label="Enlarge Juno’s Computer controls">
@@ -284,6 +288,7 @@
               <header><h3>Give a question some room.</h3><span class="feature-no" aria-hidden="true">02</span></header>
               <p>A focused pass or a deeper investigation. Set the scope of your research around the question you’re trying to answer.</p>
               <p class="feature-note">Uses your configured provider and research tools.</p>
+<div class="research-guide" role="group" aria-label="Learn about research depth"><button data-depth="quick" aria-pressed="true">Quick</button><button data-depth="standard" aria-pressed="false">Standard</button><button data-depth="deep" aria-pressed="false">Deep</button></div><p id="research-explanation" class="research-explanation" aria-live="polite">A focused pass with a few sources.</p><small class="preview-disclosure">An interface guide. This page does not run research.</small>
               <div class="feature-stage">
                 <img data-orb="prague" class="feature-host" src="/assets/prague.png" alt="" width="56" height="59" loading="lazy" />
                 <button class="product-shot" data-image="research" data-caption="Research depth options · Real Juno controls; no research run is depicted" aria-label="Enlarge research options">
@@ -294,7 +299,7 @@
             <article class="feature-panel routine-feature" id="feature-routines" data-host="toronto" data-reveal style="--d: 140ms">
               <header><h3>Put recurring work on a schedule.</h3><span class="feature-no" aria-hidden="true">03</span></header>
               <p>Set up a routine for the work that comes around again. Keep its schedule and controls close to your companion.</p>
-              <p class="feature-note">Runs while Juno and its required tools are available.</p>
+              <p class="feature-note">Runs while Juno and its required tools are available.</p><details class="feature-context"><summary>Explore the example schedule</summary><p>The captured Saturday reading hour routine is paused. A schedule needs Juno, its provider, and any required tools to be available.</p></details>
               <div class="feature-stage">
                 <img data-orb="toronto" class="feature-host" src="/assets/toronto.png" alt="" width="56" height="44" loading="lazy" />
                 <button class="product-shot" data-image="routines" data-caption="Routines · A paused example schedule in the real Juno app" aria-label="Enlarge routines settings">
@@ -305,7 +310,7 @@
             <article class="feature-panel results-feature" id="feature-results" data-host="lisbon" data-reveal style="--d: 210ms">
               <header><h3>Keep files and results together.</h3><span class="feature-no" aria-hidden="true">04</span></header>
               <p>Come back to what your companion creates. The Library brings saved files and results together beside the conversation.</p>
-              <p class="feature-note">Saved results stay close to the conversation.</p>
+              <p class="feature-note">Saved results stay close to the conversation.</p><p class="library-state">Your work has a place to come back to.</p><p class="preview-disclosure">The actual Library below is shown before any results are saved.</p>
               <div class="feature-stage">
                 <img data-orb="lisbon" class="feature-host" src="/assets/lisbon.png" alt="" width="56" height="44" loading="lazy" />
                 <button class="product-shot" data-image="library" data-caption="Results Library · Real Juno interface, shown before any results are saved" aria-label="Enlarge results library">
@@ -494,6 +499,7 @@
           <h2 id="closing-title" class="kin">A little character.<br />A lot to work with.</h2>
           <p class="lede">Juno is currently in private beta.</p>
           <a class="pill pill-white pill-big beta-status closing-request" data-beta-request href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AGitHub%20username%20(if%20you%20have%20one)%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!">Request beta access</a>
+          <div class="access-expectations"><h3>Before you join</h3><p>For Windows 11 users comfortable testing early software and connecting an AI provider.</p><ol><li><strong>Send your request</strong><span>Tell us your Windows version and what you want to try.</span></li><li><strong>Access is by invitation</strong><span>Invited testers receive a private GitHub prerelease.</span></li><li><strong>Connect your provider</strong><span>Use an account sign-in or API key. Provider charges may apply.</span></li></ol><a href="#beta-details">Read the requirements and beta details</a></div>
           <span class="closing-platform">An AI desktop workspace for Windows.</span>
           <p class="beta-email-hint">
             Opens an email draft to
@@ -534,6 +540,7 @@
         </div>
         <span>Juno</span>
       </div>
+      <div class="footer-motion"><button id="footer-flight-toggle" type="button" aria-pressed="false">Pause companion flight</button></div>
     </footer>
     <dialog id="image-dialog" data-lenis-prevent aria-labelledby="image-dialog-caption">
       <div class="dialog-bar">
