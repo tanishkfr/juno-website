@@ -1,0 +1,126 @@
+{
+  "origin": "http://127.0.0.1:5276",
+  "checkedAt": "2026-11-15T10:21:05.617Z",
+  "views": [
+    {
+      "name": "desktop",
+      "route": "/",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "desktop",
+      "route": "/updates/?preview=release",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "desktop",
+      "route": "/download/?preview=release",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "desktop",
+      "route": "/help/",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "desktop",
+      "route": "/privacy/",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "desktop",
+      "route": "/support/",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "route": "/",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile",
+      "route": "/updates/?preview=release",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile",
+      "route": "/download/?preview=release",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile",
+      "route": "/help/",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile",
+      "route": "/privacy/",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile",
+      "route": "/support/",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "narrow",
+      "route": "/",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "narrow",
+      "route": "/updates/?preview=release",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "narrow",
+      "route": "/download/?preview=release",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "narrow",
+      "route": "/help/",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "narrow",
+      "route": "/privacy/",
+      "width": 320,
+      "height": 740
+    },
+    {
+      "name": "narrow",
+      "route": "/support/",
+      "width": 320,
+      "height": 740
+    }
+  ],
+  "checks": [
+    "Historical GitHub releases; up to three bullets; full notes navigation; no Notes section",
+    "Development fixture and detail; no downloadable draft",
+    "All six hero companions",
+    "v0.5 showcase tabs and keyboard; full-size gallery image",
+    "Mobile menu and Escape focus recovery",
+    "API outage has retry; no invented download",
+    "Actual public API state captured",
+    "Future release formatting; complete final paragraph; raw HTML inert",
+    "Support mail draft, denied-clipboard manual fallback, troubleshooting disclosure"
+  ],
+  "passed": true
+}

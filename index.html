@@ -7,22 +7,22 @@
     <title>Juno — A little character. A workspace of possibilities.</title>
     <meta
       name="description"
-      content="Meet Juno, a local-first AI workspace for Windows. Six distinct companions, conversation, code, and tools—with you in control. Currently in private beta."
+      content="Meet Juno, a local-first AI workspace for Windows. Six distinct companions, conversation, code, and tools—with you in control. Conversations, Code and bounded Mission work."
     />
     <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://juno-website-two.vercel.app/" />
-    <meta property="og:url" content="https://juno-website-two.vercel.app/" />
+    <link rel="canonical" href="https://juno.tanishk.me/" />
+    <meta property="og:url" content="https://juno.tanishk.me/" />
     <meta
       property="og:title"
       content="Meet Juno. Good work, in good company."
     />
     <meta
       property="og:description"
-      content="Your AI desktop workspace, with a little character. Currently in private beta for Windows."
+      content="Your AI desktop workspace, with a little character. Local-first AI for Windows."
     />
     <meta
       property="og:image"
-      content="https://juno-website-two.vercel.app/assets/juno-social.png"
+      content="https://juno.tanishk.me/assets/juno-social.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -47,24 +47,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <canvas id="sky" class="sky" aria-hidden="true"></canvas>
-    <header class="site-header">
-      <div class="nav-wrap">
-        <a class="wordmark" href="#overview" aria-label="Juno home"
-          ><img src="/assets/kyoto.png" alt="" width="27" height="24" />Juno</a
-        >
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#overview">Overview</a><a href="#companions">Companions</a><a href="#features">Features</a><a href="#control">Your control</a>
-        </nav>
-        <a class="pill pill-cta beta-status" data-beta-request href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AGitHub%20username%20(if%20you%20have%20one)%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!" aria-label="Request access to Juno’s private beta by email">Request access</a>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9h14M5 15h14" /></svg>
-        </button>
-        <i class="nav-prog" aria-hidden="true"></i>
-      </div>
-      <nav id="mobile-nav" aria-label="Mobile navigation" hidden>
-        <a href="#overview">Overview</a><a href="#companions">Companions</a><a href="#features">Features</a><a href="#control">Your control</a>
-      </nav>
-    </header>
+    <header class="site-header"><div class="nav-wrap"><a class="wordmark" href="/" aria-label="Juno home"><img src="/assets/kyoto.png" alt="" width="27" height="24">Juno</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#product">Explore</a><a href="/updates/">Updates</a></nav><a class="pill pill-cta" href="/download/">Download for Windows</a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 9h14M5 15h14"/></svg></button><i class="nav-prog" aria-hidden="true"></i></div><nav id="mobile-nav" aria-label="Mobile navigation" hidden><a href="/#product">Explore</a><a href="/updates/">Updates</a><a href="/download/">Download</a><a href="/help/">Help</a><a href="/support/">Support</a></nav></header>
     <main id="main">
       <section data-chapter="hero" data-hour="6.5" class="hero" id="overview" aria-labelledby="hero-title" data-host="kyoto">
         <div class="hero-in hero-copy">
@@ -74,14 +57,14 @@
           </div>
           <h1 id="hero-title"><span class="sr-only">Meet Juno</span><span class="hero-word" aria-hidden="true"><b style="--i: 0">J</b><b style="--i: 1">u</b><b style="--i: 2">n</b><b style="--i: 3">o</b></span></h1>
           <p class="hero-line">A little character.<br />A workspace of possibilities.</p>
-          <p class="hero-explainer">Your AI desktop workspace for conversations, code, and connected tools.</p>
+          <p class="hero-explainer">A local-first Windows desktop agent. Talk with a companion, work on a codebase, or give a longer task a place to unfold.</p>
           <div class="hero-cta">
-            <a class="pill pill-white" href="#product">Explore Juno</a>
+            <a class="pill pill-white" href="/download/">Get Juno for Windows</a>
             <a class="pill pill-ghost" href="#demo"
               ><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M7 4.5 15 10l-8 5.5z" /></svg>Watch the demo</a
             >
           </div>
-          <p class="hero-fine">Private beta for Windows 11 · <a href="#beta-details">How the beta works</a></p>
+          <p class="hero-fine">Windows 11 x64 · <a href="/download/">Published releases & installation</a></p>
         </div>
         <a class="hero-scroll-cue" href="#product">Explore the workspace <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5" /></svg></a>
         <div class="hero-foot">
@@ -92,7 +75,7 @@
         </div>
       </section>
 
-      <section data-chapter="kyoto" data-hour="11.5" class="showcase" aria-labelledby="product-title">
+      <section class="work-story" id="workspace-story" data-hour="10"><div class="story-heading"><h2>One workspace.<br>Room to go further.</h2><p>Your conversation stays close. Code opens beside it. Recent Work keeps a path back to the project.</p></div><div class="workflow-views" role="tablist" aria-label="Explore the v0.5 workspace"><button type="button" role="tab" id="view-workspace" aria-controls="workflow-view" aria-selected="true" tabindex="0" data-workflow-view="workspace">Conversation</button><button type="button" role="tab" id="view-code" aria-controls="workflow-view" aria-selected="false" tabindex="-1" data-workflow-view="code">Code</button><button type="button" role="tab" id="view-mission" aria-controls="workflow-view" aria-selected="false" tabindex="-1" data-workflow-view="mission">Mission</button></div><figure class="v05-stage" id="workflow-view" role="tabpanel" aria-labelledby="view-workspace"><img src="/assets/v05-workspace.webp" width="1440" height="900" alt="Juno’s v0.5 workspace with six companions, Recent Work and Code and Mission in the composer" loading="lazy"><figcaption>Actual v0.5 interface · staged example workspace, not a live agent execution.</figcaption></figure><div class="story-sequence"><article><span>Conversation</span><h3>Start with a thought.</h3><p>A question, a plan, a rough draft. Six distinct companions share one familiar workspace.</p></article><article><span>Code</span><h3>Bring the project along.</h3><p>Inspect files, ask a read-only question, or authorize a change. The workspace and its permissions stay visible beside the conversation.</p></article><article><span>Mission</span><h3>Give the work a boundary.</h3><p>Plan a longer task, review its scope, and follow execution through its recorded result. Ariadne verification is shown where supported; an ordinary response is not a verified outcome.</p></article></div></section><section data-chapter="kyoto" data-hour="11.5" class="showcase" aria-labelledby="product-title">
         <div class="hero-product" id="product">
           <div class="sec-h">
             <h2 id="product-title" class="kin">Somewhere to think.<br />Somewhere to build.</h2>
@@ -107,8 +90,8 @@
                 <img data-orb="prague" class="peek peek-prague" src="/assets/prague.png" alt="" width="112" height="118" loading="lazy" />
                 <img data-orb="toronto" class="peek peek-toronto" src="/assets/toronto.png" alt="" width="124" height="96" loading="lazy" />
                 <div class="mac">
-                  <button class="product-shot hero-shot" data-image="conversation" data-caption="Conversation with Kyoto · Illustrative text in the real Juno app" aria-label="Enlarge the conversation with Kyoto">
-                    <img src="/assets/conversation-1440.webp" srcset="/assets/conversation-960.webp 960w, /assets/conversation-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 1180px" alt="An illustrative conversation with Kyoto about trying a neighborhood bookshop, shown in Juno’s real desktop app." width="1440" height="900" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
+                  <button class="product-shot hero-shot" data-image="v05-workspace" data-caption="Actual v0.5 renderer · staged workspace; no live execution" aria-label="Enlarge the conversation with Kyoto">
+                    <img src="/assets/v05-workspace-1440.webp" srcset="/assets/v05-workspace-960.webp 960w, /assets/v05-workspace-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 1180px" alt="The v0.5 companion workspace with staged example records." width="1440" height="900" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
                   </button>
                 </div>
               </div>
@@ -128,7 +111,7 @@
         </div>
       </section>
 
-      <section data-chapter="kyoto" data-hour="15.5" class="demo-section" id="demo" aria-labelledby="demo-title">
+      <section data-chapter="kyoto" data-hour="15.5" class="demo-section" id="demo" data-historical="true" aria-labelledby="demo-title">
         <div class="sec-h">
           <h2 id="demo-title" class="kin">Plan a Saturday pop-up with Kyoto.</h2>
           <p class="lede" data-reveal>
@@ -279,7 +262,7 @@
               <p class="feature-note">Configuration and permission required.</p><details class="feature-context"><summary>What am I giving access to?</summary><p>The real controls below show the available computer environments. Off is selected in this capture. Choose permissions inside Juno for each companion.</p></details>
               <div class="feature-stage">
                 <img data-orb="kyoto" class="feature-host" src="/assets/kyoto.png" alt="" width="56" height="50" loading="lazy" />
-                <button class="product-shot" data-image="computer-control" data-caption="Computer controls · Actual Juno interface; access is off" aria-label="Enlarge Juno’s Computer controls">
+                <button class="product-shot" data-image="computer-control" data-caption="Earlier beta capture · Computer controls · Actual Juno interface; access is off" aria-label="Enlarge Juno’s Computer controls">
                   <img src="/assets/computer-control-960.webp" alt="The real Juno computer-access choices, with Off selected." width="335" height="360" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
                 </button>
               </div>
@@ -291,7 +274,7 @@
 <div class="research-guide" role="group" aria-label="Learn about research depth"><button data-depth="quick" aria-pressed="true">Quick</button><button data-depth="standard" aria-pressed="false">Standard</button><button data-depth="deep" aria-pressed="false">Deep</button></div><p id="research-explanation" class="research-explanation" aria-live="polite">A focused pass with a few sources.</p><small class="preview-disclosure">An interface guide. This page does not run research.</small>
               <div class="feature-stage">
                 <img data-orb="prague" class="feature-host" src="/assets/prague.png" alt="" width="56" height="59" loading="lazy" />
-                <button class="product-shot" data-image="research" data-caption="Research depth options · Real Juno controls; no research run is depicted" aria-label="Enlarge research options">
+                <button class="product-shot" data-image="research" data-caption="Earlier beta capture · Research depth options · Real Juno controls; no research run is depicted" aria-label="Enlarge research options">
                   <img src="/assets/research-960.webp" alt="The real Quick, Standard and Deep research choices in Juno." width="500" height="310" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
                 </button>
               </div>
@@ -302,7 +285,7 @@
               <p class="feature-note">Runs while Juno and its required tools are available.</p><details class="feature-context"><summary>Explore the example schedule</summary><p>The captured Saturday reading hour routine is paused. A schedule needs Juno, its provider, and any required tools to be available.</p></details>
               <div class="feature-stage">
                 <img data-orb="toronto" class="feature-host" src="/assets/toronto.png" alt="" width="56" height="44" loading="lazy" />
-                <button class="product-shot" data-image="routines" data-caption="Routines · A paused example schedule in the real Juno app" aria-label="Enlarge routines settings">
+                <button class="product-shot" data-image="routines" data-caption="Earlier beta capture · Routines · A paused example schedule in the real Juno app" aria-label="Enlarge routines settings">
                   <img src="/assets/routines-960.webp" alt="Juno’s real Routines settings with the Saturday reading hour example paused." width="860" height="690" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
                 </button>
               </div>
@@ -313,7 +296,7 @@
               <p class="feature-note">Saved results stay close to the conversation.</p><p class="library-state">Your work has a place to come back to.</p><p class="preview-disclosure">The actual Library below is shown before any results are saved.</p>
               <div class="feature-stage">
                 <img data-orb="lisbon" class="feature-host" src="/assets/lisbon.png" alt="" width="56" height="44" loading="lazy" />
-                <button class="product-shot" data-image="library" data-caption="Results Library · Real Juno interface, shown before any results are saved" aria-label="Enlarge results library">
+                <button class="product-shot" data-image="library" data-caption="Earlier beta capture · Results Library · Real Juno interface, shown before any results are saved" aria-label="Enlarge results library">
                   <img src="/assets/library-960.webp" alt="Juno’s real Results panel, with file-type filters and its empty state." width="376" height="300" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
                 </button>
               </div>
@@ -323,7 +306,7 @@
       </section>
 
       <section data-chapter="seoul" data-hour="23.6" class="code-section" id="code" aria-labelledby="code-title">
-        <div class="sec-h">
+        <div class="sec-h"><p class="media-qualification">Supporting controls shown in earlier-beta captures; the v0.5 workspace is demonstrated above.</p>
           <h2 id="code-title" class="kin">Think it through.<br />Then build it.</h2>
           <p class="lede" data-reveal>
             Bring your companion into Code. Keep the project, conversation,
@@ -334,8 +317,8 @@
           <div class="code-frame" data-reveal="frame">
             <img data-orb="seoul" class="peek peek-seoul" src="/assets/seoul.png" alt="Seoul, Juno’s prototype-loving companion" width="124" height="112" loading="lazy" />
             <div class="mac">
-              <button class="product-shot code-shot" data-image="code" data-caption="Juno Code workspace · A local example project" aria-label="Enlarge the Juno Code workspace">
-                <img src="/assets/code-1440.webp" srcset="/assets/code-960.webp 960w, /assets/code-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 1180px" alt="Juno’s real Code workspace with an example project and the adjacent file editor." width="1440" height="960" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
+              <button class="product-shot code-shot" data-image="v05-code" data-caption="Actual v0.5 Code renderer · staged example project" aria-label="Enlarge the Juno Code workspace">
+                <img src="/assets/v05-code-1440.webp" srcset="/assets/v05-code-960.webp 960w, /assets/v05-code-1440.webp 1440w" sizes="(max-width: 700px) 100vw, 1180px" alt="Juno v0.5 Code with a staged example project and its adjacent tool panel." width="1440" height="960" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
               </button>
               <div class="mac-caps">
                 <div class="code-details">
@@ -388,7 +371,7 @@
           </div>
           <div class="team-shot split-shot" data-reveal="frame">
             <div class="mac">
-              <button class="product-shot" data-image="teams" data-caption="Team composition · Real Juno Teams interface" aria-label="Enlarge Juno’s Teams interface">
+              <button class="product-shot" data-image="teams" data-caption="Earlier beta capture · Team composition · Real Juno Teams interface" aria-label="Enlarge Juno’s Teams interface">
                 <img src="/assets/teams-960.webp" alt="The real Teams editor showing companion selection, coordinator and role configuration." width="860" height="920" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
               </button>
             </div>
@@ -415,7 +398,7 @@
           </div>
           <div class="studio-shot split-shot" data-reveal="frame">
             <div class="mac">
-              <button class="product-shot" data-image="studio" data-caption="Orb Studio · The real appearance editor" aria-label="Enlarge Orb Studio">
+              <button class="product-shot" data-image="studio" data-caption="Earlier beta capture · Orb Studio · The real appearance editor" aria-label="Enlarge Orb Studio">
                 <img src="/assets/studio-960.webp" alt="Juno’s actual Orb Studio, with a character preview and appearance controls." width="960" height="620" loading="lazy" /><span class="zoom-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4" /></svg></span>
               </button>
             </div>
@@ -455,15 +438,15 @@
         </div>
         <div class="vow-cta" data-reveal>
           <a class="pill pill-ghost" href="#beta-details">How the beta works</a>
-          <a class="pill pill-white" href="#availability">Request access</a>
+          <a class="pill pill-white" href="/download/">Download & installation</a>
         </div>
       </section>
 
       <section data-chapter="kyoto" data-hour="28.3" class="beta-section" id="beta-details" aria-labelledby="beta-details-title">
         <div class="faq-in">
           <div class="beta-intro">
-            <h2 id="beta-details-title" class="kin">Before you request access.</h2>
-            <p data-reveal>Windows requirements, provider setup and how invitations work.</p>
+            <h2 id="beta-details-title" class="kin">Before you make yourself at home.</h2>
+            <p data-reveal>Windows requirements, provider setup and manual updates.</p>
           </div>
           <dl class="beta-facts">
             <div data-reveal>
@@ -482,12 +465,7 @@
               </dd>
             </div>
             <div data-reveal style="--d: 160ms">
-              <dt>Access by invitation</dt>
-              <dd>
-                Invited testers receive access to a private GitHub prerelease with
-                the Windows build. Include your GitHub username in your request if
-                you have one. Expect bugs and unfinished features.
-              </dd>
+              <dt>Published releases. Manual updates.</dt><dd>Get installers from Juno’s public GitHub releases. Read the notes, verify the checksum and keep a backup before updating. Expect bugs and unfinished features in beta software.</dd>
             </div>
           </dl>
         </div>
@@ -497,14 +475,12 @@
         <div class="closing-inner">
           <img data-orb="kyoto" class="closing-companion" src="/assets/kyoto.png" alt="" width="88" height="78" loading="lazy" />
           <h2 id="closing-title" class="kin">A little character.<br />A lot to work with.</h2>
-          <p class="lede">Juno is currently in private beta.</p>
-          <a class="pill pill-white pill-big beta-status closing-request" data-beta-request href="mailto:madebytanishk@gmail.com?subject=Juno%20private%20beta%20access&amp;body=Hi%20Tanishk%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Juno%20private%20beta.%0A%0AI%20understand%20Juno%20is%20still%20in%20private%20beta%20and%20I%20may%20encounter%20bugs%20or%20unfinished%20features.%0A%0AName%3A%0AWindows%20version%3A%0AGitHub%20username%20(if%20you%20have%20one)%3A%0AWhat%20I%20would%20like%20to%20use%20Juno%20for%3A%0A%0AThanks!">Request beta access</a>
-          <div class="access-expectations"><h3>Before you join</h3><p>For Windows 11 users comfortable testing early software and connecting an AI provider.</p><ol><li><strong>Send your request</strong><span>Tell us your Windows version and what you want to try.</span></li><li><strong>Access is by invitation</strong><span>Invited testers receive a private GitHub prerelease.</span></li><li><strong>Connect your provider</strong><span>Use an account sign-in or API key. Provider charges may apply.</span></li></ol><a href="#beta-details">Read the requirements and beta details</a></div>
+          <p class="lede">A familiar companion. A workspace for what comes next.</p>
+          <a class="pill pill-white pill-big closing-request" href="/download/">Find your Windows download</a>
+          <div class="access-expectations"><h3>A little preparation</h3><p>For Windows 11 users comfortable testing early software and connecting an AI provider.</p><ol><li><strong>Find a published release</strong><span>Read what changed and check the installer’s source.</span></li><li><strong>Install and configure</strong><span>Review the unsigned-installer guidance and connect your provider.</span></li><li><strong>Start small</strong><span>Choose a companion, ask a question, then explore Code and Mission.</span></li></ol><a href="/help/">Read the installation guide</a></div>
           <span class="closing-platform">An AI desktop workspace for Windows.</span>
           <p class="beta-email-hint">
-            Opens an email draft to
-            <span id="beta-email-address">madebytanishk@gmail.com</span> for you
-            to review.
+            Questions or a bug to report? <a href="mailto:madebytanishk@gmail.com"><span id="beta-email-address">madebytanishk@gmail.com</span></a>
           </p>
           <div class="beta-email-tools">
             <button id="copy-email" class="copy-email" type="button" hidden>
@@ -519,20 +495,11 @@
     <footer class="site-footer" data-hour="30.4">
       <div class="footer-top">
         <p class="footer-line">Good work,<br /><em>in good company.</em></p>
-        <nav class="footer-nav" aria-label="Footer">
-          <div>
-            <p>Juno</p>
-            <a href="#product">The workspace</a><a href="#companions">Companions</a><a href="#features">Features</a><a href="#code">Code</a>
-          </div>
-          <div>
-            <p>Beta</p>
-            <a href="#control">Your control</a><a href="#beta-details">Private beta</a><a href="#availability">Request access</a>
-          </div>
-        </nav>
+        <nav class="footer-nav" aria-label="Footer"><div><p>Juno</p><a href="/#product">Explore</a><a href="/updates/">Updates</a><a href="/download/">Download</a></div><div><p>A little help</p><a href="/help/">Installation & help</a><a href="/privacy/">Privacy & permissions</a><a href="/support/">Support</a><a href="https://tanishk.me">Made by Tanishk</a></div></nav>
       </div>
       <div class="footer-base">
-        <small>© 2026 Juno · Private beta</small>
-        <a class="back-top" href="#overview">Back to top <span aria-hidden="true">↑</span></a>
+        <small>© 2026 Juno · Windows desktop AI</small>
+        <a class="back-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
       </div>
       <div class="footer-mark" aria-hidden="true">
         <div class="footer-cast">
@@ -579,6 +546,6 @@
         <img id="dialog-image" alt="" />
       </div>
     </dialog>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.ts"></script><script type="module" src="/src/site.ts"></script>
   </body>
 </html>

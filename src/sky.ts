@@ -228,18 +228,7 @@ void main(){
     else if (arms > 0.) col = mix(col, vec3(.79, .72, .68), u_stars * (.5 + .5 * twinkle));
   }
 
-  if (u_sun.z > .01) {
-    if (sd < sr) col = mix(col, vec3(.88, .77, .65), u_sun.z);
-    // A thin streak of light running off to the right of the sun.
-    float along = (cell.x - sc.x - sr) / max(1., u_res.x - sc.x - sr);
-    if (abs(cell.y - floor(sc.y)) < .5 && along > .04) {
-      float dash = hash(vec2(floor(cell.x / (1. + along * 3.)), 7.));
-      if (dash > along * .85) col = mix(col, vec3(.88, .77, .65), u_sun.z * .9);
-    }
-  }
-  if (u_moon.z > .01 && md < mr && distance(cell, mc + vec2(-mr * .55, -mr * .18)) > mr * .95)
-    col = mix(col, vec3(.88, .84, .77), u_moon.z);
-
+  // Environmental glow remains above; no literal celestial objects.
   gl_FragColor = vec4(col, 1.);
 }`;
 
@@ -389,16 +378,18 @@ export function createSky(
     // Smaller sky pixels on small screens keep the texture in proportion.
     const cell = window.innerWidth < 700 ? 5 : 6;
     const nextWidth = Math.ceil(window.innerWidth / cell);
-    const nextHeight = Math.ceil(window.innerHeight / cell);
+    const pageContent = document.querySelector<HTMLElement>("body[data-page] .release-page");
+    const coverage = pageContent ? pageContent.getBoundingClientRect().bottom + window.scrollY : window.innerHeight;
+    const nextHeight = Math.min(4096, Math.ceil(coverage / cell));
     measure();
     // Ignore the small height changes of a mobile address bar.
-    if (nextWidth === width && Math.abs(nextHeight - height) < 24) return;
+    if (nextWidth === width && Math.abs(nextHeight - height) < (pageContent ? 1 : 24)) return;
     width = nextWidth;
     height = nextHeight;
     canvas.width = width;
     canvas.height = height;
     canvas.style.width = `${width * cell}px`;
-    canvas.style.height = `${height * cell}px`;
+    canvas.style.height = `${pageContent ? coverage : height * cell}px`;
     gl!.viewport(0, 0, width, height);
   }
 
@@ -450,6 +441,8 @@ export function createSky(
     measure();
     request();
   });
+  const pageContent = document.querySelector("body[data-page] .release-page");
+  if (pageContent) new ResizeObserver(() => { resize(); request(); }).observe(pageContent);
   document.addEventListener("visibilitychange", sync);
   reducedMotion.addEventListener("change", sync);
   canvas.addEventListener("webglcontextlost", (event) => event.preventDefault());

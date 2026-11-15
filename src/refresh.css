@@ -1,0 +1,55 @@
+/* Website extension: original sky, palette, characters and self-hosted Geist. */
+.site-header .desktop-nav a[aria-current=page]{background:rgb(255 255 255/.12);border-radius:999px}
+.site-header:not(.scrolled) .wordmark,.site-header:not(.scrolled) .desktop-nav{background:rgb(24 20 25/.72);border:1px solid var(--night-line);border-radius:999px;padding:10px 18px}
+.site-header:not(.scrolled) .nav-wrap{padding-top:12px}.site-header .wordmark{gap:8px}.site-header.scrolled .nav-wrap{max-width:760px}
+.work-story{max-width:1440px;margin:0 auto;padding:100px var(--gutter);position:relative;z-index:2;color:#fff}
+.story-heading{display:flex;align-items:end;gap:48px;justify-content:space-between;margin-bottom:48px}.story-heading h2{font-size:clamp(40px,5vw,76px);font-weight:500;line-height:1.04;letter-spacing:-.04em}.story-heading>p{max-width:30ch;font-size:18px;line-height:1.6;color:#f1e6df}
+.v05-stage{margin:0}.v05-stage>img{width:100%;height:auto;border-radius:20px;border:1px solid var(--night-line);box-shadow:0 24px 80px -30px #0e0a0eb3}.v05-stage figcaption{font-size:12px;line-height:1.6;color:#e2d4d0;margin-top:12px}
+.story-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin:64px 0}.story-sequence article>span{font-size:13px;color:#e4c6b9}.story-sequence h3{font-size:27px;line-height:1.15;letter-spacing:-.025em;font-weight:500;margin:12px 0}.story-sequence p{font-size:16px;line-height:1.65;color:#e2d4d0}
+.release-page{position:relative;z-index:2;max-width:1200px;margin:auto;padding:160px 48px 120px;color:#fff;min-height:85vh}
+.journal-intro,.download-intro{margin-bottom:72px;max-width:900px}.journal-intro h1,.download-intro h1{font-size:clamp(48px,7.3vw,100px);font-weight:500;line-height:1.02;letter-spacing:-.045em;text-wrap:balance}.journal-intro>p,.download-intro>p{max-width:55ch;font-size:19px;line-height:1.6;margin-top:28px;color:#eaded8}.page-companion{display:block;object-fit:contain;image-rendering:pixelated;margin-bottom:28px}
+.journal-tabs{display:flex;align-items:center;gap:28px;border-bottom:1px solid var(--night-line);margin-bottom:16px}.journal-tabs a{text-decoration:none;font-size:15px;padding:18px 0}.journal-tabs a[aria-current]{box-shadow:0 2px 0 #e0b7a6}.journal-tabs .source-link{margin-left:auto;font-size:13px;color:#eaded8}
+.release-entry{display:grid;grid-template-columns:190px minmax(0,1fr);gap:48px;padding:56px 0;border-bottom:1px solid var(--night-line)}.release-meta{display:flex;flex-direction:column;align-items:start;gap:12px;font-size:13px;color:#eaded8}.release-version{font-size:20px;color:#fff}.release-badge{border:1px solid #cdb3a8;border-radius:999px;padding:5px 10px;font-size:11px}.release-kind{font-size:12px}.release-body h2{font-size:clamp(29px,3.6vw,46px);line-height:1.12;letter-spacing:-.03em;font-weight:500;margin:0 0 24px}.release-body h2 a{text-decoration:none}.release-markdown{font-size:16px;line-height:1.75;color:#f1e6df;overflow-wrap:anywhere}.release-markdown :is(h2,h3,h4,h5,h6){font-size:20px;line-height:1.3;margin:28px 0 12px;letter-spacing:-.015em}.release-markdown p{margin:12px 0}.release-markdown ul{padding-left:22px}.release-markdown li+li{margin-top:8px}.release-markdown a{text-underline-offset:3px}.release-markdown pre{white-space:pre-wrap;padding:18px;background:#171419;border:1px solid var(--night-line);border-radius:8px}.release-actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:28px;font-size:14px}.back-releases{display:inline-block;margin:28px 0}.notes-section{margin-top:100px;max-width:65ch}.notes-section h2,.install-guide h2{font-size:34px;font-weight:500;letter-spacing:-.03em;margin-bottom:20px}.notes-section p{font-size:17px;line-height:1.7;color:#eaded8}
+.download-intro{margin-left:auto;margin-right:auto;text-align:center}.download-intro>p{margin-inline:auto}.download-intro .page-companion{margin-inline:auto}.download-surface{max-width:850px;margin:0 auto 88px;padding:40px;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;border:1px solid #cdb3a850;border-radius:24px;background:#211b21ed;box-shadow:0 20px 60px -28px #100c12}.download-surface h2{font-size:25px;font-weight:500;margin-bottom:12px}.download-surface>div>p{font-size:14px;color:#eaded8}.download-surface #download-release{display:flex;flex-direction:column;gap:18px;min-width:0}.download-surface .pill{align-self:start}.asset-meta{overflow-wrap:anywhere;font-size:12px!important;line-height:1.6}.download-version{font-size:14px}.checksum{padding-top:14px;border-top:1px solid var(--night-line);font-size:13px;line-height:1.7}.checksum summary{cursor:pointer}.checksum p,.checksum a{display:block;margin:12px 0}.checksum code{display:block;overflow-wrap:anywhere;white-space:pre-wrap;font-family:var(--mono);font-size:11px;padding:10px;background:#171419;border-radius:6px}
+.install-guide,.reading-page{max-width:720px;margin:auto;font-size:17px;line-height:1.8;color:#f1e6df}.install-guide ol{padding-left:24px}.install-guide li{padding-left:12px;margin:24px 0}.install-guide>p{margin:28px 0}.reading-page h2{font-size:27px;line-height:1.2;color:#fff;font-weight:500;margin:48px 0 18px}.reading-page p+p{margin-top:20px}.reading-page .pill{margin-top:32px}.release-state{display:flex;flex-direction:column;align-items:start;gap:20px;padding:30px 0;font-size:16px;line-height:1.7;color:#eaded8}.release-state a{font-size:13px}.preview-banner{position:relative;z-index:60;background:#f3e8df;color:#38252b;padding:12px;text-align:center;font-size:13px}.preview-banner~.site-header{top:42px}
+body[data-page] .site-footer{position:relative}body[data-page] .footer-motion{display:none}
+@media(max-width:760px){.release-page{padding:130px 24px 72px}.journal-intro,.download-intro{margin-bottom:44px}.journal-intro>p,.download-intro>p{font-size:17px}.release-entry{grid-template-columns:1fr;gap:22px;padding:36px 0}.release-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px}.release-version{font-size:17px}.release-meta time{font-size:12px}.journal-tabs{gap:22px}.journal-tabs .source-link{font-size:11px}.download-surface{grid-template-columns:1fr;padding:24px;gap:28px}.story-heading{display:block}.story-heading>p{margin-top:24px}.story-sequence{grid-template-columns:1fr;gap:32px;margin:40px 0}.work-story{padding:64px 24px}.v05-stage>img{border-radius:10px}.site-header:not(.scrolled) .wordmark{padding:9px 12px}.site-header:not(.scrolled) .desktop-nav{padding:7px}.site-header .pill-cta{padding-inline:14px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.site-header .nav-wrap{transition:none}}
+
+[hidden]{display:none!important}
+.site-header:not(.scrolled) .nav-wrap{max-width:1280px;height:64px;padding:0;margin-top:18px;box-shadow:none}
+.site-header:not(.scrolled) .nav-wrap::before{opacity:0}
+.site-header.scrolled .wordmark,.site-header.scrolled .desktop-nav{border:0;background:transparent}
+.workflow-views{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.workflow-views button{font-size:14px;padding:11px 20px;border:1px solid var(--night-line);border-radius:999px;background:#211b21;color:#f1e6df}
+.workflow-views button[aria-selected=true]{background:#f1e6df;color:#211b21;border-color:#f1e6df}
+.workflow-views button:hover{border-color:#ddb2a2}
+body[data-page] .footer-mark{margin-top:48px}
+@media(max-width:760px){.site-header:not(.scrolled) .nav-wrap{height:56px;margin-top:10px}.site-header:not(.scrolled) .wordmark{border-color:transparent;background:transparent}.site-header:not(.scrolled) .nav-wrap::before{opacity:1}.workflow-views button{padding:10px 16px}}
+
+/* Secondary-page atmosphere covers content, stopping at the footer boundary. */
+body[data-page]{position:relative;isolation:isolate}
+body[data-page]>.sky{position:absolute;top:0;left:0}
+body[data-page]>.site-footer{background:#171419}
+
+.media-qualification{font-size:13px!important;line-height:1.6;color:#eaded8;max-width:60ch;margin:0 auto 20px}
+.editorial-note{padding:32px 0;border-bottom:1px solid var(--night-line);line-height:1.75}
+.editorial-note h3{font-size:26px;margin-bottom:12px}
+
+/* Support: a direct contact route, practical context, no invented service promise. */
+.support-nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-bottom:60px;font-size:13px;color:#eaded8}
+.support-nav a{text-decoration:none;padding-bottom:8px;border-bottom:1px solid transparent}
+.support-nav a[aria-current]{color:#fff;border-color:#ddb2a2}
+.support-intro{margin-bottom:56px}
+.support-contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:64px;padding:40px;border:1px solid var(--night-line);border-radius:24px;background:#211b21ed;margin-bottom:88px}
+.support-contact h2{font-size:36px;font-weight:500;letter-spacing:-.035em;margin-bottom:20px}
+.support-contact p{font-size:16px;line-height:1.7;color:#eaded8}
+.support-address{display:block;font-size:clamp(18px,2.3vw,29px);font-weight:500;letter-spacing:-.025em;text-decoration:none;margin:32px 0;overflow-wrap:anywhere;user-select:all}
+.support-actions{display:flex;flex-wrap:wrap;gap:12px}.support-actions .pill{font-size:14px;padding-inline:20px}
+#support-copy-status{font-size:13px;min-height:22px;margin-top:14px}
+.support-checklist h3{font-size:17px;font-weight:500;margin-bottom:16px}.support-checklist ul{padding-left:20px;font-size:15px;line-height:1.8;color:#eaded8;margin-bottom:28px}.support-checklist p{font-size:14px}
+.support-guidance{max-width:760px;margin:auto}.support-guidance section{margin-top:64px;scroll-margin-top:110px}.support-guidance h2{font-size:32px;font-weight:500;letter-spacing:-.025em;margin-bottom:20px}.support-guidance p{font-size:16px;line-height:1.8;color:#eaded8;margin:16px 0}
+.support-guidance details{padding:18px 0;border-bottom:1px solid var(--night-line)}.support-guidance summary{font-size:17px;line-height:1.5;cursor:pointer;padding-right:20px}.support-guidance details p{font-size:15px;max-width:65ch}
+@media(max-width:760px){.support-nav{gap:12px 18px;font-size:12px;margin-bottom:40px}.support-contact{grid-template-columns:1fr;padding:24px;gap:36px}.support-contact h2{font-size:30px}.support-contact-main{min-width:0}.support-actions .pill{padding-inline:16px;font-size:13px}.support-guidance h2{font-size:28px}}
+
+.release-markdown li>p{margin:0}

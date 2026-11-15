@@ -173,19 +173,19 @@ const previewScenes: Record<
   { image: string; alt: string; caption: string }
 > = {
   conversation: {
-    image: "conversation",
-    alt: "An illustrative conversation with Kyoto about a neighborhood bookshop, shown in the real Juno app.",
-    caption: "Conversation with Kyoto · Illustrative text, real app",
+    image: "v05-workspace",
+    alt: "The v0.5 workspace with Kyoto and staged example records.",
+    caption: "Actual v0.5 workspace · staged example records",
   },
   workspace: {
-    image: "agent-kyoto",
+    image: "v05-workspace",
     alt: "Juno’s actual workspace with Kyoto at the center and the six city companions in the sidebar.",
-    caption: "The Kyoto workspace · Actual Juno application",
+    caption: "Actual v0.5 workspace · staged example records",
   },
   code: {
-    image: "code",
-    alt: "The real Juno Code file editor with the Fieldnotes example project. Its AI provider is not connected.",
-    caption: "Local file editing in Code · AI provider not connected",
+    image: "v05-code",
+    alt: "Juno v0.5 Code with its tool panel. Staged example records; no live provider execution.",
+    caption: "Actual v0.5 Code interface · staged example project",
   },
 };
 const previewTabs = [
