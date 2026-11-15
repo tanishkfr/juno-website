@@ -56,3 +56,7 @@ The explicit approved:false manifest flag also blocks legacy fallback for that v
 ## Visual refinement follow-up
 
 Removed the obsolete workflow video and hero companion bar. Conversation, project workspace (Files panel), and Code now use distinct current-renderer images with working full-size dialogs. Pixel luminance and opacity are reduced for reading contrast. The home footer matches the solid Updates footer, with a static companion composition and no background pattern. Release pagination has 32px separation from the final divider (24px on small screens). Headless checks cover 1440/1280/390/320px, all three images/dialogs, accessibility and no overflow; evidence/visual-polish contains focused screenshots and receipt. Existing refresh regression suite and all 12 data tests pass.
+
+
+## Distinct current-renderer media
+Replaced the four earlier-beta feature screenshots with fresh current renderer captures: composer options, Mission planner, recorded Mission history, and Code approval. Presentation crops focus the controls, while enlargement preserves the full untouched capture. New populated conversation image replaces the empty Conversation view. Removed the duplicate opening workflow gallery and repeated standalone Code gallery; the main three-view product tour remains. Navbar selection dot removed. Captures use an isolated hidden Electron window and synthetic fixture records; no installed profile, provider execution, release artifact or desktop source edits. Source captures and provenance: source-assets/v05-next/.

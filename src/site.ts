@@ -93,16 +93,6 @@ catch (error) {
     state(container, error instanceof Error ? error.message : 'Published releases are temporarily unavailable.', true);
 } }
 void render();
-const views = [...document.querySelectorAll<HTMLButtonElement>('[data-workflow-view]')];
-for (const button of views) {
-    button.addEventListener('click', () => { const key = button.dataset.workflowView!; const panel = document.querySelector<HTMLElement>('#workflow-view')!; const image = panel.querySelector('img')!; image.src = '/assets/v05-' + key + '.webp'; image.alt = key === 'mission' ? 'Juno v0.5 Mission planner, showing task scope controls' : 'Juno v0.5 ' + key + ' workspace'; panel.setAttribute('aria-labelledby', button.id); views.forEach(b => { const active = b === button; b.setAttribute('aria-selected', String(active)); b.tabIndex = active ? 0 : -1; }); panel.querySelector('figcaption')!.textContent = 'Actual v0.5 interface · staged example records, not a live agent execution.'; });
-    button.addEventListener('keydown', e => { const i = views.indexOf(button); const n = e.key === 'ArrowRight' ? views[(i + 1) % views.length] : e.key === 'ArrowLeft' ? views[(i + views.length - 1) % views.length] : e.key === 'Home' ? views[0] : e.key === 'End' ? views.at(-1) : undefined; if (n) {
-        e.preventDefault();
-        n.focus();
-        n.click();
-    } });
-}
-
 const supportCopy=document.querySelector<HTMLButtonElement>('#support-copy');
 if(supportCopy){supportCopy.hidden=false;supportCopy.addEventListener('click',async()=>{const status=document.querySelector<HTMLElement>('#support-copy-status')!;const address=document.querySelector<HTMLElement>('#support-address')!;try{await navigator.clipboard.writeText(address.textContent!.trim());status.textContent='Email address copied.';}catch{const range=document.createRange();range.selectNodeContents(address);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);status.textContent='Copy wasn’t available. The email address is selected so you can copy it manually.';}});}
 

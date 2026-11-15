@@ -74,3 +74,7 @@ body{background:#211b21}
 body:not([data-page]) .footer-mark{margin-top:48px}
 .release-more{margin-top:32px}
 @media(max-width:600px){.release-more{margin-top:24px}}
+
+.desktop-nav a::after{display:none}
+.feature-panel .product-shot{aspect-ratio:auto}
+.feature-panel .product-shot>img{height:auto;object-fit:contain}

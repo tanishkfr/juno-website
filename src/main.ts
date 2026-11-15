@@ -141,7 +141,7 @@ const previewScenes: Record<
   { image: string; alt: string; caption: string }
 > = {
   conversation: {
-    image: "v05-workspace",
+    image: "current-conversation",
     alt: "The v0.5 workspace with Kyoto and staged example records.",
     caption: "Actual v0.5 workspace · staged example records",
   },
@@ -799,10 +799,10 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('[data-depth]'
 });
 const companionPaths: Record<string, [string, string, string]> = {
  kyoto: ['#product', 'Explore Kyoto’s workspace', 'Explore Kyoto’s conversation and project workspace.'],
- prague: ['#feature-research', 'Explore research controls', 'Give a question room for the skeptical perspective you choose.'],
- lisbon: ['#feature-results', 'Explore the Library', 'Keep the writing and files you create close to the conversation.'],
+ prague: ['#feature-research', 'Explore Mission planning', 'Give a task a clear objective and scope.'],
+ lisbon: ['#feature-results', 'Explore Code permissions', 'Review the requested action before allowing it.'],
  seoul: ['#code', 'Explore the Code workspace', 'Bring a builder’s perspective into your project workspace.'],
- toronto: ['#feature-routines', 'Explore routine settings', 'Find the controls for work you want to return to.'],
+ toronto: ['#feature-routines', 'Explore recorded Missions', 'Find the work you want to return to.'],
  'new-york': ['#team-title', 'Explore Teams', 'Give a companion a clear role in a shared direction.'],
 };
 for (const button of companionButtons) button.addEventListener('click', () => {
