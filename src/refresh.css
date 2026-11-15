@@ -79,3 +79,7 @@ body:not([data-page]) .footer-mark{margin-top:48px}
 .feature-panel .product-shot{aspect-ratio:auto}
 .feature-panel .product-shot>img{height:auto;object-fit:contain}
 .feature-panel .feature-stage{margin-top:28px}
+
+/* Shorter transition into the second pair of feature chapters. */
+.capability-grid{row-gap:40px}
+@media(max-width:760px){.capability-grid{row-gap:32px}}

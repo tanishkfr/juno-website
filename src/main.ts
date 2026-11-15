@@ -161,9 +161,7 @@ const previewTabs = [
 ];
 const heroShot = document.querySelector<HTMLButtonElement>(".hero-shot")!;
 const heroImage = heroShot.querySelector("img")!;
-const companionPlayback = byId<HTMLButtonElement>("companion-playback");
 const companyOrb = byId<HTMLImageElement>("company-orb");
-const portraitPlayback = byId<HTMLButtonElement>("portrait-playback");
 const portraitImage = byId<HTMLImageElement>("portrait-img");
 const decorativeOrbs = [
   ...document.querySelectorAll<HTMLImageElement>("img[data-orb]"),
@@ -172,7 +170,7 @@ const visibleOrbs = new Set<HTMLImageElement>();
 let selectedCompanion = "kyoto";
 let portraitVisible = false;
 let tourPlaying = !reducedMotion.matches;
-let charactersPlaying = !reducedMotion.matches;
+let charactersPlaying = false;
 let previewVisible = false;
 let companionVisible = false;
 let previewHovered = false;
@@ -180,37 +178,9 @@ let tourTimer: ReturnType<typeof setTimeout> | undefined;
 let outgoingImage: HTMLImageElement | undefined;
 let previewTransition: Animation | undefined;
 
-function updatePlaybackButton(
-  button: HTMLButtonElement,
-  playing: boolean,
-  label: string,
-) {
-  button.hidden = false;
-  button.disabled = reducedMotion.matches;
-  button.title = reducedMotion.matches
-    ? "Paused for your reduced motion preference"
-    : "";
-  button.querySelector("span")!.textContent = reducedMotion.matches
-    ? `${label[0].toUpperCase() + label.slice(1)} paused`
-    : `${playing ? "Pause" : "Play"} ${label}`;
-  button
-    .querySelector("path")!
-    .setAttribute("d", playing ? "M7 5v10M13 5v10" : "M7 4l8 6-8 6V4Z");
-}
-
 function updateMotion() {
   clearTimeout(tourTimer);
   const tourAllowed = tourPlaying && !reducedMotion.matches;
-  updatePlaybackButton(
-    companionPlayback,
-    charactersPlaying && !reducedMotion.matches,
-    "animation",
-  );
-  updatePlaybackButton(
-    portraitPlayback,
-    charactersPlaying && !reducedMotion.matches,
-    "expressions",
-  );
   byId("preview-caption").setAttribute(
     "aria-live",
     tourAllowed ? "off" : "polite",
@@ -337,14 +307,6 @@ for (const tab of previewTabs) {
     previewTabs[next].click();
   });
 }
-companionPlayback.addEventListener("click", () => {
-  charactersPlaying = !charactersPlaying;
-  updateMotion();
-});
-portraitPlayback.addEventListener("click", () => {
-  charactersPlaying = !charactersPlaying;
-  updateMotion();
-});
 for (const tab of previewTabs) tab.addEventListener("focus", stopTour);
 heroShot.addEventListener("focus", stopTour);
 heroShot.addEventListener("pointerenter", () => {
@@ -797,17 +759,3 @@ for (const button of document.querySelectorAll<HTMLButtonElement>('[data-depth]'
   document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
   byId('research-explanation').textContent = depths[button.dataset.depth!];
 });
-const companionPaths: Record<string, [string, string, string]> = {
- kyoto: ['#product', 'Explore Kyoto’s workspace', 'Explore Kyoto’s conversation and project workspace.'],
- prague: ['#feature-research', 'Explore Mission planning', 'Give a task a clear objective and scope.'],
- lisbon: ['#feature-results', 'Explore Code permissions', 'Review the requested action before allowing it.'],
- seoul: ['#code', 'Explore the Code workspace', 'Bring a builder’s perspective into your project workspace.'],
- toronto: ['#feature-routines', 'Explore recorded Missions', 'Find the work you want to return to.'],
- 'new-york': ['#team-title', 'Explore Teams', 'Give a companion a clear role in a shared direction.'],
-};
-for (const button of companionButtons) button.addEventListener('click', () => {
- const [href, label, context] = companionPaths[button.dataset.companion!];
- const link = byId<HTMLAnchorElement>('companion-destination'); link.href = href; link.textContent = label;
- byId('companion-context').textContent = context;
-});
-
