@@ -140,6 +140,7 @@ const previewScenes: Record<
   string,
   { image: string; alt: string; caption: string }
 > = {
+  home: { image: "v05-workspace", alt: "Juno empty home workspace with pixel atmosphere and Kyoto", caption: "Home · the current Juno empty workspace" },
   conversation: {
     image: "current-conversation",
     alt: "The v0.5 workspace with Kyoto and staged example records.",
