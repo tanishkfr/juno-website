@@ -105,3 +105,5 @@ for (const button of views) {
 
 const supportCopy=document.querySelector<HTMLButtonElement>('#support-copy');
 if(supportCopy){supportCopy.hidden=false;supportCopy.addEventListener('click',async()=>{const status=document.querySelector<HTMLElement>('#support-copy-status')!;const address=document.querySelector<HTMLElement>('#support-address')!;try{await navigator.clipboard.writeText(address.textContent!.trim());status.textContent='Email address copied.';}catch{const range=document.createRange();range.selectNodeContents(address);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);status.textContent='Copy wasn’t available. The email address is selected so you can copy it manually.';}});}
+
+import './support-data';

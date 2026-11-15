@@ -1,0 +1,85 @@
+{
+  "origin": "http://127.0.0.1:5276",
+  "date": "2026-11-15T10:43:09.768Z",
+  "views": [
+    {
+      "name": "desktop",
+      "route": "/known-issues/"
+    },
+    {
+      "name": "desktop",
+      "route": "/known-issues/?preview=support"
+    },
+    {
+      "name": "desktop",
+      "route": "/uninstall/"
+    },
+    {
+      "name": "desktop",
+      "route": "/support/"
+    },
+    {
+      "name": "desktop",
+      "route": "/help/"
+    },
+    {
+      "name": "desktop",
+      "route": "/privacy/"
+    },
+    {
+      "name": "mobile",
+      "route": "/known-issues/"
+    },
+    {
+      "name": "mobile",
+      "route": "/known-issues/?preview=support"
+    },
+    {
+      "name": "mobile",
+      "route": "/uninstall/"
+    },
+    {
+      "name": "mobile",
+      "route": "/support/"
+    },
+    {
+      "name": "mobile",
+      "route": "/help/"
+    },
+    {
+      "name": "mobile",
+      "route": "/privacy/"
+    },
+    {
+      "name": "narrow",
+      "route": "/known-issues/"
+    },
+    {
+      "name": "narrow",
+      "route": "/known-issues/?preview=support"
+    },
+    {
+      "name": "narrow",
+      "route": "/uninstall/"
+    },
+    {
+      "name": "narrow",
+      "route": "/support/"
+    },
+    {
+      "name": "narrow",
+      "route": "/help/"
+    },
+    {
+      "name": "narrow",
+      "route": "/privacy/"
+    }
+  ],
+  "checks": [
+    "Complete public install Markdown renders its table and fits a narrow viewport",
+    "Resolved issues excluded from active list, retained in history; absent severity not invented",
+    "New published version without approved support shows pending, not old limitations",
+    "Outage shows retry and public source, not an empty healthy list"
+  ],
+  "passed": true
+}

@@ -35,3 +35,20 @@ The website release feed is independent of the app's existing signed update-anno
 The main v0.5 workspace, Code and Mission planner media are current. The optional genuine provider video and auxiliary controls/Teams/Orb Studio captures remain visibly labelled as earlier-beta media. No fresh provider, Mission execution or Ariadne outcome footage is claimed; these can be replaced after DeepSeek's final artifact qualification without changing release synchronization.
 
 Do not promote the preview or publish any release until the owner approves. No physical-phone, Firefox or Safari verification is claimed. This is website QA, not installer/runtime qualification.
+
+
+## Additional GitHub-backed support — 15 November 2026
+
+Added /known-issues/ and /uninstall/, plus /api/support. Approved version records in the proposed public support/index.json must match a published GitHub release. The endpoint reads public files only; a draft version never returns issue data. Until the manifest is approved and published in juno-beta, the existing root KNOWN_ISSUES.md is parsed only under its own declared v0.4.2 release. Current public Install names v0.4.2; Privacy and Feedback name v0.4.1 and are shown as historical guides, not silently relabelled for v0.5.
+
+Issue title, explanation and affected versions come from the public source. Status, workaround, severity, fixed-in version and resolution date are shown only when explicitly supplied. Resolved structured records leave the active list but remain available in a historical disclosure. A newly published version without approved guidance shows pending, not old limitations or an empty healthy list.
+
+Public Markdown/JSON files are fetched from the fixed public raw GitHub repository with five-minute process caches; Vercel applies five-minute shared caching, so changes may require roughly ten minutes plus GitHub cache propagation. A successful public document can be served stale for up to 24 hours on outage, visibly labelled; a cold failure shows retry. No token or private repository is involved. Marked and DOMPurify now provide full sanitized GFM tables, ordered lists, links and code blocks for both release notes and support documents. Remote image/media loading is intentionally suppressed.
+
+Eight additional unit tests verify path restrictions, draft gating, version separation, explicit metadata, automatic refresh/stale behavior and legacy Markdown. Headless support QA covers desktop/390/320px, current public content, v0.5 dev-only fixture, pending guidance, resolved history, outages and expanded installation tables. Screenshots and receipt: evidence/v05-support/. The original refreshed-page suite also passes after the shared Markdown change.
+
+The current NSIS configuration/custom uninstall hook and public INSTALL.md were inspected read-only: removal of application/registration is separate from intentional local data deletion. /uninstall/ contains no destructive commands. No fresh live uninstall was run, and no final-build qualification is claimed on behalf of DeepSeek.
+
+proposed-public-support/ contains a preserved public v0.4.2 archive, a versioned manifest, three confirmed general v0.5 limitations and draft Install/Privacy/Feedback copy. The v0.5 record is approved:false. It is deliberately partial and must be reconciled with DeepSeek’s final corrected build and approved before any public distribution-repository update. It contains no machine-specific private findings. Nothing in juno-beta, the draft release, its assets, checksums or signed feed was edited. The website runtime and preview can be completed independently; publishing the approved public support files is the remaining coordination step.
+
+The explicit approved:false manifest flag also blocks legacy fallback for that version; a matching root Markdown file cannot bypass pending approval. Total data tests now pass: 12.

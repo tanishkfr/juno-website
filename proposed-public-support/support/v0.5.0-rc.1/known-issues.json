@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "releaseTag": "v0.5.0-rc.1",
+  "issues": [
+    {
+      "id": "unsigned-installer",
+      "title": "The Windows beta installer is unsigned",
+      "description": "Windows may show Unknown Publisher or SmartScreen. The beta has no Authenticode publisher trust or SmartScreen reputation.",
+      "affectedVersions": [
+        "0.5.0-rc.1"
+      ],
+      "status": "limitation",
+      "workaround": "Verify the official release source and its published SHA-256 before opening the installer. Do not disable Windows security protections."
+    },
+    {
+      "id": "manual-updates",
+      "title": "Updates are installed manually",
+      "description": "Automatic installer download and installation are not enabled for this beta.",
+      "affectedVersions": [
+        "0.5.0-rc.1"
+      ],
+      "status": "limitation",
+      "workaround": "Read the published release notes, back up your work, and install the official release manually."
+    },
+    {
+      "id": "provider-access",
+      "title": "External providers require your own access",
+      "description": "Provider accounts, subscriptions where applicable, network access and quota are required. Model availability is controlled by the provider.",
+      "affectedVersions": [
+        "0.5.0-rc.1"
+      ],
+      "status": "limitation"
+    }
+  ]
+}

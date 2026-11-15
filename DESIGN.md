@@ -63,3 +63,5 @@ Before the closing exhibit, an open editorial definition list explains the confi
 ## v0.5 website extension — 15 November 2026
 
 The existing world remains authoritative. Product navigation splits at the top and joins after scrolling. Updates is a release-only editorial chronology: publication metadata, three source bullets, full Markdown detail; no development Notes section. Download, Help, Privacy and Support share the original pixel atmosphere down to the footer. Support is direct contact plus a report checklist and privacy guidance, without a response-time promise. New product media is the genuine v0.5 renderer with staged records clearly labelled. The literal sun and moon are removed without changing the original palette or environmental lighting. See WEBSITE-V05-HANDOFF.md for data and verification boundaries.
+
+Known Issues extends the same support-topic navigation with a source-labelled version selector, open editorial issue rows, optional workaround surfaces and a collapsed resolved history. Current versus archived support scope is explicit. Uninstall distinguishes app removal from data erasure and supplies no destructive shell commands.

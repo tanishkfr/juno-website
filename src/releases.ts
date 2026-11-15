@@ -1,3 +1,5 @@
+import {marked} from 'marked';
+import DOMPurify from 'dompurify';
 export type Asset = {
     name: string;
     url: string;
@@ -41,68 +43,14 @@ export async function loadReleases(): Promise<Feed> {
         throw Error('The release service returned an unexpected response.');
     return data;
 }
-export function markdown(text: string) {
-    const fragment = document.createDocumentFragment();
-    let list: HTMLElement | null = null;
-    let pre: HTMLElement | null = null;
-    const inline = (node: HTMLElement, value: string) => { const re = /\[([^\]]+)\]\((https?:[^\s)]+)\)|`([^`]+)`|\*\*([^*]+)\*\*/g; let at = 0; for (const match of value.matchAll(re)) {
-        node.append(document.createTextNode(value.slice(at, match.index)));
-        const el = document.createElement(match[1] ? 'a' : match[3] ? 'code' : 'strong');
-        el.textContent = match[1] || match[3] || match[4];
-        if (el instanceof HTMLAnchorElement) {
-            try {
-                const u = new URL(match[2]);
-                if (!['https:', 'http:'].includes(u.protocol))
-                    throw Error();
-                el.href = u.href;
-                el.rel = 'noopener noreferrer';
-            }
-            catch {
-                el.removeAttribute('href');
-            }
-        }
-        node.append(el);
-        at = match.index! + match[0].length;
-    } node.append(document.createTextNode(value.slice(at))); };
-    for (const line of text.split('\n')) {
-        if (line.startsWith('```')) {
-            if (pre) {
-                pre = null;
-            }
-            else {
-                pre = document.createElement('pre');
-                fragment.append(pre);
-            }
-            continue;
-        }
-        if (pre) {
-            pre.append(document.createTextNode(line + '\n'));
-            continue;
-        }
-        if (!line.trim()) {
-            list = null;
-            continue;
-        }
-        const heading = /^(#{1,6})\s+(.+)/.exec(line), item = /^\s*(?:[-*]|\d+\.)\s+(.+)/.exec(line);
-        if (item) {
-            if (!list) {
-                list = document.createElement('ul');
-                fragment.append(list);
-            }
-            const li = document.createElement('li');
-            inline(li, item[1]);
-            list.append(li);
-        }
-        else {
-            list = null;
-            const el = document.createElement(heading ? 'h' + Math.min(heading[1].length + 1, 6) : 'p');
-            inline(el, heading ? heading[2] : line);
-            fragment.append(el);
-        }
-    }
-    return fragment;
+export function markdown(text:string,sourceUrl='https://github.com/tanishkfr/juno-beta/blob/main/') {
+ const html=marked.parse(text.replace(/^[\u200B-\u200F\uFEFF]/,''),{async:false,gfm:true});
+ const fragment=DOMPurify.sanitize(html,{USE_PROFILES:{html:true},FORBID_TAGS:['img','video','audio','iframe','style','form','input','button'],FORBID_ATTR:['style','id','name','class','target'],RETURN_DOM_FRAGMENT:true});
+ for(const a of fragment.querySelectorAll('a')){const href=a.getAttribute('href');if(!href)continue;try{const url=new URL(href,sourceUrl);if(!['https:','http:','mailto:'].includes(url.protocol))throw Error();a.href=url.href;a.rel='noopener noreferrer';}catch{a.removeAttribute('href');}}
+ for(const heading of fragment.querySelectorAll('h1,h2,h3,h4,h5,h6')){const level=Math.min(Number(heading.tagName.slice(1))+1,6);const replacement=document.createElement('h'+level);replacement.append(...heading.childNodes);heading.replaceWith(replacement);}
+ for(const table of fragment.querySelectorAll('table')){const region=document.createElement('div');region.className='markdown-table';region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label','Release or support table');table.replaceWith(region);region.append(table);}
+ return fragment;
 }
-
 /** Extract only source text; no generated changelog claims. */
 export function releaseSummary(body:string):{intro:string;bullets:string[]}{
  const lines=body.replace(/\r\n/g,'\n').replace(/```[\s\S]*?```/g,'').split('\n');

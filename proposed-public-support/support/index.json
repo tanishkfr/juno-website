@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "versions": [
+    {
+      "releaseTag": "v0.4.2",
+      "approved": true,
+      "issuesPath": "support/v0.4.2/KNOWN_ISSUES.md"
+    },
+    {
+      "releaseTag": "v0.5.0-rc.1",
+      "approved": false,
+      "issuesPath": "support/v0.5.0-rc.1/known-issues.json",
+      "documents": {
+        "install": "support/v0.5.0-rc.1/INSTALL.md",
+        "privacy": "support/v0.5.0-rc.1/PRIVACY.md",
+        "feedback": "support/v0.5.0-rc.1/FEEDBACK.md"
+      }
+    }
+  ]
+}
