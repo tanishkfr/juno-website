@@ -67,8 +67,8 @@ async function render() { const container = list ?? download; if (!container)
         next();
     }
     else if (download) {
-        const r = feed.releases.find(r => installer(r));
-        if (!r) {
+        const r = feed.releases[0];
+        if (!r || !installer(r)) {
             state(download, 'There is no published Windows installer available right now. Upcoming drafts are not public downloads.');
             return;
         }
