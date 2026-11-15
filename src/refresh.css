@@ -78,3 +78,4 @@ body:not([data-page]) .footer-mark{margin-top:48px}
 .desktop-nav a::after{display:none}
 .feature-panel .product-shot{aspect-ratio:auto}
 .feature-panel .product-shot>img{height:auto;object-fit:contain}
+.feature-panel .feature-stage{margin-top:28px}
