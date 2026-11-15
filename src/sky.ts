@@ -382,14 +382,14 @@ export function createSky(
     const coverage = pageContent ? pageContent.getBoundingClientRect().bottom + window.scrollY : window.innerHeight;
     const nextHeight = Math.min(4096, Math.ceil(coverage / cell));
     measure();
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${pageContent ? coverage : window.innerHeight}px`;
     // Ignore the small height changes of a mobile address bar.
     if (nextWidth === width && Math.abs(nextHeight - height) < (pageContent ? 1 : 24)) return;
     width = nextWidth;
     height = nextHeight;
     canvas.width = width;
     canvas.height = height;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${pageContent ? coverage : height * cell}px`;
     gl!.viewport(0, 0, width, height);
   }
 
