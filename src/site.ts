@@ -34,7 +34,7 @@ function state(container: HTMLElement, text: string, retry = false) { container.
 function releaseArticle(r: Release, latest: boolean, detail: boolean) { const article = el('article', undefined, 'release-entry'); const meta = el('div', undefined, 'release-meta'); meta.append(el('span', r.tag, 'release-version')); const time = el('time', date(r)); time.dateTime = r.published; meta.append(time); if (latest)
     meta.append(el('span', r.id === 0 ? 'Preview fixture' : 'Newest published', 'release-badge')); if (r.prerelease)
     meta.append(el('span', 'Pre-release', 'release-kind')); const body = el('div', undefined, 'release-body'); const h = el('h2'); h.append(link(r.title, releasePath(r.tag))); body.append(h); const notes = el('div', undefined, 'release-markdown'); if(detail) notes.append(markdown(r.body)); else { const summary=releaseSummary(r.body); if(summary.intro) notes.append(markdown(summary.intro)); if(summary.bullets.length){const ul=el('ul');for(const bullet of summary.bullets){const li=el('li');li.append(markdown(bullet));ul.append(li);}notes.append(ul);} } if (!r.body.trim())
-    notes.append(el('p', 'No release notes were supplied for this version.')); body.append(notes); const actions = el('div', undefined, 'release-actions'); actions.append(link(detail ? 'Original release on GitHub' : 'Read full release notes', detail ? r.url : releasePath(r.tag), detail ? undefined : 'pill pill-ghost')); const asset = installer(r); if (asset)
+    notes.append(el('p', 'No release notes were supplied for this version.')); body.append(notes); const actions = el('div', undefined, 'release-actions'); actions.append(link(detail ? 'Original release on GitHub' : 'Read full release notes', detail ? r.url : releasePath(r.tag), detail ? undefined : 'pill pill-ghost')); const asset = installer(r); if (asset && latest)
     actions.append(link('Download ' + r.tag, asset.url, 'pill pill-white')); body.append(actions); article.append(meta, body); return article; }
 async function render() { const container = list ?? download; if (!container)
     return; try {
@@ -52,7 +52,7 @@ async function render() { const container = list ?? download; if (!container)
             }
             document.title = r.title + ' · Juno Updates';
             const back = link('← All releases', '/updates/', 'back-releases');
-            list.append(back, releaseArticle(r, false, true));
+            list.append(back, releaseArticle(r, feed.releases[0]?.id === r.id, true));
             return;
         }
         if (!feed.releases.length) {

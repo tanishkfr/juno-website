@@ -83,3 +83,5 @@ body:not([data-page]) .footer-mark{margin-top:48px}
 /* Shorter transition into the second pair of feature chapters. */
 .capability-grid{row-gap:40px}
 @media(max-width:760px){.capability-grid{row-gap:32px}}
+/* Consistent chapter rhythm, without staggered headings or bottom-aligned media. */
+.capability-grid{align-items:start;row-gap:64px}.feature-panel:nth-child(n){translate:none}.feature-panel>.feature-note{margin-bottom:0}.feature-panel .feature-stage{margin-top:32px}.feature-panel header{min-height:0}.feature-panel>p:not(.feature-note){min-height:0}@media(max-width:760px){.capability-grid{row-gap:48px}.feature-panel header,.feature-panel>p:not(.feature-note){min-height:0}.feature-panel .feature-stage{margin-top:24px}}
