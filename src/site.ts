@@ -97,3 +97,14 @@ const supportCopy=document.querySelector<HTMLButtonElement>('#support-copy');
 if(supportCopy){supportCopy.hidden=false;supportCopy.addEventListener('click',async()=>{const status=document.querySelector<HTMLElement>('#support-copy-status')!;const address=document.querySelector<HTMLElement>('#support-address')!;try{await navigator.clipboard.writeText(address.textContent!.trim());status.textContent='Email address copied.';}catch{const range=document.createRange();range.selectNodeContents(address);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);status.textContent='Copy wasn’t available. The email address is selected so you can copy it manually.';}});}
 
 import './support-data';
+
+// Keep the footer orbit active only while its scene can be seen.
+const footerOrbit = document.querySelector<HTMLElement>('.footer-mark');
+if (footerOrbit) {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = false;
+    const syncOrbit = () => footerOrbit.classList.toggle('flight-running', visible && !reduced.matches && !document.hidden);
+    new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; syncOrbit(); }, { threshold: 0.1 }).observe(footerOrbit);
+    reduced.addEventListener('change', syncOrbit);
+    document.addEventListener('visibilitychange', syncOrbit);
+}
