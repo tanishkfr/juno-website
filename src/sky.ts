@@ -388,7 +388,7 @@ export function createSky(
     height = nextHeight;
     canvas.width = width;
     canvas.height = height;
-    canvas.style.width = `${width * cell}px`;
+    canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${pageContent ? coverage : height * cell}px`;
     gl!.viewport(0, 0, width, height);
   }
