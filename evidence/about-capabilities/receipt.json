@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "about 1440 fits and passes accessibility",
+    "capabilities 1440 fits and passes accessibility",
+    "about 1000 fits and passes accessibility",
+    "capabilities 1000 fits and passes accessibility",
+    "about 800 fits and passes accessibility",
+    "capabilities 800 fits and passes accessibility",
+    "about 390 fits and passes accessibility",
+    "capabilities 390 fits and passes accessibility",
+    "about 320 fits and passes accessibility",
+    "capabilities 320 fits and passes accessibility",
+    "Navigation/current state and simulated published v0.5 availability rollover"
+  ]
+}
