@@ -60,7 +60,7 @@ async function render() { const container = list ?? download; if (!container)
             return;
         }
         let shown = 0;
-        const more = el('button', 'Show more releases', 'pill pill-ghost');
+        const more = el('button', 'Show more releases', 'pill pill-ghost release-more');
         more.type = 'button';
         const next = () => { const batch = feed.releases.slice(shown, shown + 8); batch.forEach((r, i) => list.insertBefore(releaseArticle(r, shown === 0 && i === 0, false), more)); shown += batch.length; more.hidden = shown >= feed.releases.length; };
         list.append(more);

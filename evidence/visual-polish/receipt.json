@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "1440 / accessible/no overflow",
+    "1440 /updates/ accessible/no overflow",
+    "1440 /support/ accessible/no overflow",
+    "1280 / accessible/no overflow",
+    "1280 /updates/ accessible/no overflow",
+    "1280 /support/ accessible/no overflow",
+    "390 / accessible/no overflow",
+    "390 /updates/ accessible/no overflow",
+    "390 /support/ accessible/no overflow",
+    "320 / accessible/no overflow",
+    "320 /updates/ accessible/no overflow",
+    "320 /support/ accessible/no overflow",
+    "Three distinct preview images and full-size dialogs",
+    "Solid footer, no pixel background",
+    "Release pagination gap 32px"
+  ],
+  "checkedAt": "2026-11-15T11:12:54.506Z"
+}

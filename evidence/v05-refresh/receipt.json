@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:5276",
-  "checkedAt": "2026-11-15T10:40:50.962Z",
+  "checkedAt": "2026-11-15T11:12:01.052Z",
   "views": [
     {
       "name": "desktop",
@@ -114,7 +114,7 @@
   "checks": [
     "Historical GitHub releases; up to three bullets; full notes navigation; no Notes section",
     "Development fixture and detail; no downloadable draft",
-    "All six hero companions",
+    "All six roster companions; hero bar and legacy video removed",
     "v0.5 showcase tabs and keyboard; full-size gallery image",
     "Mobile menu and Escape focus recovery",
     "API outage has retry; no invented download",

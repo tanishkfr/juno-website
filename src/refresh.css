@@ -60,3 +60,17 @@ body[data-page]>.site-footer{background:#171419}
 @media(max-width:760px){.support-version-bar{align-items:start;flex-direction:column;gap:16px}.support-version-bar label{width:100%}.known-issue{padding:28px 0}.issue-workaround{padding:14px 16px}}
 
 .markdown-table{max-width:100%;overflow:auto;margin:20px 0;border:1px solid var(--night-line);border-radius:8px}.markdown-table table{border-collapse:collapse;min-width:100%;font-size:13px}.markdown-table :is(th,td){padding:10px 14px;text-align:left;border-bottom:1px solid var(--night-line);min-width:130px}.markdown-table th{font-weight:600;background:#211b21}.release-markdown blockquote{border-left:1px solid #b99c90;padding-left:18px;color:#eaded8;margin:20px 0}
+
+/* Reading contrast: preserve the pixel world while lowering its visual noise. */
+body{background:#211b21}
+.sky{filter:brightness(.66);opacity:.7}
+:is(.feature-panel,.story-sequence,.story-heading,.sec-h,.reading-page,.release-body,.journal-intro,.download-intro){text-shadow:0 1px 2px #171419}
+.feature-panel>p,.story-sequence p,.lede,.release-markdown{color:#f1e6df}
+.feature-panel>.feature-note,.image-caption,.preview-disclosure{color:#eadbd3}
+/* The closing section is the same quiet, solid surface on every route. */
+.site-footer,body[data-page]>.site-footer{position:relative;background:#171419}
+.site-footer::before{display:none}
+.footer-motion{display:none}
+body:not([data-page]) .footer-mark{margin-top:48px}
+.release-more{margin-top:32px}
+@media(max-width:600px){.release-more{margin-top:24px}}

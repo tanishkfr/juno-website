@@ -73,39 +73,7 @@ const companions: Record<string, Companion> = {
 };
 const byId = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
-const demoVideo = byId<HTMLVideoElement>("workflow-demo");
-const playDemo = byId<HTMLButtonElement>("play-demo");
-const demoError = byId("demo-error");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-demoVideo.muted = true;
-demoVideo.autoplay = !reducedMotion.matches;
-demoVideo.controls = false;
-async function playWorkflow(showError = true) {
-  playDemo.hidden = true;
-  demoError.hidden = true;
-  demoVideo.controls = true;
-  try {
-    await demoVideo.play();
-  } catch {
-    demoVideo.controls = false;
-    playDemo.hidden = false;
-    demoError.textContent =
-      "The demo couldn’t play. Try again, or read the conversation below.";
-    demoError.hidden = !showError;
-  }
-}
-playDemo.addEventListener("click", () => void playWorkflow());
-demoVideo.addEventListener("play", () => {
-  playDemo.hidden = true;
-  demoVideo.controls = true;
-});
-demoVideo.addEventListener("ended", () => {
-  demoVideo.controls = false;
-  byId("demo-play-label").textContent = "Replay demo";
-  playDemo.hidden = false;
-});
-if (reducedMotion.matches) playDemo.hidden = false;
-else void playWorkflow(false);
 const copyEmail = byId<HTMLButtonElement>("copy-email");
 copyEmail.hidden = false;
 copyEmail.addEventListener("click", async () => {
@@ -178,9 +146,9 @@ const previewScenes: Record<
     caption: "Actual v0.5 workspace · staged example records",
   },
   workspace: {
-    image: "v05-workspace",
-    alt: "Juno’s actual workspace with Kyoto at the center and the six city companions in the sidebar.",
-    caption: "Actual v0.5 workspace · staged example records",
+    image: "v05-files",
+    alt: "The v0.5 project workspace open beside the conversation, with the Files panel visible.",
+    caption: "Actual v0.5 project workspace · Files panel with staged example records",
   },
   code: {
     image: "v05-code",
@@ -413,9 +381,6 @@ decorativeOrbs.forEach((orb) => motionVisibility.observe(orb));
 document.addEventListener("visibilitychange", updateMotion);
 reducedMotion.addEventListener("change", () => {
   if (reducedMotion.matches) {
-    demoVideo.autoplay = false;
-    demoVideo.pause();
-    if (!demoVideo.currentTime) playDemo.hidden = false;
     tourPlaying = false;
     charactersPlaying = false;
     previewTransition?.finish();
@@ -605,26 +570,6 @@ updateNavigation();
 // ── Hero: choose who greets you ────────────────────────────────────────────
 const hero = byId("overview");
 const heroScene = byId("hero-scene");
-const heroOrb = byId<HTMLImageElement>("hero-orb");
-const heroPicks = [
-  ...document.querySelectorAll<HTMLButtonElement>("[data-hero-pick]"),
-];
-for (const pick of heroPicks) {
-  pick.addEventListener("click", () => {
-    const key = pick.dataset.heroPick!;
-    const c = companions[key];
-    heroPicks.forEach((b) => b.setAttribute("aria-pressed", String(b === pick)));
-    hero.dataset.host = key;
-    heroOrb.dataset.orb = key;
-    heroOrb.alt = `${c.name}, one of Juno’s six pixel companions`;
-    byId("hero-greeting").textContent = c.greeting;
-    byId("hero-host-name").textContent = c.name;
-    byId("hero-host-trait").textContent = c.personality;
-    replay(heroScene, "swap");
-    updateMotion();
-  });
-}
-
 // ── Scroll reveals ─────────────────────────────────────────────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -847,30 +792,13 @@ document
   .forEach((panel) => featureObserver.observe(panel));
 
 // Website guides expose genuine media; they do not execute agent tasks.
-const storyButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-story-time]')];
-for (const button of storyButtons) button.addEventListener('click', async () => {
-  storyButtons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-  if (demoVideo.readyState < 1) {
-    try { await new Promise<void>((resolve, reject) => {
-      const done = () => { clearTimeout(timeout); resolve(); };
-      const timeout = setTimeout(() => { demoVideo.removeEventListener('loadedmetadata', done); reject(new Error('Video unavailable')); }, 5000);
-      demoVideo.addEventListener('loadedmetadata', done, { once: true }); demoVideo.load();
-    }); } catch { byId('story-status').textContent = 'The recording could not load. Read the complete conversation below.'; return; }
-  }
-  demoVideo.pause();
-  demoVideo.currentTime = Math.min(Number(button.dataset.storyTime), Math.max(0, demoVideo.duration - .1));
-  demoVideo.controls = true;
-  playDemo.hidden = false;
-  byId('demo-play-label').textContent = 'Continue recording';
-  byId('story-status').textContent = button.querySelector('small')!.textContent;
-});
 const depths: Record<string, string> = { quick: 'A focused pass with a few sources.', standard: 'Several angles, cross-checked.', deep: 'Broad discovery, with explicit uncertainty.' };
 for (const button of document.querySelectorAll<HTMLButtonElement>('[data-depth]')) button.addEventListener('click', () => {
   document.querySelectorAll('[data-depth]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
   byId('research-explanation').textContent = depths[button.dataset.depth!];
 });
 const companionPaths: Record<string, [string, string, string]> = {
- kyoto: ['#demo', 'Explore a task with Kyoto', 'Put Kyoto’s focus to work in the recorded planning conversation.'],
+ kyoto: ['#product', 'Explore Kyoto’s workspace', 'Explore Kyoto’s conversation and project workspace.'],
  prague: ['#feature-research', 'Explore research controls', 'Give a question room for the skeptical perspective you choose.'],
  lisbon: ['#feature-results', 'Explore the Library', 'Keep the writing and files you create close to the conversation.'],
  seoul: ['#code', 'Explore the Code workspace', 'Bring a builder’s perspective into your project workspace.'],
@@ -883,19 +811,3 @@ for (const button of companionButtons) button.addEventListener('click', () => {
  byId('companion-context').textContent = context;
 });
 
-// The closing scene rests whenever it cannot be seen or motion is unwanted.
-const flightToggle = byId<HTMLButtonElement>('footer-flight-toggle');
-let flightVisible = false;
-let flightPaused = false;
-function syncFlight() {
- const resting = reducedMotion.matches;
- footerMark.classList.toggle('flight-running', flightVisible && !flightPaused && !resting && !document.hidden);
- flightToggle.hidden = resting;
- flightToggle.setAttribute('aria-pressed', String(flightPaused));
- flightToggle.textContent = flightPaused ? 'Resume companion flight' : 'Pause companion flight';
-}
-new IntersectionObserver(([entry]) => { flightVisible = entry.isIntersecting; syncFlight(); }, { threshold: .12 }).observe(footerMark);
-flightToggle.addEventListener('click', () => { flightPaused = !flightPaused; syncFlight(); });
-reducedMotion.addEventListener('change', syncFlight);
-document.addEventListener('visibilitychange', syncFlight);
-syncFlight();
